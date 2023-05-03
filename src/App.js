@@ -1,5 +1,10 @@
+import 
 function App() {
-  return <div className="App">hiii</div>;
+  return (
+    <div className="App">
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
