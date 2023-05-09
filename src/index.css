@@ -11,3 +11,40 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+:root{
+  --white: #ffffff;
+  --black: #000000;
+  --blue : #1373FB;
+  --gray72 : #EBEBEB;
+  --blacktransparent50 : rgba(0, 0, 0, 0.5);
+  --gray95: #F2F2F2;
+  --nero: #202020;
+
+
+}
+
+@font-face {
+  font-family: "Light";
+  src: url("assets/Fonts/Euclid\ Circular\ A\ Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Medium";
+  src: url("assets/Fonts/Euclid\ Circular\ A\ Medium.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Regular";
+  src: url("assets/Fonts/Euclid\ Circular\ A\ Regular.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Semi-Bold";
+  src: url("assets/Fonts/Euclid\ Circular\ A\ SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family:" Bold";
+  src: url("assets/Fonts/Euclid\ Circular\ A\ Bold.ttf");
+  font-weight: 800;
+}

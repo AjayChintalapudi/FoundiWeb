@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.footerSection{
+ width: 100%;
+ height: 100%;
+ background-color: var(--black);
+}
+.insideFooterSection{
+    max-width: 1440px;
+    margin: auto;
+    padding: 64px 80px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+   
+}
+.footerContactSection {
+    
+    display: flex;
+    flex-direction: column;
+    /* gap: 24px; */
+    align-items: center;
+    font-family: "Light", sans-serif;
+    font-size: 30px;
+line-height: 40px;  
+
+}
+.footerJoinImage{
+    text-decoration: none;
+    color: var(--white);
+    border-bottom: 1px solid var(--gray72);
+}
+.footerJoinImage:hover{
+    border-bottom: none;
+}
+
+.footerBottomSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+.footerLeftSection{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+.footerPrivacyText{
+    max-width: 91px;
+    font-family: "Light",sans-serif;
+    font-size: 14px;
+line-height: 22px;
+text-decoration-line: underline;
+color: var(--gray72);
+}
+.footerTermsText{
+    max-width: 107px;
+    font-family: "Light", sans-serif;
+    font-size: 14px;
+line-height: 22px;
+text-decoration-line: underline;
+color: var(--gray72);
+}
+.footerMiddleSection{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+.imageWidth{
+    width: 100%;
+    height: 100%;
+}
+.footerFbImage, .footerInstaImage, .footerTwitterImage , .footerlinkedInImage{
+    
+    Width:40px;
+Height:40px;
+  
+}
+
+.footerRightSection{
+    max-width: 373.33px;
+    font-family: "Light", sans-serif;
+    font-size: 14px;
+line-height: 22px;
+color: var(--gray72);
+
+}
+.footerBottomMobileSection{
+    display: none;
+}
+
+
+
+ /* Footer Section Styles Starts From 1440px */
+
+@media screen and (max-width:1440px){
+    
+}
+ /* Footer Section Styles Ends From 1440px */
+
+
+
+  /* Footer Section Styles Starts From 1366 */
+@media screen and (max-width:1366px){
+    
+}
+ /* Footer Section Styles Ends From 1440px */
+
+
+
+
+  /* Footer Section Styles Starts From 1279px */
+@media screen and (max-width:1279px){
+    
+}
+ /* Footer Section Styles Ends From 1279px */
+
+
+
+
+
+
+  /* Footer Section Styles Starts From 1023px */
+@media screen and (max-width:1023px){
+    .insideFooterSection{
+        padding: 56px 40px 28px;
+        display: flex;
+        flex-direction: column;
+        gap: 62px;
+    }
+        .footerContactSection{
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            font-size: 26px;
+        line-height: 34px;  
+        
+        }
+        .footerMiddleSection{
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+        }
+        .footerFbImage, .footerInstaImage, .footerTwitterImage, .footerlinkedInImage{
+            width: 32px;
+            height: 32px;
+            
+        }
+    
+}
+
+ /* Footer Section Styles Ends From 1023px */
+
+
+
+
+
+ /* Footer Section Styles Starts From 867px */
+
+@media screen and (max-width:867px){
+    .insideFooterSection{
+        padding: 48px 32px 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 54px;
+    }
+    .footerContactSection{
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        font-size: 24px;
+    line-height: 34px;  
+    }
+    .footerBottomSection{
+        display: none;
+    }
+    .footerBottomMobileSection{
+        display: block;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+    .footerMiddleMobileSection{
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+    }
+    .footerFbMobileImage, .footerInstaMobileImage, .footerTwitterMobileImage, .footerlinkedInMobileImage{
+  
+        Width:32px;
+    Height:32px;
+      
+
+    }
+   
+    .footerLeftMobileSection{
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+    }
+    .footerPrivacyMobileText{
+        max-width: 91px;
+        font-family: "Light",sans-serif;
+        font-size: 14px;
+    line-height: 22px;
+    text-decoration-line: underline;
+    color: var(--gray72);
+    }
+    .footerTermsMobileText{
+            max-width: 107px;
+            font-family: "Light", sans-serif;
+            font-size: 14px;
+        line-height: 22px;
+        text-decoration-line: underline;
+        color: var(--gray72);
+        }
+        .footerRightMobileSection{
+           
+                max-width: 604px;
+                font-family: "Light", sans-serif;
+                font-size: 14px;
+            line-height: 22px;
+            color: var(--gray72);
+            
+            }
+
+}
+
+ /* Footer Section Styles Ends From 867px */
+
+
+
+
+  /* Footer Section Styles Starts From 550px */
+@media screen and (max-width:550px){
+    .insideFooterSection{
+        padding: 48px 24px 24px 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 54px;
+        align-items: flex-start;
+    }
+    .footerContactSection{
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        font-size: 24px;
+    line-height: 34px;  
+    align-items: flex-start;
+    
+    }
+    .footerBottomMobileSection{
+        
+        align-items: flex-start;
+    }
+ 
+
+
+
+    /* .footerPrivacyMobileText{
+        width: 100%;
+    }
+    .footerTermsMobileText{
+            width: 100%;
+          
+        }
+        .footerRightMobileSection{
+           
+                width: 100%;
+               
+            
+            }  */
+
+    
+}
+
+  /* Footer Section Styles Ends From 550px */

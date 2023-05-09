@@ -1,0 +1,701 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+/* -----------------------Desktop View Intially Starts----------------------- */
+
+
+/* heroSection Styles Starts*/
+.eventsHeaderSection{
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/Images/eventImage.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.eventInsideContainerStyle{
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(40px);
+    background-color: var(--blacktransparent50);
+}
+.insideEventsHeaderSection{
+    max-width: 1440px;
+    margin: auto;
+    padding: 100px 80px;
+    display: flex;
+    flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+ 
+}
+.eventsMiddleSection{
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+.eventsHeaderTextSection{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+.eventsHeaderTextHeading{
+    max-width: 522px;
+    font-family: "Regular", sans-serif;
+    font-size: 40px;
+line-height: 52px;
+color: var(--white);
+text-align: center;
+
+}
+.eventsHeaderParaHeading{
+    max-width: 674px;
+    font-family: "Light", sans-serif;
+    font-size: 16px;
+line-height: 24px;
+color: var(--gray72);
+text-align: center;
+}
+
+.eventLeftIcon  {
+    width: 40px;
+    height: 40px;
+}
+.eventRightIcon{
+    width: 40px;
+    height: 40px;
+}
+.eventImageWidth{
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ease-in-out;
+}
+
+.eventsHoverSection{
+    position: relative;
+    cursor: pointer;
+}
+.eventButtonSection{
+    opacity: 0;
+    position: absolute;
+    top: 45%;
+    left: 37%;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+.eventsHoverSection:hover .eventButtonSection{
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+    
+}
+
+.eventButton{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 0px 24px;
+    gap: 10px;
+    height: 48px;
+    background: var(--blacktransparent50);
+    backdrop-filter: blur(40px);
+    border-radius: 24px;
+    font-family: 'Light';
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--white);
+    border: none;
+    /* cursor: pointer; */
+
+}
+.eventsHeaderImage{
+    max-width: 850px;
+    max-height: 452px;
+    overflow: hidden;
+    border-radius: 20px;
+
+
+}
+.eventsHoverSection:hover .eventImageWidth{
+    transform: scale(1.05);
+    transition: 0.5s ease-in-out;
+}
+.tabViewEventIcons{
+   display: none;
+}
+/* heroSection Styles Ends*/
+
+
+/* bannerSection Styles Starts*/
+
+.eventsBannerSection{
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+}
+.insideEventsBannerSection{
+    padding: 100px 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
+}
+.eventsBannerHeaderSection{
+    max-width: 738px;
+    font-family: "Light", sans-serif;
+    font-size: 30px;
+line-height: 40px;
+text-align: center;
+color: var(--black); 
+}
+
+.eventsBannerBottomSection{
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    align-items: center;
+    max-width: 1120px;
+}
+
+
+.eventsBannerBottomHeadingText{
+    /* max-width: 1120px; */
+    font-family: "Regular", sans-serif;
+    font-size: 40px;
+    line-height: 52px;
+    text-align: center;
+    color: var(--black);
+}
+.eventsBannerBottomDropSection{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    /* max-width: 1120px; */
+}
+.eventsBannerDropSection{
+    display: flex;
+flex-direction: row;
+align-items: center;
+padding: 64px;
+gap: 64px;
+background: var(--gray95);
+border-radius: 16px;
+width: 100%;
+justify-content: space-between;
+}
+.eventsBannerDropLeftSection{
+    max-width: 260px;
+max-height: 248px;
+/* width: 100%; */
+}
+.eventsBannerDropRightSection{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.eventsBannerRightHeading{
+    max-width: 572px;
+    font-family: 'Regular', sans-serif;
+    font-size: 30px;
+    line-height: 40px;
+    color: var(--black);
+}
+.eventsBannerRightPara{
+    max-width: 572px;
+    font-family: 'Light', sans-serif;
+    font-size: 16px;
+line-height: 24px;
+color: var(--nero);
+
+}
+.eventsBannerEmployeeSection{
+    display: flex;
+    flex-direction: row;
+   gap: 16px;
+}
+.eventBannerEmployeInsideSection{
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    gap: 16px;
+    width: 100%;
+    max-width: 362.67px;
+    background: var(--gray95);
+    border-radius: 16px;  
+    min-height: 381px;
+    height: 100%;
+}
+.eventBannerEmployeeHeading{
+    max-width: 240px;
+    font-family: 'Regular', sans-serif;
+    font-size: 30px;
+line-height: 40px;
+color: var(--black);
+}
+.eventBannerEmployeePara{
+    max-width: 298.67px;
+    font-family: 'Light', sans-serif;
+    font-size: 17px;
+line-height: 26px;
+color: var(--nero);
+
+}
+/* bannerSection Styles Ends*/
+
+
+
+/* -----------------------Desktop View Intially Ends----------------------- */
+
+
+/* ----------------------- View Starts at  1440px----------------------- */
+
+
+@media screen and (max-width:1440px){
+
+    /* heroSection Styles Starts at 1440px*/
+
+    /* heroSection Styles End at 1440px*/ 
+}
+
+
+
+
+/* ----------------------- View Ends at  1440px----------------------- */
+
+
+
+
+
+/* ----------------------- View Starts at  1336px----------------------- */
+
+
+@media screen and (max-width:1366px){
+    /* heroSection Styles Starts at 1336px*/
+    
+    /* heroSection Styles Ends at 1336px*/
+
+
+      /* bannerSection Styles Starts at 1336px*/
+
+        /* bannerSection Styles Ends at 1336px*/
+}
+
+
+/* ----------------------- View Ends at  1336px----------------------- */
+
+
+
+
+
+
+/* ----------------------- View Starts at  1279px----------------------- */
+
+
+@media screen and (max-width:1279px){
+
+    /* heroSection Styles Starts at 1279px*/
+    .insideEventsHeaderSection{
+        padding: 100px 80px;
+        display: flex;
+        flex-direction: column;
+       align-items: center;
+     
+    }
+    .eventLeftIcon{
+        display: none;
+    }
+    .eventRightIcon{
+        display: none;
+    }
+    .eventsMiddleSection{
+        display: flex;
+    flex-direction: column;
+    gap: 32px;
+    }
+    .tabViewEventIcons{
+        display: block;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: center;
+    }
+    .eventGapContainerTabView{
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+   /* heroSection Styles Ends at 1279px */ 
+
+
+
+/* bannerSection Styles Starts at 1279px */ 
+   .insideEventsBannerSection{
+    padding: 100px 80px;
+}
+
+.eventsBannerBottomSection{
+    max-width: 960px;
+}
+.eventsBannerDropLeftSection{
+    max-width: 260px;
+max-height: 296px;
+}
+.eventsBannerRightHeading{
+    max-width: 508px;
+}
+.eventsBannerRightPara{
+    max-width: 508px;
+
+}
+.eventBannerEmployeInsideSection{
+    
+    max-width: 309px;
+    min-height: 424px;
+    
+}
+
+.eventBannerEmployeeHeading{
+    max-width: 240px;
+}
+.eventBannerEmployeePara{
+    max-width: 245.33px;
+    font-size: 16px;
+line-height: 24px;
+}
+}
+
+/* bannerSection Styles Ends at 1279px */ 
+
+/* ----------------------- View Ends at  1279px----------------------- */
+
+
+
+
+
+
+/* ----------------------- View starts at  1023px----------------------- */
+
+@media screen and (max-width:1023px){
+    /* heroSection Styles Starts at 1023px */
+
+    .insideEventsHeaderSection{
+        padding: 80px 60px;
+     
+    }
+    .eventsHeaderTextSection{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .eventsHeaderTextHeading{
+        width: 820px;
+        font-size: 36px;
+    line-height: 44px;
+    
+    }
+    .eventsHeaderParaHeading{
+        width: 560px;
+        font-size: 16px;
+    line-height: 24px;
+    }
+    .eventGapContainerTabView{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    .eventsHeaderImage{
+        max-width: 720px;
+        max-height: 360px;
+    }
+   
+    /* heroSection Styles Ends at 1023px */
+
+
+
+/* bannerSection Styles Starts at 1023px */
+
+.insideEventsBannerSection{
+    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+ 
+}
+.eventsBannerHeaderSection{
+    max-width: 668px;
+    font-size: 26px;
+line-height: 34px;
+
+}
+.eventsBannerBottomSection{
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+ max-width: 820px;
+}
+.eventsBannerBottomHeadingText{
+    /* max-width: 820px; */
+    font-size: 36px;
+    line-height: 44px;
+  
+}
+.eventsBannerBottomDropSection{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    /* max-width: 820px; */
+}
+.eventsBannerDropSection{
+    display: flex;
+flex-direction: row;
+padding: 56px;
+gap: 56px;
+}
+.eventsBannerDropLeftSection{
+  
+max-width: 224px;
+max-height: 310px;
+
+/* width: 100%; */
+}
+.eventsBannerDropRightSection{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.eventsBannerRightHeading{
+    max-width: 428px;
+    font-size: 26px;
+    line-height: 34px;
+}
+.eventsBannerRightPara{
+    max-width: 428px;
+}
+.eventsBannerEmployeeSection{
+    display: flex;
+    flex-direction: row;
+   gap: 12px;
+}
+.eventBannerEmployeInsideSection{
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    gap: 12px;
+    width: 100%;
+    max-width: 265.33px;
+    min-height: 440px;
+    height: 100%;
+}
+.eventBannerEmployeeHeading{
+    max-width: 217.33px;
+    font-size: 26px;
+line-height: 34px;
+}
+.eventBannerEmployeePara{
+    max-width: 217.33px;
+  
+
+}
+    
+ /* bannerSection Styles Ends at 1023px */
+}
+
+/* ----------------------- View Ends at  1023px----------------------- */
+
+
+
+
+/* ----------------------- View Starts at 867px----------------------- */
+
+@media screen and (max-width:867px){
+     /* heroSection Styles Starts at 867px */
+
+     .insideEventsHeaderSection{
+        padding: 80px 32px;
+     
+    }
+    .eventsHeaderTextHeading{
+        width: 604px;
+        font-size: 30px;
+    line-height: 40px;
+    
+    }
+    .eventsHeaderParaHeading{
+        width: 452px;
+
+    }
+
+    .eventsHeaderImage{
+        max-width: 452px;
+        max-height: 320px;
+        margin: auto;
+    }
+    .eventsHoverSection{
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        }
+    .eventButtonSection{
+        position: unset;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* heroSection Styles Ends at 867px */
+
+
+
+
+/* bannerSection Styles Starts at 867px */
+.insideEventsBannerSection{
+    padding: 80px 56px;
+    
+}
+.eventsBannerHeaderSection{
+    max-width: 560px;
+
+}
+.eventsBannerBottomSection{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+ max-width: 604px;
+}
+.eventsBannerBottomHeadingText{
+    font-size: 30px;
+    line-height: 40px;
+  
+}
+.eventsBannerDropSection{
+    display: flex;
+flex-direction: column;
+padding: 24px;
+gap: 24px;
+}
+.eventsBannerDropLeftSection{
+   width: 556px;
+height: 224px;
+    /* width: 100%; */
+    }
+    .eventsBannerRightHeading{
+        max-width: 556px;
+        
+    }
+    .eventsBannerRightPara{
+        max-width: 556px;
+    }
+    .eventsBannerEmployeeSection{
+        display: flex;
+        flex-direction: column;
+       gap: 12px;
+    }
+    .eventBannerEmployeInsideSection{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 604px;
+        min-height: 214px;
+        height: 100%;
+    }
+    .eventBannerEmployeeHeading{
+        max-width: 556px;
+    }
+    .eventBannerEmployeePara{
+        max-width: 556px;
+      
+    
+    }
+
+
+
+
+        /* bannerSection Styles Ends at 867px */
+}
+
+/* ----------------------- View Ends at  867px----------------------- */
+
+
+
+
+/* ----------------------- View Starts at  550px----------------------- */
+@media screen and (max-width:550px){
+     /* heroSection Styles Ends at 550px */
+ .insideEventsHeaderSection{
+    padding: 80px 24px;
+ 
+}
+.eventsHeaderTextHeading{
+    width: 100%;
+}
+.eventsHeaderParaHeading{
+    width: 100%;
+
+}
+.eventsHeaderImage{
+    max-width: 366px;
+    max-height: 320px;
+    margin: auto;
+}
+
+ /* heroSection Styles Ends at 550px */
+
+
+ /* bannerSection Styles Starts at 550px */
+ .insideEventsBannerSection{
+    padding: 80px 24px;
+}
+.eventsBannerHeaderSection{
+    max-width: 366px;
+    font-size: 24px;
+
+}
+.eventsBannerBottomSection{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+ max-width: 366px;
+}
+.eventsBannerDropLeftSection{
+    width: 318px;
+ height: 224px;
+     }
+     .eventsBannerRightHeading{
+        max-width: 318px;
+        font-size: 24px;
+        line-height: 34px;
+    }
+    .eventsBannerRightPara{
+        max-width: 318px;
+    }
+    .eventBannerEmployeInsideSection{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 366px;
+        min-height: 310px;
+        height: 100%;
+    }
+    .eventBannerEmployeeHeading{
+        max-width: 318px;   
+        font-size: 24px;
+    line-height: 34px;
+
+    }
+    .eventBannerEmployeePara{
+        max-width: 318px;
+    }
+
+
+  /* bannerSection Styles Ends at 550px */
+
+}
+
+
+
+/* heroSection Styles Ends*/
+
+
+/* ----------------------- View Ends at 550px----------------------- */
