@@ -1,5 +1,7 @@
 const eventPageStrings = {
-  eventsHeroSectionHeading: 'Helsingborg City Expo 2022',
+  eventsHeroSectionHeading: 'EXPO 2020 - Dubai',
+  eventsHeroSectionHeading2: 'London’s New Year Eve 2023',
+  eventsHeroSectionHeading3: 'Helsingborg City Expo 2022',
   eventsHeroSectionPara:
     ' Foundi stalls and services are available for all the people who visit H22 Expo slated to happen between 12th to 24th October 2022, Address.',
   eventsHeroSectionButton: 'H22 event page',

@@ -19,6 +19,8 @@
     height: 100%;
     backdrop-filter: blur(40px);
     background-color: var(--blacktransparent50);
+    
+
 }
 .insideEventsHeaderSection{
     max-width: 1440px;
@@ -539,6 +541,7 @@ line-height: 34px;
         gap: 32px;
         }
     .eventButtonSection{
+        opacity: 1;
         position: unset;
         display: flex;
         justify-content: center;

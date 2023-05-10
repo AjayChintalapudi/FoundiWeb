@@ -1,9 +1,11 @@
-export { default as fbImg } from 'assets/Images/FbImg.svg';
-export { default as instaImg } from 'assets/Images/InstaImg.svg';
-export { default as twitterImg } from 'assets/Images/TwitterImg.svg';
-export { default as linkedinImg } from 'assets/Images/LinkedInImg.svg';
+export { default as fbImg } from 'assets/Images/facebook.svg';
+export { default as instaImg } from 'assets/Images/instagram.svg';
+export { default as twitterImg } from 'assets/Images/twitter.svg';
+export { default as linkedinImg } from 'assets/Images/linkedin.svg';
 export { default as eventImg } from 'assets/Images/eventImage.svg';
 export { default as LeftImg } from 'assets/Images/LeftIcon.svg';
 export { default as RightImg } from 'assets/Images/RightIcon.svg';
 export { default as linkImg } from 'assets/Images/Link.svg';
 export { default as droppedImg } from 'assets/Images/dropedImg.svg';
+export { default as eventImg2 } from 'assets/Images/Eventimage2.svg';
+export { default as eventImg3 } from 'assets/Images/Event image3.svg';
