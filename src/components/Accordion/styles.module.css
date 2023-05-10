@@ -1,0 +1,25 @@
+.QuestionAnswerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding: 40px;
+}
+
+.questionBlockHeading {
+  font-family: Regular;
+  font-size: 18px;
+  width: 50%;
+  margin: auto;
+  text-align: start;
+  padding: 32px;
+  background-color:var(--lightgrey);
+  border-radius: 16px;
+}
+
+.answerBlockDesc {
+  font-family: Light;
+  font-size: 17px;
+  width: 50%;
+  margin: auto;
+  text-align: start;
+}

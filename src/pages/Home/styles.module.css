@@ -1,0 +1,613 @@
+/*<-----Home Page Design----->*/
+
+/*<-----Banner Section Start----->*/
+.bannerContainer {
+  background-image: url('assets/Images/banner.svg');
+  background-size: cover;
+  height: 100vh;
+}
+
+.bannerInsideContainer {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  height: 100%;
+  width: 100%;
+}
+
+.bannerDescription {
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+  color: var(--white);
+  padding: 240px 300px 0px 300px;
+}
+
+.bannerHeadingLeft {
+  font-family: Regular;
+  font-size: 30px;
+}
+
+.bannerInfoRight {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.bannerInfoRightPara {
+  width: 120%;
+  margin: auto;
+  padding-top: 140px;
+  font-family: Light;
+  font-size: 17px;
+}
+
+.bannerInfoRightVideoDesc {
+  display: flex;
+  flex-direction: row;
+  gap: 17px;
+  width: 100%;
+  margin: auto;
+  font-family: Light;
+  font-size: 16px;
+}
+/*<----- Banner Section End----->*/
+
+/*<-----Return Section Start----->*/
+.returnContainer {
+  max-width: 1920px;
+  margin: auto;
+  background-color: var(--blue);
+  text-align: center;
+  padding: 64px 160px;
+}
+
+.returnContainerQuestion {
+  font-family: Light;
+  font-size: 30px;
+  line-height: 40px;
+  color: var(--white);
+}
+
+.returnContainerAnswer {
+  font-family: Light;
+  font-size: 30px;
+  line-height: 40px;
+  color: var(--white);
+}
+
+/*<----- Return Section End----->*/
+
+/* <-----Features Section Start-----> */
+
+.featuresTitleInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 50px 160px;
+  text-align: center;
+}
+
+.featureTitle {
+  font-family: Regular;
+  font-size: 40px;
+}
+
+.featureTitleDesc {
+  font-family: Light;
+  font-size: 16px;
+}
+/* <-----Features Section End-----> */
+
+/* Products Section Start */
+.productsMainContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  padding: 64px 160px;
+  justify-content: center;
+}
+
+.productsTitleInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+}
+
+.productsTitleHeading {
+  font-family: Regular;
+  font-size: 40px;
+}
+.productsTitleDesc {
+  width: 50%;
+  margin: auto;
+  line-height: 26px;
+  font-family: Light;
+  font-size: 17px;
+}
+
+.browseProductsHeading {
+  font-family: Medium;
+  font-size: 16px;
+  color: var(--blue);
+  border-bottom: 1px solid var(--blue);
+  width: 27%;
+  margin: auto;
+}
+
+/* Products Section End */
+
+/*  */
+
+/*<-----Home Page Design End-----> */
+
+/*<----- Medi Query Start-----> */
+/*<----- From 1024px to 1279px view Start----->  */
+@media screen and (min-width: 1023px) and (max-width: 1270px) {
+  /* Banner Section Start */
+  .bannerDescription {
+    padding: 130px 140px;
+  }
+
+  .bannerHeadingLeft {
+    font-family: Regular;
+    font-size: 20px;
+    width: 50%;
+    margin: auto;
+  }
+
+  .bannerInfoRightPara {
+    width: 85%;
+    margin: auto;
+  }
+
+  .bannerInfoRightVideoDesc {
+    width: 85%;
+    margin: auto;
+  }
+
+  /* Banner Section End */
+
+  /* Return Section Start */
+  .returnContainer {
+    padding: 64px 80px;
+    text-align: center;
+  }
+  /* Return Section End */
+
+  /* <-----Features Section Start-----> */
+
+  .featuresTitleInfo {
+    padding: 100px 80px 0px;
+  }
+
+  .featureTitle {
+    font-size: 40px;
+  }
+
+  /* <-----Features Section End-----> */
+
+  /* Products Section Start */
+  .productsMainContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    padding: 64px 80px;
+    justify-content: center;
+  }
+
+  .productsTitleInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .productsTitleHeading {
+    font-size: 40px;
+  }
+  .productsTitleDesc {
+    font-size: 16px;
+  }
+
+  /* Products Section End */
+}
+/*<----- From 1024px to 1279px view End----->  */
+
+/*<----- From 868px to 1023px view Start-----> */
+@media screen and (min-width: 867px) and (max-width: 1023px) {
+  /* Banner Section Start */
+  .bannerDescription {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 208px;
+  }
+
+  .bannerHeadingLeft {
+    font-family: Regular;
+    font-size: 25px;
+    width: 100%;
+  }
+  .bannerInfoRight {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 20px 20px 20px 40px;
+    font-size: 16px;
+  }
+
+  .bannerInfoRightPara {
+    width: 100%;
+    padding-top: 24px;
+  }
+
+  .bannerInfoRightVideoDesc {
+    width: 100%;
+    margin: auto;
+  }
+
+  /* Banner Section End */
+
+  /* Return Section Start */
+  .returnContainer {
+    padding: 40px 60px;
+    text-align: center;
+  }
+  /* Return Section End */
+
+  /* <-----Features Section Start-----> */
+
+  .featuresTitleInfo {
+    padding: 80px 60px 0px;
+  }
+
+  .featureTitle {
+    font-size: 36px;
+  }
+
+  .featureTitleDesc {
+    font-size: 16px;
+  }
+  /* <-----Features Section End-----> */
+
+  /* Products Section Start */
+  .productsMainContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    padding: 64px 60px;
+    justify-content: center;
+  }
+
+  .productsTitleInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .productsTitleHeading {
+    font-size: 36px;
+  }
+  .productsTitleDesc {
+    font-size: 16px;
+  }
+
+  /* Products Section End */
+}
+/*<----- From 868px to 1023px view End-----> */
+
+/*<----- From 550px to 867px view Start-----> */
+@media screen and (min-width: 550px) and (max-width: 868px) {
+  /* Banner Section Start */
+  .bannerContainer {
+    background-image: url('assets/Images/mobilebanner.svg');
+    background-size: cover;
+    height: 100vh;
+  }
+
+  .bannerDescription {
+    display: flex;
+    flex-direction: column;
+    padding: 120px 108px;
+  }
+
+  .bannerHeadingLeft {
+    font-family: Regular;
+    font-size: 16px;
+    width: 100%;
+    margin: auto;
+  }
+  .bannerInfoRight {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 20px 10px 20px 40px;
+    font-size: 16px;
+  }
+
+  .bannerInfoRightPara {
+    width: 100%;
+    padding-top: 24px;
+  }
+
+  .bannerInfoRightVideoDesc {
+    width: 100%;
+    margin: auto;
+  }
+  /* Banner Section End */
+
+  /* Return Section Start */
+  .returnContainer {
+    padding: 40px 32px;
+    text-align: center;
+  }
+  /* Return Section End */
+
+  /* <-----Features Section Start-----> */
+
+  .featuresTitleInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 80px 30px 0px;
+    text-align: center;
+  }
+
+  .featureTitle {
+    font-size: 30px;
+  }
+
+  .featureTitleDesc {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+  }
+  /* <-----Features Section End-----> */
+  /* Products Section Start */
+  .productsMainContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 32px 76px;
+  }
+
+  .productsTitleInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: start;
+    padding: 24px;
+    text-align: center;
+  }
+
+  .productsTitleHeading {
+    font-family: Regular;
+    font-size: 16px;
+  }
+  .productsTitleDesc {
+    width: 80%;
+    margin: auto;
+    line-height: 24px;
+    font-family: Light;
+    font-size: 18px;
+  }
+
+  /* Products Section End */
+}
+/*<-----From 550px to 867px view End-----> */
+
+/*<----- From 550px View Start----->*/
+@media screen and (max-width: 550px) {
+  /* Banner start */
+  .bannerContainer {
+    background-image: url('assets/Images/mobilebanner.svg');
+    background-size: cover;
+    height: 100vh;
+  }
+
+  .bannerDescription {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 150px 40px;
+  }
+
+  .bannerHeadingLeft {
+    font-family: Regular;
+    font-size: 20px;
+  }
+  .bannerInfoRight {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 20px 20px 20px 30px;
+    font-size: 16px;
+  }
+
+  .bannerInfoRightPara {
+    width: 100%;
+    padding-top: 24px;
+  }
+  /* Banner Start */
+
+  /* Return Section Start */
+  .returnContainer {
+    padding: 32px 24px;
+    text-align: start;
+  }
+  .returnContainerQuestion {
+    font-size: 24px;
+    line-height: 20px;
+  }
+
+  .returnContainerAnswer {
+    font-family: Light;
+    font-size: 24px;
+    line-height: 40px;
+    color: var(--white);
+    border-bottom: 1px solid #fff;
+  }
+  /* Return Section End */
+
+  /* <-----Features Section Start-----> */
+
+  .featuresTitleInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 50px 24px 0px;
+    text-align: start;
+  }
+
+  .featureTitle {
+    font-size: 30px;
+  }
+
+  .featureTitleDesc {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  /* Products Section Start */
+  .productsMainContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 32px 10px;
+  }
+
+  .productsTitleInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: start;
+    padding: 24px;
+  }
+
+  .productsTitleHeading {
+    font-family: Regular;
+    font-size: 30px;
+  }
+  .productsTitleDesc {
+    width: 100%;
+    line-height: 24px;
+    font-family: Light;
+    font-size: 16px;
+  }
+
+  .browseProducts {
+    margin: auto;
+  }
+
+  /* Products Section End */
+  /* <-----Features Section End-----> */
+}
+/*<----- From 550px View  End------> */
+
+/*<----- From  320px View Start----->*/
+
+@media screen and (max-width: 320px) {
+  /* Banner Section Start */
+  .bannerContainer {
+    background-image: url('assets/Images/mobilebanner.svg');
+    background-size: cover;
+    height: 100vh;
+  }
+
+  .bannerDescription {
+    display: flex;
+    flex-direction: column;
+    padding: 150px 24px;
+  }
+
+  .bannerHeadingLeft {
+    font-family: Regular;
+    font-size: 16px;
+  }
+  .bannerInfoRight {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 10px 20px 10px 30px;
+    font-size: 16px;
+  }
+
+  .bannerInfoRightPara {
+    width: 100%;
+    padding-top: 24px;
+  }
+  /* Banner Section End */
+
+  /* Return Section Start */
+  .returnContainer {
+    padding: 32px 24px;
+    text-align: start;
+  }
+  .returnContainerQuestion {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .returnContainerAnswer {
+    font-family: Light;
+    font-size: 16px;
+    line-height: 40px;
+    color: var(--white);
+    border-bottom: 1px solid #fff;
+  }
+  /* Return Section End */
+
+  /* <-----Features Section Start-----> */
+
+  .featuresTitleInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 50px 24px 0px;
+    text-align: start;
+  }
+
+  .featureTitle {
+    font-size: 30px;
+  }
+
+  .featureTitleDesc {
+    font-size: 16px;
+  }
+  /* <-----Features Section End-----> */
+
+  /* Products Section Start */
+  .productsMainContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 32px 10px;
+  }
+
+  .productsTitleInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: start;
+    padding: 24px;
+  }
+
+  .productsTitleHeading {
+    font-family: Regular;
+    font-size: 30px;
+  }
+  .productsTitleDesc {
+    width: 100%;
+    line-height: 24px;
+    font-family: Light;
+    font-size: 16px;
+  }
+
+  .browseProducts {
+    margin: auto;
+  }
+
+  /* Products Section End */
+}
+/*<------ From 320px View End-----> */
+
+/* <----Medi Query End------> */

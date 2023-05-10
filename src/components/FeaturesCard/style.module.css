@@ -1,0 +1,254 @@
+.featuresContainer {
+  padding: 64px 160px;
+  
+}
+
+.featuresInsideContainerOdd {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.featureInsideContainerEven {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.featuresInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.featuresHeading {
+  font-family: Regular;
+  font-size: 30px;
+  line-height: 40px;
+}
+.featuresDescrption {
+  font-family: Light;
+  font-size: 17px;
+  line-height: 26px;
+}
+
+.featuresImages {
+  width: 360px;
+  height: 380px;
+}
+
+.imageWidth {
+  width: 100%;
+  height: 100%;
+}
+
+/*<----- Media Query Start-----> */
+
+/* From 1023px to 1270px View Start */
+@media screen and (min-width: 1023px) and (max-width: 1279px) {
+  .featuresContainer {
+    padding: 64px 60px;
+  }
+
+  .featureInsideContainerEven {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 64px;
+    align-items: center;
+  }
+
+  .featuresInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .featuresHeading {
+    font-size: 30px;
+  }
+
+  .featuresDescrption {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .featuresImages {
+    width: 100%;
+    height: 100%;
+  }
+
+  .imageWidth {
+    width: 320px;
+    height: 320px;
+  }
+
+  .featuresDescrption {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .featuresImages {
+    width: 320px;
+    height: 320px;
+  }
+}
+/* From 1023px to 1270px View End */
+
+/* From 868px to 1023px View Start */
+@media screen and (min-width: 867px) and (max-width: 1023px) {
+  .featuresContainer {
+    padding: 64px 60px;
+  }
+
+  .featureInsideContainerEven {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 64px;
+    align-items: center;
+  }
+
+  .featuresInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .featuresHeading {
+    font-size: 26px;
+  }
+
+  .featuresDescrption {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .featuresImages {
+    width: 100%;
+    height: 100%;
+  }
+
+  .imageWidth {
+    width: 280px;
+    height: 280px;
+  }
+}
+/* From 868px to 1023px View End */
+
+/* From 550px to 867px View Start */
+
+@media screen and (min-width: 550px) and (max-width: 867px) {
+  /* Features Section Start */
+  .featuresContainer {
+    padding: 64px 90px;
+  }
+
+  .featuresInsideContainerOdd,
+  .featureInsideContainerEven {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .featuresInfo {
+    display: flex;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .featuresHeading {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .featuresDescrption {
+    font-size: 16px;
+    width: 75%;
+    margin: auto;
+  }
+
+  .featuresImages {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Features Section End */
+}
+
+/* From 550px to 867px View End */
+
+/* From 550px View Start*/
+@media screen and (max-width: 550px) {
+  /* Features Section Start */
+  .featuresContainer {
+    padding: 64px 24px 24px 24px;
+  }
+
+  .featuresInsideContainerOdd,
+  .featureInsideContainerEven {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .featuresInfo {
+    display: flex;
+    gap: 12px;
+  }
+
+  .featuresHeading {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .featuresDescrption {
+    font-size: 16px;
+  }
+
+  .featuresImages {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Features Section End */
+}
+/* From 550px View  End*/
+
+/* From  320px View Start*/
+
+@media screen and (max-width: 320px) {
+  /* Features Section Start */
+  .featuresContainer {
+    padding: 64px 24px 24px 24px;
+  }
+
+  .featuresInsideContainerOdd,
+  .featureInsideContainerEven {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .featuresInfo {
+    display: flex;
+    gap: 12px;
+  }
+
+  .featuresHeading {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .featuresDescrption {
+    font-size: 16px;
+  }
+
+  .featuresImages {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Features Section End */
+}
+/* From 320px View End*/
+
+/*<----- Media Query End-----> */

@@ -1,13 +1,39 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    margin: 0;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root{
+    --white:#ffff;
+    --black:#0000;
+    --blue:#1373FB;
+    --lightgrey:#f2f2f2;
+}
+
+@font-face {
+    font-family:"Light";
+    src: url("assets/Fonts/Euclid\ Circular\ B\ Light.ttf");
+    font-weight: 300;
+}
+@font-face {
+    font-family:"Medium";
+    src: url("assets/Fonts/Euclid\ Circular\ B\ Medium.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family:"Regular";
+    src: url("assets/Fonts/Euclid\ Circular\ B\ Regular.ttf");
+    font-weight: 500;
+}
+@font-face {
+    font-family:"SemiBold";
+    src: url("assets/Fonts/Euclid\ Circular\ B\ SemiBold.ttf");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family:"Bold";
+    src: url("assets/Fonts/Euclid\ Circular\ B\ Bold.ttf");
+    font-weight: 800;
 }
