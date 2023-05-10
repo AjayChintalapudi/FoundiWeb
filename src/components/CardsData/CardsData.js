@@ -6,6 +6,8 @@ import {
   productspackone,
   productspacktwo,
   productspackthree,
+  uparrow,
+  downarrow,
 } from 'resources/Images/Images';
 import { Strings } from 'resources/Strings/eng';
 const { home } = Strings;
@@ -60,24 +62,58 @@ const ProductsData = [
 ];
 
 const QuestionAnswerData = [
+  
   {
     question: home.questionOne,
+    upArrow:uparrow,
+    downArrow:downarrow,
     answer: home.answerOne, 
+   
+  },
+  {
+    question: home.questionOne,
+    upArrow:uparrow,
+    downArrow:downarrow,
+    answer: home.answerOne, 
+   
+  },
+  {
+    question: home.questionOne,
+    upArrow:uparrow,
+    downArrow:downarrow,
+    answer: home.answerOne, 
+   
+  },
+  {
+    question: home.questionOne,
+    upArrow:uparrow,
+    downArrow:downarrow,
+    answer: home.answerOne, 
+   
   },
 
   {
     question: home.questionTwo,
+    upArrow:uparrow,
+    downArrow:downarrow,
     answer: home.answerTwo,
+  
   },
 
   {
     question: home.questionThree,
+    upArrow:uparrow,
+    downArrow:downarrow,
     answer: home.answerThree,
+ 
   },
 
   {
     question: home.questionFour,
+    upArrow:uparrow,
+    downArrow:downarrow,
     answer: home.answerFour ,
+   
   },
 ];
 

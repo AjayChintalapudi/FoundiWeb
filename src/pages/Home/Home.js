@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './styles.module.css';
 import NavBar from 'components/NavBar/NavBar';
 import { playicon } from 'resources/Images/Images';
+import { learnmore } from 'resources/Images/Images';
 import { Strings } from 'resources/Strings/eng';
 import {
   FeatureData,
@@ -14,6 +15,15 @@ import QuestionAnswer from 'components/Accordion/QuestionAnswer';
 
 const Home = () => {
   const { home } = Strings;
+
+  // Accordion QuestionAnswer Section
+  const [collapse, setCollapse] = useState(0);
+  const showAnswer = (index) => {
+    if (collapse === index) {
+      setCollapse(null);
+    }
+    setCollapse(index);
+  };
   const bannerSection = () => {
     return (
       <div className={styles.bannerContainer}>
@@ -104,21 +114,57 @@ const Home = () => {
   const questionAnswerSection = () => {
     return (
       <div className={styles.questionAnswerTitleInfo}>
-        <h2 className={styles.questionAnswerHeading}>{home.questionAnswerHeading}</h2>
+        <h2 className={styles.questionAnswerHeading}>
+          {home.questionAnswerHeading}
+        </h2>
         <p className={styles.questionAnswerDesc}>{home.questionAnswerDesc}</p>
-      <div className={styles.questionAnswerContainer}>
-        {QuestionAnswerData &&
-          QuestionAnswerData.map((item, index) => (
-            <QuestionAnswer
-              key={index}
-              question={item.question}
-              answer={item.answer}
-            />
-          ))}
-      </div>
+        <div className={styles.questionAnswerContainer}>
+          {QuestionAnswerData &&
+            QuestionAnswerData.map((item, index) => (
+              <QuestionAnswer
+                key={index}
+                question={item.question}
+                answer={item.answer}
+                upArrow={item.upArrow}
+                downArrow={item.downArrow}
+                onClick={() => {
+                  showAnswer(index);
+                }}
+                collapse={collapse}
+                index={index}
+              />
+            ))}
+        </div>
+        <div className={styles.letsTalk}>
+          <span className={styles.letsTalkQuestion}>
+            {home.letsTalkQuestion}
+          </span>
+          <span className={styles.letsTalkHeading}>{home.letsTalkHeading}</span>
+          <span className={styles.letsTalkIcon}>{home.letsTalkIcon}</span>
+        </div>
       </div>
     );
   };
+
+  const sustainabilitySection = () => {
+    return(
+    <div className={styles.sustainabilityContainer}>
+      <div className={styles.sustainabilityHeading}>
+        <h1>{home.sustainabilityHeading}</h1>
+      </div>
+      <div className={styles.sustainabilityDescContainer}>
+        <div className={styles.sustainabilityDesc}>
+          <p>{home.sustainabilityDesc}</p>
+        </div>
+        <div className={styles.learnMoreContainer}>
+          <img src={learnmore} alt={home.learnMoreAlt} />
+          <p>{home.learnMore}</p>
+        </div>
+      </div>
+    </div>
+    );
+  };
+
   return (
     <div className={styles.homeSection}>
       {bannerSection()}
@@ -126,6 +172,7 @@ const Home = () => {
       {featuresSection()}
       {productsSection()}
       {questionAnswerSection()}
+      {sustainabilitySection()}
     </div>
   );
 };

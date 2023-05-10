@@ -51,8 +51,9 @@ export const Strings = {
     browserProductIcon: '🛍️',
     // QuestionAnswer Section
 
-    questionAnswerHeading:"You’ve got questionsWe’ve got answers!",
-    questionAnswerDesc:"Everything you need to know about our product. In case your query isn’t present below, please feel free to contact us.",
+    questionAnswerHeading: 'You’ve got questions We’ve got answers!',
+    questionAnswerDesc:
+      'Everything you need to know about our product. In case your query isn’t present below, please feel free to contact us.',
     questionOne:
       '01 - What should I do if I found an item without Foundi tag attached to it?',
     answerOne:
@@ -67,5 +68,16 @@ export const Strings = {
       '04 - Here goes the question number four and how the questions should look if it take two or more lines?',
     answerFour:
       "'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse risus urna, rutrum non quam in. Lorem ipsum dolor sit. Suspendisse risus urna, rutrum non quam in. Lorem ipsum dolor sit. Suspendisse risus urna, rutrum non quam in.",
+
+    // Letus Talk
+    letsTalkQuestion: 'Still have questions?',
+    letsTalkHeading: 'Let’s talk',
+    letsTalkIcon: '📞',
+    // Sustanability Section
+    sustainabilityHeading: 'Sustainability is our core belief.',
+    sustainabilityDesc:
+      'Make a difference to be the difference. We put 120% of our effort towards Product, Environmental, and Social sustainability.',
+    learnMore: 'Learn more',
+    learnMoreAlt: 'LearnMore',
   },
 };
