@@ -22,5 +22,6 @@ export {default as uparrow} from "assets/Images/uparrow.svg";
 export {default as downarrow} from "assets/Images/downarrow.svg";
 
 // Sustainability Images
-// export {default as sustainabilitybackground} from "assets/Images/sustainabilitybackground.svg";
+export {default as sustainabilitybackground} from "assets/Images/sustainabilitybackground.svg";
 export {default as learnmore} from "assets/Images/learnmore.svg";
+export {default as sustainabilitybackgroundmobile} from "assets/Images/sustainabilitybackgroundmobile.svg";

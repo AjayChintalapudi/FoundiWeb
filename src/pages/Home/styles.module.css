@@ -8,7 +8,7 @@
 }
 
 .bannerInsideContainer {
-  background:var(--blacktransparent);
+  background: var(--blacktransparent);
   backdrop-filter: blur(8px);
   height: 100%;
   width: 100%;
@@ -23,7 +23,7 @@
 }
 
 .bannerHeadingLeft {
-  font-family: "Regular",sans-serif;
+  font-family: 'Regular', sans-serif;
   font-size: 30px;
 }
 
@@ -74,6 +74,7 @@
   font-size: 30px;
   line-height: 40px;
   color: var(--white);
+  border-bottom: 1px solid var(--white);
 }
 
 /*<----- Return Section End----->*/
@@ -175,9 +176,55 @@
 /* questionAnswer Section End */
 
 /* Sustainability Section Start */
-  .sustainabilityContainer{
-    /* background-image:url('assets/Images/sustainabilitybackground.svg'); */
-  }
+.sustainabilityContainer {
+  background-image: url('assets/Images/sustainabilitybackground.svg');
+  background-size: cover;
+  height: 100vh;
+}
+
+.sustainabilityInsideContainer {
+  display: flex;
+  flex-direction: row;
+  padding: 308px 300px;
+  background: var(--blacktransparent);
+  backdrop-filter: blur(8px);
+  height: 100%;
+  width: 100%;
+}
+
+.sustainabilityHeading {
+  width: 452px;
+  font-size: 48px;
+  font-family: 'Regular', sans-serif;
+  color: var(--white);
+}
+
+.sustainabilityDescContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-top: 80px;
+  color: var(--grey92);
+}
+
+.sustainabilityDesc {
+  width: 420px;
+  line-height: 24px;
+  font-family: 'Light', sans-serif;
+  font-size: 17px;
+}
+.learnMoreContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.learnMoreDesc {
+  font-family: 'Regular', sans-serif;
+  font-size: 16px;
+}
+
 /* Sustainability Section End */
 
 /*<-----Home Page Design End-----> */
@@ -191,7 +238,7 @@
   }
 
   .bannerHeadingLeft {
-    font-family: "Regular", sans-serif;
+    font-family: 'Regular', sans-serif;
     font-size: 20px;
     width: 50%;
     margin: auto;
@@ -263,8 +310,8 @@
 
   .questionAnswerHeading {
     margin: auto;
-    font-size:40px;
-    width:55%;
+    font-size: 40px;
+    width: 55%;
   }
 
   .questionAnswerDesc {
@@ -275,10 +322,44 @@
   }
 
   .letsTalk {
-   font-family: Medium;
+    font-family: Medium;
     margin: auto;
   }
   /* questionAnswer Section End */
+
+  /* Sustainability Section Start */
+
+.sustainabilityInsideContainer {
+  display: flex;
+  flex-direction: row;
+  padding: 250px 180px;
+}
+
+.sustainabilityHeading {
+  width: 452px;
+  font-size: 48px;
+}
+
+.sustainabilityDesc {
+  width: 420px;
+  font-family: 'Light', sans-serif;
+  line-height: 24px;
+  font-size: 17px;
+}
+.learnMoreContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.learnMoreDesc {
+  font-family: 'Regular', sans-serif;
+  font-size: 16px;
+}
+
+/* Sustainability Section End */
+
 }
 /*<----- From 1024px to 1279px view End----->  */
 
@@ -385,10 +466,53 @@
   }
 
   .letsTalk {
-   font-family: Medium;
+    font-family: Medium;
     margin: auto;
   }
   /* questionAnswer Section End */
+
+  /* Sustainability Section Start */
+  .sustainabilityContainer {
+    background-image: url('assets/Images/sustainabilitybackgroundmobile.svg');
+    background-size: cover;
+    height: 100vh;
+  }
+
+  .sustainabilityInsideContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 240px 120px;
+  }
+  .sustainabilityHeading {
+    width: 452px;
+    margin: auto;
+    font-size: 40px;
+  }
+
+  .sustainabilityDescContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 30px;
+  }
+
+  .sustainabilityDesc {
+    width: 450px;
+    margin: auto;
+    padding: 0px 24px;
+    line-height: 24px;
+  }
+  .learnMoreContainer {
+    width: 450px;
+    padding: 0px 24px;
+    margin: auto;
+  }
+
+  .learnMoreDesc {
+    color: var(--white);
+  }
+
+  /* Sustainability Section End */
 }
 /*<----- From 868px to 1023px view End-----> */
 
@@ -490,34 +614,76 @@
 
   /* Products Section End */
 
-    /* questionAnswer Section Start */
-    .questionAnswerTitleInfo {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      padding: 80px 24px 32px 24px;
-      text-align: center;
-    }
-  
-    .questionAnswerHeading {
-      margin: auto;
-      font-size: 36px;
-      width: 70%;
-    }
-  
-    .questionAnswerDesc {
-      font-size: 16px;
-      line-height: 24px;
-      width: 90%;
-      margin: auto;
-    }
-  
-    .letsTalk {
-     font-family: Medium;
-      margin: auto;
-    }
-    /* questionAnswer Section End */
+  /* questionAnswer Section Start */
+  .questionAnswerTitleInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 80px 24px 32px 24px;
+    text-align: center;
+  }
 
+  .questionAnswerHeading {
+    margin: auto;
+    font-size: 36px;
+    width: 70%;
+  }
+
+  .questionAnswerDesc {
+    font-size: 16px;
+    line-height: 24px;
+    width: 90%;
+    margin: auto;
+  }
+
+  .letsTalk {
+    font-family: Medium;
+    margin: auto;
+  }
+  /* questionAnswer Section End */
+
+  /* Sustainability Section Start */
+  .sustainabilityContainer {
+    background-image: url('assets/Images/sustainabilitybackgroundmobile.svg');
+    background-size: cover;
+    height: 100vh;
+  }
+
+  .sustainabilityInsideContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 240px 108px;
+  }
+  .sustainabilityHeading {
+    width: 452px;
+    margin: auto;
+    font-size: 40px;
+  }
+
+  .sustainabilityDescContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 30px;
+  }
+
+  .sustainabilityDesc {
+    width: 380px;
+    margin: auto;
+    padding: 0px 24px;
+    line-height: 24px;
+  }
+  .learnMoreContainer {
+    width: 380px;
+    padding: 0px 24px;
+    margin: auto;
+  }
+
+  .learnMoreDesc {
+    color: var(--white);
+  }
+
+  /* Sustainability Section End */
 }
 /*<-----From 550px to 867px view End-----> */
 
@@ -570,7 +736,7 @@
     font-size: 24px;
     line-height: 40px;
     color: var(--white);
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid var(--white);
   }
   /* Return Section End */
 
@@ -592,6 +758,8 @@
     font-size: 16px;
     width: 100%;
   }
+
+  /* <-----Features Section End-----> */
 
   /* Products Section Start */
   .productsMainContainer {
@@ -650,7 +818,49 @@
     margin: auto;
   }
   /* questionAnswer Section End */
-  /* <-----Features Section End-----> */
+
+  /* Sustainability Section Start */
+  .sustainabilityContainer {
+    background-image: url('assets/Images/sustainabilitybackgroundmobile.svg');
+    background-size: cover;
+    height: 100vh;
+  }
+
+  .sustainabilityInsideContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 202px 24px;
+  }
+
+  .sustainabilityHeading {
+    width: 100%;
+    font-size: 40px;
+  }
+
+  .sustainabilityDescContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 24px;
+  }
+
+  .sustainabilityDesc {
+    width:100%;
+    padding: 0px 24px;
+    color: var(--grey92);
+    font-size: 16px;
+  }
+  .learnMoreContainer {
+    width: 100%;
+    padding: 0px 24px;
+  }
+
+  .learnMoreDesc {
+    width: 100%;
+    color: var(--white);
+  }
+
+  /* Sustainability Section End */
 }
 /*<----- From 550px View  End------> */
 
@@ -783,6 +993,49 @@
     margin: auto;
   }
   /* questionAnswer Section End */
+
+  /* Sustainability Section Start */
+  .sustainabilityContainer {
+    background-image: url('assets/Images/sustainabilitybackgroundmobile.svg');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .sustainabilityInsideContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 202px 24px;
+  }
+
+  .sustainabilityHeading {
+    width: 280px;
+    font-size: 30px;
+  }
+
+  .sustainabilityDescContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 24px;
+  }
+
+  .sustainabilityDesc {
+    width: 280px;
+    color: var(--grey92);
+    font-size: 16px;
+    padding: 0px 10px 0px 30px;
+  }
+  .learnMoreContainer {
+    width: 280px;
+    padding: 0px 10px 0px 30px;
+  }
+
+  .learnMoreDesc {
+    color: var(--white);
+  }
+
+  /* Sustainability Section End */
 }
 /*<------ From 320px View End-----> */
 

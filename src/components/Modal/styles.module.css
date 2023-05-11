@@ -1,0 +1,23 @@
+.noscroll {
+  overflow: hidden;
+}
+
+.videoPopUp {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color:var(--white);
+  padding: 20px;
+}
+
+.closeIcon{
+  position: absolute;
+  border-radius: 50%;
+  right: -50px;
+  top:-40px;
+  padding: 10px;
+  color: var(--blue);
+  cursor: pointer;
+  font-size: 30px;
+}
