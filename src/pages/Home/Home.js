@@ -3,7 +3,7 @@ import styles from './styles.module.css';
 import NavBar from 'components/NavBar/NavBar';
 import { playicon } from 'resources/Images/Images';
 import { learnmore } from 'resources/Images/Images';
-import { Strings } from 'resources/Strings/eng';
+import { englishStrings } from 'resources/Strings/eng';
 import {
   FeatureData,
   ProductsData,
@@ -15,7 +15,7 @@ import QuestionAnswer from 'components/Accordion/QuestionAnswer';
 import Modal from 'components/Modal/Modal';
 
 const Home = () => {
-  const { home } = Strings;
+  const {home} =englishStrings;
 
   // Accordion QuestionAnswer Section
   const [collapse, setCollapse] = useState(0);

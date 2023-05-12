@@ -1,10 +1,12 @@
 import React from 'react';
 import styles from './styles.module.css';
 import { navbarlogo, language, cart, profile,menu } from 'resources/Images/Images';
-import { Strings } from 'resources/Strings/eng';
+// import { Strings } from 'resources/Strings/eng';
+import { englishStrings } from 'resources/Strings/eng';
 
 const NavBar = () => {
-  const{navbar}=Strings;
+  // const{navbar}=Strings;
+  const {navbar}=englishStrings;
   return (
     <div className={styles.navbarContainer}>
       <div className={styles.navbarLogoLeft}>

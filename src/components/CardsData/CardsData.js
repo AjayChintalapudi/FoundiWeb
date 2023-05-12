@@ -9,8 +9,9 @@ import {
   uparrow,
   downarrow,
 } from 'resources/Images/Images';
-import { Strings } from 'resources/Strings/eng';
-const { home } = Strings;
+// import { Strings } from 'resources/Strings/eng';
+import { englishStrings } from 'resources/Strings/eng';
+const { home } = englishStrings;
 const FeatureData = [
   {
     heading: home.purchasetag,

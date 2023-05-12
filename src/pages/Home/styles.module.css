@@ -35,7 +35,7 @@
 
 .bannerInfoRightPara {
   width: 120%;
-  color: var(--grey92);
+  color: var(--grey95);
   margin: auto;
   padding-top: 140px;
   font-family: Light;
@@ -204,7 +204,7 @@
   flex-direction: column;
   gap: 32px;
   padding-top: 80px;
-  color: var(--grey92);
+  color: var(--grey95);
 }
 
 .sustainabilityDesc {
@@ -847,7 +847,7 @@
   .sustainabilityDesc {
     width:100%;
     padding: 0px 24px;
-    color: var(--grey92);
+    color: var(--grey95);
     font-size: 16px;
   }
   .learnMoreContainer {
@@ -1022,7 +1022,7 @@
 
   .sustainabilityDesc {
     width: 280px;
-    color: var(--grey92);
+    color: var(--grey95);
     font-size: 16px;
     padding: 0px 10px 0px 30px;
   }
