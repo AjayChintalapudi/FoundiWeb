@@ -9,7 +9,7 @@ import {
   droppedImg,
   eventImg3,
   eventImg2,
-} from 'resources/Image/Image';
+} from 'resources/Images/Images';
 import Button from 'components/Button/Button';
 import Footer from 'components/Footer/Footer';
 const { eventPageStrings } = englishStrings;
@@ -160,7 +160,7 @@ const Events = () => {
             <div className={styles.eventsBannerBottomDropSection}>
               <div className={styles.eventsBannerDropSection}>
                 <div className={styles.eventsBannerDropLeftSection}>
-                  <img src={droppedImg} className={styles.imageWidth} />
+                  <img src={droppedImg} className={styles.imageWidth} alt="droppedImage"/>
                 </div>
                 <div className={styles.eventsBannerDropRightSection}>
                   <h6 className={styles.eventsBannerRightHeading}>

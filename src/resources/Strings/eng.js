@@ -78,6 +78,9 @@ const home = {
     'Make a difference to be the difference. We put 120% of our effort towards Product, Environmental, and Social sustainability.',
   learnMore: 'Learn more',
   learnMoreAlt: 'LearnMore',
+
+  // Collabarate Section
+  collabarateHeading:"We collaborated with the leading brands to ensure the best services for our end users."
 };
 const eventPageStrings = {
   eventsHeroSectionHeading: 'EXPO 2020 - Dubai',

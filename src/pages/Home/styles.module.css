@@ -204,7 +204,6 @@
   flex-direction: column;
   gap: 32px;
   padding-top: 80px;
-  color: var(--grey95);
 }
 
 .sustainabilityDesc {
@@ -212,6 +211,7 @@
   line-height: 24px;
   font-family: 'Light', sans-serif;
   font-size: 17px;
+  color: var(--gray95);
 }
 .learnMoreContainer {
   display: flex;
@@ -223,9 +223,56 @@
 .learnMoreDesc {
   font-family: 'Regular', sans-serif;
   font-size: 16px;
+  color: var(--gray95);
 }
 
 /* Sustainability Section End */
+
+/* Collabarate Section Start */
+.collabarateInsideContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  text-align: center;
+  padding: 100px 330px;
+}
+.collabarateHeading {
+  max-width: 738px;
+  margin: auto;
+  text-align: center;
+  line-height: 40px;
+  font-family: 'Light', sans-serif;
+  font-size: 30px;
+  color: var(--blackfade);
+}
+
+.collabarateButtons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.collabarateBtnStyle {
+  height: 100px;
+  background-color: var(--gray95);
+  border: 1px solid var(--gray72);
+  border-radius: 84px;
+  padding: 34px 84px;
+}
+
+.imageWrapperStyle {
+  width: 80px;
+  height: 32px;
+}
+
+.imgStyle {
+  width: 100%;
+  height: 100%;
+}
+
+/* Collabarate Section End */
 
 /*<-----Home Page Design End-----> */
 
@@ -329,36 +376,79 @@
 
   /* Sustainability Section Start */
 
-.sustainabilityInsideContainer {
+  .sustainabilityInsideContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 250px 180px;
+  }
+
+  .sustainabilityHeading {
+    width: 452px;
+    font-size: 48px;
+  }
+
+  .sustainabilityDesc {
+    width: 420px;
+    font-family: 'Light', sans-serif;
+    line-height: 24px;
+    font-size: 17px;
+  }
+  .learnMoreContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    color: white;
+  }
+
+  .learnMoreDesc {
+    font-family: 'Regular', sans-serif;
+    font-size: 16px;
+  }
+
+  /* Sustainability Section End */
+
+  /* Collabarate Section Start */
+.collabarateInsideContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  text-align: center;
+  padding: 80px 150px;
+}
+.collabarateHeading {
+  max-width: 960px;
+  margin: auto;
+  text-align: center;
+  line-height: 40px;
+  font-size: 30px;
+}
+
+.collabarateButtons {
   display: flex;
   flex-direction: row;
-  padding: 250px 180px;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
 }
 
-.sustainabilityHeading {
-  width: 452px;
-  font-size: 48px;
+.collabarateBtnStyle {
+  height: 100px;
+  border-radius: 84px;
+  padding: 34px 84px;
 }
 
-.sustainabilityDesc {
-  width: 420px;
-  font-family: 'Light', sans-serif;
-  line-height: 24px;
-  font-size: 17px;
-}
-.learnMoreContainer {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  align-items: center;
+.imageWrapperStyle {
+  width: 80px;
+  height: 32px;
 }
 
-.learnMoreDesc {
-  font-family: 'Regular', sans-serif;
-  font-size: 16px;
+.imgStyle {
+  width: 100%;
+  height: 100%;
 }
 
-/* Sustainability Section End */
+/* Collabarate Section End */
 
 }
 /*<----- From 1024px to 1279px view End----->  */
@@ -513,6 +603,49 @@
   }
 
   /* Sustainability Section End */
+
+  /* Collabarate Section Start */
+.collabarateInsideContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  text-align: center;
+  padding: 80px 150px;
+}
+.collabarateHeading {
+  max-width: 960px;
+  margin: auto;
+  text-align: center;
+  line-height: 40px;
+  font-size: 30px;
+}
+
+.collabarateButtons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.collabarateBtnStyle {
+  height: 100px;
+  border-radius: 84px;
+  padding: 34px 84px;
+}
+
+.imageWrapperStyle {
+  width: 80px;
+  height: 32px;
+}
+
+.imgStyle {
+  width: 100%;
+  height: 100%;
+}
+
+/* Collabarate Section End */
+
 }
 /*<----- From 868px to 1023px view End-----> */
 
@@ -684,6 +817,47 @@
   }
 
   /* Sustainability Section End */
+
+  
+/* Collabarate Section Start */
+.collabarateInsideContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  text-align: center;
+  padding: 80px 32px;
+}
+.collabarateHeading {
+  width: 100%;
+  text-align: center;
+  line-height: 34px;
+  font-size: 34px;
+}
+
+.collabarateButtons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.collabarateBtnStyle {
+  height: 100px;
+  padding: 26px 76px;
+}
+
+.imageWrapperStyle {
+  width: 80px;
+  height: 32px;
+}
+
+.imgStyle {
+  width: 100%;
+  height: 100%;
+}
+
+/* Collabarate Section End */
 }
 /*<-----From 550px to 867px view End-----> */
 
@@ -845,9 +1019,8 @@
   }
 
   .sustainabilityDesc {
-    width:100%;
+    width: 100%;
     padding: 0px 24px;
-    color: var(--grey95);
     font-size: 16px;
   }
   .learnMoreContainer {
@@ -861,6 +1034,43 @@
   }
 
   /* Sustainability Section End */
+
+  /* Collabarate Section Start */
+  .collabarateInsideContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    text-align: start;
+    padding: 80px 24px;
+  }
+  .collabarateHeading {
+    width: 100%;
+    text-align: start;
+    line-height: 30px;
+    font-family: 'Light', sans-serif;
+    font-size: 20px;
+    color: var(--blackfade);
+  }
+
+  .collabarateButtons {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .collabarateBtnStyle {
+    width: 100%;
+    height: 80px;
+    padding: 24px 84px;
+  }
+
+  .imageWrapperStyle {
+    width: 100%;
+    height: 26px;
+  }
+
+  /* Collabarate Section End */
 }
 /*<----- From 550px View  End------> */
 
@@ -1022,7 +1232,6 @@
 
   .sustainabilityDesc {
     width: 280px;
-    color: var(--grey95);
     font-size: 16px;
     padding: 0px 10px 0px 30px;
   }
@@ -1036,6 +1245,43 @@
   }
 
   /* Sustainability Section End */
+
+  /* Collabarate Section Start */
+  .collabarateInsideContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    text-align: start;
+    padding: 80px 24px;
+  }
+  .collabarateHeading {
+    width: 100%;
+    text-align: start;
+    line-height: 30px;
+    font-family: 'Light', sans-serif;
+    font-size: 20px;
+    color: var(--blackfade);
+  }
+
+  .collabarateButtons {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .collabarateBtnStyle {
+    width: 100%;
+    height: 80px;
+    padding: 24px 84px;
+  }
+
+  .imageWrapperStyle {
+    width: 100%;
+    height: 26px;
+  }
+
+  /* Collabarate Section End */
 }
 /*<------ From 320px View End-----> */
 

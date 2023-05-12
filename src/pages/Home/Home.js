@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import styles from './styles.module.css';
 import NavBar from 'components/NavBar/NavBar';
 import { playicon } from 'resources/Images/Images';
 import { learnmore } from 'resources/Images/Images';
 import { englishStrings } from 'resources/Strings/eng';
 import {
+  CollabarateData,
   FeatureData,
   ProductsData,
   QuestionAnswerData,
@@ -13,9 +13,12 @@ import FeaturesCard from 'components/FeaturesCard/FeaturesCard';
 import Products from 'components/Products/Products';
 import QuestionAnswer from 'components/Accordion/QuestionAnswer';
 import Modal from 'components/Modal/Modal';
+import Footer from 'components/Footer/Footer';
+import Button from 'components/Button/Button';
+import styles from './styles.module.css';
 
 const Home = () => {
-  const {home} =englishStrings;
+  const { home } = englishStrings;
 
   // Accordion QuestionAnswer Section
   const [collapse, setCollapse] = useState(0);
@@ -282,6 +285,54 @@ const Home = () => {
     );
   };
 
+  const collabarateSection = () => {
+    return (
+      <div className={styles.collabarateContainer}>
+        <div className={styles.collabarateInsideContainer}>
+          {collabarateTitleInfo()}
+          {collabarateButtons()}
+        </div>
+      </div>
+    );
+  };
+
+  const collabarateTitleInfo = () => {
+    return (
+      <div className={styles.collabarateTitleInfo}>
+        <h3 className={styles.collabarateHeading}>{home.collabarateHeading}</h3>
+      </div>
+    );
+  };
+
+  const collabarateButtons = () => {
+    
+    return (
+      <div className={styles.collabarateButtons}>
+        {CollabarateData &&
+          CollabarateData.map((item, index) => {
+            return (
+              <Button
+                key={index}
+                btnStyles={styles.collabarateBtnStyle}
+                image={item.buttonImage}
+                imageWrapperStyle={styles.imageWrapperStyle}
+                imgStyles={styles.imgStyles}
+                indexNo={index}
+              />
+            );
+          })}
+      </div>
+    );
+  };
+
+  const FooterSection = () => {
+    return (
+      <div>
+        <Footer />
+      </div>
+    );
+  };
+
   return (
     <div className={styles.homeSection}>
       {bannerSection()}
@@ -290,6 +341,8 @@ const Home = () => {
       {productsSection()}
       {questionAnswerSection()}
       {sustainabilitySection()}
+      {collabarateSection()}
+      {FooterSection()}
     </div>
   );
 };

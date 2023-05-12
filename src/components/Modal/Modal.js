@@ -12,14 +12,15 @@ const Modal = (props) => {
   }, [props.isVideoOpen]);
   return (
     <div className={styles.videoPopUp}>
-      <span className={styles.closeIcon}
+      <span
+        className={styles.closeIcon}
         onClick={() => {
           props.setIsVideoOpen(false);
         }}
       >
         <RxCross1 />
       </span>
-      
+
       <iframe
         width="1000"
         height="450"

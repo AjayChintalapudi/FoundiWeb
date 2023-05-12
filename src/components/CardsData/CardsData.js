@@ -8,6 +8,11 @@ import {
   productspackthree,
   uparrow,
   downarrow,
+  ebay,
+  aws,
+  google,
+  twitch,
+  ios
 } from 'resources/Images/Images';
 // import { Strings } from 'resources/Strings/eng';
 import { englishStrings } from 'resources/Strings/eng';
@@ -118,4 +123,25 @@ const QuestionAnswerData = [
   },
 ];
 
-export { FeatureData, ProductsData,QuestionAnswerData };
+const CollabarateData=[{
+  buttonImage:ebay
+},
+{
+  buttonImage:aws
+},
+
+{
+  buttonImage:google
+},
+{
+  buttonImage:twitch
+},
+{
+  buttonImage:ios
+},
+// {
+//   buttonImage:ebay
+// },
+]
+
+export { FeatureData, ProductsData,QuestionAnswerData, CollabarateData};

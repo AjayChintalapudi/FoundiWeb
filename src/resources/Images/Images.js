@@ -18,10 +18,31 @@ export { default as productspackthree } from 'assets/Images/productspackthree.sv
 
 // Question Answer Images
 
-export {default as uparrow} from "assets/Images/uparrow.svg";
-export {default as downarrow} from "assets/Images/downarrow.svg";
+export { default as uparrow } from 'assets/Images/uparrow.svg';
+export { default as downarrow } from 'assets/Images/downarrow.svg';
 
 // Sustainability Images
-export {default as sustainabilitybackground} from "assets/Images/sustainabilitybackground.svg";
-export {default as learnmore} from "assets/Images/learnmore.svg";
-export {default as sustainabilitybackgroundmobile} from "assets/Images/sustainabilitybackgroundmobile.svg";
+export { default as sustainabilitybackground } from 'assets/Images/sustainabilitybackground.svg';
+export { default as learnmore } from 'assets/Images/learnmore.svg';
+export { default as sustainabilitybackgroundmobile } from 'assets/Images/sustainabilitybackgroundmobile.svg';
+
+// Collabarate Images
+
+export { default as ebay } from 'assets/Images/ebay.svg';
+export { default as aws } from 'assets/Images/aws.svg';
+export { default as google } from 'assets/Images/google.svg';
+export { default as twitch } from 'assets/Images/twitch.svg';
+export { default as ios } from 'assets/Images/ios.svg';
+
+// Footer Images
+export { default as fbImg } from 'assets/Images/facebook.svg';
+export { default as instaImg } from 'assets/Images/instagram.svg';
+export { default as twitterImg } from 'assets/Images/twitter.svg';
+export { default as linkedinImg } from 'assets/Images/linkedin.svg';
+export { default as eventImg } from 'assets/Images/eventImage.svg';
+export { default as LeftImg } from 'assets/Images/LeftIcon.svg';
+export { default as RightImg } from 'assets/Images/RightIcon.svg';
+export { default as linkImg } from 'assets/Images/Link.svg';
+export { default as droppedImg } from 'assets/Images/dropedImg.svg';
+export { default as eventImg2 } from 'assets/Images/Eventimage2.svg';
+export { default as eventImg3 } from 'assets/Images/Event image3.svg';
