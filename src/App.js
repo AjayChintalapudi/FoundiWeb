@@ -1,11 +1,11 @@
-import Footer from 'components/Footer/Footer';
 import Events from './pages/Events/Events';
+import Products from './pages/Products/Products';
 
 function App() {
   return (
     <div className="App">
-      {/* <Footer /> */}
-      <Events />
+      {/* <Events /> */}
+      <Products />
     </div>
   );
 }

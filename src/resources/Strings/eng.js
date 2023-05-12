@@ -34,4 +34,18 @@ const footerPageStrings = {
   footerRights: '©2022, All right reserved - Foundi',
 };
 
-export const englishStrings = { eventPageStrings, footerPageStrings };
+const prooductsPageStrings = {
+  productsHeroSectionHeading: '🎄Holiday Season Sale!',
+  productsHeroSectionPara:
+    '  Get a flat 30% off on all our products till 5th January 2023. Use the below coupon code to avail the offer. Hurry up!',
+  productsHeroSectionButton: 'GET40OFFHD',
+};
+
+const productsCategoriesData = {};
+
+export const englishStrings = {
+  eventPageStrings,
+  footerPageStrings,
+  prooductsPageStrings,
+  productsCategoriesData,
+};

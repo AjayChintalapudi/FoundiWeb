@@ -9,3 +9,5 @@ export { default as linkImg } from 'assets/Images/Link.svg';
 export { default as droppedImg } from 'assets/Images/dropedImg.svg';
 export { default as eventImg2 } from 'assets/Images/Eventimage2.svg';
 export { default as eventImg3 } from 'assets/Images/Event image3.svg';
+export { default as singleTagImg } from 'assets/Images/singleTag.svg';
+export { default as fourTagsImg } from 'assets/Images/4TagsImg.svg';
