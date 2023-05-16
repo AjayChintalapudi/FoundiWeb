@@ -10,7 +10,7 @@ const CartItem = (props) => {
         </div>
         <div className={styles.cartItemBottomParaSection}>
           <p className={styles.cartItemParaSection}>
-            {props.productHTageading}
+            {props.productTagHeading}
           </p>
           <div className={styles.cartItemPrice}>
             <p className={styles.cartItemPriceSection}>{props.productPrice}</p>

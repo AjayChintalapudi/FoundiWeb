@@ -39,6 +39,11 @@ const prooductsPageStrings = {
   productsHeroSectionPara:
     '  Get a flat 30% off on all our products till 5th January 2023. Use the below coupon code to avail the offer. Hurry up!',
   productsHeroSectionButton: 'GET40OFFHD',
+  productsCategorietext: 'All categories',
+  productsCategorietext1: '🎄 Holiday Sale',
+  productsCategorietext2: 'Category 3',
+  productsCategorietext3: 'Category 4',
+  productsCategorietext4: 'Category 5',
 };
 
 const productsCategoriesData = {};

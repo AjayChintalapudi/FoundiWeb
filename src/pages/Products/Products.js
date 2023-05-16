@@ -3,6 +3,9 @@ import styles from './styles.module.css';
 import { LeftImg, RightImg } from 'resources/Images/Images';
 import Button from 'components/Button/Button';
 import { englishStrings } from 'resources/Strings/eng';
+import { ProductsCategoriesData } from 'components/CardData/CardData';
+import CartItem from 'components/CartItems/CartItem';
+import Footer from 'components/Footer/Footer';
 
 const { prooductsPageStrings } = englishStrings;
 const Products = () => {
@@ -58,15 +61,50 @@ const Products = () => {
   };
 
   const productsbannerSection = () => {
-    <div className={styles.productsBannerSection}>
-      <div className={styles.insideProductsBannerSection}></div>
-    </div>;
+    return (
+      <div className={styles.productsBannerSection}>
+        <div className={styles.insideProductsBannerSection}>
+          <div className={styles.productsBannerTopSection}>
+            <p className={styles.productsBannerCategorieOne}>
+              {prooductsPageStrings.productsCategorietext}
+            </p>
+            <p className={styles.productsBannerHoliday}>
+              {prooductsPageStrings.productsCategorietext1}
+            </p>
+            <p className={styles.productsBannerCategorieTwo}>
+              {prooductsPageStrings.productsCategorietext2}
+            </p>
+            <p className={styles.productsBannerCategorieThree}>
+              {prooductsPageStrings.productsCategorietext3}
+            </p>
+            <p className={styles.productsBannerCategorieFour}>
+              {prooductsPageStrings.productsCategorietext4}
+            </p>
+          </div>
+          <div className={styles.productsCartSection}>
+            {ProductsCategoriesData &&
+              ProductsCategoriesData.map((item, index) => {
+                return (
+                  <CartItem
+                    key={index}
+                    productImg={item.productImg}
+                    productTagHeading={item.productTagHeading}
+                    productPrice={item.productPrice}
+                    offerPrice={item.offerPrice}
+                  />
+                );
+              })}
+          </div>
+        </div>
+      </div>
+    );
   };
 
   return (
     <div>
       {productsHeroSection()}
-      {/* {productsbannerSection()} */}
+      {productsbannerSection()}
+      <Footer />
     </div>
   );
 };

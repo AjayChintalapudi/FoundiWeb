@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import styles from './styles.module.css';
 import { englishStrings } from 'resources/Strings/eng';
 import {
   eventImg,
@@ -12,6 +11,7 @@ import {
 } from 'resources/Images/Images';
 import Button from 'components/Button/Button';
 import Footer from 'components/Footer/Footer';
+import styles from './styles.module.css';
 const { eventPageStrings } = englishStrings;
 const Employee = [
   {
