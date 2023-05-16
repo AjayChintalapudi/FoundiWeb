@@ -7,6 +7,7 @@
   color: var(--white);
   max-width: 1440px;
   margin: auto;
+  align-items: center;
 }
 
 .foundiLogo {
@@ -22,6 +23,7 @@
   width: 23px;
   height: 30px;
   font-family: Medium;
+  cursor: pointer;
 }
 
 .navbarMenuItems {
@@ -29,6 +31,7 @@
   flex-direction: row;
   gap: 48px;
   font-family: Medium;
+  cursor: pointer;
 }
 
 .navbarMenuItemsRightContainer {
@@ -36,6 +39,7 @@
   flex-direction: row;
   gap: 40px;
   align-items: center;
+  cursor: pointer;
 }
 
 .menuItemsRightLogo {
@@ -52,6 +56,134 @@
   display: none;
 }
 /* From 1440px to 1366px  End*/
+.languageContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 274px;
+  height: 112px;
+  overflow: hidden;
+  /* background-color:var(--white); */
+  /* border: 1px solid var(--gray72); */
+  /* box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08); */
+  border-radius: 24px;
+  padding: 24px 48px 24px;
+}
+
+.englishIcon,
+.swedishIcon {
+  display: flex;
+  flex-direction: row;
+  gap: 13px;
+}
+
+.englishBlock,
+.swedishBlock {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.unCheck {
+  color: var(--gray72);
+}
+.englishText,
+.swedishText {
+  font-family: 'Light', sans-serif;
+  font-size: 14px;
+}
+
+.englishText {
+  color: var(--blue);
+}
+
+.cartContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  align-items: center;
+  overflow: hidden;
+  padding: 16px 24px;
+}
+.cartInfo {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Medium', sans-serif;
+  font-size: 14px;
+}
+
+.cartShoNow {
+  color: var(--blue);
+  border-bottom: 1px solid var(--blue);
+}
+
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 320px;
+  height: 100%;
+  padding: 24px;
+}
+.signUpLoginHeading {
+  font-family: 'Semi-Bold', sans-serif;
+  font-size: 16px;
+}
+
+.signUpLoginBlock {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.closeIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.signUpBottomBorder {
+  width: 100%;
+  border-bottom: 1px solid var(--gray72);
+}
+
+.profileIcon {
+  width: 64px;
+  height: 64px;
+  margin: auto;
+}
+
+.signUpLoginDesc {
+  font-family: 'Light', sans-serif;
+  width: 272px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.loginSignUpButton {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin: auto;
+}
+
+.loginButtonStyles,
+.signUpButtonStyles {
+  width: fit-content;
+  height: 40px;
+  padding: 9px 40px;
+  color: var(--nero);
+  background: var(--white);
+  border: 1px solid var(--black);
+  border-radius: 20px;
+  font-family: 'Regular', sans-serif;
+  font-size: 14px;
+}
+
+.signUpButtonStyles {
+  background: var(--blue);
+  color: var(--white);
+  border: 1px solid var(--blue);
+}
 
 /* Media Query Start */
 
@@ -87,6 +219,10 @@
     display: block;
     width: 100%;
     height: 100%;
+  }
+
+  .languageContainer {
+    display: none;
   }
 }
 /* 320px MobieView End */
@@ -131,7 +267,7 @@
 
 /*  From 560px to 867 px View Start */
 
-@media screen and (min-width: 550px) and (max-width:867px){
+@media screen and (min-width: 550px) and (max-width: 867px) {
   .navbarContainer {
     padding: 18px 24px;
   }
@@ -148,7 +284,7 @@
     display: block;
     position: absolute;
     right: 80px;
-    top:29px;
+    top: 29px;
   }
 
   .navbarMenuItemsMenuIcon {

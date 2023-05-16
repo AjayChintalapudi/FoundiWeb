@@ -3,6 +3,21 @@ const navbar = {
   events: 'Events',
   about: 'About',
   products: 'Products',
+  // language
+  english: 'English',
+  swedish: 'Swedish',
+  // cart
+  nothingInCart: "Nothing's in the cart.",
+  shopNow: 'Shop now',
+
+  // Login & SignUp
+
+  signUpLoginHeading: 'Sign up or Log in',
+  signUpLoginDesc:
+    'Create an account or Log in with an existing account to access all of Foundi’s exciting features.',
+  logIn: 'Log in',
+  signUp: 'Sign up',
+
 };
 const home = {
   // banner Section
@@ -13,6 +28,12 @@ const home = {
   // return Section
   returnContainerQuestion: '👋 Have you found a lost-item?',
   returnContainerAnswer: 'Return it now',
+  // return PopUp
+  needHelp:"Need help?",
+  returnItemHeading:"Return item",
+  returnItemDesc:"Scan QR or enter the SNO number present on the tag attached to the found-item to get in touch with the owner of the item.",
+  scanQrCodeText:"Scan QR code",
+  inputText:"Enter SNO code",
   // Features Section:
   featureTitle: 'Ah, it’s so simple!',
   featureTitleDesc:
@@ -80,7 +101,8 @@ const home = {
   learnMoreAlt: 'LearnMore',
 
   // Collabarate Section
-  collabarateHeading:"We collaborated with the leading brands to ensure the best services for our end users."
+  collabarateHeading:
+    'We collaborated with the leading brands to ensure the best services for our end users.',
 };
 const eventPageStrings = {
   eventsHeroSectionHeading: 'EXPO 2020 - Dubai',

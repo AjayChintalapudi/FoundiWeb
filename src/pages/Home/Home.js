@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import NavBar from 'components/NavBar/NavBar';
-import { playicon } from 'resources/Images/Images';
-import { learnmore } from 'resources/Images/Images';
+import {
+  playicon,
+  learnmore,
+  uparrow,
+  downarrow,
+  closeicontwo,
+} from 'resources/Images/Images';
 import { englishStrings } from 'resources/Strings/eng';
 import {
   CollabarateData,
@@ -19,8 +24,7 @@ import styles from './styles.module.css';
 
 const Home = () => {
   const { home } = englishStrings;
-
-  // Accordion QuestionAnswer Section
+  // Accordion
   const [collapse, setCollapse] = useState(0);
   const showAnswer = (index) => {
     if (collapse === index) {
@@ -29,8 +33,16 @@ const Home = () => {
     setCollapse(index);
   };
 
-  // Modal
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  // Common Modal
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
+  };
 
   const bannerSection = () => {
     return (
@@ -41,19 +53,7 @@ const Home = () => {
             {bannerHeadingLeft()}
             <div className={styles.bannerInfoRight}>
               {bannerInfoRightPara()}
-              <div
-                className={styles.bannerInfoRightVideoDesc}
-                onClick={() => setIsVideoOpen(true)}
-              >
-                <img src={playicon} alt="" />
-                <p>{home.bannerInfoRightVideoDesc}</p>
-              </div>
-              {isVideoOpen && (
-                <Modal
-                  setIsVideoOpen={setIsVideoOpen}
-                  isVideoOpen={isVideoOpen}
-                />
-              )}
+              {bannerInfoRightVideoDesc()}
             </div>
           </div>
         </div>
@@ -77,6 +77,17 @@ const Home = () => {
     );
   };
 
+  const bannerInfoRightVideoDesc = () => {
+    return (
+      <div
+        className={styles.bannerInfoRightVideoDesc}
+      >
+        <img src={playicon} alt="" />
+        <p>{home.bannerInfoRightVideoDesc}</p>
+      </div>
+    );
+  };
+
   const returnSection = () => {
     return (
       <div className={styles.returnContainer}>
@@ -96,9 +107,48 @@ const Home = () => {
 
   const returnContainerAnswer = () => {
     return (
-      <span className={styles.returnContainerAnswer}>
-        {home.returnContainerAnswer}
-      </span>
+      <div className={styles.returnItemMainContainer}>
+        <Modal open={modalOpen} onClose={handleCloseModal}>
+          <div className={styles.returnItemContainer}>
+            <div className={styles.returnItemInsideContainer}>
+              <div className={styles.returnItemCloseBlock}>
+                <Button
+                  btName={home.needHelp}
+                  btnStyles={styles.returnButtonStyles}
+                />
+                <div className={styles.returnCloseIcon}>
+                  <img
+                    src={closeicontwo}
+                    alt=""
+                    className={styles.imageWidth}
+                    onClick={handleCloseModal}
+                  />
+                </div>
+              </div>
+              <div className={styles.returnItemInfoBlock}>
+                <div className={styles.returnItemDescBlock}>
+                  <h1 className={styles.returnItemHeading}>
+                    {home.returnItemHeading}
+                  </h1>
+                  <p className={styles.returnItemDesc}>{home.returnItemDesc}</p>
+                </div>
+              </div>
+              <div className={styles.snoCodeInputBlock}>
+                <input
+                  className={styles.snoCodeInput}
+                  placeholder={home.inputText}
+                />
+              </div>
+              <div className={styles.scanQrCodeBlock}>
+                <p className={styles.scanQrCodeText}>{home.scanQrCodeText}</p>
+              </div>
+            </div>
+          </div>
+        </Modal>
+        <span className={styles.returnContainerAnswer} onClick={handleOpenModal}>
+          {home.returnContainerAnswer}
+        </span>
+      </div>
     );
   };
 
@@ -217,8 +267,8 @@ const Home = () => {
               key={index}
               question={item.question}
               answer={item.answer}
-              upArrow={item.upArrow}
-              downArrow={item.downArrow}
+              upArrow={uparrow}
+              downArrow={downarrow}
               onClick={() => {
                 showAnswer(index);
               }}
@@ -305,7 +355,6 @@ const Home = () => {
   };
 
   const collabarateButtons = () => {
-    
     return (
       <div className={styles.collabarateButtons}>
         {CollabarateData &&

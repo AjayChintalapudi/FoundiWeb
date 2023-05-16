@@ -5,6 +5,25 @@ export { default as cart } from 'assets/Images/cart.svg';
 export { default as profile } from 'assets/Images/profile.svg';
 export { default as playicon } from 'assets/Images/playicon.svg';
 export { default as menu } from 'assets/Images/menu.svg';
+
+// Language Icon
+
+export {default as englishicon} from "assets/Images/englishicon.svg";
+export {default as swedishicon} from "assets/Images/swedishicon.svg";
+export {default as check} from "assets/Images/check.svg";
+export {default as uncheck} from "assets/Images/uncheck.svg";
+
+// cartIcon
+
+export {default as dangercircle} from "assets/Images/dangercircle.svg"
+
+// profileIcon
+
+export {default as closeicon} from "assets/Images/closeicon.svg";
+export {default as adduser} from "assets/Images/adduser.svg";
+
+// Return Section Images
+export {default as closeicontwo} from "assets/Images/closeicontwo.svg";
 // Features Section Images
 export { default as purchasetag } from 'assets/Images/purchasetag.svg';
 export { default as additems } from 'assets/Images/additems.svg';

@@ -6,13 +6,11 @@ import {
   productspackone,
   productspacktwo,
   productspackthree,
-  uparrow,
-  downarrow,
   ebay,
   aws,
   google,
   twitch,
-  ios
+  ios,
 } from 'resources/Images/Images';
 // import { Strings } from 'resources/Strings/eng';
 import { englishStrings } from 'resources/Strings/eng';
@@ -68,80 +66,59 @@ const ProductsData = [
 ];
 
 const QuestionAnswerData = [
-  
   {
     question: home.questionOne,
-    upArrow:uparrow,
-    downArrow:downarrow,
-    answer: home.answerOne, 
-   
+    answer: home.answerOne,
   },
   {
     question: home.questionOne,
-    upArrow:uparrow,
-    downArrow:downarrow,
-    answer: home.answerOne, 
-   
+    answer: home.answerOne,
   },
   {
     question: home.questionOne,
-    upArrow:uparrow,
-    downArrow:downarrow,
-    answer: home.answerOne, 
-   
+    answer: home.answerOne,
   },
   {
     question: home.questionOne,
-    upArrow:uparrow,
-    downArrow:downarrow,
-    answer: home.answerOne, 
-   
+    answer: home.answerOne,
   },
 
   {
     question: home.questionTwo,
-    upArrow:uparrow,
-    downArrow:downarrow,
     answer: home.answerTwo,
-  
   },
 
   {
     question: home.questionThree,
-    upArrow:uparrow,
-    downArrow:downarrow,
     answer: home.answerThree,
- 
   },
 
   {
     question: home.questionFour,
-    upArrow:uparrow,
-    downArrow:downarrow,
-    answer: home.answerFour ,
-   
+    answer: home.answerFour,
   },
 ];
 
-const CollabarateData=[{
-  buttonImage:ebay
-},
-{
-  buttonImage:aws
-},
+const CollabarateData = [
+  {
+    buttonImage: ebay,
+  },
+  {
+    buttonImage: aws,
+  },
 
-{
-  buttonImage:google
-},
-{
-  buttonImage:twitch
-},
-{
-  buttonImage:ios
-},
-// {
-//   buttonImage:ebay
-// },
-]
+  {
+    buttonImage: google,
+  },
+  {
+    buttonImage: twitch,
+  },
+  {
+    buttonImage: ios,
+  },
+  // {
+  //   buttonImage:ebay
+  // },
+];
 
-export { FeatureData, ProductsData,QuestionAnswerData, CollabarateData};
+export { FeatureData, ProductsData, QuestionAnswerData, CollabarateData };

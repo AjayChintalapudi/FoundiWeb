@@ -50,6 +50,7 @@
   margin: auto;
   font-family: Light;
   font-size: 16px;
+  cursor: pointer;
 }
 /*<----- Banner Section End----->*/
 
@@ -75,6 +76,71 @@
   line-height: 40px;
   color: var(--white);
   border-bottom: 1px solid var(--white);
+}
+
+.returnItemInsideContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+}
+
+.returnItemDescBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.returnItemCloseBlock {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.returnButtonStyles {
+  width: 108px;
+  height: 40px;
+  background: var(--white);
+  border: 1px solid var(--gray72);
+  box-shadow: 0px 0px 16px var(--blacktransparent80);
+  border-radius: 20px;
+  font-family: 'Medium', sans-serif;
+}
+
+.returnItemHeading {
+  font-family: 'Regular', sans-serif;
+  font-size: 26px;
+}
+
+.returnItemDesc {
+  font-family: 'Light', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--nero);
+  width: 524px;
+}
+
+.snoCodeInput {
+  width: 524px;
+  height: 48px;
+  background: var(--white);
+  border: 1px solid var(--gray100);
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+
+.snoCodeInput:focus {
+  border: 1px solid var(--blue);
+  color: var(--gray100);
+  outline: none;
+}
+
+.scanQrCodeText {
+  text-align: center;
+  font-family: 'Regular', sans-serif;
+  color: var(--blue);
+  text-decoration: underline var(--blue);
 }
 
 /*<----- Return Section End----->*/
@@ -204,6 +270,7 @@
   flex-direction: column;
   gap: 32px;
   padding-top: 80px;
+  color: var(--gray95);
 }
 
 .sustainabilityDesc {
@@ -211,7 +278,6 @@
   line-height: 24px;
   font-family: 'Light', sans-serif;
   font-size: 17px;
-  color: var(--gray95);
 }
 .learnMoreContainer {
   display: flex;
@@ -409,47 +475,46 @@
   /* Sustainability Section End */
 
   /* Collabarate Section Start */
-.collabarateInsideContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 64px;
-  text-align: center;
-  padding: 80px 150px;
-}
-.collabarateHeading {
-  max-width: 960px;
-  margin: auto;
-  text-align: center;
-  line-height: 40px;
-  font-size: 30px;
-}
+  .collabarateInsideContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    text-align: center;
+    padding: 80px 150px;
+  }
+  .collabarateHeading {
+    max-width: 960px;
+    margin: auto;
+    text-align: center;
+    line-height: 40px;
+    font-size: 30px;
+  }
 
-.collabarateButtons {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
-}
+  .collabarateButtons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
 
-.collabarateBtnStyle {
-  height: 100px;
-  border-radius: 84px;
-  padding: 34px 84px;
-}
+  .collabarateBtnStyle {
+    height: 100px;
+    border-radius: 84px;
+    padding: 34px 84px;
+  }
 
-.imageWrapperStyle {
-  width: 80px;
-  height: 32px;
-}
+  .imageWrapperStyle {
+    width: 80px;
+    height: 32px;
+  }
 
-.imgStyle {
-  width: 100%;
-  height: 100%;
-}
+  .imgStyle {
+    width: 100%;
+    height: 100%;
+  }
 
-/* Collabarate Section End */
-
+  /* Collabarate Section End */
 }
 /*<----- From 1024px to 1279px view End----->  */
 
@@ -605,47 +670,46 @@
   /* Sustainability Section End */
 
   /* Collabarate Section Start */
-.collabarateInsideContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 64px;
-  text-align: center;
-  padding: 80px 150px;
-}
-.collabarateHeading {
-  max-width: 960px;
-  margin: auto;
-  text-align: center;
-  line-height: 40px;
-  font-size: 30px;
-}
+  .collabarateInsideContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    text-align: center;
+    padding: 80px 150px;
+  }
+  .collabarateHeading {
+    max-width: 960px;
+    margin: auto;
+    text-align: center;
+    line-height: 40px;
+    font-size: 30px;
+  }
 
-.collabarateButtons {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
-}
+  .collabarateButtons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
 
-.collabarateBtnStyle {
-  height: 100px;
-  border-radius: 84px;
-  padding: 34px 84px;
-}
+  .collabarateBtnStyle {
+    height: 100px;
+    border-radius: 84px;
+    padding: 34px 84px;
+  }
 
-.imageWrapperStyle {
-  width: 80px;
-  height: 32px;
-}
+  .imageWrapperStyle {
+    width: 80px;
+    height: 32px;
+  }
 
-.imgStyle {
-  width: 100%;
-  height: 100%;
-}
+  .imgStyle {
+    width: 100%;
+    height: 100%;
+  }
 
-/* Collabarate Section End */
-
+  /* Collabarate Section End */
 }
 /*<----- From 868px to 1023px view End-----> */
 
@@ -818,46 +882,45 @@
 
   /* Sustainability Section End */
 
-  
-/* Collabarate Section Start */
-.collabarateInsideContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
-  text-align: center;
-  padding: 80px 32px;
-}
-.collabarateHeading {
-  width: 100%;
-  text-align: center;
-  line-height: 34px;
-  font-size: 34px;
-}
+  /* Collabarate Section Start */
+  .collabarateInsideContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    text-align: center;
+    padding: 80px 32px;
+  }
+  .collabarateHeading {
+    width: 100%;
+    text-align: center;
+    line-height: 34px;
+    font-size: 34px;
+  }
 
-.collabarateButtons {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: center;
-}
+  .collabarateButtons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
 
-.collabarateBtnStyle {
-  height: 100px;
-  padding: 26px 76px;
-}
+  .collabarateBtnStyle {
+    height: 100px;
+    padding: 26px 76px;
+  }
 
-.imageWrapperStyle {
-  width: 80px;
-  height: 32px;
-}
+  .imageWrapperStyle {
+    width: 80px;
+    height: 32px;
+  }
 
-.imgStyle {
-  width: 100%;
-  height: 100%;
-}
+  .imgStyle {
+    width: 100%;
+    height: 100%;
+  }
 
-/* Collabarate Section End */
+  /* Collabarate Section End */
 }
 /*<-----From 550px to 867px view End-----> */
 
