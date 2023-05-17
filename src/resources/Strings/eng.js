@@ -45,6 +45,12 @@ const prooductsPageStrings = {
   productsCategorietext3: 'Category 4',
   productsCategorietext4: 'Category 5',
 };
+const reviewPageStrings = {
+  reviewHeroText: 'Regular tags - A pack of 4',
+  reviewHeroPara:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse risus urna, rutrum non quam in. Lorem ipsum dolor sit consectetur.',
+  reviewHeroCart: 'Add to cart',
+};
 
 const productsCategoriesData = {};
 
@@ -53,4 +59,5 @@ export const englishStrings = {
   footerPageStrings,
   prooductsPageStrings,
   productsCategoriesData,
+  reviewPageStrings,
 };

@@ -16,3 +16,7 @@ export { default as eventImg3 } from 'assets/Images/Event image3.svg';
 // products Images
 export { default as singleTagImg } from 'assets/Images/singleTag.svg';
 export { default as fourTagsImg } from 'assets/Images/4TagsImg.svg';
+
+//review Images
+export { default as plusImg } from 'assets/Images/plus.svg';
+export { default as subtractionImg } from 'assets/Images/subtraction.svg';

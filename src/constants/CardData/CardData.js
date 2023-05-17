@@ -84,4 +84,20 @@ const ProductsCategoriesData = [
   },
 ];
 
-export { ProductsCategoriesData };
+const ReviewCategoriesData = [
+  {
+    reviewImg: singleTagImg,
+    reviewAlt: '',
+  },
+
+  // {
+  //   reviewImg: fourTagsImg,
+  //   reviewAlt: '',
+  // },
+  // {
+  //   reviewImg: singleTagImg,
+  //   reviewAlt: '',
+  // },
+];
+
+export { ProductsCategoriesData, ReviewCategoriesData };

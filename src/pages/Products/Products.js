@@ -3,7 +3,7 @@ import styles from './styles.module.css';
 import { LeftImg, RightImg } from 'resources/Images/Images';
 import Button from 'components/Button/Button';
 import { englishStrings } from 'resources/Strings/eng';
-import { ProductsCategoriesData } from 'components/CardData/CardData';
+import { ProductsCategoriesData } from 'constants/CardData/CardData';
 import CartItem from 'components/CartItems/CartItem';
 import Footer from 'components/Footer/Footer';
 
@@ -64,38 +64,49 @@ const Products = () => {
     return (
       <div className={styles.productsBannerSection}>
         <div className={styles.insideProductsBannerSection}>
-          <div className={styles.productsBannerTopSection}>
-            <p className={styles.productsBannerCategorieOne}>
-              {prooductsPageStrings.productsCategorietext}
-            </p>
-            <p className={styles.productsBannerHoliday}>
-              {prooductsPageStrings.productsCategorietext1}
-            </p>
-            <p className={styles.productsBannerCategorieTwo}>
-              {prooductsPageStrings.productsCategorietext2}
-            </p>
-            <p className={styles.productsBannerCategorieThree}>
-              {prooductsPageStrings.productsCategorietext3}
-            </p>
-            <p className={styles.productsBannerCategorieFour}>
-              {prooductsPageStrings.productsCategorietext4}
-            </p>
-          </div>
-          <div className={styles.productsCartSection}>
-            {ProductsCategoriesData &&
-              ProductsCategoriesData.map((item, index) => {
-                return (
-                  <CartItem
-                    key={index}
-                    productImg={item.productImg}
-                    productTagHeading={item.productTagHeading}
-                    productPrice={item.productPrice}
-                    offerPrice={item.offerPrice}
-                  />
-                );
-              })}
-          </div>
+          {productsBannerHeaderSection()}
+          {productsBannerFooterSection()}
         </div>
+      </div>
+    );
+  };
+  const productsBannerHeaderSection = () => {
+    return (
+      <div className={styles.productsBannerTopSection}>
+        <p className={styles.productsBannerCategorieOne}>
+          {prooductsPageStrings.productsCategorietext}
+        </p>
+        <p className={styles.productsBannerHoliday}>
+          {prooductsPageStrings.productsCategorietext1}
+        </p>
+        <p className={styles.productsBannerCategorieTwo}>
+          {prooductsPageStrings.productsCategorietext2}
+        </p>
+        <p className={styles.productsBannerCategorieThree}>
+          {prooductsPageStrings.productsCategorietext3}
+        </p>
+        <p className={styles.productsBannerCategorieFour}>
+          {prooductsPageStrings.productsCategorietext4}
+        </p>
+      </div>
+    );
+  };
+
+  const productsBannerFooterSection = () => {
+    return (
+      <div className={styles.productsCartSection}>
+        {ProductsCategoriesData &&
+          ProductsCategoriesData.map((item, index) => {
+            return (
+              <CartItem
+                key={index}
+                productImg={item.productImg}
+                productTagHeading={item.productTagHeading}
+                productPrice={item.productPrice}
+                offerPrice={item.offerPrice}
+              />
+            );
+          })}
       </div>
     );
   };
