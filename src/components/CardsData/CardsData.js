@@ -11,6 +11,8 @@ import {
   google,
   twitch,
   ios,
+  appleicon,
+  playstoreicon,
 } from 'resources/Images/Images';
 // import { Strings } from 'resources/Strings/eng';
 import { englishStrings } from 'resources/Strings/eng';
@@ -41,6 +43,22 @@ const FeatureData = [
     description: home.recoverDescription,
     image: recover,
     name: home.recoverAlt,
+  },
+];
+
+const GetAppData = [
+  {
+    getAppImg: appleicon,
+    getAppText: home.appStoreText,
+    getAppHeading:home.appStroreHeading,
+    getAppAltText:home.appStoreAltText,
+  },
+
+  {
+    getAppImg: playstoreicon,
+    getAppText: home.playStoreText,
+    getAppHeading:home.playStoreHeading,
+    getAppAltText:home.playStoreAltText,
   },
 ];
 
@@ -121,4 +139,4 @@ const CollabarateData = [
   // },
 ];
 
-export { FeatureData, ProductsData, QuestionAnswerData, CollabarateData };
+export { FeatureData,GetAppData, ProductsData, QuestionAnswerData, CollabarateData };

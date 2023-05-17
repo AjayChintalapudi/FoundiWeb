@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './styles.module.css';
 import {
-  navbarlogo,
+  // navbarlogo,
   language,
   cart,
   profile,
@@ -13,27 +13,47 @@ import {
   dangercircle,
   closeicon,
   adduser,
+  languageblackicon,
+  cartblackicon,
+  profileblackicon,
+  foundiblackicon,
+  foundilogowhite,
 } from 'resources/Images/Images';
 import { englishStrings } from 'resources/Strings/eng';
 import PopOver from 'components/PopOver/PopOver';
 import Button from 'components/Button/Button';
+import { useNavigate } from 'react-router-dom';
+import classNames from 'classnames';
 
-const NavBar = () => {
+const NavBar = (props) => {
   const { navbar } = englishStrings;
 
+  // based on the route path change images and logos
+  const navigate = useNavigate();
+  const [isHome, setIsHome] = useState(true);
+  useEffect(() => {
+    setIsHome(window.location.pathname === '/');
+  }, [navigate]);
+  
   const navbarLogoLeft = () => {
     return (
-      <div className={styles.navbarLogoLeft}>
-        <img src={navbarlogo} className={styles.foundiLogo} alt="foundiLogo" />
-        <h5>{navbar.logoHeading}</h5>
+      <div className={styles.navbarLogoLeft} onClick={() => navigate('/')}>
+        <img
+          src={isHome ? foundilogowhite : foundiblackicon}
+          className={styles.foundiLogo}
+          alt="foundiLogo"
+        />
+        {/* <h5>{navbar.logoHeading}</h5> */}
       </div>
     );
   };
 
   const navbarMenuItemsMiddle = () => {
     return (
-      <div className={styles.navbarMenuItems}>
-        <p>{navbar.events}</p>
+      <div
+        className={classNames(styles.navbarMenuItems, props.navbarMenuItems)}
+      >
+        <p onClick={() => navigate('/events')}>{navbar.events}</p>
         <p>{navbar.about}</p>
         <p>{navbar.products}</p>
       </div>
@@ -48,7 +68,7 @@ const NavBar = () => {
             triggerElement={
               <img
                 className={styles.menuItemsRightLogo}
-                src={language}
+                src={isHome ? language : languageblackicon}
                 alt="language"
               />
             }
@@ -82,7 +102,7 @@ const NavBar = () => {
             triggerElement={
               <img
                 className={styles.menuItemsRightCartIcon}
-                src={cart}
+                src={isHome ? cart : cartblackicon}
                 alt="cart"
               />
             }
@@ -104,33 +124,38 @@ const NavBar = () => {
             triggerElement={
               <img
                 className={styles.menuItemsRightLogo}
-                src={profile}
+                src={isHome ? profile : profileblackicon}
                 alt="profile"
               />
             }
             content={
               <div className={styles.profileContainer}>
                 <div className={styles.signUpLoginBlock}>
-                  <p className={styles.signUpLoginHeading}>{navbar.signUpLoginHeading}</p>
+                  <p className={styles.signUpLoginHeading}>
+                    {navbar.signUpLoginHeading}
+                  </p>
                   <div className={styles.closeIcon}>
-                  <img src={closeicon} alt='' className={styles.imageWidth}/>
+                    <img src={closeicon} alt="" className={styles.imageWidth} />
                   </div>
                 </div>
                 <div className={styles.signUpBottomBorder}></div>
                 <div className={styles.profileIcon}>
-                  <img src={adduser} alt="" className={styles.imageWidth}/>
+                  <img src={adduser} alt="" className={styles.imageWidth} />
                 </div>
                 <div className={styles.signUpLoginDescText}>
-                  <p className={styles.signUpLoginDesc}>{navbar.signUpLoginDesc}</p>
+                  <p className={styles.signUpLoginDesc}>
+                    {navbar.signUpLoginDesc}
+                  </p>
                 </div>
                 <div className={styles.loginSignUpButton}>
                   <Button
-                  btName={navbar.logIn}
-                  btnStyles={styles.loginButtonStyles}
+                    btName={navbar.logIn}
+                    btnStyles={styles.loginButtonStyles}
                   />
                   <Button
-                  btName={navbar.signUp}
-                  btnStyles={styles.signUpButtonStyles}/>
+                    btName={navbar.signUp}
+                    btnStyles={styles.signUpButtonStyles}
+                  />
                 </div>
               </div>
             }
@@ -147,7 +172,7 @@ const NavBar = () => {
     );
   };
   return (
-    <div className={styles.navbarContainer}>
+    <div className={classNames(styles.navbarContainer, props.navbarContainer)}>
       {navbarLogoLeft()}
       {navbarMenuItemsMiddle()}
       {navbarMenuItemsRight()}

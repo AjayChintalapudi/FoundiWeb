@@ -5,7 +5,7 @@ import classNames from 'classnames';
 const Button = (props) => {
   const { btName, btnStyles, image, imageWrapperStyle } = props;
   return (
-    <button className={classNames(styles.btnStyles, btnStyles)}>
+    <button className={classNames(styles.btnStyles, btnStyles)}> 
       {btName}
       {image && (
         <div

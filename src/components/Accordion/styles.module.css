@@ -164,7 +164,8 @@
 
   .questionBlockHeading {
     font-family: Regular;
-    font-size: 16px;
+    font-size: 14px;
+    width: 200px;
     text-align: start;
   }
 

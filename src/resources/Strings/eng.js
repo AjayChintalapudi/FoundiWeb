@@ -17,7 +17,6 @@ const navbar = {
     'Create an account or Log in with an existing account to access all of Foundi’s exciting features.',
   logIn: 'Log in',
   signUp: 'Sign up',
-
 };
 const home = {
   // banner Section
@@ -29,11 +28,12 @@ const home = {
   returnContainerQuestion: '👋 Have you found a lost-item?',
   returnContainerAnswer: 'Return it now',
   // return PopUp
-  needHelp:"Need help?",
-  returnItemHeading:"Return item",
-  returnItemDesc:"Scan QR or enter the SNO number present on the tag attached to the found-item to get in touch with the owner of the item.",
-  scanQrCodeText:"Scan QR code",
-  inputText:"Enter SNO code",
+  needHelp: 'Need help?',
+  returnItemHeading: 'Return item',
+  returnItemDesc:
+    'Scan QR or enter the SNO number present on the tag attached to the found-item to get in touch with the owner of the item.',
+  scanQrCodeText: 'Scan QR code',
+  inputText: 'Enter SNO code',
   // Features Section:
   featureTitle: 'Ah, it’s so simple!',
   featureTitleDesc:
@@ -62,6 +62,14 @@ const home = {
     'Conversing with the finder, figure out a way to recover your misplaced item. That’s it! We told you, it is simple.',
   recoverImage: 'recover',
   recoverAlt: 'recoverImage',
+
+  // Get App [PlayStore&AppleStore]
+  appStoreText:"Download on the",
+  appStroreHeading:"App Store",
+  appStoreAltText:"Apple Store",
+  playStoreText:"GET IT ON",
+  playStoreHeading:"Google Play",
+  playStoreAltText:"PlayStore",
 
   // Product Section
   productsTitleHeading: 'Featured products',

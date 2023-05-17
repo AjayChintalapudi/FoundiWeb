@@ -6,29 +6,40 @@ export { default as profile } from 'assets/Images/profile.svg';
 export { default as playicon } from 'assets/Images/playicon.svg';
 export { default as menu } from 'assets/Images/menu.svg';
 
+export {default as foundiblackicon} from "assets/Images/foundilogo.svg";
+export {default as foundilogowhite} from "assets/Images/foundilogowhite.svg";
+export { default as languageblackicon } from 'assets/Images/languageiconblack.svg';
+export { default as cartblackicon } from 'assets/Images/carticonblack.svg';
+export { default as profileblackicon } from 'assets/Images/profileiconblack.svg';
+
 // Language Icon
 
-export {default as englishicon} from "assets/Images/englishicon.svg";
-export {default as swedishicon} from "assets/Images/swedishicon.svg";
-export {default as check} from "assets/Images/check.svg";
-export {default as uncheck} from "assets/Images/uncheck.svg";
+export { default as englishicon } from 'assets/Images/englishicon.svg';
+export { default as swedishicon } from 'assets/Images/swedishicon.svg';
+export { default as check } from 'assets/Images/check.svg';
+export { default as uncheck } from 'assets/Images/uncheck.svg';
 
 // cartIcon
 
-export {default as dangercircle} from "assets/Images/dangercircle.svg"
+export { default as dangercircle } from 'assets/Images/dangercircle.svg';
 
 // profileIcon
 
-export {default as closeicon} from "assets/Images/closeicon.svg";
-export {default as adduser} from "assets/Images/adduser.svg";
+export { default as closeicon } from 'assets/Images/closeicon.svg';
+export { default as adduser } from 'assets/Images/adduser.svg';
 
 // Return Section Images
-export {default as closeicontwo} from "assets/Images/closeicontwo.svg";
+export { default as closeicontwo } from 'assets/Images/closeicontwo.svg';
 // Features Section Images
 export { default as purchasetag } from 'assets/Images/purchasetag.svg';
 export { default as additems } from 'assets/Images/additems.svg';
 export { default as connect } from 'assets/Images/connect.svg';
 export { default as recover } from 'assets/Images/recover.svg';
+
+// Get App Section Images
+
+export { default as appleicon } from 'assets/Images/appleicon.svg';
+export { default as playstoreicon } from 'assets/Images/playstoreicon.svg';
 // Products Images
 
 export { default as productspackone } from 'assets/Images/productspackone.svg';

@@ -7,10 +7,21 @@
   text-align: center;
 }
 
+.productsContainer:hover{
+  transform: scale(1.05);
+  transition: ease-out 0.5s;
+  height: 400px;
+}
+
 .productsImage {
   width: 100%;
   height: 224px;
   border-radius: 16px;
+}
+
+.productsImage:hover{
+  transform: scale(1.05);
+  transition: ease-out 0.5s;
 }
 
 .imageWidth {

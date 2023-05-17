@@ -11,6 +11,7 @@ import { englishStrings } from 'resources/Strings/eng';
 import {
   CollabarateData,
   FeatureData,
+  GetAppData,
   ProductsData,
   QuestionAnswerData,
 } from 'components/CardsData/CardsData';
@@ -24,7 +25,8 @@ import styles from './styles.module.css';
 
 const Home = () => {
   const { home } = englishStrings;
-  // Accordion
+
+  //------------ Accordion Start--------------------
   const [collapse, setCollapse] = useState(0);
   const showAnswer = (index) => {
     if (collapse === index) {
@@ -33,7 +35,9 @@ const Home = () => {
     setCollapse(index);
   };
 
-  // Common Modal
+  //------------- Accordion End----------------------
+
+  //------------ ReturnSection Modal Start-----------
   const [modalOpen, setModalOpen] = useState(false);
 
   const handleOpenModal = () => {
@@ -43,12 +47,28 @@ const Home = () => {
   const handleCloseModal = () => {
     setModalOpen(false);
   };
+  //---------- ReturnSectiomn Modal End-------------
+
+  //---------- BannerSection Model Start-----------
+
+  const [videoOpen, setVideoOpen] = useState(false);
+
+  const handleVideoOpenModal = () => {
+    setVideoOpen(true);
+  };
+
+  const handleVideoCloseModal = () => {
+    setVideoOpen(false);
+  };
+
+  //----------- Banner Section Modal End------------
+
+  // ...Banner Section Start...
 
   const bannerSection = () => {
     return (
       <div className={styles.bannerContainer}>
         <div className={styles.bannerInsideContainer}>
-          <NavBar />
           <div className={styles.bannerDescription}>
             {bannerHeadingLeft()}
             <div className={styles.bannerInfoRight}>
@@ -79,14 +99,44 @@ const Home = () => {
 
   const bannerInfoRightVideoDesc = () => {
     return (
-      <div
-        className={styles.bannerInfoRightVideoDesc}
-      >
-        <img src={playicon} alt="" />
-        <p>{home.bannerInfoRightVideoDesc}</p>
+      <div className={styles.bannerInfoRightVideoDescContainer}>
+        <Modal open={videoOpen} onClose={handleVideoOpenModal}>
+          <div className={styles.videoModalContainer}>
+            <div className={styles.videoBlock}>
+              <div className={styles.videoCloseIcon}>
+                <img
+                  src={closeicontwo}
+                  alt=""
+                  className={styles.imageWidth}
+                  onClick={handleVideoCloseModal}
+                />
+              </div>
+              <iframe
+                width="100%"
+                height="100%"
+                className={styles.iframeBlock}
+                src="https://www.youtube.com/embed/eKdOrHc7WWw"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </Modal>
+        <div
+          className={styles.bannerInfoRightVideoDesc}
+          onClick={handleVideoOpenModal}
+        >
+          <img src={playicon} alt="" />
+          <p>{home.bannerInfoRightVideoDesc}</p>
+        </div>
       </div>
     );
   };
+
+  //... Banner Section End...
+
+  //... Return Section Start...
 
   const returnSection = () => {
     return (
@@ -110,21 +160,21 @@ const Home = () => {
       <div className={styles.returnItemMainContainer}>
         <Modal open={modalOpen} onClose={handleCloseModal}>
           <div className={styles.returnItemContainer}>
-            <div className={styles.returnItemInsideContainer}>
-              <div className={styles.returnItemCloseBlock}>
-                <Button
-                  btName={home.needHelp}
-                  btnStyles={styles.returnButtonStyles}
+            <div className={styles.returnItemCloseBlock}>
+              <Button
+                btName={home.needHelp}
+                btnStyles={styles.returnButtonStyles}
+              />
+              <div className={styles.returnCloseIcon}>
+                <img
+                  src={closeicontwo}
+                  alt=""
+                  className={styles.imageWidth}
+                  onClick={handleCloseModal}
                 />
-                <div className={styles.returnCloseIcon}>
-                  <img
-                    src={closeicontwo}
-                    alt=""
-                    className={styles.imageWidth}
-                    onClick={handleCloseModal}
-                  />
-                </div>
               </div>
+            </div>
+            <div className={styles.returnItemInsideContainer}>
               <div className={styles.returnItemInfoBlock}>
                 <div className={styles.returnItemDescBlock}>
                   <h1 className={styles.returnItemHeading}>
@@ -145,12 +195,19 @@ const Home = () => {
             </div>
           </div>
         </Modal>
-        <span className={styles.returnContainerAnswer} onClick={handleOpenModal}>
+        <span
+          className={styles.returnContainerAnswer}
+          onClick={handleOpenModal}
+        >
           {home.returnContainerAnswer}
         </span>
       </div>
     );
   };
+
+  //... Return Section End...
+
+  // ...Features Section Start...
 
   const featuresSection = () => {
     return (
@@ -188,11 +245,42 @@ const Home = () => {
     );
   };
 
+  //... Features Section End...
+
+  //... Get App Section Start...
+
+  const getAppSection = () => {
+    return (
+      <div className={styles.getAppContainer}>
+        {GetAppData &&
+          GetAppData.map((item, index) => {
+            return (
+              <div className={styles.getAppButtonBlock} key={index}>
+                <div className={styles.getAppImage}>
+                  <img
+                    src={item.getAppImg}
+                    alt={item.getAppAltText}
+                    className={styles.imageWidth}
+                  />
+                </div>
+                <div className={styles.getAppDesc}>
+                  <p className={styles.getAppText}>{item.getAppText}</p>
+                  <p className={styles.getAppHeading}>{item.getAppHeading}</p>
+                </div>
+              </div>
+            );
+          })}
+      </div>
+    );
+  };
+  //... Get App Section End...
+
+  // ...Product Section Start...
   const productsSection = () => {
     return (
       <div className={styles.productsTitleInfo}>
         {productsTitleInfo()}
-        {mainContainer()}
+        {productMainContainer()}
         {browseProducts()}
       </div>
     );
@@ -209,7 +297,7 @@ const Home = () => {
     );
   };
 
-  const mainContainer = () => {
+  const productMainContainer = () => {
     return (
       <div className={styles.productsMainContainer}>
         {ProductsData &&
@@ -237,6 +325,9 @@ const Home = () => {
     );
   };
 
+  //... Product section End...
+
+  // ...Question Answer Section Start...
   const questionAnswerSection = () => {
     return (
       <div className={styles.questionAnswerTitleInfo}>
@@ -290,6 +381,10 @@ const Home = () => {
     );
   };
 
+  // ...Question Answer Section End...
+
+  //... Sustainability Section Start...
+
   const sustainabilitySection = () => {
     return (
       <div className={styles.sustainabilityContainer}>
@@ -335,6 +430,10 @@ const Home = () => {
     );
   };
 
+  //... Sustainability Section End...
+
+  // ...Collabarate Section Start...
+
   const collabarateSection = () => {
     return (
       <div className={styles.collabarateContainer}>
@@ -374,6 +473,9 @@ const Home = () => {
     );
   };
 
+  //... Collabarate Section End...
+
+  //... Footer Section Start...
   const FooterSection = () => {
     return (
       <div>
@@ -382,11 +484,18 @@ const Home = () => {
     );
   };
 
+  //... Footer Section End...
+
   return (
     <div className={styles.homeSection}>
+      <NavBar
+        navbarMenuItems={styles.navbarMenuItems}
+        navbarContainer={styles.navbarContainer}
+      />
       {bannerSection()}
       {returnSection()}
       {featuresSection()}
+      {getAppSection()}
       {productsSection()}
       {questionAnswerSection()}
       {sustainabilitySection()}
