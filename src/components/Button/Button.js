@@ -4,8 +4,9 @@ import classNames from 'classnames';
 
 const Button = (props) => {
   const { btName, btnStyles, image, imageWrapperStyle } = props;
+  console.log(btnStyles)
   return (
-    <button className={classNames(styles.btnStyles, btnStyles)}> 
+    <button className={[btnStyles,styles.btnStyles].join(" ")}> 
       {btName}
       {image && (
         <div

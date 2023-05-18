@@ -3,6 +3,8 @@ const navbar = {
   events: 'Events',
   about: 'About',
   products: 'Products',
+  profile:"Profile",
+  eventsAndBuissness:"Events & Business",
   // language
   english: 'English',
   swedish: 'Swedish',

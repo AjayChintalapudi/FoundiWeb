@@ -14,7 +14,7 @@ import {
   GetAppData,
   ProductsData,
   QuestionAnswerData,
-} from 'components/CardsData/CardsData';
+} from 'constants/CardsData';
 import FeaturesCard from 'components/FeaturesCard/FeaturesCard';
 import Products from 'components/Products/Products';
 import QuestionAnswer from 'components/Accordion/QuestionAnswer';
@@ -115,8 +115,9 @@ const Home = () => {
                 width="100%"
                 height="100%"
                 className={styles.iframeBlock}
-                src="https://www.youtube.com/embed/eKdOrHc7WWw"
+                src="https://www.youtube.com/embed/TVQm5lTRMO0"
                 title="YouTube video player"
+                frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               ></iframe>

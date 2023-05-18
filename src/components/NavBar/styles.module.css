@@ -66,9 +66,6 @@
   width: 274px;
   height: 112px;
   overflow: hidden;
-  /* background-color:var(--white); */
-  /* border: 1px solid var(--gray72); */
-  /* box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08); */
   border-radius: 24px;
   padding: 24px 48px 24px;
 }
@@ -188,7 +185,148 @@
   border: 1px solid var(--blue);
 }
 
-/* Media Query Start */
+/* Toggle Menu start */
+
+.toggleMenuContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: var(--white);
+  color: var(--black);
+  border-radius: 0px 0px 16px 16px;
+  padding: 24px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  top: 0;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.headerLogoLeft {
+  width: 92px;
+  height: 28px;
+}
+
+.headerItemsRight {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.headerBottomBorder {
+  border-bottom: 1px solid var(--gray72);
+  width: 100%;
+}
+
+.headerMenuItemsBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: 'Medium', sans-serif;
+  font-size: 16px;
+}
+
+.profileContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.profileLoginBtnStyles {
+  width: 110px;
+  background-color: var(--blue);
+  color: var(--white);
+  border: 1px solid var(--blue);
+  border-radius: 28px;
+  padding: 7px 15px;
+}
+/* Toggle Menu End */
+
+/*-------- Media Query Start--------- */
+
+/*  From 560px to 867 px View Start */
+
+@media screen and (min-width: 550px) and (max-width: 867px) {
+  .navbarContainer {
+    padding: 18px 24px;
+  }
+
+  .navbarMenuItems {
+    display: none;
+  }
+
+  .menuItemsRightLogo {
+    display: none;
+  }
+
+  .menuItemsRightCartIcon {
+    display: block;
+    position: absolute;
+    right: 80px;
+    top: 29px;
+  }
+
+  .navbarMenuItemsMenuIcon {
+    width: 24px;
+    height: 8px;
+    position: relative;
+    top: 8px;
+  }
+
+  .menuItemsRightMenuIcon {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/*  From 867px to 560 px View End */
+
+/* 550px Mobile View Start */
+
+@media screen and (max-width: 550px) {
+  .navbarContainer {
+    padding: 18px 24px;
+  }
+
+  .navbarMenuItems {
+    display: none;
+  }
+
+  .menuItemsRightLogo {
+    display: none;
+  }
+
+  .menuItemsRightCartIcon {
+    display: block;
+    position: absolute;
+    right: 80px;
+    top: 28px;
+  }
+
+  .navbarMenuItemsMenuIcon {
+    width: 24px;
+    height: 8px;
+    position: relative;
+    top: 8px;
+  }
+
+  .menuItemsRightMenuIcon {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* 550px Mobile View End */
 
 /* 320px MobieView Start */
 @media screen and (max-width: 320px) {
@@ -230,79 +368,4 @@
 }
 /* 320px MobieView End */
 
-/* 550px Mobile View Start */
-
-@media screen and (max-width: 550px) {
-  .navbarContainer {
-    padding: 18px 24px;
-  }
-
-  .navbarMenuItems {
-    display: none;
-  }
-
-  .menuItemsRightLogo {
-    display: none;
-  }
-
-  .menuItemsRightCartIcon {
-    display: block;
-    position: absolute;
-    right: 80px;
-    top: 28px;
-  }
-
-  .navbarMenuItemsMenuIcon {
-    width: 24px;
-    height: 8px;
-    position: relative;
-    top: 8px;
-  }
-
-  .menuItemsRightMenuIcon {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-}
-
-/* 550px Mobile View End */
-
-/*  From 560px to 867 px View Start */
-
-@media screen and (min-width: 550px) and (max-width: 867px) {
-  .navbarContainer {
-    padding: 18px 24px;
-  }
-
-  .navbarMenuItems {
-    display: none;
-  }
-
-  .menuItemsRightLogo {
-    display: none;
-  }
-
-  .menuItemsRightCartIcon {
-    display: block;
-    position: absolute;
-    right: 80px;
-    top: 29px;
-  }
-
-  .navbarMenuItemsMenuIcon {
-    width: 24px;
-    height: 8px;
-    position: relative;
-    top: 8px;
-  }
-
-  .menuItemsRightMenuIcon {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-}
-
-/*  From 867px to 560 px View End */
 /* Media Query End */

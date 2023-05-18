@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './styles.module.css';
 import {
-  // navbarlogo,
   language,
   cart,
   profile,
@@ -28,13 +27,21 @@ import classNames from 'classnames';
 const NavBar = (props) => {
   const { navbar } = englishStrings;
 
-  // based on the route path change images and logos
+  // Based on the route path change images and logos
   const navigate = useNavigate();
   const [isHome, setIsHome] = useState(true);
   useEffect(() => {
     setIsHome(window.location.pathname === '/');
   }, [navigate]);
-  
+
+  // Hamberger Menu
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  /*************NAVBAR LOGOLEFT START****************/
   const navbarLogoLeft = () => {
     return (
       <div className={styles.navbarLogoLeft} onClick={() => navigate('/')}>
@@ -43,26 +50,30 @@ const NavBar = (props) => {
           className={styles.foundiLogo}
           alt="foundiLogo"
         />
-        {/* <h5>{navbar.logoHeading}</h5> */}
       </div>
     );
   };
+  /*************NAVBAR LOGOLEFT END*****************/
 
+  /*************NAVBAR MENUITEMS MIDDLE START****************/
   const navbarMenuItemsMiddle = () => {
     return (
       <div
         className={classNames(styles.navbarMenuItems, props.navbarMenuItems)}
       >
         <p onClick={() => navigate('/events')}>{navbar.events}</p>
-        <p>{navbar.about}</p>
-        <p>{navbar.products}</p>
+        <p onClick={() => navigate('/about')}>{navbar.about}</p>
+        <p onClick={() => navigate('/products')}>{navbar.products}</p>
       </div>
     );
   };
+  /*************NAVBAR MENUITEMS MIDDLE END****************/
 
+  /*************NAVBAR MENUITEMS RIGHT START****************/
   const navbarMenuItemsRight = () => {
     return (
       <div className={styles.navbarMenuItemsRightContainer}>
+        {/* =============NAVBAR MENU ITEMS RIGHT "LANGUAGE" ICON START==============*/}
         <div className={styles.navbarMenuItemsRight}>
           <PopOver
             triggerElement={
@@ -72,7 +83,7 @@ const NavBar = (props) => {
                 alt="language"
               />
             }
-            // Content Of  the Popup Languages
+            /*************CONTENT OF THE LANGUAGE POPUP START********/
             content={
               <div className={styles.languageContainer}>
                 <div className={styles.englishBlock}>
@@ -95,8 +106,12 @@ const NavBar = (props) => {
                 </div>
               </div>
             }
+            /*************CONTENT OF THE LANGUAGE POPUP END********/
           />
         </div>
+        {/* =============NAVBAR MENU ITEMS RIGHT "LANGUAGE" ICON END==============*/}
+
+        {/* =============NAVBAR MENU ITEMS RIGHT "CART" ICON START==============*/}
         <div className={styles.navbarMenuItemsRight}>
           <PopOver
             triggerElement={
@@ -106,6 +121,7 @@ const NavBar = (props) => {
                 alt="cart"
               />
             }
+            /*************CONTENT OF THE CART POPUP START********/
             content={
               <div className={styles.cartContainer}>
                 <div className={styles.cartNothingIcon}>
@@ -117,8 +133,12 @@ const NavBar = (props) => {
                 </div>
               </div>
             }
+            /*************CONTENT OF THE CART POPUP END********/
           />
         </div>
+        {/* =============NAVBAR MENU ITEMS RIGHT "CART" ICON END==============*/}
+
+        {/* =============NAVBAR MENU ITEMS RIGHT "PROFILE" ICON START============= */}
         <div className={styles.navbarMenuItemsRight}>
           <PopOver
             triggerElement={
@@ -128,6 +148,7 @@ const NavBar = (props) => {
                 alt="profile"
               />
             }
+            /*************CONTENT OF THE PROFILE POPUP START********/
             content={
               <div className={styles.profileContainer}>
                 <div className={styles.signUpLoginBlock}>
@@ -159,18 +180,62 @@ const NavBar = (props) => {
                 </div>
               </div>
             }
+            /*************CONTENT OF THE "CART" POPUP END********/
           />
         </div>
+        {/* =============NAVBAR MENU ITEMS RIGHT "PROFILE" ICON END==============*/}
+
+        {/* ===================HAMBERGER MENU START=============================== */}
         <div className={styles.navbarMenuItemsMenuIcon}>
           <img
+            onClick={toggleMenu}
             className={styles.menuItemsRightMenuIcon}
             src={menu}
             alt="menu"
           />
         </div>
+        {isMenuOpen && (
+          <div className={styles.toggleMenuContainer}>
+            <div className={styles.headerContainer}>
+              <div className={styles.headerLogoLeft}>
+                <img
+                  src={foundiblackicon}
+                  alt=""
+                  className={styles.imageWidth}
+                />
+              </div>
+              <div className={styles.headerItemsRight}>
+                <img src={cartblackicon} alt="" className={styles.imageWidth} />
+                <img
+                  src={closeicon}
+                  alt=""
+                  className={styles.imageWidth}
+                  onClick={toggleMenu}
+                />
+              </div>
+            </div>
+            <div className={styles.headerBottomBorder}></div>
+            <div className={styles.headerMenuItemsBlock}>
+              <div className={styles.profileContainer}>
+                <span>{navbar.profile}</span>
+                <Button
+                  btName={navbar.logIn}
+                  btnStyles={styles.profileLoginBtnStyles}
+                />
+              </div>
+              <div>{navbar.eventsAndBuissness}</div>
+              <div>{navbar.about}</div>
+              <div>{navbar.products}</div>
+            </div>
+          </div>
+        )}
       </div>
     );
+    {
+      /* ===================HAMBERGER MENU END=============================== */
+    }
   };
+  /*************NAVBAR MENUITEMS RIGHT END****************/
   return (
     <div className={classNames(styles.navbarContainer, props.navbarContainer)}>
       {navbarLogoLeft()}
