@@ -89,15 +89,36 @@ const ReviewCategoriesData = [
     reviewImg: singleTagImg,
     reviewAlt: '',
   },
-
-  // {
-  //   reviewImg: fourTagsImg,
-  //   reviewAlt: '',
-  // },
-  // {
-  //   reviewImg: singleTagImg,
-  //   reviewAlt: '',
-  // },
+];
+const ReviewRatingData = [
+  {
+    rating: 4,
+    reviewParaDescription:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse risus urna, rutrum non quam in. Lorem ipsum dolor sit. Suspendisse risus urna, rutrum non quam in. Lorem ipsum dolor sit. Suspendisse risus urna, rutrum non quam in.',
+    reviewUserName: '- Anonymous',
+    reviewDateMonth: 'Dec 24, 2022, Sweden',
+  },
+  {
+    rating: 5,
+    reviewParaDescription:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse risus urna, rutrum non quam in. Lorem ipsum dolor sit. Suspendisse risus urna, rutrum non quam in. Lorem ipsum dolor sit.',
+    reviewUserName: '- Anonymous',
+    reviewDateMonth: 'Dec 20, 2022, Sweden',
+  },
+  {
+    rating: 4,
+    reviewParaDescription:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse risus urna, rutrum non quam in. Lorem ipsum dolor sit. Suspendisse risus urna, rutrum non quam in.',
+    reviewUserName: '- Anonymous',
+    reviewDateMonth: 'Dec 15, 2022, Sweden',
+  },
+  {
+    rating: 5,
+    reviewParaDescription:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse risus urna, rutrum non quam in.',
+    reviewUserName: '- Anonymous',
+    reviewDateMonth: 'Dec 14, 2022, Sweden',
+  },
 ];
 
-export { ProductsCategoriesData, ReviewCategoriesData };
+export { ProductsCategoriesData, ReviewCategoriesData, ReviewRatingData };

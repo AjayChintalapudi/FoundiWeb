@@ -20,3 +20,4 @@ export { default as fourTagsImg } from 'assets/Images/4TagsImg.svg';
 //review Images
 export { default as plusImg } from 'assets/Images/plus.svg';
 export { default as subtractionImg } from 'assets/Images/subtraction.svg';
+export { default as downArrowImg } from 'assets/Images/reviewDownIcon.svg';

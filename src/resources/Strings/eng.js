@@ -50,6 +50,9 @@ const reviewPageStrings = {
   reviewHeroPara:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse risus urna, rutrum non quam in. Lorem ipsum dolor sit consectetur.',
   reviewHeroCart: 'Add to cart',
+  reviewMiddleRating: '4.3 stars, 136 reviews',
+  reviewMiddleParaText: 'Most Recent',
+  reviewMiddleReviewText: 'View more reviews',
 };
 
 const productsCategoriesData = {};

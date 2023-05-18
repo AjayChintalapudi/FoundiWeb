@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import styles from './styles.module.css';
 import { ReviewCategoriesData } from 'constants/CardData/CardData';
+import { ReviewRatingData } from 'constants/CardData/CardData';
 import { englishStrings } from 'resources/Strings/eng';
 import Button from 'components/Button/Button';
-import { plusImg, subtractionImg } from 'resources/Images/Images';
+import { plusImg, subtractionImg, downArrowImg } from 'resources/Images/Images';
+import { Rating } from 'react-simple-star-rating';
+import { HiStar } from 'react-icons/hi';
 
 const Review = () => {
   const [cartItem, setCartItem] = useState(0);
@@ -92,7 +95,82 @@ const Review = () => {
       </div>
     );
   };
-  return <div>{reviewHeroSection()}</div>;
+  const fillColor = ['#FFC700'];
+  const customIcons = [
+    { icon: <HiStar size={24} /> },
+    { icon: <HiStar size={24} /> },
+    { icon: <HiStar size={24} /> },
+    { icon: <HiStar size={24} /> },
+    { icon: <HiStar size={24} /> },
+  ];
+  const reviewMiddleSection = () => {
+    return (
+      <div className={styles.reviewMiddleContent}>
+        <div className={styles.insideReviewMiddleContent}>
+          <div className={styles.reviewMiddleTopSection}>
+            <h5 className={styles.reviewMiddleRatingText}>
+              {reviewPageStrings.reviewMiddleRating}
+            </h5>
+            <div className={styles.reviewMiddleRecentText}>
+              <p className={styles.reviewMiddlePara}>
+                {reviewPageStrings.reviewMiddleParaText}
+              </p>
+              <div className={styles.reviewMiddleDownIcon}>
+                <img
+                  src={downArrowImg}
+                  alt=""
+                  className={styles.reviewImageWidth}
+                />
+              </div>
+            </div>
+          </div>
+          <div className={styles.reviewMiddleRatingSection}>
+            {ReviewRatingData &&
+              ReviewRatingData.map((item, index) => {
+                return (
+                  <div
+                    key={index}
+                    className={styles.insideReviewMiddleRatingSection}
+                  >
+                    <Rating
+                      customIcons={customIcons}
+                      initialValue={item.rating}
+                      allowFraction
+                      readonly={true}
+                      fillColorArray={fillColor}
+                    />
+                    <div className={styles.reviewRatingPara}>
+                      <p className={styles.reviewRatingParaText}>
+                        {item.reviewParaDescription}
+                      </p>
+                    </div>
+                    <div className={styles.reviewUserSection}>
+                      <p className={styles.reviewUserName}>
+                        {item.reviewUserName}
+                      </p>
+                      <p className={styles.reviewUserDate}>
+                        {item.reviewDateMonth}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+          </div>
+          <div className={styles.reviewMiddleBottomSection}>
+            <p className={styles.reviewMiddleBottomSectionText}>
+              {reviewPageStrings.reviewMiddleReviewText}
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  };
+  return (
+    <div>
+      {/* {reviewHeroSection()} */}
+      {reviewMiddleSection()}
+    </div>
+  );
 };
 
 export default Review;
