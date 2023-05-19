@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import styles from './styles.module.css';
 import {
   language,
   cart,
@@ -22,6 +21,7 @@ import { englishStrings } from 'resources/Strings/eng';
 import PopOver from 'components/PopOver/PopOver';
 import Button from 'components/Button/Button';
 import { useNavigate } from 'react-router-dom';
+import styles from './styles.module.css';
 import classNames from 'classnames';
 
 const NavBar = (props) => {
@@ -169,14 +169,19 @@ const NavBar = (props) => {
                   </p>
                 </div>
                 <div className={styles.loginSignUpButton}>
-                  <Button
-                    btName={navbar.logIn}
-                    btnStyles={styles.loginButtonStyles}
-                  />
-                  <Button
-                    btName={navbar.signUp}
-                    btnStyles={styles.signUpButtonStyles}
-                  />
+                  <div onClick={() => navigate('/login')}>
+                    <Button
+                      btName={navbar.logIn}
+                      btnStyles={styles.loginButtonStyles}
+                    />
+                  </div>
+                  <div onClick={() => navigate('/signup')}>
+                    <Button
+                      btName={navbar.signUp}
+                      btnStyles={styles.signUpButtonStyles}
+                      onClick={() => navigate('/signup')}
+                    />
+                  </div>
                 </div>
               </div>
             }
@@ -216,7 +221,7 @@ const NavBar = (props) => {
             </div>
             <div className={styles.headerBottomBorder}></div>
             <div className={styles.headerMenuItemsBlock}>
-              <div className={styles.profileContainer}>
+              <div className={styles.profileContainerMobile}>
                 <span>{navbar.profile}</span>
                 <Button
                   btName={navbar.logIn}

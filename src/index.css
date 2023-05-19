@@ -11,10 +11,12 @@
   --gray72 : #EBEBEB;
   --blacktransparent50 : rgba(0, 0, 0, 0.5);
   --blacktransparent80:rgba(0,0,0,0.08);
+  --blacktransparent100:rgba(208, 208, 208, 0.24);
   --bluetransparent24:rgba(19, 115, 251, 0.24);
   --gray95: #F2F2F2;
   --gray100:#D0D0D0;
   --gray110:#A6A6A6;
+  --gray120:--#A0A0A0;
   --nero: #202020;
   --blackfade:#505050;
 

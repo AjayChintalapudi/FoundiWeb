@@ -1,12 +1,20 @@
 import React from 'react';
 import styles from './styles.module.css';
 import classNames from 'classnames';
+import { useNavigate } from 'react-router-dom';
 
 const Button = (props) => {
-  const { btName, btnStyles, image, imageWrapperStyle } = props;
-  console.log(btnStyles)
+  const { btName, btnStyles, image, imageWrapperStyle,onClick } = props;
+  const navigate=useNavigate();
+  const handleClick=()=>{
+    if(onClick)
+    {
+      onClick();
+    }
+    navigate('/')
+  }
   return (
-    <button className={[btnStyles,styles.btnStyles].join(" ")}> 
+    <button className={classNames(btnStyles,styles.btnStyles)}> 
       {btName}
       {image && (
         <div

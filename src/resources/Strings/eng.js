@@ -3,8 +3,8 @@ const navbar = {
   events: 'Events',
   about: 'About',
   products: 'Products',
-  profile:"Profile",
-  eventsAndBuissness:"Events & Business",
+  profile: 'Profile',
+  eventsAndBuissness: 'Events & Business',
   // language
   english: 'English',
   swedish: 'Swedish',
@@ -66,12 +66,12 @@ const home = {
   recoverAlt: 'recoverImage',
 
   // Get App [PlayStore&AppleStore]
-  appStoreText:"Download on the",
-  appStroreHeading:"App Store",
-  appStoreAltText:"Apple Store",
-  playStoreText:"GET IT ON",
-  playStoreHeading:"Google Play",
-  playStoreAltText:"PlayStore",
+  appStoreText: 'Download on the',
+  appStroreHeading: 'App Store',
+  appStoreAltText: 'Apple Store',
+  playStoreText: 'GET IT ON',
+  playStoreHeading: 'Google Play',
+  playStoreAltText: 'PlayStore',
 
   // Product Section
   productsTitleHeading: 'Featured products',
@@ -140,6 +140,64 @@ const eventPageStrings = {
     'Have an upcoming event that you need merch for? Give your attendees something they will actually value with our Foundi tags and stickers. Click here to go to our event site to check out previous sponsorships. ',
 };
 
+// LoginPage Strings
+
+const loginPageStrings = {
+  back: 'Back',
+  closeIconAlt: 'closeIcon',
+  loginPageTitle: 'Hello there, welcome back!',
+  loginPageAccountDesc: 'No account?',
+  loginPageSignUpText: 'Sign up',
+  inputTypeEmail: 'text',
+  emailHeading: 'Email',
+  emailText: 'Email',
+  emailPlaceHolderText: 'Enter your email ID',
+  inputTypePassword: 'password',
+  passWordHeading: 'PassWord',
+  passwordText: 'Password',
+  passwordPlaceHolderText: '6+ characters, 1 capital',
+  forgotPassWordText: 'Forgot password',
+  continueGoogleText: 'Continue with Google',
+  logIn: 'Login',
+};
+
+const createAccountPageStrings = {
+  back: 'Back',
+  closeIconAlt: 'closeIcon',
+  loginPageTitle: 'Hello there, welcome back!',
+  loginPageAccountDesc: 'No account?',
+  loginPageSignUpText: 'Sign up',
+  inputTypeEmail: 'text',
+  emailHeading: 'Email',
+  emailText: 'Email',
+  emailPlaceHolderText: 'Enter your email ID',
+  inputTypePassword: 'password',
+  passWordHeading: 'PassWord',
+  passwordText: 'Password',
+  passwordPlaceHolderText: '6+ characters, 1 capital',
+  forgotPassWordText: 'Forgot password',
+  continueGoogleText: 'Continue with Google',
+  logIn: 'Login',
+
+  // create Account Details
+  back: 'Back',
+  closeIconAlt: 'closeIcon',
+  createAccountTitle: 'Create an account',
+  createAccountAccountDesc: 'Have an account?',
+  createAccountLogin: 'Log In',
+  inputTypeEmail: 'text',
+  fullNameHeading: 'Full name',
+  fullNameText: 'Full name',
+  fullNamePlaceHolderText: 'Enter your first name',
+  inputTypetext: 'text',
+  lastNameHeading: 'Last name',
+  lastNameText: 'text',
+  lastNamePlaceHolderText: 'Enter your last name',
+  continueGoogleText: 'Continue with Google',
+  next: 'Next',
+};
+
+// Footer Page Strings
 const footerPageStrings = {
   footerJoin: 'Join community',
   footerMail: 'info@foundiapp.com',
@@ -155,4 +213,6 @@ export const englishStrings = {
   footerPageStrings,
   navbar,
   home,
+  loginPageStrings,
+  createAccountPageStrings,
 };

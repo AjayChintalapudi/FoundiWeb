@@ -1,3 +1,8 @@
+// Login Form Images
+
+export {default as passwordhideicon} from "assets/Images/passwordhideicon.svg"
+export {default as googleicon} from "assets/Images/googleicon.svg";
+
 // Navbar Images
 export { default as navbarlogo } from 'assets/Images/navbarlogo.svg';
 export { default as language } from 'assets/Images/language.svg';

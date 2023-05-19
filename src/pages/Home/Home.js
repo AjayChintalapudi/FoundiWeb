@@ -6,6 +6,7 @@ import {
   uparrow,
   downarrow,
   closeicontwo,
+  passwordhideicon,
 } from 'resources/Images/Images';
 import { englishStrings } from 'resources/Strings/eng';
 import {
@@ -22,6 +23,7 @@ import Modal from 'components/Modal/Modal';
 import Footer from 'components/Footer/Footer';
 import Button from 'components/Button/Button';
 import styles from './styles.module.css';
+import Input from 'components/Input/Input';
 
 const Home = () => {
   const { home } = englishStrings;

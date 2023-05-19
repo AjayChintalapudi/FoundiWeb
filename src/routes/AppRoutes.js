@@ -4,6 +4,8 @@ import Home from 'pages/Home/Home';
 import Events from 'pages/Events/Events';
 import About from 'pages/About/About';
 import Products from 'pages/Products/Products';
+import LoginPage from 'pages/Login/LoginPage';
+import CreateAccountPage from 'pages/CreateAccount/CreateAccountPage';
 
 const AppRoutes = () => {
   return (
@@ -14,6 +16,8 @@ const AppRoutes = () => {
           <Route path="/events" element={<Events />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/products" element={<Products />}></Route>
+          <Route path="/login" element={<LoginPage />}></Route>
+          <Route path="/signup" element={<CreateAccountPage />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

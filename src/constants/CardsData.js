@@ -50,15 +50,15 @@ const GetAppData = [
   {
     getAppImg: appleicon,
     getAppText: home.appStoreText,
-    getAppHeading:home.appStroreHeading,
-    getAppAltText:home.appStoreAltText,
+    getAppHeading: home.appStroreHeading,
+    getAppAltText: home.appStoreAltText,
   },
 
   {
     getAppImg: playstoreicon,
     getAppText: home.playStoreText,
-    getAppHeading:home.playStoreHeading,
-    getAppAltText:home.playStoreAltText,
+    getAppHeading: home.playStoreHeading,
+    getAppAltText: home.playStoreAltText,
   },
 ];
 
@@ -139,4 +139,10 @@ const CollabarateData = [
   // },
 ];
 
-export { FeatureData,GetAppData, ProductsData, QuestionAnswerData, CollabarateData };
+export {
+  FeatureData,
+  GetAppData,
+  ProductsData,
+  QuestionAnswerData,
+  CollabarateData,
+};
