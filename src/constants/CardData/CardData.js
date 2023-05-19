@@ -121,4 +121,11 @@ const ReviewRatingData = [
   },
 ];
 
-export { ProductsCategoriesData, ReviewCategoriesData, ReviewRatingData };
+const SubscriptionCategoriesData = [];
+
+export {
+  ProductsCategoriesData,
+  ReviewCategoriesData,
+  ReviewRatingData,
+  SubscriptionCategoriesData,
+};

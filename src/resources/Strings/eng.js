@@ -55,12 +55,31 @@ const reviewPageStrings = {
   reviewMiddleReviewText: 'View more reviews',
 };
 
-const productsCategoriesData = {};
+const aboutPageStrings = {
+  aboutHeroHeading: ' A modern solution to an ancient problem',
+  aboutHeroPara:
+    'Our story - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non lacus ac elit dictum tempor sed id lectus. Duis suscipit quis nisl nec consectetur. Donec scelerisque congue felis non volutpat. Etiam sed magna bibendum, pharetra diam aliquam, vehicula magna. Aenean non accumsan dolor, in porta lectus. Ut vel semper eros.',
+  aboutPeoplePara: 'Do you know, ',
+  aboutPeopleParaOne: '19.4 billion kr',
+  aboutPeopleParaTwo:
+    ' worth of belongings were lost by the Swedish population in the last yearalone',
+  aboutHoursHeading: '55 hours',
+  aboutHoursPara:
+    'Average time each person spends searching for lost or misplaced items per year',
+  aboutPercentageHeading: '96%',
+  aboutPercentagePara:
+    'Percentage of the Swedish population that lose or misplace their belongings every year ',
+  aboutAverageHeading: '1.89',
+  aboutAveragePara:
+    'Average amount of items each person loses or misplaces in a year',
+  aboutkrHeading: '2000kr',
+  aboutKrPara: 'Average cost per lost or misplaced belonging',
+};
 
 export const englishStrings = {
   eventPageStrings,
   footerPageStrings,
   prooductsPageStrings,
-  productsCategoriesData,
   reviewPageStrings,
+  aboutPageStrings,
 };

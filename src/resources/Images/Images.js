@@ -21,3 +21,9 @@ export { default as fourTagsImg } from 'assets/Images/4TagsImg.svg';
 export { default as plusImg } from 'assets/Images/plus.svg';
 export { default as subtractionImg } from 'assets/Images/subtraction.svg';
 export { default as downArrowImg } from 'assets/Images/reviewDownIcon.svg';
+
+//about Images
+export { default as aboutImg } from 'assets/Images/Video here.svg';
+export { default as pauseImg } from 'assets/Images/pause.svg';
+export { default as appleImg } from 'assets/Images/App Store.svg';
+export { default as playStoreImg } from 'assets/Images/Google Play.svg';
