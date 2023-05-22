@@ -1,4 +1,9 @@
-import { singleTagImg, fourTagsImg } from 'resources/Images/Images';
+import {
+  singleTagImg,
+  fourTagsImg,
+  greenTickImg,
+  blueTickImg,
+} from 'resources/Images/Images';
 
 const ProductsCategoriesData = [
   {
@@ -121,7 +126,62 @@ const ReviewRatingData = [
   },
 ];
 
-const SubscriptionCategoriesData = [];
+const SubscriptionCategoriesData = [
+  {
+    subscriptionText: 'Starter plan',
+    subscriptionTextOne: '$0',
+    subscriptionTextPrice: '/lifetime',
+    subscriptionGreenImage: greenTickImg,
+    subscriptionaltName: '',
+    subscriptionTextTwo: 'Limit maxes at 1 item',
+    subscriptionTextThree: 'Lifetime validity',
+  },
+  {
+    subscriptionText: 'Upto 3 tags',
+    subscriptionTextOne: '$299',
+    subscriptionTextPrice: '/year',
+    subscriptionGreenImage: blueTickImg,
+    subscriptionaltName: '',
+    subscriptionTextTwo: 'Limit maxes at 3 items',
+    subscriptionTextThree: '365 days of validity',
+  },
+  {
+    subscriptionText: 'Upto 5 tags',
+    subscriptionTextOne: '$449',
+    subscriptionTextPrice: '/year',
+    subscriptionGreenImage: blueTickImg,
+    subscriptionaltName: '',
+    subscriptionTextTwo: 'Limit maxes at 5 items',
+    subscriptionTextThree: '365 days of validity',
+  },
+  {
+    subscriptionText: 'Upto 7 tags',
+    subscriptionTextOne: '$649',
+    subscriptionTextPrice: '/year',
+    subscriptionGreenImage: blueTickImg,
+    subscriptionaltName: '',
+    subscriptionTextTwo: 'Limit maxes at 7 items',
+    subscriptionTextThree: '365 days of validity',
+  },
+  {
+    subscriptionText: 'Upto 3 tags',
+    subscriptionTextOne: '$849',
+    subscriptionTextPrice: '/year',
+    subscriptionGreenImage: blueTickImg,
+    subscriptionaltName: '',
+    subscriptionTextTwo: 'Limit maxes at 9 items',
+    subscriptionTextThree: '365 days of validity',
+  },
+  {
+    subscriptionText: 'Upto n tags',
+    subscriptionTextOne: '$nx89',
+    subscriptionTextPrice: '/year',
+    subscriptionGreenImage: blueTickImg,
+    subscriptionaltName: '',
+    subscriptionTextTwo: 'Limit maxes at n items',
+    subscriptionTextThree: '365 days of validity',
+  },
+];
 
 export {
   ProductsCategoriesData,

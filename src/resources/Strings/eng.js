@@ -74,6 +74,13 @@ const aboutPageStrings = {
     'Average amount of items each person loses or misplaces in a year',
   aboutkrHeading: '2000kr',
   aboutKrPara: 'Average cost per lost or misplaced belonging',
+  aboutSubscriptionHeading: '  We’re a subscription based service',
+  aboutSubscriptionPara:
+    'However, as a part of promotional gift, users can enjoy 365 days of serives for free. The following are the maximum prices, the minimum price that users have to pay will vary depending on what active plan they are upgrading from.',
+  aboutFooterHeading:
+    'Eliminating the problems that come with Bluetooth/GPS trackers',
+  aboutFooterPara:
+    'From security to reliability of electronic devices, the Bluetooth/GPS lost & found solutions have many issues. Here are a few features that puts Foundi apart from what competitors have to offer.',
 };
 
 export const englishStrings = {

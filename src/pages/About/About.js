@@ -1,13 +1,20 @@
 import React from 'react';
+import styles from './styles.module.css';
+import { SubscriptionCategoriesData } from 'constants/CardData/CardData';
 import { englishStrings } from 'resources/Strings/eng';
 import {
   aboutImg,
   appleImg,
+  cartImg,
+  heartImg,
+  lockImg,
+  messageImg,
   pauseImg,
   playStoreImg,
+  redplusImg,
+  timeImg,
 } from 'resources/Images/Images';
-import Button from 'components/Button/Button';
-import styles from './styles.module.css';
+import Footer from 'components/Footer/Footer';
 
 const { aboutPageStrings } = englishStrings;
 const AboutData = [
@@ -30,6 +37,44 @@ const AboutData = [
     id: 4,
     aboutHeaing: aboutPageStrings.aboutkrHeading,
     aboutPara: aboutPageStrings.aboutKrPara,
+  },
+];
+const CartData = [
+  {
+    id: 1,
+    cartImg: cartImg,
+    cartpara: 'Vast collection of products for registering belongings',
+  },
+  {
+    id: 2,
+    cartImg: redplusImg,
+    cartaltName: '',
+    cartpara: 'Easy setup and item registration process',
+  },
+
+  {
+    id: 3,
+    cartImg: messageImg,
+    cartaltName: '',
+    cartpara: 'Messenger functions without having an app',
+  },
+  {
+    id: 4,
+    cartImg: lockImg,
+    cartaltName: '',
+    cartpara: 'Increased privacy for both users and finders',
+  },
+  {
+    id: 5,
+    cartImg: timeImg,
+    cartaltName: '',
+    cartpara: 'Life-long use, no battery or charging required',
+  },
+  {
+    id: 6,
+    cartImg: heartImg,
+    cartaltName: '',
+    cartpara: 'Sustainable solution + Reliable everywhere and every time',
   },
 ];
 
@@ -125,26 +170,133 @@ const About = () => {
     return (
       <div className={styles.aboutSubscriptionContainer}>
         <div className={styles.insideaboutSubscriptionContainer}>
-          <div className={styles.aboutSubscriptionText}>
-            <h4 className={styles.subscriptionHeading}>
-              We’re a subscription based service
-            </h4>
-            <p className={styles.subscriptionPara}>
-              However, as a part of promotional gift, users can enjoy 365 days
-              of serives for free. The following are the maximum prices, the
-              minimum price that users have to pay will vary depending on what
-              active plan they are upgrading from.
-            </p>
-          </div>
+          {aboutSubscriptionTopSection()}
+          {aboutSubscriptionBottomSection()}
         </div>
+      </div>
+    );
+  };
+
+  const aboutSubscriptionTopSection = () => {
+    return (
+      <div className={styles.aboutSubscriptionText}>
+        <h4 className={styles.subscriptionHeading}>
+          {aboutPageStrings.aboutSubscriptionHeading}
+        </h4>
+        <p className={styles.subscriptionPara}>
+          {aboutPageStrings.aboutSubscriptionPara}
+        </p>
+      </div>
+    );
+  };
+  const aboutSubscriptionBottomSection = () => {
+    return (
+      <div className={styles.subscriptionPlannerData}>
+        {SubscriptionCategoriesData.map((item, index) => {
+          return (
+            <div
+              key={index}
+              className={index === 0 ? styles.subscriptionFreepack : styles.odd}
+            >
+              <div className={styles.insideSubscriptionFreepack}>
+                <div className={styles.subscriptionFreePackTopText}>
+                  <p className={styles.subscriptionStaterPlan}>
+                    {item.subscriptionText}
+                  </p>
+                  <p className={styles.subscriptionLifeTime}>
+                    {item.subscriptionTextOne}
+                    <span className={styles.subscriptionPrice}>
+                      {item.subscriptionTextPrice}
+                    </span>
+                  </p>
+                </div>
+                <div className={styles.subscriptionFreePackBottomText}>
+                  <div className={styles.subscriptionLimit}>
+                    <div className={styles.subscriptionGreenIcon}>
+                      <img
+                        src={item.subscriptionGreenImage}
+                        alt={item.subscriptionaltName}
+                        className={styles.imageWidth}
+                      />
+                    </div>
+                    <p className={styles.subscriptionLimitTimeText}>
+                      {item.subscriptionTextTwo}
+                    </p>
+                  </div>
+                  <div className={styles.subscriptionValidity}>
+                    <div className={styles.subscriptionBlueIcon}>
+                      <img
+                        src={item.subscriptionGreenImage}
+                        alt={item.subscriptionaltName}
+                        className={styles.imageWidth}
+                      />
+                    </div>
+                    <p className={styles.subscriptionValidityText}>
+                      {item.subscriptionTextThree}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
+
+  const aboutFooterSection = () => {
+    return (
+      <div className={styles.aboutFooterSection}>
+        <div className={styles.insideAboutFooterSection}>
+          {aboutFooterTopContainer()}
+          {aboutFooterBottomContainer()}
+        </div>
+      </div>
+    );
+  };
+  const aboutFooterTopContainer = () => {
+    return (
+      <div className={styles.abooutFooterTopSection}>
+        <h4 className={styles.aboutFooterHeading}>
+          {aboutPageStrings.aboutFooterHeading}
+        </h4>
+        <p className={styles.aboutFooterPara}>
+          {aboutPageStrings.aboutFooterPara}
+        </p>
+      </div>
+    );
+  };
+  const aboutFooterBottomContainer = () => {
+    return (
+      <div className={styles.abooutFooterCartSection}>
+        {CartData.map((item, index) => {
+          return (
+            <div key={index}>
+              <div className={styles.aboutFooterBottomSection}>
+                <div className={styles.insideAboutFooterBottomSection}>
+                  <div className={styles.aboutCartImageSection}>
+                    <img
+                      src={item.cartImg}
+                      alt={item.cartaltName}
+                      className={styles.imageWidth}
+                    />
+                  </div>
+                  <p className={styles.aboutCartParaText}>{item.cartpara}</p>
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </div>
     );
   };
   return (
     <div>
-      {/* {aboutTopSection()} */}
+      {aboutTopSection()}
       {aboutMiddleSection()}
-      {/* {aboutSubscriptionSection()} */}
+      {aboutSubscriptionSection()}
+      {aboutFooterSection()}
+      <Footer />
     </div>
   );
 };
