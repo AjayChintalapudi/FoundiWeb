@@ -1,22 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
 import classNames from 'classnames';
 import styles from './styles.module.css';
+import { passwordhideicon, passwordopenicon } from 'resources/Images/Images';
 
-const Input = ({ type, value, placeholder, onChange, className, image }) => {
+const Input = ({
+  type,
+  name,
+  value,
+  placeholder,
+  onChange,
+  onBlur,
+  className,
+  image,
+  error,
+  errorMessage,
+}) => {
+  // Toggle Password
+  const [showPassWord, setShowPassWord] = useState(false);
+
+  const togglePassWord = () => {
+    setShowPassWord(!showPassWord);
+  };
   return (
     <div className={styles.inputContainer}>
       <input
-        type={type}
+        type={showPassWord ? 'text' : type}
+        name={name}
         value={value}
         placeholder={placeholder}
         onChange={onChange}
-        className={classNames(styles.input, className)}
+        onBlur={onBlur}
+        className={classNames(styles.input, className, error && errorMessage)}
       />
       {image && (
-        <div className={styles.inputIcon}>
-          <img src={image} className={styles.imageWidth} />
+        <div className={styles.inputIcon} onClick={togglePassWord}>
+          <img src={showPassWord ? passwordopenicon : passwordhideicon} className={styles.imageWidth} />
         </div>
       )}
+
+      {error && <div className={styles.error}>{error}</div>}
     </div>
   );
 };

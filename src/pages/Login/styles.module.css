@@ -100,6 +100,27 @@
   border-radius: 8px;
 }
 
+/* Error Messages Design */
+
+.emailErrorMessage,
+.passWordErrorMessage {
+  padding-top: 8px;
+}
+.inValidEmailText,
+.inValidPassWord {
+  color: var(--redbrick);
+  font-size: 14px;
+}
+
+.reset {
+  color: var(--blue);
+  border-bottom: 1px solid var(--blue);
+}
+
+.errorMessage {
+  background-color: var(--backgroundtransparentpink);
+  border: 1px solid var(--redbrick);
+}
 /* Media Query Start */
 
 /* From View 550px View Start */

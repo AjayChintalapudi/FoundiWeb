@@ -159,6 +159,11 @@ const loginPageStrings = {
   forgotPassWordText: 'Forgot password',
   continueGoogleText: 'Continue with Google',
   logIn: 'Login',
+  inValidEmail:"Invalid email.",
+  enterValidEmail:"Enter valid email",
+  inValidPassWord:"Invalid password",
+  tryAgain:"Try again or",
+  reset:"Reset",
 };
 
 const createAccountPageStrings = {

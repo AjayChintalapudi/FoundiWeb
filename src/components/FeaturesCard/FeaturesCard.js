@@ -22,3 +22,4 @@ const FeaturesCard = (props) => {
 };
 
 export default FeaturesCard;
+
