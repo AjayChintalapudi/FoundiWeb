@@ -35,3 +35,12 @@ export { default as messageImg } from 'assets/Images/Message.svg';
 export { default as lockImg } from 'assets/Images/Lock.svg';
 export { default as timeImg } from 'assets/Images/Time Circle.svg';
 export { default as heartImg } from 'assets/Images/Heart.svg';
+
+//chat Images
+export { default as chatDownImg } from 'assets/Images/chatDownIcon.svg';
+export { default as closeImg } from 'assets/Images/CloseIcon.svg';
+export { default as walletImg } from 'assets/Images/coin-wallet.svg';
+export { default as ipadImg } from 'assets/Images/ipadpro.svg';
+export { default as headsetImg } from 'assets/Images/airpods-pro-max.svg';
+export { default as backpackImg } from 'assets/Images/backpack.svg';
+export { default as cameraImg } from 'assets/Images/camera.svg';

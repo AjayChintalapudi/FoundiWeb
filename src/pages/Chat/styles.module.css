@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* -----------------------Desktop View Intially Starts----------------------- */
+
+
+
+/* ChatTopSection  Styles Starts*/
+.chatTopContainer{
+    width: 100%;
+    height: 100%;
+}
+.insideChatTopContainer{
+    max-width: 1440px;
+    margin: auto;
+    background: var(--white);
+    border-bottom: 1px solid var(--gray72);
+border-radius: 0px;
+    padding: 18px 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.chatTopLeftSection{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+.chatTopLeftText{
+    max-width: 75px;
+    font-family: 'Regular', sans-serif;
+    font-size: 18px;
+line-height: 28px;
+color:var(--black);
+}
+.chatTopLeftImage{
+max-width: 8px;
+max-height:4px
+
+}
+.imageWidth{
+    width: 100%;
+    height: 100%;
+}
+.chatTopRightSection{
+    max-width: 20px;
+    max-height: 20px;
+}
+/* ChatTopSection  styles Ends*/
+
+
+
+/* ChatLeftContainer Styles Starts*/
+.chatLeftColumnData{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.insideChatLeftContainer{
+    /* max-width: 496px; */
+    padding: 24px 32px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    background: var(--white);
+}
+.insideChatLeftContainer:active{
+    background: var(--gray95);
+    border-radius: 16px;
+    
+
+}
+.chatLeftImage{
+    width: 56px;
+    height: 56px;
+    padding: 16px;
+    background: var(--gray95);
+border-radius: 48px;
+}
+.chatLeftImage:active{
+    background: var(--white);
+    border: 1px solid var(--gray72);
+}
+.imageWidth{
+    width: 100%;
+    height: 100%;
+}
+.chatLeftText{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+
+}
+.chatLeftHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ 
+
+}
+.chatLeftHeaderText{
+    max-width: 307px;
+    font-family: 'Regular', sans-serif;
+    font-size: 18px;
+line-height: 28px;
+color: var(--black);
+
+}
+.snoNumber{
+    font-family: 'Light',sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--grey);
+}
+.chatLeftHeaderDate{
+  max-width: 48px;
+  font-family: 'Light',sans-serif;
+  font-size: 14px;
+line-height: 22px;
+text-align: right;
+color: var(--grey);
+
+}
+.chatLeftPara{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 16px;
+}
+.chatLeftParaFinder{
+    max-width: 324px;
+    font-family: 'Medium',sans-serif;
+    font-size: 16px;
+line-height: 24px;
+color: var(--black);
+-webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.chatLeftParaFinderText{
+    font-family: 'Light',sans-serif;
+    color: var(--nero);
+}
+.chatLeftParaNotifications{
+    width: 20px;
+    height: 20px;
+    font-family: 'Light',sans-serif;
+    font-size: 13px;
+line-height: 18px;
+    text-align: center;
+    background-color: var(--blue);
+    border-radius: 16px;
+    color: var(--white);
+
+}
+
+/* ChatLeftContainer Styles Ends*/
+
+
+/* ChatRightContainer Styles Starts*/
+
+/* ChatRightContainer Styles Ends*/
+.chatRightContainer{
+    /* width: 100%;
+    height: 100%; */
+
+}
+.insidechatRightContainer{
+    padding: 100px;
+
+}
+
+
+
+
+
+/* -----------------------Desktop View Intially Starts----------------------- */

@@ -3,6 +3,11 @@ import {
   fourTagsImg,
   greenTickImg,
   blueTickImg,
+  walletImg,
+  ipadImg,
+  headsetImg,
+  backpackImg,
+  cameraImg,
 } from 'resources/Images/Images';
 
 const ProductsCategoriesData = [
@@ -183,9 +188,54 @@ const SubscriptionCategoriesData = [
   },
 ];
 
+const AboutNotificationsData = [
+  {
+    chatImage: walletImg,
+    chatHeading: 'My wallet',
+    chatISONumber: '(SNO#1E46MP)',
+    chatDate: 'Oct 20',
+    chatMessageFinder: 'Finder:',
+    chatMessage: 'Lorem ipsum dolor sit amet  consec tetur adipiscing elit. ',
+    chatNotifications: '2',
+  },
+  {
+    chatImage: ipadImg,
+    chatHeading: 'My iPad ',
+    chatISONumber: '(SNO#1C46UP)',
+    chatDate: 'Oct 20',
+    chatMessageFinder: 'Owner:',
+    chatMessage: 'Lorem ipsum dolor sit amet  consec tetur adipiscing elit. ',
+  },
+  {
+    chatImage: headsetImg,
+    chatHeading: 'Sony XM4 ',
+    chatISONumber: '(SNO#F10BNR)',
+    chatDate: 'Aug 7',
+    chatMessageFinder: 'You:',
+    chatMessage: 'Thank you! ',
+  },
+  {
+    chatImage: backpackImg,
+    chatHeading: 'Backpack ',
+    chatISONumber: '(SNO#V96BNW)',
+    chatDate: 'Mar 23',
+    chatMessageFinder: 'Finder:',
+    chatMessage: 'Lorem ipsum dolor sit amet  consec tetur adipiscing elit. ',
+  },
+  {
+    chatImage: cameraImg,
+    chatHeading: 'My wallet',
+    chatISONumber: '(SNO#1E46MP)',
+    chatDate: 'Oct 20',
+    chatMessageFinder: 'You:',
+    chatMessage: 'Lorem ipsum dolor sit amet  consec tetur adipiscing elit. ',
+  },
+];
+
 export {
   ProductsCategoriesData,
   ReviewCategoriesData,
   ReviewRatingData,
   SubscriptionCategoriesData,
+  AboutNotificationsData,
 };
