@@ -3,7 +3,6 @@ import { englishStrings } from 'resources/Strings/eng';
 import Input from 'components/Input/Input';
 import {
   passwordhideicon,
-  passwordopenicon,
   closeicon,
   googleicon,
 } from 'resources/Images/Images';
@@ -11,7 +10,10 @@ import Button from 'components/Button/Button';
 import styles from './styles.module.css';
 import { useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
-import { ValidationSchema } from 'validators/Validators';
+import {
+  EmailValidationSchema,
+  PassWordValidationSchema,
+} from 'validators/Validators';
 
 const LoginPage = () => {
   /*****LOGIN PAGE STRINGS*****/
@@ -47,7 +49,7 @@ const LoginPage = () => {
       email: '',
       password: '',
     },
-    validationSchema: ValidationSchema,
+    validationSchema: EmailValidationSchema.concat(PassWordValidationSchema),
     onSubmit: handleLogin,
   });
 

@@ -159,11 +159,11 @@ const loginPageStrings = {
   forgotPassWordText: 'Forgot password',
   continueGoogleText: 'Continue with Google',
   logIn: 'Login',
-  inValidEmail:"Invalid email.",
-  enterValidEmail:"Enter valid email",
-  inValidPassWord:"Invalid password",
-  tryAgain:"Try again or",
-  reset:"Reset",
+  inValidEmail: 'Invalid email.',
+  enterValidEmail: 'Enter valid email',
+  inValidPassWord: 'Invalid password',
+  tryAgain: 'Try again or',
+  reset: 'Reset',
 };
 
 const createAccountPageStrings = {
@@ -189,7 +189,8 @@ const createAccountPageStrings = {
   closeIconAlt: 'closeIcon',
   createAccountTitle: 'Create an account',
   createAccountAccountDesc: 'Have an account?',
-  createAccountLogin: 'Log In',
+  createAccountLogIn: 'Log In',
+  createAccountNext: 'Next',
   inputTypeEmail: 'text',
   fullNameHeading: 'Full name',
   fullNameText: 'Full name',
@@ -199,7 +200,23 @@ const createAccountPageStrings = {
   lastNameText: 'text',
   lastNamePlaceHolderText: 'Enter your last name',
   continueGoogleText: 'Continue with Google',
-  next: 'Next',
+  firstName: 'FirstName',
+  required: 'required',
+  lastName: 'LastName',
+
+  inValidEmail: 'Invalid email.',
+  enterValidEmail: 'Enter valid email',
+  inValidPassWord: 'Invalid password',
+  tryAgain: 'Try again or',
+  reset: 'Reset',
+  strength:"Strength",
+  poor:":Poor",
+  // Verify credential
+  verifyCredentialHeading: 'Hang on, we’re verifying',
+  verifyCredentialDesc:
+    'We’ve sent a confirmation mail to username@gmail.com Open your inbox and click on the confirmation link to finish account setup.',
+  resendLink: 'Resend link',
+  editEmail: 'Edit email',
 };
 
 // Footer Page Strings

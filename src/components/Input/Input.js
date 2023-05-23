@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
-import styles from './styles.module.css';
 import { passwordhideicon, passwordopenicon } from 'resources/Images/Images';
+import styles from './styles.module.css';
 
 const Input = ({
   type,
@@ -10,10 +10,12 @@ const Input = ({
   placeholder,
   onChange,
   onBlur,
+  onFocus,
   className,
   image,
   error,
   errorMessage,
+  customeInputStyle
 }) => {
   // Toggle Password
   const [showPassWord, setShowPassWord] = useState(false);
@@ -30,7 +32,8 @@ const Input = ({
         placeholder={placeholder}
         onChange={onChange}
         onBlur={onBlur}
-        className={classNames(styles.input, className, error && errorMessage)}
+        onFocus={onFocus}
+        className={classNames(styles.input, className, error && errorMessage,customeInputStyle)}
       />
       {image && (
         <div className={styles.inputIcon} onClick={togglePassWord}>

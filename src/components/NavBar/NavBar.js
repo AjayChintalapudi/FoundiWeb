@@ -169,19 +169,16 @@ const NavBar = (props) => {
                   </p>
                 </div>
                 <div className={styles.loginSignUpButton}>
-                  <div onClick={() => navigate('/login')}>
-                    <Button
-                      btName={navbar.logIn}
-                      btnStyles={styles.loginButtonStyles}
-                    />
-                  </div>
-                  <div onClick={() => navigate('/signup')}>
-                    <Button
-                      btName={navbar.signUp}
-                      btnStyles={styles.signUpButtonStyles}
-                      onClick={() => navigate('/signup')}
-                    />
-                  </div>
+                  <Button
+                    btName={navbar.logIn}
+                    btnStyles={styles.loginButtonStyles}
+                    onClick={() => navigate('/login')}
+                  />
+                  <Button
+                    btName={navbar.signUp}
+                    btnStyles={styles.signUpButtonStyles}
+                    onClick={() => navigate('/signup')}
+                  />
                 </div>
               </div>
             }
@@ -226,6 +223,7 @@ const NavBar = (props) => {
                 <Button
                   btName={navbar.logIn}
                   btnStyles={styles.profileLoginBtnStyles}
+                  onClick={() => navigate('/login')}
                 />
               </div>
               <div>{navbar.eventsAndBuissness}</div>

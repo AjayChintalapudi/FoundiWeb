@@ -13,7 +13,6 @@ const Button = (props) => {
       className={classNames(btnStyles, styles.btnStyles)}
     >
       {btName}
-      {type}
       {image && (
         <div
           className={classNames(styles.imageWrapperStyle, imageWrapperStyle)}
