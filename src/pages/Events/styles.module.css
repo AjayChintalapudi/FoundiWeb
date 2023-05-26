@@ -185,7 +185,7 @@ gap: 64px;
 background: var(--gray95);
 border-radius: 16px;
 width: 100%;
-justify-content: space-between;
+
 }
 .eventsBannerDropLeftSection{
     max-width: 260px;
@@ -198,14 +198,14 @@ max-height: 248px;
     gap: 16px;
 }
 .eventsBannerRightHeading{
-    max-width: 572px;
+    
     font-family: 'Regular', sans-serif;
     font-size: 30px;
     line-height: 40px;
     color: var(--black);
 }
 .eventsBannerRightPara{
-    max-width: 572px;
+   
     font-family: 'Light', sans-serif;
     font-size: 16px;
 line-height: 24px;
@@ -454,7 +454,7 @@ line-height: 34px;
     display: flex;
 flex-direction: row;
 padding: 56px;
-gap: 56px;
+
 }
 .eventsBannerDropLeftSection{
   
@@ -578,7 +578,7 @@ line-height: 34px;
     display: flex;
 flex-direction: column;
 padding: 24px;
-gap: 24px;
+
 }
 .eventsBannerDropLeftSection{
    width: 556px;
@@ -664,8 +664,9 @@ height: 224px;
  max-width: 366px;
 }
 .eventsBannerDropLeftSection{
-    width: 318px;
- height: 224px;
+    max-width: 314px;
+    width: 100%;
+ height: 100%;
      }
      .eventsBannerRightHeading{
         max-width: 318px;
@@ -682,6 +683,10 @@ height: 224px;
         max-width: 366px;
         min-height: 310px;
         height: 100%;
+    }
+    .eventsBannerBottomHeadingText{
+        text-align: initial;
+      
     }
     .eventBannerEmployeeHeading{
         max-width: 318px;   

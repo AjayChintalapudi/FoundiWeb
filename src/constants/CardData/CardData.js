@@ -8,6 +8,7 @@ import {
   headsetImg,
   backpackImg,
   cameraImg,
+  orderTagImg,
 } from 'resources/Images/Images';
 
 const ProductsCategoriesData = [
@@ -231,6 +232,63 @@ const AboutNotificationsData = [
     chatMessage: 'Lorem ipsum dolor sit amet  consec tetur adipiscing elit. ',
   },
 ];
+const OrderHistoryData = [
+  {
+    orderIdNo: 'Order No. 11001122',
+    totalPrice: '$180.00',
+    orderDate: 'Odered on: 23-06-2022',
+    estimateDate: 'Estimated delivery:',
+    deliveryTime: ' By tomorrow 9 PM',
+    invoice: 'Invoice',
+    items: [
+      {
+        orderImage: orderTagImg,
+        orderProductName: 'Keychain tags - A pack of 4',
+        orderPrice: 'Price (x1): $ 90.00',
+      },
+      {
+        orderImage: orderTagImg,
+        orderProductName: 'Keychain tags - A pack of 4',
+        orderPrice: 'Price (x1): $ 90.00',
+      },
+    ],
+  },
+  {
+    orderIdNo: 'Order No. 71451126',
+    totalPrice: '$90.00',
+    orderDate: 'Odered on: 23-06-2022',
+    estimateDate: 'Status:',
+    deliveryTime: ' Order cancelled',
+    invoice: 'Invoice',
+    items: [
+      {
+        orderImage: orderTagImg,
+        orderProductName: 'Keychain tags - A pack of 4',
+        orderPrice: 'Price (x1): $ 90.00',
+      },
+    ],
+  },
+  {
+    orderIdNo: 'Order No. 11001122',
+    totalPrice: '$180.00',
+    orderDate: 'Odered on: 23-06-2022',
+    estimateDate: 'Status:',
+    deliveryTime: ' Order cancelled',
+    invoice: 'Invoice',
+    items: [
+      {
+        orderImage: orderTagImg,
+        orderProductName: 'Keychain tags - A pack of 4',
+        orderPrice: 'Price (x1): $ 90.00',
+      },
+      {
+        orderImage: orderTagImg,
+        orderProductName: 'Keychain tags - A pack of 4',
+        orderPrice: 'Price (x1): $ 90.00',
+      },
+    ],
+  },
+];
 
 export {
   ProductsCategoriesData,
@@ -238,4 +296,5 @@ export {
   ReviewRatingData,
   SubscriptionCategoriesData,
   AboutNotificationsData,
+  OrderHistoryData,
 };

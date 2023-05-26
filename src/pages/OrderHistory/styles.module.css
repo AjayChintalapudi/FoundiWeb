@@ -1,0 +1,399 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+/* -----------------------------DeskTop View Starts----------------------------- */
+
+/* heroSection Styles Starts */
+
+.orderSection{
+    width: 100%;
+    height: 100%;
+    background-color: var(--gray95);
+}
+.orderIdHorizontalLine{
+    display: none;
+}
+.insideOrderSection{
+    max-width: 1440px;
+    margin: auto;
+    padding: 32px 80px 64px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.orderTopSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.orderTopText{
+    max-width: 88px;
+    width: 100%;
+    font-family: 'Medium',sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+  color:var(--nero);
+
+}
+.orderTopImage{
+max-width: 20px;
+max-height: 20px;
+}
+.imageWidth{
+    width: 100%;
+    height: 100%;
+}
+.orderBotttomSection{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.orderIdContainer{
+    background-color: var(--white);
+    padding: 32px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+}
+
+.orderIdTopTextSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 64px;
+    
+}
+.orderNoSection{
+    display: flex;
+    flex-direction: column;
+    gap:4px;
+
+}
+.orderIdParas{
+    display: flex;
+    flex-direction: column;
+}
+.orderNoLeftText{
+    font-family: 'Regular',sans-serif;
+    font-size: 20px;
+line-height: 30px;
+color:var(--black);
+}
+.orderNoRightText{
+    font-family: 'Regular',sans-serif;
+    font-size: 20px;
+line-height: 30px;
+color: var(--black);
+}
+.orderDate, .estimateDeliveryLeftText{
+    font-family: 'Light',sans-serif;
+font-size: 16px;
+line-height: 24px;
+color: var(--blackfade);
+}
+.estimatedDelivery{
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+
+}
+.estimateDeliveryLeftSpanText{
+    color: var(--blue);
+    font-family: 'Medium',sans-serif;
+}
+.estimateDeliveryRightText{
+    font-family: 'Light',sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--blackfade);
+    text-decoration: underline;
+    text-align: end;
+}
+.orderIdBottomSection{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+/* .orderIdMobileViewSection{
+    display:none;
+} */
+.orderIdMobileSection, .orderIdMobileReviewText{
+    display:none;
+}
+.orderIdTrackSection{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+}
+.orderIdTrackButtonSection{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+   
+}
+.orderIdTagImage, .orderIdButtonTagImage{
+    background-color: var(--gray95);
+    padding: 4px;
+    border-radius: 8px;
+    max-width: 112px;
+    max-height: 112px;
+}
+.orderIdReviewSection, .orderIdReviewButtonSection{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.orderIdPriceSection, .orderIdPriceButtonSection{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.orderIdTagText, .orderIdTagButtonText{
+    font-family: 'Regular',sans-serif;
+    font-size: 16px;
+line-height: 24px;
+color: var(--nero);
+}
+.orderIdPriceText, .orderIdPriceButtonText{
+    font-family: 'Light',sans-serif;
+    font-size: 14px;
+line-height: 22px;
+color: var(--nero);
+}
+.orderReviewTextSection, .orderReviewTextButtonSection{
+    display: block;
+    border-radius: 20px;
+    background-color: var(--gray95);
+    box-shadow: 0px 4px 16px rgba(235, 235, 235, 0.24);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 149px;
+    width: 100%;
+    height: 34px;
+
+}
+
+.orderReviewtext, .orderReviewButtonText{
+    font-family: 'Medium',sans-serif;
+    font-size: 14px;
+line-height: 22px;
+color: var(--nero);
+}
+.OrderIdButtonSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 64px;
+    align-items: center;
+}
+.orderIdButtonContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.orderTrackButton{
+    background: var(--blue);
+    box-shadow: 0px 4px 16px rgba(19, 115, 251, 0.24);
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    width: 260px;
+    height: 48px;
+}
+.trackId{
+    font-family: 'Light',sans-serif;
+    font-size: 17px;
+line-height: 24px;
+color:  var(--white);
+}
+.orderCancelButton{
+    background: var(--white);
+    box-shadow: 0px 4px 16px rgba(208, 208, 208, 0.24);
+    border: 1px solid var(--black);
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    width: 260px;
+    height: 48px;
+}
+.cancelId{
+    font-family: 'Light',sans-serif;
+    font-size: 17px;
+line-height: 24px;
+color:  var(--black);
+}
+/* heroSection Styles Ends */
+
+/* -----------------------------DeskTop View Ends----------------------------- */
+
+
+
+/* ----------------------- View Starts at  1440px----------------------- */
+
+@media screen and (max-width:1440px){
+
+    /* heroSection Styles Starts at 1440px*/
+    .orderReviewTextSection, .orderReviewTextButtonSection{
+       
+        max-width: 142px;
+        width: 100%;
+        height: 34px;
+        
+    
+    }
+
+    /* heroSection Styles End at 1440px*/   
+}
+
+/* ----------------------- View Ends at  1440px----------------------- */
+
+
+
+
+/* ----------------------- View Starts at  1336px----------------------- */
+
+@media screen and (max-width:1336px){
+
+    /* heroSection Styles Starts at 1336px*/
+
+
+    /* heroSection Styles End at 1336px*/
+
+   
+}
+
+/* ----------------------- View Ends at  1336px----------------------- */
+
+/* ----------------------- View Starts at  1279px----------------------- */
+
+@media screen and (max-width:1279px){
+
+    /* heroSection Styles Starts at 1279px*/
+
+    /* heroSection Styles End at 1279px*/
+ 
+}
+
+/* ----------------------- View Ends at  1279px----------------------- */
+
+
+/* ----------------------- View Starts at  1023px----------------------- */
+
+@media screen and (max-width:1023px){
+
+    /* heroSection Styles Starts at 1023px*/
+
+    .insideOrderSection{
+        padding: 32px 60px 64px 60px;
+    }
+    /* heroSection Styles End at 1023px*/
+ 
+}
+
+/* ----------------------- View Ends at  1023px----------------------- */
+
+/* ----------------------- View Starts at  867px----------------------- */
+
+@media screen and (max-width:867px){
+
+    /* heroSection Styles Starts at 867px*/
+    .insideOrderSection{
+        padding: 24px 32px 40px 32px;
+        gap: 24px;
+    }
+    .orderIdTopTextSection{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        
+    }.estimatedDelivery{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    
+    }
+    .OrderIdButtonSection{
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        align-items: flex-start;
+    }
+   
+    .orderIdButtonContainer{
+       width: 100%;
+    }
+    .orderTrackButton{
+        width: 100%;
+        height: 48px;
+    }
+    .orderCancelButton{
+       
+        width: 100%;
+        height: 48px;
+    }
+    /* heroSection Styles End at 867px*/
+ 
+}
+
+/* ----------------------- View Ends at  867px----------------------- */
+
+/* ----------------------- View Starts at  550px----------------------- */
+
+@media screen and (max-width:550px){
+
+    /* heroSection Styles Starts at 550px*/
+    .insideOrderSection{
+        padding: 24px 24px 40px 24px;
+    }
+    .orderIdContainer{
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    
+    }
+
+    .orderReviewTextSection, .orderReviewTextButtonSection{
+    display: none;
+    }
+    .orderIdHorizontalLine{
+        display: block;
+        border: 1px solid var(--gray72);
+    }
+    .orderIdTagImage, .orderIdButtonTagImage{
+        max-width: 80px;
+        max-height: 80px;
+    }
+    .orderIdMobileViewSection, .orderIdMobileReview{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+    }
+    .orderIdMobileSection {
+        display: block;
+        width: 100%;
+        border-radius: 20px;
+        background-color: var(--gray95);
+        box-shadow: 0px 4px 16px rgba(235, 235, 235, 0.24);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 34px;
+    }
+
+    /* heroSection Styles End at 550px*/   
+}
+
+/* ----------------------- View Ends at  550px----------------------- */

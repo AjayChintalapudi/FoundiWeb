@@ -2,8 +2,21 @@ import React from 'react';
 import styles from './styles.module.css';
 import { chatDownImg, closeImg, eventImg } from 'resources/Images/Images';
 import { AboutNotificationsData } from 'constants/CardData/CardData';
+import { headsetImg } from 'resources/Images/Images';
 
 const Chat = () => {
+  const chatData = [
+    {
+      type: 'receive',
+      msg: 'dfxghxxfbfnqecijqencjinqeejcnjqbncinqejbcqehcbhebvwenjnwjbviwrhviwrriviwrnvjiwrnjvnkjwvnjkwenvjknhi',
+    },
+    { type: 'send', msg: 'hi' },
+    { type: 'send', msg: 'hi' },
+    { type: 'receive', msg: 'hello,how are you' },
+    { type: 'send', msg: 'i am fine' },
+    { type: 'receive', msg: 'how can i help you' },
+    { type: 'send', msg: '?' },
+  ];
   const chatTopSection = () => {
     return (
       <div className={styles.chatTopContainer}>
@@ -73,7 +86,43 @@ const Chat = () => {
     return (
       <div className={styles.chatRightContainer}>
         <div className={styles.insidechatRightContainer}>
-          <img src={eventImg} />
+          <div className={styles.chatRightTopSection}>
+            <div className={styles.insideChatRightSection}>
+              <div className={styles.chatRightTopText}>
+                <div className={styles.chatRightTopImage}>
+                  <img src={headsetImg} alt="" className={styles.imageWidth} />
+                </div>
+                <div className={styles.chatRightHeadSetDetalis}>
+                  <p className={styles.chatRightHeadSetName}> Sony XM4</p>
+                  <p className={styles.chatRightIsoNumber}>SNO#F10B7NR</p>
+                </div>
+              </div>
+              <div className={styles.chatRightOption}>
+                <span className={styles.chatRightOptionOne}></span>
+                <span className={styles.chatRightOptionTwo}></span>
+              </div>
+            </div>
+          </div>
+          <div className={styles.chatRightMiddleSection}>
+            <div className={styles.insideChatRightSection}>
+              <div className={styles.chatRightNotificationSection}>
+                {chatData &&
+                  chatData.map((item, index) => (
+                    <div key={index}>
+                      <p
+                        className={
+                          item.type === 'receive'
+                            ? styles.receivedMsgStyle
+                            : styles.sendMsgStyle
+                        }
+                      >
+                        {item.msg}
+                      </p>
+                    </div>
+                  ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );
@@ -81,7 +130,7 @@ const Chat = () => {
 
   return (
     <div>
-      {chatTopSection()}
+      {/* {chatTopSection()} */}
       <div style={{ display: 'grid', gridTemplateColumns: '40% 70%' }}>
         {chatLeftSection()}
         {chatRightSection()}

@@ -44,3 +44,10 @@ export { default as ipadImg } from 'assets/Images/ipadpro.svg';
 export { default as headsetImg } from 'assets/Images/airpods-pro-max.svg';
 export { default as backpackImg } from 'assets/Images/backpack.svg';
 export { default as cameraImg } from 'assets/Images/camera.svg';
+
+//PrivacyPolicy Images
+export { default as privacyPolicyImg } from 'assets/Images/Image here.svg';
+export { default as privacyPolicyImgOne } from 'assets/Images/privacy.svg';
+
+//OrderSection Images
+export { default as orderTagImg } from 'assets/Images/orderTagImage.svg';

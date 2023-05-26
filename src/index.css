@@ -31,26 +31,26 @@ code {
 
 @font-face {
   font-family: "Light";
-  src: url("assets/Fonts/Euclid\ Circular\ A\ Light.ttf");
+  src: url("assets/Fonts/EuclidCircularB-Light.ttf");
   font-weight: 300;
 }
 @font-face {
   font-family: "Medium";
-  src: url("assets/Fonts/Euclid\ Circular\ A\ Medium.ttf");
+  src: url("assets/Fonts/EuclidCircularB-Medium.ttf");
   font-weight: 400;
 }
 @font-face {
   font-family: "Regular";
-  src: url("assets/Fonts/Euclid\ Circular\ A\ Regular.ttf");
+  src: url("assets/Fonts/EuclidCircularB-Regular.ttf");
   font-weight: 500;
 }
 @font-face {
   font-family: "Semi-Bold";
-  src: url("assets/Fonts/Euclid\ Circular\ A\ SemiBold.ttf");
+  src: url("assets/Fonts/EuclidCircularB-SemiBold.ttf");
   font-weight: 600;
 }
 @font-face {
   font-family:"Bold";
-  src: url("assets/Fonts/Euclid\ Circular\ A\ Bold.ttf");
+  src: url("assets/Fonts/EuclidCircularB-Bold.ttf");
   font-weight: 800;
 }

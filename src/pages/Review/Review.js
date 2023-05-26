@@ -167,7 +167,7 @@ const Review = () => {
   };
   return (
     <div>
-      {/* {reviewHeroSection()} */}
+      {reviewHeroSection()}
       {reviewMiddleSection()}
     </div>
   );
