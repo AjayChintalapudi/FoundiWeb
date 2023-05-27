@@ -41,6 +41,11 @@ const NavBar = (props) => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // close icon
+  const [showPopup, setShowPopup] = useState(false);
+  const [showLanguage,setShowLanguage]=useState(false);
+  const [showCart,setShowCart]=useState(false);
+
   /*************NAVBAR LOGOLEFT START****************/
   const navbarLogoLeft = () => {
     return (
@@ -76,11 +81,13 @@ const NavBar = (props) => {
         {/* =============NAVBAR MENU ITEMS RIGHT "LANGUAGE" ICON START==============*/}
         <div className={styles.navbarMenuItemsRight}>
           <PopOver
+          showPopup={showLanguage}
             triggerElement={
               <img
                 className={styles.menuItemsRightLogo}
                 src={isHome ? language : languageblackicon}
                 alt="language"
+                onClick={()=>setShowLanguage(!showLanguage)}
               />
             }
             /*************CONTENT OF THE LANGUAGE POPUP START********/
@@ -114,11 +121,13 @@ const NavBar = (props) => {
         {/* =============NAVBAR MENU ITEMS RIGHT "CART" ICON START==============*/}
         <div className={styles.navbarMenuItemsRight}>
           <PopOver
+          showPopup={showCart}
             triggerElement={
               <img
                 className={styles.menuItemsRightCartIcon}
                 src={isHome ? cart : cartblackicon}
                 alt="cart"
+                onClick={()=>setShowCart(!showCart)}
               />
             }
             /*************CONTENT OF THE CART POPUP START********/
@@ -141,50 +150,60 @@ const NavBar = (props) => {
         {/* =============NAVBAR MENU ITEMS RIGHT "PROFILE" ICON START============= */}
         <div className={styles.navbarMenuItemsRight}>
           <PopOver
+            showPopup={showPopup}
             triggerElement={
               <img
                 className={styles.menuItemsRightLogo}
                 src={isHome ? profile : profileblackicon}
                 alt="profile"
+                onClick={() => setShowPopup(true)}
               />
             }
             /*************CONTENT OF THE PROFILE POPUP START********/
             content={
-              <div className={styles.profileContainer}>
-                <div className={styles.signUpLoginBlock}>
-                  <p className={styles.signUpLoginHeading}>
-                    {navbar.signUpLoginHeading}
-                  </p>
-                  <div className={styles.closeIcon}>
-                    <img src={closeicon} alt="" className={styles.imageWidth} />
+              <div>
+                <div className={styles.profileContainer}>
+                  <div className={styles.signUpLoginBlock}>
+                    <p className={styles.signUpLoginHeading}>
+                      {navbar.signUpLoginHeading}
+                    </p>
+                    <div className={styles.closeIcon}>
+                      <img
+                        src={closeicon}
+                        alt=""
+                        className={styles.imageWidth}
+                        onClick={() => setShowPopup(false)}
+                      />
+                    </div>
                   </div>
-                </div>
-                <div className={styles.signUpBottomBorder}></div>
-                <div className={styles.profileIcon}>
-                  <img src={adduser} alt="" className={styles.imageWidth} />
-                </div>
-                <div className={styles.signUpLoginDescText}>
-                  <p className={styles.signUpLoginDesc}>
-                    {navbar.signUpLoginDesc}
-                  </p>
-                </div>
-                <div className={styles.loginSignUpButton}>
-                  <Button
-                    btName={navbar.logIn}
-                    btnStyles={styles.loginButtonStyles}
-                    onClick={() => navigate('/login')}
-                  />
-                  <Button
-                    btName={navbar.signUp}
-                    btnStyles={styles.signUpButtonStyles}
-                    onClick={() => navigate('/signup')}
-                  />
+                  <div className={styles.signUpBottomBorder}></div>
+                  <div className={styles.profileIcon}>
+                    <img src={adduser} alt="" className={styles.imageWidth} />
+                  </div>
+                  <div className={styles.signUpLoginDescText}>
+                    <p className={styles.signUpLoginDesc}>
+                      {navbar.signUpLoginDesc}
+                    </p>
+                  </div>
+                  <div className={styles.loginSignUpButton}>
+                    <Button
+                      btName={navbar.logIn}
+                      btnStyles={styles.loginButtonStyles}
+                      onClick={() => navigate('/login')}
+                    />
+                    <Button
+                      btName={navbar.signUp}
+                      btnStyles={styles.signUpButtonStyles}
+                      onClick={() => navigate('/signup')}
+                    />
+                  </div>
                 </div>
               </div>
             }
             /*************CONTENT OF THE "CART" POPUP END********/
           />
         </div>
+
         {/* =============NAVBAR MENU ITEMS RIGHT "PROFILE" ICON END==============*/}
 
         {/* ===================HAMBERGER MENU START=============================== */}

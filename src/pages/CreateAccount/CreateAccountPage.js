@@ -16,6 +16,8 @@ import {
   LastNameValidationSchema,
   PassWordValidationSchema,
 } from 'validators/Validators';
+import { signUp } from 'networking/endpoints/endpoints';
+import ProgressBar from 'components/ProgressBar/ProgressBar';
 
 const CreateAccountPage = () => {
   /***********STRING VALUES************/
@@ -35,17 +37,20 @@ const CreateAccountPage = () => {
   /***********AFTER  CLOSING THE ICON REDIRECT TO HOME PAGE************/
 
   /***********Form HANDLING************/
-  const handleSignUp = async (values) => {
-    // try{
-    //   console.log(response)
-    // }
-    // catch{
-    //   console.log('error')
-    // }
 
+  const [isDetailsVerified, setIsDetailsVerified] = useState(false);
+
+  const handleSignUp = async (values) => {
     setCurrentStep((previous) => previous + 1);
     if (currentStep === 3) {
       console.log(values);
+      try {
+        const response = await signUp(values);
+        console.log(response);
+        const isVerified = response.status === 'verified';
+      } catch (error) {
+        console.log('error');
+      }
     }
   };
 
@@ -63,7 +68,7 @@ const CreateAccountPage = () => {
     }
   }, [currentStep]);
 
-  // progress bar
+  // fomik validation
 
   const formik = useFormik({
     initialValues: {
@@ -76,12 +81,21 @@ const CreateAccountPage = () => {
     onSubmit: handleSignUp,
   });
 
+  const progressBar = () => {
+    const progressPercentage = (currentStep - 0) * 33.33;
+    return (
+      <div>
+        <ProgressBar progressPercentage={progressPercentage} />
+      </div>
+    );
+  };
+
   const createAccountPageCloseBlock = () => {
+    const totalSteps = 3;
+    const stepText = `Step ${currentStep} of ${totalSteps}`;
     return (
       <div className={styles.createAccountPageCloseBlock}>
-        <p className={styles.createAccountPageBackText}>
-          {createAccountPageStrings.back}
-        </p>
+        <p className={styles.createAccountPageBackText}>{stepText}</p>
         <img
           src={closeicon}
           alt={createAccountPageStrings.closeIconAlt}
@@ -98,12 +112,15 @@ const CreateAccountPage = () => {
           <h3 className={styles.createAccountPageTitle}>
             {createAccountPageStrings.createAccountTitle}
           </h3>
-          <span className={styles.createAccountPageAccountDesc}>
-            {createAccountPageStrings.createAccountAccountDesc}
-          </span>
-          <span className={styles.createAccountPageSignUpText}>
-            {createAccountPageStrings.createAccountLogIn}
-          </span>
+          <div className={styles.createAccountPageAccountDescBlock}>
+            <span className={styles.createAccountPageAccountDesc}>
+              {createAccountPageStrings.createAccountAccountDesc}
+            </span>
+            &nbsp;&nbsp;
+            <span className={styles.createAccountPageSignUpText}>
+              {createAccountPageStrings.createAccountLogIn}
+            </span>
+          </div>
         </div>
       );
     }
@@ -111,11 +128,13 @@ const CreateAccountPage = () => {
 
   const createAccountPageFormFields = () => {
     return (
+      <div>
         <form onSubmit={formik.handleSubmit}>
           {renderStepOne()}
           {renderStepTwo()}
           {renderStepThree()}
         </form>
+      </div>
     );
   };
 
@@ -124,9 +143,9 @@ const CreateAccountPage = () => {
     return (
       <div className={styles.createAccountPageFormFields}>
         <div className={styles.fullNameContainer}>
-          <span className={StyleSheet.fullNameHeading}>
+          <p className={StyleSheet.fullNameHeading}>
             {createAccountPageStrings.fullNameHeading}
-          </span>
+          </p>
           <div>
             <Input
               name="firstname"
@@ -142,6 +161,7 @@ const CreateAccountPage = () => {
                     <span className={styles.firstNameText}>
                       {createAccountPageStrings.firstName}
                     </span>
+                    &nbsp;&nbsp;
                     <span>{createAccountPageStrings.required}</span>
                   </div>
                 ) : (
@@ -152,9 +172,9 @@ const CreateAccountPage = () => {
           </div>
         </div>
         <div className={styles.lastNameContainer}>
-          <span className={styles.lastNameHeading}>
+          <p className={styles.lastNameHeading}>
             {createAccountPageStrings.lastNameHeading}
-          </span>
+          </p>
           <Input
             name="lastname"
             type={createAccountPageStrings.inputTypetext}
@@ -169,6 +189,7 @@ const CreateAccountPage = () => {
                   <span className={styles.lastNameText}>
                     {createAccountPageStrings.lastName}
                   </span>
+                  &nbsp;&nbsp;
                   <span>{createAccountPageStrings.required}</span>
                 </div>
               ) : (
@@ -218,6 +239,7 @@ const CreateAccountPage = () => {
                     <span className={styles.inValidEmailText}>
                       {createAccountPageStrings.inValidEmail}
                     </span>
+                    &nbsp;&nbsp;
                     <span className={styles.enterValidEmailText}>
                       {createAccountPageStrings.enterValidEmail}
                     </span>
@@ -231,7 +253,7 @@ const CreateAccountPage = () => {
         </div>
         <div className={styles.passWordContainer}>
           <span className={styles.passWordHeading}>
-            {createAccountPageStrings.passWordHeading}
+            {createAccountPageStrings.passwordText}
           </span>
           <Input
             type={createAccountPageStrings.inputTypePassword}
@@ -248,6 +270,7 @@ const CreateAccountPage = () => {
                   <span className={styles.inValidPassWord}>
                     {createAccountPageStrings.strength}
                   </span>
+                  &nbsp;&nbsp;
                   <span>{createAccountPageStrings.poor}</span>
                 </div>
               ) : (
@@ -256,13 +279,10 @@ const CreateAccountPage = () => {
             }
             errorMessage={styles.errorMessage}
           />
-          <span className={styles.forgotPassWordText}>
-            {createAccountPageStrings.forgotPassWordText}
-          </span>
         </div>
         <div className={styles.createAccountPageButtons}>
           <Button
-            btName={createAccountPageStrings.logIn}
+            btName={createAccountPageStrings.createAccount}
             btnStyles={styles.createAccountPageButtonStyles}
             type="submit"
           />
@@ -279,6 +299,36 @@ const CreateAccountPage = () => {
 
   const renderStepThree = () => {
     if (currentStep !== 3) return null;
+    // our logic regarding credential verfication
+    const message = isDetailsVerified ? (
+      <div className={styles.cheersMessageContainer}>
+        <h3 className={styles.cheersHeading}>
+          {createAccountPageStrings.cheersHeading}
+        </h3>
+        <p className={styles.cheersDesc}>
+          {createAccountPageStrings.cheersDesc}
+        </p>
+        <Button
+          btName={createAccountPageStrings.cheersBtnName}
+          btnStyles={styles.cheersBtnStyles}
+        />
+      </div>
+    ) : (
+      <div className={styles.oppsMessageContainer}>
+        <h3 className={styles.oopsHeading}>
+          {createAccountPageStrings.oopsHeading}
+        </h3>
+        <p className={styles.oopsDesc1}>{createAccountPageStrings.oopsDesc1}</p>
+        <p className={styles.oopsDesc2}>{createAccountPageStrings.oopsDesc2}</p>
+        <Button
+          btName={createAccountPageStrings.resendLink}
+          btnStyles={styles.resendLinkBtnStyles}
+        />
+        <span className={styles.editEmail}>
+          {createAccountPageStrings.editEmail}
+        </span>
+      </div>
+    );
     return (
       <div className={styles.verifyCredentialContainer}>
         <h3 className={styles.verifyCredentialHeading}>
@@ -301,10 +351,15 @@ const CreateAccountPage = () => {
 
   return (
     <div className={styles.createAccountPageContainer}>
+      {progressBar()}
       <div className={styles.createAccountPageInsideContainer}>
-        {createAccountPageCloseBlock()}
-        {createAccountPageTitleInfo()}
-        {createAccountPageFormFields()}
+        <div className={styles.closeBlockContainer}>
+          {createAccountPageCloseBlock()}
+        </div>
+        <div className={styles.FormFieldsAndTitleInfoBlock}>
+          {createAccountPageTitleInfo()}
+          {createAccountPageFormFields()}
+        </div>
       </div>
     </div>
   );

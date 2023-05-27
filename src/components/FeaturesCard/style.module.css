@@ -1,12 +1,7 @@
-.featuresContainer {
-  padding: 64px 160px;
-  
-}
-
 .featuresInsideContainerOdd {
   display: flex;
   flex-direction: row;
-  gap: 100px;
+  gap: 64px;
   align-items: center;
   justify-content: center;
 }
@@ -14,7 +9,7 @@
 .featureInsideContainerEven {
   display: flex;
   flex-direction: row-reverse;
-  gap: 100px;
+  gap: 64px;
   align-items: center;
   justify-content: center;
 }
@@ -25,7 +20,7 @@
   gap: 16px;
 }
 .featuresHeading {
-  font-family: Regular;
+  font-family: 'Regular', sans-serif;
   font-size: 30px;
   line-height: 40px;
 }
@@ -34,11 +29,13 @@
   font-size: 17px;
   line-height: 26px;
   color: var(--nero);
+  max-width: 704px;
+  width: 100%;
 }
 
 .featuresImages {
-  width: 360px;
-  height: 380px;
+  max-width: 352px;
+  width: 100%;
 }
 
 .imageWidth {
@@ -49,11 +46,7 @@
 /*<----- Media Query Start-----> */
 
 /* From 1023px to 1270px View Start */
-@media screen and (min-width: 1023px) and (max-width: 1279px) {
-  .featuresContainer {
-    padding: 64px 60px;
-  }
-
+@media screen and (max-width: 1279px) {
   .featureInsideContainerEven {
     display: flex;
     flex-direction: row-reverse;
@@ -76,34 +69,20 @@
     line-height: 24px;
   }
 
-  .featuresImages {
+  .imageWidth {
     width: 100%;
     height: 100%;
-  }
-
-  .imageWidth {
-    width: 320px;
-    height: 320px;
   }
 
   .featuresDescrption {
     font-size: 16px;
     line-height: 24px;
   }
-
-  .featuresImages {
-    width: 320px;
-    height: 320px;
-  }
 }
 /* From 1023px to 1270px View End */
 
 /* From 868px to 1023px View Start */
-@media screen and (min-width: 867px) and (max-width: 1023px) {
-  .featuresContainer {
-    padding: 64px 60px;
-  }
-
+@media screen and (max-width: 1023px) {
   .featureInsideContainerEven {
     display: flex;
     flex-direction: row-reverse;
@@ -125,26 +104,13 @@
     font-size: 16px;
     line-height: 24px;
   }
-
-  .featuresImages {
-    width: 100%;
-    height: 100%;
-  }
-
-  .imageWidth {
-    width: 280px;
-    height: 280px;
-  }
 }
 /* From 868px to 1023px View End */
 
 /* From 550px to 867px View Start */
 
-@media screen and (min-width: 550px) and (max-width: 867px) {
+@media screen and (max-width: 867px) {
   /* Features Section Start */
-  .featuresContainer {
-    padding: 64px 90px;
-  }
 
   .featuresInsideContainerOdd,
   .featureInsideContainerEven {
@@ -159,19 +125,12 @@
   }
 
   .featuresHeading {
-    font-size: 16px;
+    font-size: 24px;
     line-height: 24px;
   }
 
   .featuresDescrption {
     font-size: 16px;
-    width: 75%;
-    margin: auto;
-  }
-
-  .featuresImages {
-    width: 100%;
-    height: 100%;
   }
 
   /* Features Section End */
@@ -182,35 +141,34 @@
 /* From 550px View Start*/
 @media screen and (max-width: 550px) {
   /* Features Section Start */
-  .featuresContainer {
-    padding: 64px 24px 24px 24px;
-  }
 
   .featuresInsideContainerOdd,
   .featureInsideContainerEven {
     display: flex;
     flex-direction: column-reverse;
+    gap: 24px;
   }
 
   .featuresInfo {
     display: flex;
+    flex-direction: column;
     gap: 12px;
+    text-align: start;
   }
 
   .featuresHeading {
-    font-size: 16px;
+    max-width: 366px;
+    width: 100%;
+    font-size: 24px;
     line-height: 24px;
   }
 
   .featuresDescrption {
+    max-width: 366px;
+    width: 100%;
     font-size: 16px;
   }
 
-  .featuresImages {
-    width: 100%;
-    height: 100%;
-  }
-  
   /* Features Section End */
 }
 /* From 550px View  End*/
@@ -219,33 +177,32 @@
 
 @media screen and (max-width: 320px) {
   /* Features Section Start */
-  .featuresContainer {
-    padding: 64px 24px 24px 24px;
-  }
 
   .featuresInsideContainerOdd,
   .featureInsideContainerEven {
     display: flex;
     flex-direction: column-reverse;
+    gap: 24px;
   }
 
   .featuresInfo {
     display: flex;
+    flex-direction: column;
     gap: 12px;
+    text-align: start;
   }
 
   .featuresHeading {
-    font-size: 16px;
+    max-width: 366px;
+    width: 100%;
+    font-size: 24px;
     line-height: 24px;
   }
 
   .featuresDescrption {
-    font-size: 16px;
-  }
-
-  .featuresImages {
+    max-width: 366px;
     width: 100%;
-    height: 100%;
+    font-size: 16px;
   }
 
   /* Features Section End */

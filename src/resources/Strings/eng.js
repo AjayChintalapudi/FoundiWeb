@@ -27,7 +27,7 @@ const home = {
     'Foundi is a QR code solution created to recover lost itemswhile protecting your identity and privacy.',
   bannerInfoRightVideoDesc: 'WatchVideos',
   // return Section
-  returnContainerQuestion: '👋 Have you found a lost-item?',
+  returnContainerQuestion: '👋 Have you found a lost-item? ',
   returnContainerAnswer: 'Return it now',
   // return PopUp
   needHelp: 'Need help?',
@@ -153,7 +153,7 @@ const loginPageStrings = {
   emailText: 'Email',
   emailPlaceHolderText: 'Enter your email ID',
   inputTypePassword: 'password',
-  passWordHeading: 'PassWord',
+  passWordHeading: 'Password',
   passwordText: 'Password',
   passwordPlaceHolderText: '6+ characters, 1 capital',
   forgotPassWordText: 'Forgot password',
@@ -183,6 +183,7 @@ const createAccountPageStrings = {
   forgotPassWordText: 'Forgot password',
   continueGoogleText: 'Continue with Google',
   logIn: 'Login',
+  createAccount: 'Create account',
 
   // create Account Details
   back: 'Back',
@@ -209,14 +210,86 @@ const createAccountPageStrings = {
   inValidPassWord: 'Invalid password',
   tryAgain: 'Try again or',
   reset: 'Reset',
-  strength:"Strength",
-  poor:":Poor",
+  strength: 'Strength:',
+  poor: 'Poor',
   // Verify credential
   verifyCredentialHeading: 'Hang on, we’re verifying',
   verifyCredentialDesc:
     'We’ve sent a confirmation mail to username@gmail.com Open your inbox and click on the confirmation link to finish account setup.',
   resendLink: 'Resend link',
   editEmail: 'Edit email',
+
+  // Cheers message
+  cheersHeading: 'Cheers!',
+  cheersDesc:
+    'Your account is successfully verified. We hope you will enjoy our services. Have a wonderful day.',
+  cheersBtnName: 'Take me to home',
+  // oops message
+
+  oopsHeading: 'Oops! Something’s gone wrong',
+  oopsDesc1:
+    'The confirmation link we sent to username@gmail.com appears to be broken or expired.',
+  oopsDesc2:
+    'We recommend you to click “Resend link” or “Edit email” and enter correct email address incase your email ID doesn’t match the above highlighted one.',
+  oopsBtnName: 'Resend link',
+  oopsEditMail: 'Edit email',
+};
+
+const checkoutPageStrings = {
+  checkOut: 'Checkout',
+  ContactDetails: 'Contact details',
+  firstName: 'First name',
+  LastName: 'Last name',
+  firstNamePlaceHolderText: 'Enter first name',
+  lastNamePlaceHolderText: 'Enter last name',
+  EmailAddress: 'Email address',
+  EnterYourEmailID: 'Enter your email ID',
+  PhoneNumber: 'Phone number',
+  EnterYourPhoneNo: 'Enter your phone No.',
+  phoneCode: '+42',
+
+  addressInfo: 'Address info',
+  doorNo: 'Door no, Floor, Building/Apt, & Street',
+  city: 'City',
+  zipCode: 'ZIP code',
+  stateAndCountry: 'State & Country',
+  cityName: 'Stockholm, Sweden',
+
+  Payment: 'Payment',
+  CardHolderName: 'Card holder name',
+  EnterNameOnTheCard: 'Enter name on the card',
+  CreditOrDebitCardNo: 'Credit or Debit card No.',
+  Enter16DigitCardNo: 'Enter 16 digit card No.',
+  ExpiryDate: 'Expiry date',
+  monthYear: 'MM/YY',
+  cvv: 'CVV',
+  XYZ: 'XYZ',
+
+  orderSummary: 'Order summary',
+  keychainTagPackOf4: 'Keychain tags - A pack of 4',
+  priceX1: 'Price (x1): $ 90.00',
+  enterDiscountCode: 'Enter discount code',
+  subtotal: 'Subtotal',
+  shippingAddressDetails: 'Shipping (Fill address details)',
+  taxExtras: 'Tax & extras',
+  discount: 'Discount',
+  total: 'Total',
+  withoutShipping: 'without shipping',
+  pay: 'Pay - $180.00',
+
+  enterDiscountCode:"Enter discount code",
+  subtotal:"Subtotal",
+  subTotalPrice:"$180.00",
+  shipping:"Shipping",
+  fillAddressDetails:"(Fill address details)",
+  taxAndExtras:"Tax & extras",
+  taxPrice:"+ $0",
+  disCount:"Discount",
+  disCountPrice:"- $0",
+  totalShipping:"Total",
+  withOutShipping:"without shipping",
+  totalPrice:"$180.00",
+  payAmount:"Pay - $180.00",
 };
 
 // Footer Page Strings
@@ -237,4 +310,5 @@ export const englishStrings = {
   home,
   loginPageStrings,
   createAccountPageStrings,
+  checkoutPageStrings,
 };

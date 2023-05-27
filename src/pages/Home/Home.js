@@ -7,6 +7,13 @@ import {
   downarrow,
   closeicontwo,
   passwordhideicon,
+  applestore,
+  appstore,
+  googleplay,
+  appleplaystore,
+  googleplaystore,
+  leranmoreicon,
+  arrowleftcircle,
 } from 'resources/Images/Images';
 import { englishStrings } from 'resources/Strings/eng';
 import {
@@ -84,11 +91,7 @@ const Home = () => {
   };
 
   const bannerHeadingLeft = () => {
-    return (
-      <div className={styles.bannerHeadingLeft}>
-        <h1>{home.bannerHeading}</h1>
-      </div>
-    );
+    return <h1 className={styles.bannerHeadingLeft}>{home.bannerHeading}</h1>;
   };
 
   const bannerInfoRightPara = () => {
@@ -152,9 +155,12 @@ const Home = () => {
 
   const returnContainerQuestion = () => {
     return (
-      <span className={styles.returnContainerQuestion}>
+      <p className={styles.returnContainerQuestion}>
         {home.returnContainerQuestion}
-      </span>
+        <a className={styles.returnContainerAnswer} onClick={handleOpenModal}>
+          {home.returnContainerAnswer}
+        </a>
+      </p>
     );
   };
 
@@ -187,10 +193,10 @@ const Home = () => {
                 </div>
               </div>
               <div className={styles.snoCodeInputBlock}>
-                <input
-                  className={styles.snoCodeInput}
-                  placeholder={home.inputText}
-                />
+                <Input
+                 placeholder={home.inputText}
+                 className={styles.snoCodeInput}
+                 image={arrowleftcircle}/>
               </div>
               <div className={styles.scanQrCodeBlock}>
                 <p className={styles.scanQrCodeText}>{home.scanQrCodeText}</p>
@@ -198,12 +204,6 @@ const Home = () => {
             </div>
           </div>
         </Modal>
-        <span
-          className={styles.returnContainerAnswer}
-          onClick={handleOpenModal}
-        >
-          {home.returnContainerAnswer}
-        </span>
       </div>
     );
   };
@@ -252,27 +252,41 @@ const Home = () => {
 
   //... Get App Section Start...
 
+  // const getAppSection = () => {
+  //   return (
+  //     <div className={styles.getAppContainer}>
+  //       {GetAppData &&
+  //         GetAppData.map((item, index) => {
+  //           return (
+  //             <div className={styles.getAppButtonBlock} key={index}>
+  //               <div className={styles.getAppImage}>
+  //                 <img
+  //                   src={item.getAppImg}
+  //                   alt={item.getAppAltText}
+  //                   className={styles.imageWidth}
+  //                 />
+  //               </div>
+  //               <div className={styles.getAppDesc}>
+  //                 <p className={styles.getAppText}>{item.getAppText}</p>
+  //                 <p className={styles.getAppHeading}>{item.getAppHeading}</p>
+  //               </div>
+  //             </div>
+  //           );
+  //         })}
+  //     </div>
+  //   );
+  // };
+
   const getAppSection = () => {
     return (
       <div className={styles.getAppContainer}>
-        {GetAppData &&
-          GetAppData.map((item, index) => {
-            return (
-              <div className={styles.getAppButtonBlock} key={index}>
-                <div className={styles.getAppImage}>
-                  <img
-                    src={item.getAppImg}
-                    alt={item.getAppAltText}
-                    className={styles.imageWidth}
-                  />
-                </div>
-                <div className={styles.getAppDesc}>
-                  <p className={styles.getAppText}>{item.getAppText}</p>
-                  <p className={styles.getAppHeading}>{item.getAppHeading}</p>
-                </div>
-              </div>
-            );
-          })}
+        <a className={styles.getAppImages}>
+          <img src={appleplaystore} alt="" className={styles.imageWidth} />
+        </a>
+
+        <a className={styles.getAppImages}>
+          <img src={googleplaystore} alt="" className={styles.imageWidth} />
+        </a>
       </div>
     );
   };
@@ -281,7 +295,7 @@ const Home = () => {
   // ...Product Section Start...
   const productsSection = () => {
     return (
-      <div className={styles.productsTitleInfo}>
+      <div className={styles.productsContainer}>
         {productsTitleInfo()}
         {productMainContainer()}
         {browseProducts()}
@@ -333,7 +347,7 @@ const Home = () => {
   // ...Question Answer Section Start...
   const questionAnswerSection = () => {
     return (
-      <div className={styles.questionAnswerTitleInfo}>
+      <div className={styles.questionAnswerMainContainer}>
         {questionAnswerTitleInfo()}
         {questionAnswerContainer()}
         {letsTalk()}
@@ -378,6 +392,7 @@ const Home = () => {
     return (
       <div className={styles.letsTalk}>
         <span className={styles.letsTalkQuestion}>{home.letsTalkQuestion}</span>
+        &nbsp;
         <span className={styles.letsTalkHeading}>{home.letsTalkHeading}</span>
         <span className={styles.letsTalkIcon}>{home.letsTalkIcon}</span>
       </div>
@@ -392,7 +407,9 @@ const Home = () => {
     return (
       <div className={styles.sustainabilityContainer}>
         <div className={styles.sustainabilityInsideContainer}>
-          {sustainabilityHeadingBlock()}
+          <div className={styles.sustainabilityHeadingContainer}>
+            {sustainabilityHeadingBlock()}
+          </div>
           <div className={styles.sustainabilityDescContainer}>
             {sustainabilityDescBlock()}
             {learnMoreContainer()}
@@ -423,11 +440,13 @@ const Home = () => {
   const learnMoreContainer = () => {
     return (
       <div className={styles.learnMoreContainer}>
-        <img
-          src={learnmore}
-          alt={home.learnMoreAlt}
-          className={styles.imageWidth}
-        />
+        <div className={styles.learMoreIconBlock}>
+          <img
+            src={leranmoreicon}
+            alt={home.learnMoreAlt}
+            className={styles.imageWidth}
+          />
+        </div>
         <p className={styles.learnMoreDesc}>{home.learnMore}</p>
       </div>
     );
@@ -497,10 +516,12 @@ const Home = () => {
       />
       {bannerSection()}
       {returnSection()}
-      {featuresSection()}
-      {getAppSection()}
-      {productsSection()}
-      {questionAnswerSection()}
+      <div className={styles.outSidefeatuesContainer}>
+        {featuresSection()}
+        {getAppSection()}
+        {productsSection()}
+        {questionAnswerSection()}
+      </div>
       {sustainabilitySection()}
       {collabarateSection()}
       {FooterSection()}

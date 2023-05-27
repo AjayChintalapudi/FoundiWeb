@@ -4,15 +4,23 @@
   padding: 12px 16px;
   font-family: 'Light', sans-serif;
   background-color: var(--white);
-  border: 1px solid var(--gray100);
+  /* border: 1px solid var(--gray100); */
   border-radius: 8px;
 }
 
-.input:focus {
-  border: 1px solid var(--blue);
+.input:focus{
+  outline: none;
+  border: 1px solid var(--blue) ;
+
+}
+.input::placeholder{
+
+  font-size: 16px;
+
 }
 .inputContainer {
   position: relative;
+  width: 100%;
 }
 
 .inputIcon {

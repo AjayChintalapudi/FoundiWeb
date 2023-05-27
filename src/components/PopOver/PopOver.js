@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Popover } from '@mui/material';
 
-const PopOver = ({ triggerElement, content }) => {
+const PopOver = ({ triggerElement, content, showPopup }) => {
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleOpen = (event) => {
@@ -18,23 +18,25 @@ const PopOver = ({ triggerElement, content }) => {
   return (
     <>
       <span onClick={handleOpen}>{triggerElement}</span>
-      <Popover
-        id={id}
-        open={open}
-        anchorEl={anchorEl}
-        onClose={handleClose}
-        anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'center',
-        }}
-        transformOrigin={{
-          vertical: 'top',
-          horizontal: 'right',
-        }}
-        marginThreshold={70}
-      >
-        {content}
-      </Popover>
+      {showPopup && (
+        <Popover
+          id={id}
+          open={open}
+          anchorEl={anchorEl}
+          onClose={handleClose}
+          anchorOrigin={{
+            vertical: 'bottom',
+            horizontal: 'center',
+          }}
+          transformOrigin={{
+            vertical: 'top',
+            horizontal: 'right',
+          }}
+          marginThreshold={70}
+        >
+          {content}
+        </Popover>
+      )}
     </>
   );
 };

@@ -88,18 +88,6 @@ const QuestionAnswerData = [
     question: home.questionOne,
     answer: home.answerOne,
   },
-  {
-    question: home.questionOne,
-    answer: home.answerOne,
-  },
-  {
-    question: home.questionOne,
-    answer: home.answerOne,
-  },
-  {
-    question: home.questionOne,
-    answer: home.answerOne,
-  },
 
   {
     question: home.questionTwo,

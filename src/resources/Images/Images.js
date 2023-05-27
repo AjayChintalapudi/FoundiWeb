@@ -1,8 +1,9 @@
 // Login Form Images
 
-export {default as passwordhideicon} from "assets/Images/passwordhideicon.svg"
-export {default as passwordopenicon} from "assets/Images/openicon.svg";
-export {default as googleicon} from "assets/Images/googleicon.svg";
+export { default as passwordhideicon } from 'assets/Images/passwordhideicon.svg';
+export { default as passwordopenicon } from 'assets/Images/openicon.svg';
+export { default as googleicon } from 'assets/Images/googleicon.svg';
+export { default as arrowleftcircle } from 'assets/Images/arrowleftcircle.svg';
 
 // Navbar Images
 export { default as navbarlogo } from 'assets/Images/navbarlogo.svg';
@@ -12,8 +13,8 @@ export { default as profile } from 'assets/Images/profile.svg';
 export { default as playicon } from 'assets/Images/playicon.svg';
 export { default as menu } from 'assets/Images/menu.svg';
 
-export {default as foundiblackicon} from "assets/Images/foundilogo.svg";
-export {default as foundilogowhite} from "assets/Images/foundilogowhite.svg";
+export { default as foundiblackicon } from 'assets/Images/foundilogo.svg';
+export { default as foundilogowhite } from 'assets/Images/foundilogowhite.svg';
 export { default as languageblackicon } from 'assets/Images/languageiconblack.svg';
 export { default as cartblackicon } from 'assets/Images/carticonblack.svg';
 export { default as profileblackicon } from 'assets/Images/profileiconblack.svg';
@@ -46,6 +47,10 @@ export { default as recover } from 'assets/Images/recover.svg';
 
 export { default as appleicon } from 'assets/Images/appleicon.svg';
 export { default as playstoreicon } from 'assets/Images/playstoreicon.svg';
+
+export { default as appleplaystore } from 'assets/Images/appleplaystore.svg';
+export { default as googleplaystore } from 'assets/Images/googleplaystrore.svg';
+
 // Products Images
 
 export { default as productspackone } from 'assets/Images/productspackone.svg';
@@ -60,7 +65,10 @@ export { default as downarrow } from 'assets/Images/downarrow.svg';
 // Sustainability Images
 export { default as sustainabilitybackground } from 'assets/Images/sustainabilitybackground.svg';
 export { default as learnmore } from 'assets/Images/learnmore.svg';
+export { default as leranmoreicon } from 'assets/Images/learmoreicon.svg';
 export { default as sustainabilitybackgroundmobile } from 'assets/Images/sustainabilitybackgroundmobile.svg';
+export { default as sustainability867 } from 'assets/Images/sustainability867.svg';
+export { default as sustainability1023 } from 'assets/Images/sustainability1023.svg';
 
 // Collabarate Images
 
@@ -69,6 +77,15 @@ export { default as aws } from 'assets/Images/aws.svg';
 export { default as google } from 'assets/Images/google.svg';
 export { default as twitch } from 'assets/Images/twitch.svg';
 export { default as ios } from 'assets/Images/ios.svg';
+
+// Checkout Images
+
+export { default as checkouticontick } from 'assets/Images/checkouticontick.svg';
+export { default as checkoutuparrow } from 'assets/Images/checkoutuparrow.png';
+export { default as pack4checkout } from 'assets/Images/pack4checkout (2).svg';
+export { default as plusicon } from 'assets/Images/plusicon.svg';
+export { default as minusicon } from 'assets/Images/minusicon.svg';
+export { default as deletecheckout } from 'assets/Images/deletecheckout.svg';
 
 // Footer Images
 export { default as fbImg } from 'assets/Images/facebook.svg';

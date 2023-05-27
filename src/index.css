@@ -1,9 +1,8 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  
 }
-*::-webkit-scrollbar{
+*::-webkit-scrollbar {
   display: none;
 }
 :root {
@@ -15,6 +14,7 @@
   --blacktransparent80: rgba(0, 0, 0, 0.08);
   --blacktransparent100: rgba(208, 208, 208, 0.24);
   --bluetransparent24: rgba(19, 115, 251, 0.24);
+  --bluetransparent50: rgba(19, 115, 251, 0.5);
   --gray95: #f2f2f2;
   --gray100: #d0d0d0;
   --gray110: #a6a6a6;

@@ -22,7 +22,6 @@
   flex-direction: row;
   gap: 10px;
   align-items: center;
-  width: 23px;
   height: 30px;
   font-family: Medium;
   cursor: pointer;
@@ -35,6 +34,9 @@
   font-family: Medium;
   color: var(--black);
   cursor: pointer;
+  justify-content: space-around;
+  align-items: center;
+  width: 337px;
 }
 
 .navbarMenuItemsRightContainer {
@@ -82,6 +84,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .unCheck {

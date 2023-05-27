@@ -5,6 +5,7 @@ import {
   passwordhideicon,
   closeicon,
   googleicon,
+  passwordopenicon,
 } from 'resources/Images/Images';
 import Button from 'components/Button/Button';
 import styles from './styles.module.css';
@@ -55,127 +56,132 @@ const LoginPage = () => {
 
   // console.log(formik.validationSchema)
 
-  const loginPageCloseBlock = () => {
-    return (
-      <div className={styles.loginPageCloseBlock}>
-        <p className={styles.loginPageBackText}>{loginPageStrings.back}</p>
-        <img
-          src={closeicon}
-          alt={loginPageStrings.closeIconAlt}
-          onClick={handleClosePage}
-        />
-      </div>
-    );
-  };
+  // Toggle Password
+  const [showPassWord, setShowPassWord] = useState(false);
 
-  const loginPageTitleInfo = () => {
-    return (
-      <div className={styles.loginPageTitleInfo}>
-        <h3 className={styles.loginPageTitle}>
-          {loginPageStrings.loginPageTitle}
-        </h3>
-        <span className={styles.loginPageAccountDesc}>
-          {loginPageStrings.loginPageAccountDesc}
-        </span>
-        <span className={styles.loginPageSignUpText}>
-          {loginPageStrings.loginPageSignUpText}
-        </span>
-      </div>
-    );
+  const togglePassWord = () => {
+    setShowPassWord(!showPassWord);
   };
-
-  const loginPageFormFields = () => {
-    return (
-      <form
-        onSubmit={formik.handleSubmit}
-        className={styles.loginPageFormFields}
-      >
-        <div className={styles.emailContainer}>
-          <span className={StyleSheet.emailHeading}>
-            {loginPageStrings.emailHeading}
-          </span>
-          <div>
-            <Input
-              type={loginPageStrings.inputTypeEmail}
-              name="email"
-              value={formik.values.email}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              placeholder={loginPageStrings.emailPlaceHolderText}
-              className={styles.loginPageInputFields}
-              errorMessage={styles.errorMessage}
-              error={
-                formik.touched.email && formik.errors.email ? (
-                  <div className={styles.emailErrorMessage}>
-                    <span className={styles.inValidEmailText}>
-                      {loginPageStrings.inValidEmail}
-                    </span>
-                    <span className={styles.enterValidEmailText}>
-                      {loginPageStrings.enterValidEmail}
-                    </span>
-                  </div>
-                ) : (
-                  ''
-                )
-              }
-            />
-          </div>
-        </div>
-        <div className={styles.passWordContainer}>
-          <span className={styles.passWordHeading}>
-            {loginPageStrings.passWordHeading}
-          </span>
-          <Input
-            type={loginPageStrings.inputTypePassword}
-            name="password"
-            value={formik.values.password}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            placeholder={loginPageStrings.passwordPlaceHolderText}
-            className={styles.loginPageInputFields}
-            image={passwordhideicon}
-            error={
-              formik.touched.password && formik.errors.password ? (
-                <div className={styles.passWordErrorMessage}>
-                  <span className={styles.inValidPassWord}>
-                    {loginPageStrings.inValidPassWord}
-                  </span>
-                  <span>{loginPageStrings.tryAgain}</span>
-                  <span className={styles.reset}>{loginPageStrings.reset}</span>
-                </div>
-              ) : (
-                ''
-              )
-            }
-            errorMessage={styles.errorMessage}
-          />
-          <span className={styles.forgotPassWordText}>
-            {loginPageStrings.forgotPassWordText}
-          </span>
-        </div>
-        <div className={styles.loginPageButtons}>
-          <Button
-            btName={loginPageStrings.logIn}
-            btnStyles={styles.loginPageButtonStyles}
-            type="submit"
-          />
-          <Button
-            btName={loginPageStrings.continueGoogleText}
-            btnStyles={styles.continueGoogleButton}
-            image={googleicon}
-            type="button"
-          />
-        </div>
-      </form>
-    );
-  };
-
   return (
     <div className={styles.loginPageContainer}>
       <div className={styles.loginPageInsideContainer}>
-        {loginPageCloseBlock()}
-        {loginPageTitleInfo()}
-        {loginPageFormFields()}
+        {/* close block */}
+        <div className={styles.loginPageCloseAndTitleInfo}>
+          <div className={styles.loginPageCloseBlock}>
+            <p className={styles.loginPageBackText}>{loginPageStrings.back}</p>
+            <img
+              src={closeicon}
+              alt={loginPageStrings.closeIconAlt}
+              onClick={handleClosePage}
+            />
+          </div>
+          {/* title info */}
+          <div className={styles.loginPageTitleInfo}>
+            <h3 className={styles.loginPageTitle}>
+              {loginPageStrings.loginPageTitle}
+            </h3>
+            <div className={styles.loginPageAccounsSignUpBlock}>
+              <span className={styles.loginPageAccountDesc}>
+                {loginPageStrings.loginPageAccountDesc}
+              </span>
+              &nbsp;
+              <span className={styles.loginPageSignUpText}>
+                {loginPageStrings.loginPageSignUpText}
+              </span>
+            </div>
+          </div>
+        </div>
+        {/* login page form fields */}
+        <div className={styles.loginPageFormsContainer}>
+          <form
+            onSubmit={formik.handleSubmit}
+            className={styles.loginPageFormFields}
+          >
+            <div className={styles.inputContainerStyle}>
+              <div className={styles.emailContainer}>
+                <span className={StyleSheet.emailHeading}>
+                  {loginPageStrings.emailHeading}
+                </span>
+                <div>
+                  <Input
+                    type={loginPageStrings.inputTypeEmail}
+                    name="email"
+                    value={formik.values.email}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    placeholder={loginPageStrings.emailPlaceHolderText}
+                    className={styles.loginPageInputFields}
+                    errorMessage={styles.errorMessage}
+                    error={
+                      formik.touched.email && formik.errors.email ? (
+                        <div className={styles.emailErrorMessage}>
+                          <span className={styles.inValidEmailText}>
+                            {loginPageStrings.inValidEmail}
+                          </span>
+                          &nbsp;&nbsp;
+                          <span className={styles.enterValidEmailText}>
+                            {loginPageStrings.enterValidEmail}
+                          </span>
+                        </div>
+                      ) : (
+                        ''
+                      )
+                    }
+                  />
+                </div>
+              </div>
+              <div className={styles.passWordContainer}>
+                <span className={styles.passWordHeading}>
+                  {loginPageStrings.passWordHeading}
+                </span>
+                <Input
+                  type={showPassWord ? 'text' : 'password'}
+                  name="password"
+                  value={formik.values.password}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  placeholder={loginPageStrings.passwordPlaceHolderText}
+                  className={styles.loginPageInputFields}
+                  image={showPassWord ? passwordopenicon : passwordhideicon}
+                  onClick={togglePassWord}
+                  error={
+                    formik.touched.password && formik.errors.password ? (
+                      <div className={styles.passWordErrorMessage}>
+                        <span className={styles.inValidPassWord}>
+                          {loginPageStrings.inValidPassWord}
+                        </span>
+                        &nbsp; &nbsp;
+                        <span>{loginPageStrings.tryAgain}</span>&nbsp;&nbsp;
+                        <span className={styles.reset}>
+                          {loginPageStrings.reset}
+                        </span>
+                      </div>
+                    ) : (
+                      ''
+                    )
+                  }
+                  errorMessage={styles.errorMessage}
+                />
+                <span className={styles.forgotPassWordText}>
+                  {loginPageStrings.forgotPassWordText}
+                </span>
+              </div>
+            </div>
+            <div className={styles.loginPageButtons}>
+              <Button
+                btName={loginPageStrings.logIn}
+                btnStyles={styles.loginPageButtonStyles}
+                type="submit"
+              />
+              <Button
+                btName={loginPageStrings.continueGoogleText}
+                btnStyles={styles.continueGoogleButton}
+                image={googleicon}
+                type="button"
+              />
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );
