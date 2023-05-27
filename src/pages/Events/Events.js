@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import styles from './styles.module.css';
 import { englishStrings } from 'resources/Strings/eng';
 import {
   eventImg,
@@ -12,7 +11,11 @@ import {
 } from 'resources/Images/Images';
 import Button from 'components/Button/Button';
 import Footer from 'components/Footer/Footer';
+<<<<<<< HEAD
 import NavBar from 'components/NavBar/NavBar';
+=======
+import styles from './styles.module.css';
+>>>>>>> c6de6e55df6c8bc59f6adc54a944745df04f2139
 const { eventPageStrings } = englishStrings;
 const Employee = [
   {
@@ -69,87 +72,86 @@ const Events = () => {
   };
   const heroSection = () => {
     return (
-      <div>
-        <div className={styles.eventsHeaderSection}>
-          <div className={styles.eventInsideContainerStyle}>
-            {EventData.map((item, index) => {
-              return (
-                <div key={index}>
-                  {indexNo === index && (
-                    <div
-                      key={index}
-                      className={styles.insideEventsHeaderSection}
-                    >
-                      <div
-                        className={styles.eventLeftIcon}
-                        onClick={() => onLeftClick(index)}
-                      >
-                        <img
-                          src={LeftImg}
-                          alt=""
-                          className={styles.imageWidth}
-                        />
-                      </div>
-                      <div className={styles.eventsMiddleSection}>
-                        <div className={styles.eventGapContainerTabView}>
-                          <div className={styles.eventsHeaderTextSection}>
-                            <h6 className={styles.eventsHeaderTextHeading}>
-                              {item.eventsHeading}
-                            </h6>
-                            <p className={styles.eventsHeaderParaHeading}>
-                              {item.eventsPara}
-                            </p>
-                          </div>
-                          <div className={styles.tabViewEventIcons}>
-                            <div
-                              className={styles.tabViewEventLeftIcon}
-                              onClick={() => onLeftClick(index)}
-                            >
-                              <img src={LeftImg} alt="" />
-                            </div>
-                            <div
-                              className={styles.tabViewEventLeftIcon}
-                              onClick={() => onRightClick(index)}
-                            >
-                              <img src={RightImg} alt="" />
-                            </div>
-                          </div>
-                        </div>
+      <div className={styles.eventsHeaderSection}>
+        <div className={styles.eventInsideContainerStyle}>
+          {EventData.map((item, index) => {
+            return (
+              <div key={index}>
+                {indexNo === index && (
+                  <div key={index} className={styles.insideEventsHeaderSection}>
+                    {eventLeftHeroSection(index)}
 
-                        <div className={styles.eventsHoverSection}>
-                          <div className={styles.eventsHeaderImage}>
-                            <img
-                              src={item.eventsImage}
-                              alt=""
-                              className={styles.eventImageWidth}
-                            />
-                          </div>
-                          <div className={styles.eventButtonSection}>
-                            <Button
-                              btName={eventPageStrings.eventsHeroSectionButton}
-                              btnStyles={styles.eventButton}
-                              image={linkImg}
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        className={styles.eventRightIcon}
-                        onClick={() => onRightClick(index)}
-                      >
-                        <img
-                          src={RightImg}
-                          alt=""
-                          className={styles.imageWidth}
-                        />
-                      </div>
-                    </div>
-                  )}
-                </div>
-              );
-            })}
+                    {eventHeroMiddleSction(item, index)}
+                    {eventRightHeroSection(index)}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
+  };
+
+  const eventLeftHeroSection = (index) => {
+    return (
+      <div className={styles.eventLeftIcon} onClick={() => onLeftClick(index)}>
+        <img src={LeftImg} alt="" className={styles.imageWidth} />
+      </div>
+    );
+  };
+  const eventHeroMiddleSction = (item, index) => {
+    return (
+      <div className={styles.eventsMiddleSection}>
+        <div className={styles.eventGapContainerTabView}>
+          <div className={styles.eventsHeaderTextSection}>
+            <h6 className={styles.eventsHeaderTextHeading}>
+              {item.eventsHeading}
+            </h6>
+            <p className={styles.eventsHeaderParaHeading}>{item.eventsPara}</p>
+          </div>
+          <div className={styles.tabViewEventIcons}>
+            <div
+              className={styles.tabViewEventLeftIcon}
+              onClick={() => onLeftClick(index)}
+            >
+              <img src={LeftImg} alt="" />
+            </div>
+            <div
+              className={styles.tabViewEventLeftIcon}
+              onClick={() => onRightClick(index)}
+            >
+              <img src={RightImg} alt="" />
+            </div>
           </div>
         </div>
+
+        <div className={styles.eventsHoverSection}>
+          <div className={styles.eventsHeaderImage}>
+            <img
+              src={item.eventsImage}
+              alt=""
+              className={styles.eventImageWidth}
+            />
+          </div>
+          <div className={styles.eventButtonSection}>
+            <Button
+              btName={eventPageStrings.eventsHeroSectionButton}
+              btnStyles={styles.eventButton}
+              image={linkImg}
+            />
+          </div>
+        </div>
+      </div>
+    );
+  };
+  const eventRightHeroSection = (index) => {
+    return (
+      <div
+        className={styles.eventRightIcon}
+        onClick={() => onRightClick(index)}
+      >
+        <img src={RightImg} alt="" className={styles.imageWidth} />
       </div>
     );
   };
@@ -158,56 +160,60 @@ const Events = () => {
     return (
       <div className={styles.eventsBannerSection}>
         <div className={styles.insideEventsBannerSection}>
-          <div className={styles.eventsBannerHeaderSection}>
-            <p>{eventPageStrings.eventsBannerSectionHeaderText}</p>
-          </div>
-          <div className={styles.eventsBannerBottomSection}>
-            <div className={styles.eventsBannerBottomHeading}>
-              <h6 className={styles.eventsBannerBottomHeadingText}>
-                {eventPageStrings.eventsBannerSectionHeading}
+          {eventBannerTopSection()}
+          {eventBannerBottomSection()}
+        </div>
+      </div>
+    );
+  };
+
+  const eventBannerTopSection = () => {
+    return (
+      <div className={styles.eventsBannerHeaderSection}>
+        <p>{eventPageStrings.eventsBannerSectionHeaderText}</p>
+      </div>
+    );
+  };
+  const eventBannerBottomSection = () => {
+    return (
+      <div className={styles.eventsBannerBottomSection}>
+        <div className={styles.eventsBannerBottomHeading}>
+          <h6 className={styles.eventsBannerBottomHeadingText}>
+            {eventPageStrings.eventsBannerSectionHeading}
+          </h6>
+        </div>
+        <div className={styles.eventsBannerBottomDropSection}>
+          <div className={styles.eventsBannerDropSection}>
+            <div className={styles.eventsBannerDropLeftSection}>
+              <img src={droppedImg} className={styles.imageWidth} />
+            </div>
+            <div className={styles.eventsBannerDropRightSection}>
+              <h6 className={styles.eventsBannerRightHeading}>
+                {eventPageStrings.eventsBannerSectionDropHeading}
               </h6>
+              <p className={styles.eventsBannerRightPara}>
+                {eventPageStrings.eventsBannerSectionDropPara}
+              </p>
+              <p className={styles.eventsBannerRightPara}>
+                {eventPageStrings.eventsBannerSectionDropParaOne}
+              </p>
             </div>
-            <div className={styles.eventsBannerBottomDropSection}>
-              <div className={styles.eventsBannerDropSection}>
-                <div className={styles.eventsBannerDropLeftSection}>
-                  <img
-                    src={droppedImg}
-                    className={styles.imageWidth}
-                    alt="droppedImage"
-                  />
+          </div>
+          <div className={styles.eventsBannerEmployeeSection}>
+            {Employee.map((item, index) => {
+              return (
+                <div key={index} className={styles.eventBannerEmployeSection}>
+                  <div className={styles.eventBannerEmployeInsideSection}>
+                    <h6 className={styles.eventBannerEmployeeHeading}>
+                      {item.emoployeeHeading}
+                    </h6>
+                    <p className={styles.eventBannerEmployeePara}>
+                      {item.emoployeePara}
+                    </p>
+                  </div>
                 </div>
-                <div className={styles.eventsBannerDropRightSection}>
-                  <h6 className={styles.eventsBannerRightHeading}>
-                    {eventPageStrings.eventsBannerSectionDropHeading}
-                  </h6>
-                  <p className={styles.eventsBannerRightPara}>
-                    {eventPageStrings.eventsBannerSectionDropPara}
-                  </p>
-                  <p className={styles.eventsBannerRightPara}>
-                    {eventPageStrings.eventsBannerSectionDropParaOne}
-                  </p>
-                </div>
-              </div>
-              <div className={styles.eventsBannerEmployeeSection}>
-                {Employee.map((item, index) => {
-                  return (
-                    <div
-                      key={index}
-                      className={styles.eventBannerEmployeSection}
-                    >
-                      <div className={styles.eventBannerEmployeInsideSection}>
-                        <h6 className={styles.eventBannerEmployeeHeading}>
-                          {item.emoployeeHeading}
-                        </h6>
-                        <p className={styles.eventBannerEmployeePara}>
-                          {item.emoployeePara}
-                        </p>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
       </div>

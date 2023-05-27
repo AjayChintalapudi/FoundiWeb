@@ -303,6 +303,57 @@ const footerPageStrings = {
   footerRights: '©2022, All right reserved - Foundi',
 };
 
+
+
+const prooductsPageStrings = {
+  productsHeroSectionHeading: '🎄Holiday Season Sale!',
+  productsHeroSectionPara:
+    '  Get a flat 30% off on all our products till 5th January 2023. Use the below coupon code to avail the offer. Hurry up!',
+  productsHeroSectionButton: 'GET40OFFHD',
+  productsCategorietext: 'All categories',
+  productsCategorietext1: '🎄 Holiday Sale',
+  productsCategorietext2: 'Category 3',
+  productsCategorietext3: 'Category 4',
+  productsCategorietext4: 'Category 5',
+};
+const reviewPageStrings = {
+  reviewHeroText: 'Regular tags - A pack of 4',
+  reviewHeroPara:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse risus urna, rutrum non quam in. Lorem ipsum dolor sit consectetur.',
+  reviewHeroCart: 'Add to cart',
+  reviewMiddleRating: '4.3 stars, 136 reviews',
+  reviewMiddleParaText: 'Most Recent',
+  reviewMiddleReviewText: 'View more reviews',
+};
+
+const aboutPageStrings = {
+  aboutHeroHeading: ' A modern solution to an ancient problem',
+  aboutHeroPara:
+    'Our story - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non lacus ac elit dictum tempor sed id lectus. Duis suscipit quis nisl nec consectetur. Donec scelerisque congue felis non volutpat. Etiam sed magna bibendum, pharetra diam aliquam, vehicula magna. Aenean non accumsan dolor, in porta lectus. Ut vel semper eros.',
+  aboutPeoplePara: 'Do you know, ',
+  aboutPeopleParaOne: '19.4 billion kr',
+  aboutPeopleParaTwo:
+    ' worth of belongings were lost by the Swedish population in the last yearalone',
+  aboutHoursHeading: '55 hours',
+  aboutHoursPara:
+    'Average time each person spends searching for lost or misplaced items per year',
+  aboutPercentageHeading: '96%',
+  aboutPercentagePara:
+    'Percentage of the Swedish population that lose or misplace their belongings every year ',
+  aboutAverageHeading: '1.89',
+  aboutAveragePara:
+    'Average amount of items each person loses or misplaces in a year',
+  aboutkrHeading: '2000kr',
+  aboutKrPara: 'Average cost per lost or misplaced belonging',
+  aboutSubscriptionHeading: '  We’re a subscription based service',
+  aboutSubscriptionPara:
+    'However, as a part of promotional gift, users can enjoy 365 days of serives for free. The following are the maximum prices, the minimum price that users have to pay will vary depending on what active plan they are upgrading from.',
+  aboutFooterHeading:
+    'Eliminating the problems that come with Bluetooth/GPS trackers',
+  aboutFooterPara:
+    'From security to reliability of electronic devices, the Bluetooth/GPS lost & found solutions have many issues. Here are a few features that puts Foundi apart from what competitors have to offer.',
+};
+
 export const englishStrings = {
   eventPageStrings,
   footerPageStrings,
@@ -311,4 +362,9 @@ export const englishStrings = {
   loginPageStrings,
   createAccountPageStrings,
   checkoutPageStrings,
-};
+  prooductsPageStrings,
+  reviewPageStrings,
+  aboutPageStrings
+}
+
+

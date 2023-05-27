@@ -20,33 +20,35 @@
   --gray110: #a6a6a6;
   --gray120: --#A0A0A0;
   --nero: #202020;
-  --blackfade: #505050;
-  --redbrick: #fa1363;
-  --backgroundtransparentpink: rgba(250, 19, 99, 0.08);
+  --blackfade:#505050;
+  --grey: #808080;
+  --lightgreen:rgba(3, 227, 139, 0.1);
+  --lightblue:rgba(19, 115, 251, 0.1);
+  --lightpink:rgba(250, 19, 99, 0.1);
 }
 
 @font-face {
-  font-family: 'Light';
-  src: url('assets/Fonts/Euclid\ Circular\ A\ Light.ttf');
+  font-family: "Light";
+  src: url("assets/Fonts/EuclidCircularB-Light.ttf");
   font-weight: 300;
 }
 @font-face {
-  font-family: 'Medium';
-  src: url('assets/Fonts/Euclid\ Circular\ A\ Medium.ttf');
+  font-family: "Medium";
+  src: url("assets/Fonts/EuclidCircularB-Medium.ttf");
   font-weight: 400;
 }
 @font-face {
-  font-family: 'Regular';
-  src: url('assets/Fonts/Euclid\ Circular\ A\ Regular.ttf');
+  font-family: "Regular";
+  src: url("assets/Fonts/EuclidCircularB-Regular.ttf");
   font-weight: 500;
 }
 @font-face {
-  font-family: 'Semi-Bold';
-  src: url('assets/Fonts/Euclid\ Circular\ A\ SemiBold.ttf');
+  font-family: "Semi-Bold";
+  src: url("assets/Fonts/EuclidCircularB-SemiBold.ttf");
   font-weight: 600;
 }
 @font-face {
-  font-family: 'Bold';
-  src: url('assets/Fonts/Euclid\ Circular\ A\ Bold.ttf');
+  font-family:"Bold";
+  src: url("assets/Fonts/EuclidCircularB-Bold.ttf");
   font-weight: 800;
 }

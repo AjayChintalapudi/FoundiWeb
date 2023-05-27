@@ -1,3 +1,4 @@
+
 import CheckOut from 'pages/CheckOut/CheckOut';
 import React, { useEffect } from 'react';
 import AppRoutes from 'routes/AppRoutes';

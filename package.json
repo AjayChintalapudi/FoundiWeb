@@ -12,15 +12,23 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
     "classnames": "^2.3.2",
+<<<<<<< HEAD
     "formik": "^2.2.9",
+=======
+>>>>>>> c6de6e55df6c8bc59f6adc54a944745df04f2139
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
     "react-router-dom": "^6.11.1",
     "react-scripts": "5.0.1",
+<<<<<<< HEAD
     "styled-components": "^5.3.10",
     "web-vitals": "^2.1.4",
     "yup": "^1.1.1"
+=======
+    "react-simple-star-rating": "^5.1.7",
+    "web-vitals": "^2.1.4"
+>>>>>>> c6de6e55df6c8bc59f6adc54a944745df04f2139
   },
   "scripts": {
     "start": "react-scripts start",

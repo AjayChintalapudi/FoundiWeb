@@ -1,9 +1,123 @@
-import React from 'react'
+import React from 'react';
+import styles from './styles.module.css';
+import { LeftImg, RightImg } from 'resources/Images/Images';
+import Button from 'components/Button/Button';
+import { englishStrings } from 'resources/Strings/eng';
+import { ProductsCategoriesData } from 'constants/CardData/CardData';
+import CartItem from 'components/CartItems/CartItem';
+import Footer from 'components/Footer/Footer';
 
+const { prooductsPageStrings } = englishStrings;
 const Products = () => {
-  return (
-    <div>Products</div>
-  )
-}
+  const productsHeroSection = () => {
+    return (
+      <div className={styles.productsHeroSection}>
+        <div className={styles.insideProductsHeroSection}>
+          {productsHeroTopSection()}
+          {productsHeroBottomSection()}
+        </div>
+      </div>
+    );
+  };
 
-export default Products
+  const productsHeroTopSection = () => {
+    return (
+      <div className={styles.productsMiddleHeroSection}>
+        <div className={styles.leftProductsHeroSection}>
+          <img src={LeftImg} alt="" />
+        </div>
+        <div className={styles.productsTextContainer}>
+          <div className={styles.productsHeroTextSection}>
+            <div className={styles.productsHeroText}>
+              <p className={styles.productsHeroSectionHeading}>
+                {prooductsPageStrings.productsHeroSectionHeading}
+              </p>
+              <p className={styles.productsHeroSectionPara}>
+                {prooductsPageStrings.productsHeroSectionPara}
+              </p>
+            </div>
+            <div className={styles.productsHeroButtonSection}>
+              <Button
+                btName={prooductsPageStrings.productsHeroSectionButton}
+                btnStyles={styles.ProductsButton}
+              />
+            </div>
+          </div>
+        </div>
+        <div className={styles.rightProductsHeroSection}>
+          <img src={RightImg} alt="" />
+        </div>
+      </div>
+    );
+  };
+  const productsHeroBottomSection = () => {
+    return (
+      <div className={styles.productsHeroBottomSection}>
+        <span className={styles.productsSpanOne}></span>
+        <span className={styles.productsSpanTwo}></span>
+        <span className={styles.productsSpanThree}></span>
+      </div>
+    );
+  };
+
+  const productsbannerSection = () => {
+    return (
+      <div className={styles.productsBannerSection}>
+        <div className={styles.insideProductsBannerSection}>
+          {productsBannerHeaderSection()}
+          {productsBannerFooterSection()}
+        </div>
+      </div>
+    );
+  };
+  const productsBannerHeaderSection = () => {
+    return (
+      <div className={styles.productsBannerTopSection}>
+        <p className={styles.productsBannerCategorieOne}>
+          {prooductsPageStrings.productsCategorietext}
+        </p>
+        <p className={styles.productsBannerHoliday}>
+          {prooductsPageStrings.productsCategorietext1}
+        </p>
+        <p className={styles.productsBannerCategorieTwo}>
+          {prooductsPageStrings.productsCategorietext2}
+        </p>
+        <p className={styles.productsBannerCategorieThree}>
+          {prooductsPageStrings.productsCategorietext3}
+        </p>
+        <p className={styles.productsBannerCategorieFour}>
+          {prooductsPageStrings.productsCategorietext4}
+        </p>
+      </div>
+    );
+  };
+
+  const productsBannerFooterSection = () => {
+    return (
+      <div className={styles.productsCartSection}>
+        {ProductsCategoriesData &&
+          ProductsCategoriesData.map((item, index) => {
+            return (
+              <CartItem
+                key={index}
+                productImg={item.productImg}
+                productTagHeading={item.productTagHeading}
+                productPrice={item.productPrice}
+                offerPrice={item.offerPrice}
+              />
+            );
+          })}
+      </div>
+    );
+  };
+
+  return (
+    <div>
+      {productsHeroSection()}
+      {productsbannerSection()}
+      <Footer />
+    </div>
+  );
+};
+
+export default Products;

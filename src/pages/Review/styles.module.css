@@ -1,0 +1,576 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+/* -----------------------------DeskTop View Starts----------------------------- */
+
+/* heroSection Styles Start */
+.reviewHeroSection{
+    width: 100%;
+    height: 100%;
+}
+.insideReviewHeroSetion{
+    max-width: 1440px;
+    margin: auto;
+    background-color: var(--white);
+    padding: 64px 160px;
+
+}
+.reviewHeroTopSection{
+    display: flex;
+    flex-direction:row ;
+    gap: 64px;
+}
+.reviewHeroLeftSection{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--gray95);
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    padding: 32px;
+    width: 100%;
+}
+.reviewHeroLeftImage{
+    width: 476px;
+    height: 411px;
+}
+.reviewImage{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.reviewHeroLeftIndicator{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+.reviewIndicatorOne{
+    width: 8px;
+    height: 8px;
+    background-color: var(--black);
+    border-radius: 8px;
+    border: 1px solid var(--black);
+}
+.reviewIndicatorTwo{
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    border: 1px solid var(--black);
+
+}
+.reviewIndicatorThree{
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    border: 1px solid var(--black);
+}
+.reviewHeroRightSection{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: center;
+    max-width: 516px;
+}
+.reviewHeroRightText{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+}
+.reviewHeroRightHeading{
+    font-family: 'Regular', sans-serif;
+    font-size: 30px;
+line-height: 40px;
+color: var(--black);
+}
+.reviewHeroRightPara{
+    font-family: 'Light', sans-serif;
+    font-size: 16px;
+line-height: 24px;
+color: var(--nero);
+}
+.reviewPriceSection{
+    display: flex;
+    flex-direction: row;
+    width: 115px;
+    align-items: center;
+
+}
+.reviewOriginalPrice{
+    font-family: 'Regular', sans-serif;
+    font-size: 18px;
+line-height: 28px;
+color: var(--black);
+}
+.reviewOfferPrice{
+    font-family: 'Light', sans-serif;
+    font-size: 14px;
+line-height: 22px;
+color: var(--blackfade);
+text-decoration:line-through;
+}
+.reviewButtonSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 16px;
+}
+.reviewCartButton{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12px 0px;
+    max-width: 250px;
+    width: 100%;
+    height: 48px;
+    background: var(--white);
+border: 1px solid var(--black);
+box-shadow: 0px 4px 16px var(--gray72);
+border-radius: 28px;
+}
+.reviewCartStyles{
+font-family: 'Light', sans-serif;
+font-size: 16px;
+line-height: 24px;
+color: var(--black);
+
+}
+.reviewBuyButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 0px;
+        max-width: 250px;
+        width: 100%;
+        height: 48px;
+        background: var(--blue);
+    box-shadow: 0px 4px 16px rgba(19, 115, 251, 0.24);
+    border-radius: 28px;
+}
+.buyButton{
+    font-family: 'Light', sans-serif;
+font-size: 16px;
+line-height: 24px;
+color: var(--white);
+
+}
+.reviewCartAddSection{
+    display: flex;
+    flex-direction: row;
+    gap: 19px;
+    align-items: center;
+}
+.reviewCartNumber{
+    font-family: 'Regular',sans-serif;
+font-size: 14px;
+line-height: 20px;
+text-align: center;
+color: var(--black);
+}
+
+/* heroSection Styles Ends */
+
+
+/* MiddleSection Styles Start */
+.reviewMiddleContent{
+    width: 100%;
+    height: 100%;
+}
+.insideReviewMiddleContent{
+    max-width: 1440px;
+    margin: auto;
+    background-color: var(--white);
+    padding: 36px 160px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    align-items: center;
+
+}
+
+.reviewMiddleTopSection{
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+   align-items: center;
+}
+.reviewMiddleRatingText{
+    max-width: 1120px;
+    width: 100%;
+    font-family: 'Regular', sans-serif;
+    font-size: 40px;
+line-height: 52px;
+color:var(--black);
+}
+.reviewMiddleRecentText{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+.reviewMiddlePara{
+    font-family: 'Light', sans-serif;
+    font-size: 14px;
+line-height: 22px;
+color: var(--nero); 
+
+}
+.reviewMiddleDownIcon{
+    width: 8px;
+    height: 4.54px;
+
+}
+.reviewImageWidth{
+    width: 100%;
+    height: 100%;
+}
+.reviewMiddleRatingSection{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.insideReviewMiddleRatingSection{
+    display: flex;
+flex-direction: column;
+padding: 32px;
+gap: 24px;
+max-width: 840px;
+width: 100%;
+background: var(--gray95);
+border-radius: 16px;
+ }
+.reviewRatingParaText{
+    font-family: 'Light',sans-serif;
+    max-width: 776px;
+    font-size: 17px;
+line-height: 26px;
+color: var(--nero);
+
+}
+.reviewUserSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.reviewUserName{
+    font-family: 'Regular', sans-serif;
+    font-size: 17px;
+line-height: 26px;
+color: var(--black);
+}
+.reviewUserDate{
+    font-family: 'Light', sans-serif;
+    font-size: 15px;
+line-height: 22px;
+color: var(--blackfade);
+}
+.reviewMiddleBottomSectionText{
+    font-family: 'Medium', sans-serif;
+    font-size: 17px;
+line-height: 26px;
+text-align: center;
+text-decoration: underline  ;
+color: var(--blue);
+}
+
+
+
+
+/* MiddleSection Styles End */
+
+
+/* -----------------------------DeskTop View Starts----------------------------- */
+
+
+
+/* ----------------------- View Starts at  1440px----------------------- */
+
+@media screen and (max-width:1440px){
+
+    /* heroSection Styles Starts at 1440px*/
+
+    /* heroSection Styles End at 1440px*/
+    
+    /* MiddleSection Styles Starts at 1440px*/
+    /* MiddleSection Styles Ends at 1440px*/
+}
+
+/* ----------------------- View Ends at  1440px----------------------- */
+
+
+/* ----------------------- View Starts at  1336px----------------------- */
+
+@media screen and (max-width:1336px){
+
+    /* heroSection Styles Starts at 1336px*/
+    .insideReviewHeroSetion{
+        background-color: var(--white);
+        padding: 64px 80px;
+    }
+
+    /* heroSection Styles End at 1336px*/
+    
+    /* MiddleSection Styles Starts at 1336px*/
+    
+    .insideReviewMiddleContent{
+
+        padding: 36px 128px 0px;
+
+    }
+    /* MiddleSection Styles Ends at 1336px*/
+}
+
+/* ----------------------- View Ends at  1336px----------------------- */
+
+
+
+/* ----------------------- View Starts at  1279px----------------------- */
+
+@media screen and (max-width:1279px){
+
+    /* heroSection Styles Starts at 1279px*/
+    .reviewHeroLeftImage{
+        width: 388px;
+        height: 388px;
+    }
+    .reviewHeroRightSection{
+       
+        max-width: 444px;
+    }
+    .reviewCartButton{
+        max-width: 214px;
+    }
+    .reviewBuyButton{
+        max-width: 214px;
+            
+    }
+
+
+    /* heroSection Styles End at 1279px*/
+    
+    /* MiddleSection Styles Starts at 1279px*/
+    .insideReviewMiddleContent{
+       
+        padding: 36px 80px 0px;
+
+    }
+
+    /* MiddleSection Styles Ends at 1279px*/
+}
+
+
+
+/* ----------------------- View Ends at  1279px----------------------- *
+
+
+
+/* ----------------------- View Starts at  1023px----------------------- */
+
+@media screen and (max-width:1023px){
+
+    /* heroSection Styles Starts at 1023px*/
+    .insideReviewHeroSetion{
+     
+        background-color: var(--white);
+        padding: 56px 60px;
+    
+    }
+    .reviewHeroTopSection{
+        gap: 56px;
+    }
+    .reviewHeroLeftSection{
+        padding: 24px;
+    }
+    .reviewHeroLeftImage{
+        width: 332px;
+        height: 332px;
+    }
+    .reviewHeroRightSection{
+        gap: 24px;
+        max-width: 384px;
+    }
+    .reviewHeroRightText{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    
+    }
+    .reviewHeroRightHeading{
+        font-size: 26px;
+    line-height: 36px;
+   
+    }
+    .reviewButtonSection{   
+        gap: 12px;
+    }
+    .reviewCartButton{
+        max-width: 186px;
+    }
+    .reviewBuyButton{
+            max-width: 186px;
+            
+    }
+
+    /* heroSection Styles End at 1023px*/
+    
+    /* MiddleSection Styles Starts at 1023px*/
+    .insideReviewMiddleContent{
+        padding: 24px 60px 0px;
+        gap: 56px;
+    }
+    .reviewMiddleTopSection{
+        gap: 12px;
+        
+     }
+    .reviewMiddleRatingText{
+        max-width: 820px;
+     width: 100%;
+        font-size: 36px;
+    line-height: 44px;
+    }
+    .insideReviewMiddleRatingSection{
+    padding: 24px;
+    gap: 16px;
+    max-width: 820px;
+    width: 100%;
+     }
+     
+
+    /* MiddleSection Styles Ends at 1023px*/
+}
+
+/* ----------------------- View Ends at  1023px----------------------- */
+
+
+
+/* ----------------------- View Starts at 867px----------------------- */
+
+@media screen and (max-width:867px){
+
+    /* heroSection Styles Starts at 867px*/
+    .insideReviewHeroSetion{
+
+        padding: 32px;
+    
+    }
+    .reviewHeroTopSection{
+        display: flex;
+        flex-direction:column;
+        gap: 32px;
+    }
+    .reviewHeroLeftImage{
+        max-width: 556px;
+        max-height: 332px;
+    }
+    .reviewHeroRightSection{
+        max-width: 604px;
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        align-items: center;
+    }
+    .reviewHeroRightHeading{
+        font-size: 24px;
+    line-height: 34px;
+    }
+    .reviewButtonSection{   
+        width: 100%;
+    }
+    .reviewCartButton{
+        max-width: 296px;
+    }
+    .reviewBuyButton{
+            max-width: 296px;
+            
+    }
+
+    /* heroSection Styles End at 867px*/
+    
+    /* MiddleSection Styles Starts at 867px*/
+    .insideReviewMiddleContent{
+        padding: 48px 32px 0px;
+        gap: 48px;
+    }
+    .reviewMiddleRatingText{
+        max-width: 604px;
+     width: 100%;
+        font-size: 30px;
+    line-height: 40px;
+    }
+    .reviewMiddleRatingSection{
+        gap: 12px;
+    }
+    .insideReviewMiddleRatingSection{
+       
+        max-width: 604px;
+    
+         }
+    /* MiddleSection Styles Ends at 867px*/
+}
+
+/* ----------------------- View Ends at  867px----------------------- */
+
+
+
+
+/* ----------------------- View Starts at  1440px----------------------- */
+
+@media screen and (max-width:550px){
+
+    /* heroSection Styles Starts at 550px*/
+    .insideReviewHeroSetion{
+
+        padding: 24px;
+    
+    }
+    .reviewHeroLeftImage{
+        max-width: 318px;
+        max-height: 318px;
+    }
+    .reviewHeroRightSection{
+        max-width: 366px;
+        width: 100%;
+        text-align:initial;
+        margin: inherit;
+        align-items: flex-start;
+    }
+    .reviewButtonSection{   
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .reviewCartButton{
+        max-width: 366px;
+    }
+    .reviewBuyButton{
+            max-width: 366px;
+            
+    }
+
+    /* heroSection Styles End at 550px*/
+    
+    /* bannerSection Styles Starts at 5500px*/
+    .insideReviewMiddleContent{
+        padding: 56px 24px 0px;
+        gap: 32px;
+    }
+    .reviewMiddleRatingText{
+        max-width: 366px;
+     width: 100%
+    }
+    .reviewMiddleTopSection{
+        align-items: initial;
+     }
+    
+    /* bannerSection Styles Ends at 550px*/
+}
+
+/* ----------------------- View Ends at  550px----------------------- */
+
+
+
+
+
