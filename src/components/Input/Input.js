@@ -18,6 +18,7 @@ const Input = ({
   errorMessage,
   customeInputStyle,
 }) => {
+  console.log(error,errorMessage)
   return (
     <div className={styles.inputContainer}>
       <input
@@ -32,7 +33,7 @@ const Input = ({
           styles.input,
           className,
           error && errorMessage,
-          customeInputStyle
+          customeInputStyle,
         )}
       />
       {image && (

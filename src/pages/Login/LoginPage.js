@@ -85,7 +85,10 @@ const LoginPage = () => {
                 {loginPageStrings.loginPageAccountDesc}
               </span>
               &nbsp;
-              <span className={styles.loginPageSignUpText}>
+              <span
+                className={styles.loginPageSignUpText}
+                onClick={() => navigate('/signup')}
+              >
                 {loginPageStrings.loginPageSignUpText}
               </span>
             </div>

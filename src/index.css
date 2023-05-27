@@ -25,6 +25,8 @@
   --lightgreen:rgba(3, 227, 139, 0.1);
   --lightblue:rgba(19, 115, 251, 0.1);
   --lightpink:rgba(250, 19, 99, 0.1);
+  --backgroundtransparentpink:rgba(250, 19, 99, 0.08);
+  --redbrick:#FA1363;
 }
 
 @font-face {

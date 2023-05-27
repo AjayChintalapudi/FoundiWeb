@@ -10,6 +10,8 @@ import { HiStar } from 'react-icons/hi';
 import NavBar from 'components/NavBar/NavBar';
 import { useNavigate } from 'react-router-dom';
 import Footer from 'components/Footer/Footer';
+import { CustomersProductData } from 'constants/CardsData';
+import CustomerProductCard from 'components/customerProductCard/CustomerProductCard';
 
 const Review = () => {
   const [cartItem, setCartItem] = useState(0);
@@ -175,12 +177,39 @@ const Review = () => {
     );
   };
 
-  
+  const customerProductSection = () => {
+    return (
+      <div className={styles.CustomerCardMainConatiner}>
+        <div className={styles.customerCardHeadingBlock}>
+          <h3 className={styles.customerCardHeading}>Customers also liked</h3>
+        </div>
+        <div className={styles.customerCardContainer}>
+          {CustomersProductData &&
+            CustomersProductData.map((item, index) => {
+              return (
+                <CustomerProductCard
+                  key={index}
+                  customerProductImg={item.customerProductImg}
+                  customerProductHeading={item.customerProductHeading}
+                  customerProductOfferPrice={item.customerProductOfferPrice}
+                  customerProductPrice={item.customerProductPrice}
+                />
+              );
+            })}
+        </div>
+        <div className={styles.browseProductContainer}>
+          <p className={styles.browseProductHeading}>Browse all products 🛍️</p>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div>
       <NavBar />
       {reviewHeroSection()}
       {reviewMiddleSection()}
+      {customerProductSection()}
       <Footer />
     </div>
   );

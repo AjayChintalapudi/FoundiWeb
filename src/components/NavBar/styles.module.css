@@ -129,7 +129,7 @@
   padding: 24px;
 }
 .signUpLoginHeading {
-  font-family: 'Semi-Bold', sans-serif;
+  font-family: 'Medium', sans-serif;
   font-size: 16px;
 }
 
@@ -274,14 +274,14 @@
     display: block;
     position: absolute;
     right: 80px;
-    top: 29px;
+    top: 24px;
   }
 
   .navbarMenuItemsMenuIcon {
     width: 24px;
     height: 8px;
     position: relative;
-    top: 8px;
+    top: 4px;
   }
 
   .menuItemsRightMenuIcon {
@@ -312,14 +312,14 @@
     display: block;
     position: absolute;
     right: 80px;
-    top: 28px;
+    top: 24px;
   }
 
   .navbarMenuItemsMenuIcon {
     width: 24px;
     height: 8px;
     position: relative;
-    top: 8px;
+    top: 4px;
   }
 
   .menuItemsRightMenuIcon {
@@ -349,14 +349,14 @@
     display: block;
     position: absolute;
     right: 80px;
-    top: 29px;
+    top: 24px;
   }
 
   .navbarMenuItemsMenuIcon {
     width: 24px;
     height: 8px;
     position: relative;
-    top: 8px;
+    top: 4px;
   }
 
   .menuItemsRightMenuIcon {

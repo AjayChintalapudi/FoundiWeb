@@ -117,7 +117,10 @@ const CreateAccountPage = () => {
               {createAccountPageStrings.createAccountAccountDesc}
             </span>
             &nbsp;&nbsp;
-            <span className={styles.createAccountPageSignUpText}>
+            <span
+              className={styles.createAccountPageSignUpText}
+              onClick={() => navigate('/login')}
+            >
               {createAccountPageStrings.createAccountLogIn}
             </span>
           </div>
@@ -168,6 +171,7 @@ const CreateAccountPage = () => {
                   ''
                 )
               }
+              errorMessage={styles.errorMessage}
             />
           </div>
         </div>
@@ -196,6 +200,7 @@ const CreateAccountPage = () => {
                 ''
               )
             }
+            errorMessage={styles.errorMessage}
           />
         </div>
         <div className={styles.createAccountPageButtons}>

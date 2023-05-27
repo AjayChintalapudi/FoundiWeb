@@ -31,9 +31,11 @@ import Footer from 'components/Footer/Footer';
 import Button from 'components/Button/Button';
 import styles from './styles.module.css';
 import Input from 'components/Input/Input';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
   const { home } = englishStrings;
+  const navigate = useNavigate();
 
   //------------ Accordion Start--------------------
   const [collapse, setCollapse] = useState(0);
@@ -194,9 +196,10 @@ const Home = () => {
               </div>
               <div className={styles.snoCodeInputBlock}>
                 <Input
-                 placeholder={home.inputText}
-                 className={styles.snoCodeInput}
-                 image={arrowleftcircle}/>
+                  placeholder={home.inputText}
+                  className={styles.snoCodeInput}
+                  image={arrowleftcircle}
+                />
               </div>
               <div className={styles.scanQrCodeBlock}>
                 <p className={styles.scanQrCodeText}>{home.scanQrCodeText}</p>
@@ -439,7 +442,10 @@ const Home = () => {
 
   const learnMoreContainer = () => {
     return (
-      <div className={styles.learnMoreContainer}>
+      <div
+        className={styles.learnMoreContainer}
+        onClick={() => navigate('/privacypolicy')}
+      >
         <div className={styles.learMoreIconBlock}>
           <img
             src={leranmoreicon}

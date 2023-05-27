@@ -37,6 +37,7 @@
   line-height: 64px;
   max-width: 452px;
   width: 100%;
+  font-weight: 500;
 }
 
 .bannerInfoRight {
@@ -242,7 +243,7 @@
   max-width: 167px;
   width: 100%;
 }
-.returnCloseIcon{
+.returnCloseIcon {
   cursor: pointer;
 }
 
@@ -376,6 +377,7 @@
   line-height: 64px;
   font-size: 48px;
   font-family: 'Regular', sans-serif;
+  font-weight: 400;
   color: var(--white);
 }
 
@@ -393,6 +395,7 @@
   width: 100%;
   line-height: 24px;
   font-family: 'Light', sans-serif;
+  font-weight: 300;
   font-size: 17px;
   padding-top: 96px;
 }
@@ -401,6 +404,7 @@
   flex-direction: row;
   gap: 10px;
   align-items: center;
+  cursor: pointer;
 }
 
 .learnMoreDesc {
@@ -559,7 +563,6 @@
     font-size: 16px;
     line-height: 24px;
     width: 524px;
-
   }
 
   .snoCodeInput {
@@ -569,10 +572,10 @@
     font-family: 'Light', sans-serif;
     font-size: 16px;
   }
-  .snoCodeInput::placeholder{
+  .snoCodeInput::placeholder {
     font-size: 16px;
   }
-  .returnSectionInput{
+  .returnSectionInput {
     border: 1px solid var(--gray100);
   }
 
@@ -796,7 +799,6 @@
     flex-direction: row;
     gap: 12px;
     justify-content: center;
-
   }
 
   .productsTitleInfo {

@@ -8,6 +8,7 @@ import LoginPage from 'pages/Login/LoginPage';
 import CreateAccountPage from 'pages/CreateAccount/CreateAccountPage';
 import Review from 'pages/Review/Review';
 import CheckOut from 'pages/CheckOut/CheckOut';
+import PrivacyPolicy from 'pages/PrivacyPolicy/PrivacyPolicy';
 
 const AppRoutes = () => {
   return (
@@ -22,6 +23,7 @@ const AppRoutes = () => {
           <Route path="/signup" element={<CreateAccountPage />}></Route>
           <Route path="/review" element={<Review />}></Route>
           <Route path="/checkout" element={<CheckOut />}></Route>
+          <Route path="/privacypolicy" element={<PrivacyPolicy/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>

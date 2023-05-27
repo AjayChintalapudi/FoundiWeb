@@ -16,6 +16,7 @@ import {
   profileblackicon,
   foundiblackicon,
   foundilogowhite,
+  hamberblackicon,
 } from 'resources/Images/Images';
 import { englishStrings } from 'resources/Strings/eng';
 import PopOver from 'components/PopOver/PopOver';
@@ -43,8 +44,8 @@ const NavBar = (props) => {
 
   // close icon
   const [showPopup, setShowPopup] = useState(false);
-  const [showLanguage,setShowLanguage]=useState(false);
-  const [showCart,setShowCart]=useState(false);
+  const [showLanguage, setShowLanguage] = useState(false);
+  const [showCart, setShowCart] = useState(false);
 
   /*************NAVBAR LOGOLEFT START****************/
   const navbarLogoLeft = () => {
@@ -81,13 +82,13 @@ const NavBar = (props) => {
         {/* =============NAVBAR MENU ITEMS RIGHT "LANGUAGE" ICON START==============*/}
         <div className={styles.navbarMenuItemsRight}>
           <PopOver
-          showPopup={showLanguage}
+            showPopup={showLanguage}
             triggerElement={
               <img
                 className={styles.menuItemsRightLogo}
                 src={isHome ? language : languageblackicon}
                 alt="language"
-                onClick={()=>setShowLanguage(!showLanguage)}
+                onClick={() => setShowLanguage(!showLanguage)}
               />
             }
             /*************CONTENT OF THE LANGUAGE POPUP START********/
@@ -121,13 +122,13 @@ const NavBar = (props) => {
         {/* =============NAVBAR MENU ITEMS RIGHT "CART" ICON START==============*/}
         <div className={styles.navbarMenuItemsRight}>
           <PopOver
-          showPopup={showCart}
+            showPopup={showCart}
             triggerElement={
               <img
                 className={styles.menuItemsRightCartIcon}
                 src={isHome ? cart : cartblackicon}
                 alt="cart"
-                onClick={()=>setShowCart(!showCart)}
+                onClick={() => setShowCart(!showCart)}
               />
             }
             /*************CONTENT OF THE CART POPUP START********/
@@ -211,14 +212,14 @@ const NavBar = (props) => {
           <img
             onClick={toggleMenu}
             className={styles.menuItemsRightMenuIcon}
-            src={menu}
+            src={isHome ? menu : hamberblackicon}
             alt="menu"
           />
         </div>
         {isMenuOpen && (
           <div className={styles.toggleMenuContainer}>
             <div className={styles.headerContainer}>
-              <div className={styles.headerLogoLeft}>
+              <div className={styles.headerLogoLeft} onClick={()=>navigate('/')}>
                 <img
                   src={foundiblackicon}
                   alt=""
@@ -245,9 +246,11 @@ const NavBar = (props) => {
                   onClick={() => navigate('/login')}
                 />
               </div>
-              <div>{navbar.eventsAndBuissness}</div>
-              <div>{navbar.about}</div>
-              <div>{navbar.products}</div>
+              <div onClick={() => navigate('/events')}>
+                {navbar.eventsAndBuissness}
+              </div>
+              <div onClick={() => navigate('/about')}>{navbar.about}</div>
+              <div onClick={() => navigate('/products')}>{navbar.products}</div>
             </div>
           </div>
         )}

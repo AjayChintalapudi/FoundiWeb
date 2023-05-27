@@ -265,6 +265,37 @@
   color: var(--blue);
 }
 
+/* Customer product section */
+.CustomerCardMainConatiner {
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  text-align: center;
+  padding-block: 100px;
+}
+.customerCardContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: center;
+}
+
+.customerCardHeading {
+  font-family: 'Regular', sans-serif;
+  font-size: 40px;
+  line-height: 52px;
+}
+
+.browseProductHeading {
+  font-family: 'Medium', sans-serif;
+  font-size: 17px;
+  line-height: 26px;
+  color: var(--blue);
+  text-decoration: underline;
+  width: 100%;
+}
 /* MiddleSection Styles End */
 
 /* -----------------------------DeskTop View Starts----------------------------- */
@@ -329,6 +360,25 @@
   }
 
   /* MiddleSection Styles Ends at 1279px*/
+
+  /* Customer Product Section */
+  .CustomerCardMainConatiner {
+    max-width: 1120px;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    text-align: center;
+    padding-block: 100px;
+  }
+
+  .browseProductHeading {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  /* Customer Product End */
 }
 
 /* ----------------------- View Ends at  1279px----------------------- *
@@ -398,6 +448,32 @@
     max-width: 820px;
     width: 100%;
   }
+  .CustomerCardMainConatiner {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+    padding-block: 80px;
+  }
+  .customerCardContainer {
+    max-width: 452px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .customerCardHeading {
+    font-family: 'Regular', sans-serif;
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .browseProductHeading {
+    font-size: 16px;
+    line-height: 22px;
+  }
 
   /* MiddleSection Styles Ends at 1023px*/
 }
@@ -460,6 +536,32 @@
   .insideReviewMiddleRatingSection {
     max-width: 604px;
   }
+
+  .CustomerCardMainConatiner {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding-block: 80px;
+  }
+  .customerCardContainer {
+    max-width: 452px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .customerCardHeading {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .browseProductHeading {
+    font-size: 16px;
+    line-height: 24px;
+  }
   /* MiddleSection Styles Ends at 867px*/
 }
 
@@ -509,8 +611,62 @@
   .reviewMiddleTopSection {
     align-items: initial;
   }
+  .CustomerCardMainConatiner {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-block: 80px;
+  }
+  .customerCardContainer {
+    max-width: 366px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    padding-inline: 24px;
+  }
+
+  .customerCardHeading {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .browseProductHeading {
+    font-size: 16px;
+    line-height: 24px;
+  }
 
   /* bannerSection Styles Ends at 550px*/
 }
 
 /* ----------------------- View Ends at  550px----------------------- */
+
+@media screen and (max-width: 320px) {
+  .CustomerCardMainConatiner {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-block: 80px;
+  }
+  .customerCardContainer {
+    max-width: 300px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .customerCardHeading {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .browseProductHeading {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

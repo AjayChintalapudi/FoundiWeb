@@ -13,6 +13,9 @@ import {
   ios,
   appleicon,
   playstoreicon,
+  customerproductImg1,
+  customerproductImg2,
+  customerproductImg3,
 } from 'resources/Images/Images';
 // import { Strings } from 'resources/Strings/eng';
 import { englishStrings } from 'resources/Strings/eng';
@@ -127,10 +130,32 @@ const CollabarateData = [
   // },
 ];
 
+const CustomersProductData = [
+  {
+    customerProductImg: customerproductImg1,
+    customerProductHeading: 'Regular tags - A pack of 4',
+    customerProductOfferPrice: '$59.00 ',
+    customerProductPrice: '$99.00',
+  },
+  {
+    customerProductImg: customerproductImg2,
+    customerProductHeading: 'Regular tag - A pack of 1',
+    customerProductOfferPrice: '$29.00',
+    customerProductPrice: '$39.00',
+  },
+  {
+    customerProductImg: customerproductImg3,
+    customerProductHeading: 'Regular tags - A pack of 4',
+    customerProductOfferPrice: '$59.00 ',
+    customerProductPrice: '$99.00',
+  },
+];
+
 export {
   FeatureData,
   GetAppData,
   ProductsData,
   QuestionAnswerData,
   CollabarateData,
+  CustomersProductData,
 };

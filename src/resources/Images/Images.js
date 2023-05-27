@@ -1,3 +1,6 @@
+// HamberIcon
+export {default as hamberblackicon} from 'assets/Images/hamberblackicon.svg';
+
 // Login Form Images
 
 export { default as passwordhideicon } from 'assets/Images/passwordhideicon.svg';
@@ -141,3 +144,8 @@ export { default as privacyPolicyImgOne } from 'assets/Images/privacy.svg';
 
 //OrderSection Images
 export { default as orderTagImg } from 'assets/Images/orderTagImage.svg';
+
+// Customer product Images
+export {default as customerproductImg1} from 'assets/Images/customerproductImg1.svg';
+export {default as customerproductImg2} from 'assets/Images/customerproductImg2.svg';
+export {default as customerproductImg3} from 'assets/Images/customerproductImg3.svg';
