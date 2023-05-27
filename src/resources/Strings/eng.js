@@ -79,6 +79,7 @@ const home = {
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse risus urna, rutrum non quam in. Lorem ipsum dolor sit.',
   browseProducts: 'Browse all products',
   browserProductIcon: '🛍️',
+  customersLiked:"Customers also liked",
   // QuestionAnswer Section
 
   questionAnswerHeading: 'You’ve got questions We’ve got answers!',

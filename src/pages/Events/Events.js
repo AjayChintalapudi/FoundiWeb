@@ -11,11 +11,8 @@ import {
 } from 'resources/Images/Images';
 import Button from 'components/Button/Button';
 import Footer from 'components/Footer/Footer';
-<<<<<<< HEAD
 import NavBar from 'components/NavBar/NavBar';
-=======
 import styles from './styles.module.css';
->>>>>>> c6de6e55df6c8bc59f6adc54a944745df04f2139
 const { eventPageStrings } = englishStrings;
 const Employee = [
   {

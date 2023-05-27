@@ -32,7 +32,7 @@ export { default as dangercircle } from 'assets/Images/dangercircle.svg';
 
 // profileIcon
 
-export { default as closeicon } from 'assets/Images/closeicon.svg';
+export { default as closeicon } from 'assets/Images/CloseIcon.svg';
 export { default as adduser } from 'assets/Images/adduser.svg';
 
 // Return Section Images
@@ -93,11 +93,8 @@ export { default as fbImg } from 'assets/Images/facebook.svg';
 export { default as instaImg } from 'assets/Images/instagram.svg';
 export { default as twitterImg } from 'assets/Images/twitter.svg';
 export { default as linkedinImg } from 'assets/Images/linkedin.svg';
-<<<<<<< HEAD
-=======
 
 // events Images
->>>>>>> c6de6e55df6c8bc59f6adc54a944745df04f2139
 export { default as eventImg } from 'assets/Images/eventImage.svg';
 export { default as LeftImg } from 'assets/Images/LeftIcon.svg';
 export { default as RightImg } from 'assets/Images/RightIcon.svg';
@@ -105,8 +102,6 @@ export { default as linkImg } from 'assets/Images/Link.svg';
 export { default as droppedImg } from 'assets/Images/dropedImg.svg';
 export { default as eventImg2 } from 'assets/Images/Eventimage2.svg';
 export { default as eventImg3 } from 'assets/Images/Event image3.svg';
-<<<<<<< HEAD
-=======
 
 // products Images
 export { default as singleTagImg } from 'assets/Images/singleTag.svg';
@@ -146,4 +141,3 @@ export { default as privacyPolicyImgOne } from 'assets/Images/privacy.svg';
 
 //OrderSection Images
 export { default as orderTagImg } from 'assets/Images/orderTagImage.svg';
->>>>>>> c6de6e55df6c8bc59f6adc54a944745df04f2139

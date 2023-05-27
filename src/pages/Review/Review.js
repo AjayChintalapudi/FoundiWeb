@@ -7,10 +7,13 @@ import Button from 'components/Button/Button';
 import { plusImg, subtractionImg, downArrowImg } from 'resources/Images/Images';
 import { Rating } from 'react-simple-star-rating';
 import { HiStar } from 'react-icons/hi';
+import NavBar from 'components/NavBar/NavBar';
+import { useNavigate } from 'react-router-dom';
+import Footer from 'components/Footer/Footer';
 
 const Review = () => {
   const [cartItem, setCartItem] = useState(0);
-  const { reviewPageStrings } = englishStrings;
+  const { reviewPageStrings, home } = englishStrings;
   const addFunction = () => {
     setCartItem(cartItem + 1);
   };
@@ -19,6 +22,8 @@ const Review = () => {
       setCartItem(cartItem - 1);
     }
   };
+  // navigate
+  const navigate = useNavigate();
   const reviewHeroSection = () => {
     return (
       <div className={styles.reviewHeroSection}>
@@ -86,7 +91,11 @@ const Review = () => {
                   )}
                 </div>
                 <div className={styles.reviewBuyButton}>
-                  <Button btName={'Buy now'} btnStyles={styles.buyButton} />
+                  <Button
+                    btName={'Buy now'}
+                    btnStyles={styles.buyButton}
+                    onClick={() => navigate('/checkout')}
+                  />
                 </div>
               </div>
             </div>
@@ -165,10 +174,14 @@ const Review = () => {
       </div>
     );
   };
+
+  
   return (
     <div>
+      <NavBar />
       {reviewHeroSection()}
       {reviewMiddleSection()}
+      <Footer />
     </div>
   );
 };

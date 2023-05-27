@@ -15,6 +15,7 @@ import {
   timeImg,
 } from 'resources/Images/Images';
 import Footer from 'components/Footer/Footer';
+import NavBar from 'components/NavBar/NavBar';
 
 const { aboutPageStrings } = englishStrings;
 const AboutData = [
@@ -292,6 +293,7 @@ const About = () => {
   };
   return (
     <div>
+      <NavBar/>
       {aboutTopSection()}
       {aboutMiddleSection()}
       {aboutSubscriptionSection()}

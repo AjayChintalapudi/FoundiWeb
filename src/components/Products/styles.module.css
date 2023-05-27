@@ -12,7 +12,7 @@
 .productsContainer:hover {
   transform: scale(1.05);
   transition: ease-out 0.5s;
-  height: 400px;
+  padding-bottom: 46px;
 }
 
 .productsImage {

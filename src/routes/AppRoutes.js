@@ -6,6 +6,8 @@ import About from 'pages/About/About';
 import Products from 'pages/Products/Products';
 import LoginPage from 'pages/Login/LoginPage';
 import CreateAccountPage from 'pages/CreateAccount/CreateAccountPage';
+import Review from 'pages/Review/Review';
+import CheckOut from 'pages/CheckOut/CheckOut';
 
 const AppRoutes = () => {
   return (
@@ -18,6 +20,8 @@ const AppRoutes = () => {
           <Route path="/products" element={<Products />}></Route>
           <Route path="/login" element={<LoginPage />}></Route>
           <Route path="/signup" element={<CreateAccountPage />}></Route>
+          <Route path="/review" element={<Review />}></Route>
+          <Route path="/checkout" element={<CheckOut />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

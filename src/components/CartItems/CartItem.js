@@ -3,7 +3,7 @@ import styles from './styles.module.css';
 
 const CartItem = (props) => {
   return (
-    <div className={styles.cartItemSection}>
+    <div onClick={props.onClick} className={styles.cartItemSection}>
       <div className={styles.insideCartSection}>
         <div className={styles.cartItemTopSection}>
           <img src={props.productImg} className={styles.cartImage} alt="" />

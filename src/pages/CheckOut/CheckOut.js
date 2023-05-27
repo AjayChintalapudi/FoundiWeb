@@ -18,6 +18,7 @@ import { checkoutuparrow } from 'resources/Images/Images';
 import Input from 'components/Input/Input';
 import Button from 'components/Button/Button';
 import styles from './styles.module.css';
+import { useNavigate } from 'react-router-dom';
 
 const CheckOut = () => {
   const { checkoutPageStrings } = englishStrings;
@@ -25,11 +26,16 @@ const CheckOut = () => {
   const [showAddress, setShowAddress] = useState(true);
   const [showPayment, setShowPayment] = useState(true);
   const [isPageClosed, setIsPageClosed] = useState(false);
+  // navigate
+  const navigate = useNavigate();
   return (
     <div className={styles.checkOutMainContainer}>
       <div className={styles.checkOutCloseBlock}>
         <p className={styles.checkOutHeading}>{checkoutPageStrings.checkOut}</p>
-        <div className={styles.closeIconContainer}>
+        <div
+          className={styles.closeIconContainer}
+          onClick={() => navigate('/review')}
+        >
           <img src={closeicon} alt="" className={styles.imageWidth} />
         </div>
       </div>

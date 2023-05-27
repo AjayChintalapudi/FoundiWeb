@@ -6,9 +6,12 @@ import { englishStrings } from 'resources/Strings/eng';
 import { ProductsCategoriesData } from 'constants/CardData/CardData';
 import CartItem from 'components/CartItems/CartItem';
 import Footer from 'components/Footer/Footer';
+import NavBar from 'components/NavBar/NavBar';
+import { useNavigate } from 'react-router-dom';
 
 const { prooductsPageStrings } = englishStrings;
 const Products = () => {
+  const navigate = useNavigate();
   const productsHeroSection = () => {
     return (
       <div className={styles.productsHeroSection}>
@@ -104,6 +107,7 @@ const Products = () => {
                 productTagHeading={item.productTagHeading}
                 productPrice={item.productPrice}
                 offerPrice={item.offerPrice}
+                onClick={()=>navigate('/review')}
               />
             );
           })}
@@ -113,6 +117,7 @@ const Products = () => {
 
   return (
     <div>
+      <NavBar />
       {productsHeroSection()}
       {productsbannerSection()}
       <Footer />
