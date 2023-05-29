@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import styles from './styles.module.css';
 import { privacyPolicyImg, privacyPolicyImgOne } from 'resources/Images/Images';
 import useWindowDimensions from 'hooks/UseWindowDimensionHook/UseWindowDimemsionHook';
@@ -6,6 +6,10 @@ import NavBar from 'components/NavBar/NavBar';
 
 const PrivacyPolicy = () => {
   const { width } = useWindowDimensions();
+  // scroll to top of the page onloading
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const privacyPolicyTopSection = () => {
     return (
       <div className={styles.privacyPolicyTopContainer}>

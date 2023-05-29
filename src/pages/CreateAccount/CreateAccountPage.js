@@ -23,6 +23,12 @@ const CreateAccountPage = () => {
   /***********STRING VALUES************/
   const { createAccountPageStrings } = englishStrings;
   /***********AFTER  CLOSING THE ICON REDIRECT TO HOME PAGE************/
+
+  // scroll to top of the page onloading
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  // scroll to top of the page onloading
   const navigate = useNavigate();
   const [isPageClosed, setIsPageClosed] = useState(false);
   useEffect(() => {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import NavBar from 'components/NavBar/NavBar';
 import {
   playicon,
@@ -36,6 +36,11 @@ import { useNavigate } from 'react-router-dom';
 const Home = () => {
   const { home } = englishStrings;
   const navigate = useNavigate();
+
+  // scroll to top page onLoad the page
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   //------------ Accordion Start--------------------
   const [collapse, setCollapse] = useState(0);
@@ -444,7 +449,7 @@ const Home = () => {
     return (
       <div
         className={styles.learnMoreContainer}
-        onClick={() => navigate('/privacypolicy')}
+        onClick={() => navigate('/about')}
       >
         <div className={styles.learMoreIconBlock}>
           <img

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './styles.module.css';
 import { SubscriptionCategoriesData } from 'constants/CardData/CardData';
 import { englishStrings } from 'resources/Strings/eng';
@@ -80,6 +80,10 @@ const CartData = [
 ];
 
 const About = () => {
+  // scroll to top of the page onloading
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const aboutTopSection = () => {
     return (
       <div className={styles.aboutHeroSection}>
@@ -293,7 +297,7 @@ const About = () => {
   };
   return (
     <div>
-      <NavBar/>
+      <NavBar />
       {aboutTopSection()}
       {aboutMiddleSection()}
       {aboutSubscriptionSection()}

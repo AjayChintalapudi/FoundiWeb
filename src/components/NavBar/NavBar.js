@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import {
-  language,
   cart,
   profile,
   menu,
@@ -17,16 +16,49 @@ import {
   foundiblackicon,
   foundilogowhite,
   hamberblackicon,
+  languageicon,
 } from 'resources/Images/Images';
 import { englishStrings } from 'resources/Strings/eng';
 import PopOver from 'components/PopOver/PopOver';
 import Button from 'components/Button/Button';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import styles from './styles.module.css';
 import classNames from 'classnames';
+import { useAppData } from 'providers/AppDataProvider';
+import { IoIosArrowDown, IoIosArrowForward } from 'react-icons/io';
 
 const NavBar = (props) => {
   const { navbar } = englishStrings;
+
+  // scroll to top page
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  // NavbarActive Links
+  const location = useLocation();
+
+  const [activeItem, setActiveItem] = useState(null);
+  const handleItemClick = (path) => {
+    navigate(path);
+    setActiveItem(path);
+  };
+
+  useEffect(() => {
+    setActiveItem(location.pathname);
+  }, [location]);
+
+  // Language Change
+  const { strings, setLanguage, currentLanguage } = useAppData();
+  console.log(currentLanguage);
+  const selectSweLanguage = () => {
+    setLanguage('SE');
+  };
+
+  const selectEngLanguage = () => {
+    setLanguage('EN');
+  };
 
   // Based on the route path change images and logos
   const navigate = useNavigate();
@@ -46,6 +78,14 @@ const NavBar = (props) => {
   const [showPopup, setShowPopup] = useState(false);
   const [showLanguage, setShowLanguage] = useState(false);
   const [showCart, setShowCart] = useState(false);
+
+  // language menu mobile
+
+  const [openLanguage, setOpenLanguage] = useState(false);
+
+  const handleOpenLanguage = () => {
+    setOpenLanguage(!openLanguage);
+  };
 
   /*************NAVBAR LOGOLEFT START****************/
   const navbarLogoLeft = () => {
@@ -67,9 +107,24 @@ const NavBar = (props) => {
       <div
         className={classNames(styles.navbarMenuItems, props.navbarMenuItems)}
       >
-        <p onClick={() => navigate('/events')}>{navbar.events}</p>
-        <p onClick={() => navigate('/about')}>{navbar.about}</p>
-        <p onClick={() => navigate('/products')}>{navbar.products}</p>
+        <p
+          onClick={() => handleItemClick('/events')}
+          className={activeItem === '/events' ? styles.activeItem : ''}
+        >
+          {navbar.events}
+        </p>
+        <p
+          onClick={() => handleItemClick('/about')}
+          className={activeItem === '/about' ? styles.activeItem : ''}
+        >
+          {navbar.about}
+        </p>
+        <p
+          onClick={() => handleItemClick('/products')}
+          className={activeItem === '/products' ? styles.activeItem : ''}
+        >
+          {navbar.products}
+        </p>
       </div>
     );
   };
@@ -86,7 +141,7 @@ const NavBar = (props) => {
             triggerElement={
               <img
                 className={styles.menuItemsRightLogo}
-                src={isHome ? language : languageblackicon}
+                src={isHome ? languageicon : languageblackicon}
                 alt="language"
                 onClick={() => setShowLanguage(!showLanguage)}
               />
@@ -94,22 +149,56 @@ const NavBar = (props) => {
             /*************CONTENT OF THE LANGUAGE POPUP START********/
             content={
               <div className={styles.languageContainer}>
-                <div className={styles.englishBlock}>
+                <div
+                  className={styles.englishBlock}
+                  onClick={() => setLanguage('EN')}
+                >
                   <div className={styles.englishIcon}>
-                    <img src={englishicon} alt="" />
-                    <h5 className={styles.englishText}>{navbar.english}</h5>
+                    <img
+                      src={currentLanguage === 'EN' ? englishicon : swedishicon}
+                      alt=""
+                    />
+                    <h5
+                      className={
+                        currentLanguage === 'EN'
+                          ? styles.languageSelectedStyle
+                          : styles.languageStyle
+                      }
+                    >
+                      {strings.navbar.english}
+                    </h5>
                   </div>
                   <div className={styles.check}>
-                    <img src={check} alt="" />
+                    <img
+                      src={currentLanguage === 'EN' ? check : uncheck}
+                      alt=""
+                    />
                   </div>
                 </div>
-                <div className={styles.swedishBlock}>
+                <div
+                  className={styles.swedishBlock}
+                  onClick={() => setLanguage('SE')}
+                >
                   <div className={styles.swedishIcon}>
-                    <img src={swedishicon} alt="" />
-                    <h5 className={styles.swedishText}>{navbar.swedish}</h5>
+                    <img
+                      src={currentLanguage === 'EN' ? swedishicon : englishicon}
+                      alt=""
+                    />
+                    <h5
+                      className={
+                        currentLanguage === 'SE'
+                          ? styles.languageSelectedStyle
+                          : styles.languageStyle
+                      }
+                    >
+                      {navbar.swedish}
+                    </h5>
                   </div>
                   <div className={styles.check}>
-                    <img src={uncheck} alt="" />
+                    <img
+                      src={currentLanguage === 'EN' ? uncheck : check}
+                      alt=""
+                    />
                   </div>
                 </div>
               </div>
@@ -219,7 +308,10 @@ const NavBar = (props) => {
         {isMenuOpen && (
           <div className={styles.toggleMenuContainer}>
             <div className={styles.headerContainer}>
-              <div className={styles.headerLogoLeft} onClick={()=>navigate('/')}>
+              <div
+                className={styles.headerLogoLeft}
+                onClick={() => navigate('/')}
+              >
                 <img
                   src={foundiblackicon}
                   alt=""
@@ -246,19 +338,98 @@ const NavBar = (props) => {
                   onClick={() => navigate('/login')}
                 />
               </div>
-              <div onClick={() => navigate('/events')}>
+              <div
+                onClick={() => handleItemClick('/events')}
+                className={activeItem === '/events' ? styles.activeItem : ''}
+              >
                 {navbar.eventsAndBuissness}
               </div>
-              <div onClick={() => navigate('/about')}>{navbar.about}</div>
-              <div onClick={() => navigate('/products')}>{navbar.products}</div>
+              <div
+                onClick={() => handleItemClick('/about')}
+                className={activeItem === '/about' ? styles.activeItem : ''}
+              >
+                {navbar.about}
+              </div>
+              <div
+                onClick={() => handleItemClick('/products')}
+                className={activeItem === '/products' ? styles.activeItem : ''}
+              >
+                {navbar.products}
+              </div>
+              {/* Language container Mobile start */}
+              <div className={styles.laguageContainerMobile}>
+                <p>{navbar.language}</p>
+                <span onClick={handleOpenLanguage}>
+                  {openLanguage ? <IoIosArrowDown /> : <IoIosArrowForward />}
+                </span>
+              </div>
+              {openLanguage && (
+                <div className={styles.languageContainerContentMobileBlock}>
+                  <div
+                    className={styles.englishBlock}
+                    onClick={() => setLanguage('EN')}
+                  >
+                    <div className={styles.englishIcon}>
+                      <img
+                        src={
+                          currentLanguage === 'EN' ? englishicon : swedishicon
+                        }
+                        alt=""
+                      />
+                      <h5
+                        className={
+                          currentLanguage === 'EN'
+                            ? styles.languageSelectedStyle
+                            : styles.languageStyle
+                        }
+                      >
+                        {strings.navbar.english}
+                      </h5>
+                    </div>
+                    <div className={styles.check}>
+                      <img
+                        src={currentLanguage === 'EN' ? check : uncheck}
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className={styles.swedishBlock}
+                    onClick={() => setLanguage('SE')}
+                  >
+                    <div className={styles.swedishIcon}>
+                      <img
+                        src={
+                          currentLanguage === 'EN' ? swedishicon : englishicon
+                        }
+                        alt=""
+                      />
+                      <h5
+                        className={
+                          currentLanguage === 'SE'
+                            ? styles.languageSelectedStyle
+                            : styles.languageStyle
+                        }
+                      >
+                        {navbar.swedish}
+                      </h5>
+                    </div>
+                    <div className={styles.check}>
+                      <img
+                        src={currentLanguage === 'EN' ? uncheck : check}
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              )}
+              {/* Language container Mobile end */}
             </div>
           </div>
         )}
       </div>
     );
-    {
-      /* ===================HAMBERGER MENU END=============================== */
-    }
+    /* ===================HAMBERGER MENU END=============================== */
   };
   /*************NAVBAR MENUITEMS RIGHT END****************/
   return (

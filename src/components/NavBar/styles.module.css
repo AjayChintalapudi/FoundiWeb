@@ -12,6 +12,10 @@
   z-index: 999;
 }
 
+.activeItem {
+  text-decoration: underline;
+}
+
 .foundiLogo {
   width: 90px;
   height: 90px;
@@ -66,10 +70,10 @@
   flex-direction: column;
   gap: 18px;
   width: 274px;
-  height: 112px;
+  max-width: 100%;
   overflow: hidden;
-  border-radius: 24px;
-  padding: 24px 48px 24px;
+  /* border-radius: 24px; */
+  padding: 24px;
 }
 
 .englishIcon,
@@ -81,6 +85,7 @@
 
 .englishBlock,
 .swedishBlock {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -90,13 +95,17 @@
 .unCheck {
   color: var(--gray72);
 }
-.englishText,
-.swedishText {
+.languageStyle {
   font-family: 'Light', sans-serif;
   font-size: 14px;
+  line-height: 20px;
+  color: var(--black);
 }
 
-.englishText {
+.languageSelectedStyle {
+  font-family: 'Light', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
   color: var(--blue);
 }
 
@@ -250,7 +259,25 @@
   border: 1px solid var(--blue);
   border-radius: 28px;
   padding: 7px 15px;
+  font-family: "Regular" ,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
 }
+
+.laguageContainerMobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.languageContainerContentMobileBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 25px;
+}
+
 /* Toggle Menu End */
 
 /*-------- Media Query Start--------- */

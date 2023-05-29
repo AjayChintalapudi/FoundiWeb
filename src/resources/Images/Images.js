@@ -10,7 +10,7 @@ export { default as arrowleftcircle } from 'assets/Images/arrowleftcircle.svg';
 
 // Navbar Images
 export { default as navbarlogo } from 'assets/Images/navbarlogo.svg';
-export { default as language } from 'assets/Images/language.svg';
+export { default as languageicon } from 'assets/Images/language.svg';
 export { default as cart } from 'assets/Images/cart.svg';
 export { default as profile } from 'assets/Images/profile.svg';
 export { default as playicon } from 'assets/Images/playicon.svg';

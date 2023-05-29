@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   checkouticontick,
   closeicon,
@@ -21,6 +21,11 @@ import styles from './styles.module.css';
 import { useNavigate } from 'react-router-dom';
 
 const CheckOut = () => {
+  // scroll to top of the page onloading
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  // scroll to top of the page onloading
   const { checkoutPageStrings } = englishStrings;
   const [showContact, setShowContact] = useState(true);
   const [showAddress, setShowAddress] = useState(true);

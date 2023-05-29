@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './styles.module.css';
 import { ReviewCategoriesData } from 'constants/CardData/CardData';
 import { ReviewRatingData } from 'constants/CardData/CardData';
@@ -14,6 +14,10 @@ import { CustomersProductData } from 'constants/CardsData';
 import CustomerProductCard from 'components/customerProductCard/CustomerProductCard';
 
 const Review = () => {
+  // scroll to top page
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [cartItem, setCartItem] = useState(0);
   const { reviewPageStrings, home } = englishStrings;
   const addFunction = () => {

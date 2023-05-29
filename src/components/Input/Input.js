@@ -18,7 +18,7 @@ const Input = ({
   errorMessage,
   customeInputStyle,
 }) => {
-  console.log(error,errorMessage)
+  // console.log(error,errorMessage)
   return (
     <div className={styles.inputContainer}>
       <input

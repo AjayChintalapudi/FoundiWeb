@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './styles.module.css';
 import { LeftImg, RightImg } from 'resources/Images/Images';
 import Button from 'components/Button/Button';
@@ -7,11 +7,28 @@ import { ProductsCategoriesData } from 'constants/CardData/CardData';
 import CartItem from 'components/CartItems/CartItem';
 import Footer from 'components/Footer/Footer';
 import NavBar from 'components/NavBar/NavBar';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import classNames from 'classnames';
 
 const { prooductsPageStrings } = englishStrings;
 const Products = () => {
+  // scroll to top of the page onloading
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  // scroll to top of the page onloading
   const navigate = useNavigate();
+  // Active menu bar item
+  const location = useLocation();
+  const [activeItem, setActiveItem] = useState(null);
+  const handleItemClick = (path) => {
+    navigate(path);
+    setActiveItem(path);
+  };
+
+  useEffect(() => {
+    setActiveItem(location.pathname);
+  }, [location]);
   const productsHeroSection = () => {
     return (
       <div className={styles.productsHeroSection}>
@@ -100,14 +117,16 @@ const Products = () => {
       <div className={styles.productsCartSection}>
         {ProductsCategoriesData &&
           ProductsCategoriesData.map((item, index) => {
+            const isActive = location.pathname === activeItem;
             return (
               <CartItem
                 key={index}
+                className={isActive ? styles.activeItem : ''}
                 productImg={item.productImg}
                 productTagHeading={item.productTagHeading}
                 productPrice={item.productPrice}
                 offerPrice={item.offerPrice}
-                onClick={()=>navigate('/review')}
+                onClick={() => handleItemClick('/review')}
               />
             );
           })}

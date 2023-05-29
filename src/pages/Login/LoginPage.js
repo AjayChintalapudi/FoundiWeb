@@ -17,6 +17,11 @@ import {
 } from 'validators/Validators';
 
 const LoginPage = () => {
+  // scroll to top of the page onloading
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  // scroll to top of the page onloading
   /*****LOGIN PAGE STRINGS*****/
   const { loginPageStrings } = englishStrings;
 

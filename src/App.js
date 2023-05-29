@@ -1,14 +1,12 @@
-import React, { useEffect } from 'react';
-import AppRoutes from 'routes/AppRoutes';
-function App() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
+import React from 'react';
+import AppRoutes from 'routes/AppRoutes';
+import { AppDataProvider } from 'providers/AppDataProvider';
+function App() {
   return (
-    <div className="App">
-      <AppRoutes />
-    </div>
+    <AppDataProvider>
+        <AppRoutes />
+        </AppDataProvider>
   );
 }
 

@@ -14,6 +14,11 @@ const PopOver = ({ triggerElement, content, showPopup }) => {
 
   const open = Boolean(anchorEl);
   const id = open ? 'modal-popover' : undefined;
+  const popoverPaperProps = {
+    style: {
+      borderRadius: '16px',
+    },
+  };
 
   return (
     <>
@@ -33,6 +38,7 @@ const PopOver = ({ triggerElement, content, showPopup }) => {
             horizontal: 'right',
           }}
           marginThreshold={70}
+          PaperProps={popoverPaperProps}
         >
           {content}
         </Popover>

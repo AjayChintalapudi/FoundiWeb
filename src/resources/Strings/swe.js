@@ -8,7 +8,6 @@ const navbar = {
   // language
   english: 'English',
   swedish: 'Swedish',
-  language:"Language",
   // cart
   nothingInCart: "Nothing's in the cart.",
   shopNow: 'Shop now',
@@ -354,7 +353,7 @@ const aboutPageStrings = {
     'From security to reliability of electronic devices, the Bluetooth/GPS lost & found solutions have many issues. Here are a few features that puts Foundi apart from what competitors have to offer.',
 };
 
-export const englishStrings = {
+export const swedishStrings = {
   eventPageStrings,
   footerPageStrings,
   navbar,

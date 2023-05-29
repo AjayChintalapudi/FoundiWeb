@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { englishStrings } from 'resources/Strings/eng';
 import {
   eventImg,
@@ -52,6 +52,11 @@ const EventData = [
   },
 ];
 const Events = () => {
+  // scroll to top of the page onloading
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  // scroll to top of the page onloading
   const [indexNo, setIndexNo] = useState(0);
   const onLeftClick = (index) => {
     if (index === 0) {
