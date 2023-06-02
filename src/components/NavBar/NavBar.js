@@ -111,19 +111,19 @@ const NavBar = (props) => {
           onClick={() => handleItemClick('/events')}
           className={activeItem === '/events' ? styles.activeItem : ''}
         >
-          {navbar.events}
+          {strings.navbar.events}
         </p>
         <p
           onClick={() => handleItemClick('/about')}
           className={activeItem === '/about' ? styles.activeItem : ''}
         >
-          {navbar.about}
+          {strings.navbar.about}
         </p>
         <p
           onClick={() => handleItemClick('/products')}
           className={activeItem === '/products' ? styles.activeItem : ''}
         >
-          {navbar.products}
+          {strings.navbar.products}
         </p>
       </div>
     );
@@ -331,9 +331,9 @@ const NavBar = (props) => {
             <div className={styles.headerBottomBorder}></div>
             <div className={styles.headerMenuItemsBlock}>
               <div className={styles.profileContainerMobile}>
-                <span>{navbar.profile}</span>
+                <span>{strings.navbar.profile}</span>
                 <Button
-                  btName={navbar.logIn}
+                  btName={strings.navbar.logIn}
                   btnStyles={styles.profileLoginBtnStyles}
                   onClick={() => navigate('/login')}
                 />
@@ -342,23 +342,23 @@ const NavBar = (props) => {
                 onClick={() => handleItemClick('/events')}
                 className={activeItem === '/events' ? styles.activeItem : ''}
               >
-                {navbar.eventsAndBuissness}
+                {strings.navbar.eventsAndBuissness}
               </div>
               <div
                 onClick={() => handleItemClick('/about')}
                 className={activeItem === '/about' ? styles.activeItem : ''}
               >
-                {navbar.about}
+                {strings.navbar.about}
               </div>
               <div
                 onClick={() => handleItemClick('/products')}
                 className={activeItem === '/products' ? styles.activeItem : ''}
               >
-                {navbar.products}
+                {strings.navbar.products}
               </div>
               {/* Language container Mobile start */}
               <div className={styles.laguageContainerMobile}>
-                <p>{navbar.language}</p>
+                <p>{strings.navbar.language}</p>
                 <span onClick={handleOpenLanguage}>
                   {openLanguage ? <IoIosArrowDown /> : <IoIosArrowForward />}
                 </span>

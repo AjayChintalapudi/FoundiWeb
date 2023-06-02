@@ -108,6 +108,7 @@ const About = () => {
       </div>
     );
   };
+  
   const aboutHeroMiddleContainer = () => {
     return (
       <div className={styles.aboutHeroMiddleSection}>
@@ -120,6 +121,7 @@ const About = () => {
       </div>
     );
   };
+
   const aboutHeroBottomContainer = () => {
     return (
       <div className={styles.aboutHeroBottomSection}>
@@ -194,6 +196,7 @@ const About = () => {
       </div>
     );
   };
+
   const aboutSubscriptionBottomSection = () => {
     return (
       <div className={styles.subscriptionPlannerData}>
@@ -259,6 +262,7 @@ const About = () => {
       </div>
     );
   };
+
   const aboutFooterTopContainer = () => {
     return (
       <div className={styles.abooutFooterTopSection}>
@@ -271,6 +275,7 @@ const About = () => {
       </div>
     );
   };
+
   const aboutFooterBottomContainer = () => {
     return (
       <div className={styles.abooutFooterCartSection}>

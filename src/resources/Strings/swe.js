@@ -1,10 +1,11 @@
 const navbar = {
   logoHeading: 'Foundi',
-  events: 'Events',
-  about: 'About',
-  products: 'Products',
-  profile: 'Profile',
-  eventsAndBuissness: 'Events & Business',
+  events: 'Händelser',
+  about: 'Om',
+  products: 'Produkter',
+  profile: ' Profil',
+  eventsAndBuissness: ' Evenemang och Affärer',
+  language: 'Språk',
   // language
   english: 'English',
   swedish: 'Swedish',
@@ -17,7 +18,7 @@ const navbar = {
   signUpLoginHeading: 'Sign up or Log in',
   signUpLoginDesc:
     'Create an account or Log in with an existing account to access all of Foundi’s exciting features.',
-  logIn: 'Log in',
+  logIn: ' Logga in',
   signUp: 'Sign up',
 };
 const home = {

@@ -70,6 +70,7 @@ const Products = () => {
       </div>
     );
   };
+
   const productsHeroBottomSection = () => {
     return (
       <div className={styles.productsHeroBottomSection}>
@@ -90,6 +91,7 @@ const Products = () => {
       </div>
     );
   };
+  
   const productsBannerHeaderSection = () => {
     return (
       <div className={styles.productsBannerTopSection}>

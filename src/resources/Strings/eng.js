@@ -8,7 +8,7 @@ const navbar = {
   // language
   english: 'English',
   swedish: 'Swedish',
-  language:"Language",
+  language: 'Language',
   // cart
   nothingInCart: "Nothing's in the cart.",
   shopNow: 'Shop now',
@@ -214,6 +214,7 @@ const createAccountPageStrings = {
   reset: 'Reset',
   strength: 'Strength:',
   poor: 'Poor',
+  good: 'Good',
   // Verify credential
   verifyCredentialHeading: 'Hang on, we’re verifying',
   verifyCredentialDesc:
@@ -266,6 +267,7 @@ const checkoutPageStrings = {
   monthYear: 'MM/YY',
   cvv: 'CVV',
   XYZ: 'XYZ',
+  enterCvvNumber: 'Enter CVV Number',
 
   orderSummary: 'Order summary',
   keychainTagPackOf4: 'Keychain tags - A pack of 4',
@@ -354,6 +356,176 @@ const aboutPageStrings = {
     'From security to reliability of electronic devices, the Bluetooth/GPS lost & found solutions have many issues. Here are a few features that puts Foundi apart from what competitors have to offer.',
 };
 
+const privacyPolicyPageStrings = {
+  // privacyPolicyTopRightSection
+  privacyPolicyTopHeaderText: 'At Foundi, honesty goes first.',
+  privacyPolicyTopHeaderpara:
+    "We want to inspire honesty, and that starts with Foundi being transparent with how we handle our customer's privacy and security.",
+  privacyPolicyTopHeaderparaOne:
+    'One way we are keeping your security a top priority is with our integrated chat function which allows you to choose what information you want to share with others. Your identification marker is the unique SNO-code present on your Foundi products, everything else is  up to you to share.',
+  privacyPolicyTopHeaderparaTwo:
+    'We value the information you chose to share with us, giving us the    ability to make your experience as personal as possible. However,  with trust comes responsibility, which means we never sell your data or information to other parties.',
+  privacyPolicyTopHeaderparaThree:
+    "Our mission is to make you feel safe in your day-to-day activities. Your safety and privacy should not be a matter of concern when you are using Foundi. If you want to read more about Foundi's honesty  policy, see below.",
+
+  // privacyPolicyBottomHeaderSection
+
+  privacyPolicyBottomHeading: 'Privacy policy',
+  privacyPolicyBottomSpanOne: 'Last updated:',
+  privacyPolicyBottomSpanOneSubDesc: 'Dec 30th 2022,',
+  privacyPolicyBottomSpanTwo: 'Last reviewed:',
+  privacyPolicyBottomSpanTwoSubDesc: 'Dec 20th 2022',
+
+  // privacyPolicyDataController
+  DataControllerHeading: 'Data controller',
+  dataControllerContentTextStyle:
+    'Vilje Tech AB (“Vilje Tech”, “we”, “us”, “our”), the developer of the Foundi app (“Foundi”), is a data controller of personal data  (“Data”). At Vilje Tech, we take your privacy very seriously and ensure that all applicable data privacy regulations are observed.  In this section, you can learn about how we process your Data when you use:',
+  dataControllerLinkTextStyleOne: 'www.foundiapp.com',
+  dataControllerLinkTextStyleOneSubDesc: '(“Site”)',
+  dataControllerContentTextStyleTwo:
+    ' - the Foundi web or mobile app (“App”, “Apps”), or',
+  dataControllerContentTextStyleTwoSubDesc:
+    ' - corresponding products and services offered by Vilje Tech (“Service”, “Services”, “Solutions”).',
+  dataControllerContentTextStyleSubDescThree:
+    'This Policy does not apply to third-party applications, websites, products, services, or platforms that may be accessed through links that we provide to you. These third parties are owned and operated dependently from us and have their own separate privacy and data-collection practices. Any personal data that you provide to these third parties will be governed by the third party’s own privacy policy. We cannot accept liability for the actions or policies of these independent third parties, and we are not responsible for the content or privacy practices of such sites.',
+
+  // privacyPolicyAboutFoundi
+  aboutFoundiTextStyleDescOne:
+    'Foundi is a QR code solution built to help recover your lost items while protecting your identity and privacy. You can tag all your belongings by registering your products in our App by scanning the QR code or entering the serial number (SNO). While registering the product, you can select a gift card to reward the finder of your  lost item.',
+  aboutFoundiTextStyleDescTwo:
+    'Foundi products come in multiple variants, ranging from simple keychains to laptop stickers, so that all of your items can be tagged with ease. In case you lose your belongings, the finder easily scan the QR code or enter the SNO and be in touch with you to return the item.',
+  // privacyPolicyPersonalData
+  personalDataParaTextStyleOne:
+    'Depending on your interaction with Vilje Tech, we may process different categories of your Data. When using our Site or Apps, the categories of Data that we may process include:',
+  personalDataParaTextStyleSubDescOne: '- Name',
+  personalDataParaTextStyleSubDescTwo: '- Postal address',
+  personalDataParaTextStyleSubDescThree: '- Email address',
+  personalDataParaTextStyleSubDescFour: '- Submitted video data',
+  personalDataParaTextStyleSubDescFive:
+    '- Device-specific data (e.g. hardware model, operating system, and crash data)',
+  personalDataParaTextStyleSubDescSix: '  - Telephone number',
+  personalDataParaTextStyleSubDescSeven:
+    ' - Feedback, support, and error submissions',
+  personalDataParaTextStyleSubDescEight: '  - Cookie and marketing preferences',
+  personalDataParaTextStyleSubDescNine: '- Payment information',
+  personalDataParaTextStyleSubHeadingOne:
+    'Additionally,when submitting feedback, support, or error forms, you may be asked to provide your name, contact information, feedback or error message, and the identification number of the product in question.',
+  personalDataParaTextStyleSubHeadingTwo:
+    'This Data is collected when you register or use our Site, App Solutions, opt-in to cookies, opt-in to receiving marketing material, submit feedback or booking forms, from public records, and through direct correspondence between Vilje Tech and yourself.',
+
+  // PurposeData
+
+  purposeDataParaStyleOne:
+    'Vilje Tech processes your Data in order to be able to provide to you in completion our services in accordance with your wishes, to improve and expand our Solutions and Apps, for insight and researc purposes, to communicate with you, to screen for potential risk or fraud, and, when in line with the preferences that you have indicated, to provide you with advertisement or promotional material.',
+  purposeDataParaStyleTwo:
+    'As we develop insights and research, we ensure that data is aggregated in order to prevent any individual from being identified, in effect anonymising the data set. Our legal bases for processing are:',
+  purposeDataParaStyleOne: '- Based on your consent,',
+  purposeDataParaStyleTwo: '- Necessary for the performance of contract,',
+  purposeDataParaStyleThree: '- Due to other legal obligations, or',
+  purposeDataParaStyleFour: '- Legitimate interest.',
+
+  // dataRetention
+  dataRetentionHeading: 'Data retention',
+  dataRetentionParaStyleOne:
+    'Unless required by law, Data is retained for up to 24 months after your last interaction with Vilje Tech, after which it is erased or anonymised. Interaction with Vilje Tech includes, for example, using our Site, Apps, or Services, or opening marketing communications from us.',
+  dataRetentionParaStyleTwo:
+    ' You can at any time opt-out of receiving marketing communications or close your account by following on-screen instructions, or by contacting us at',
+  dataRetentionParaSpan: 'privacy@foundiapp.com',
+
+  // employmentApplication
+
+  employmentApplicationsHeading: 'Employment applications',
+  employmentApplicationParaStyle:
+    'For both published vacancies and open applications, our recruitment process may involve the processing of the following categories of Data of our applicants: name; postal address; email address; telephone number; government-issued identification; references and CVs. This Data is retained for up to 5 years after the application date, or for as long as we have a legitimate business need for it. This Data is collected from public records, third-party recommendations and referrals, and through direct correspondence between Vilje Tech and yourself.',
+
+  // thirdParties
+
+  thirdPartiesHeading: 'Third parties and Countries',
+  thirdPartyParaStylesDesc:
+    ' We may share your Data with affiliated companies with which we have partnered in order to provide to you a greater set of services, and with trusted third-party service providers as',
+  thirdPartyParaStylesOne: '- Cloud data storage',
+  thirdPartyParaStylesTwo: '- Processing payments',
+  thirdPartyParaStylesThree: '- Product development',
+  thirdPartyParaStylesFour: '- Application deployment and publication',
+  thirdPartyParaStylesFive: '- Cybersecurity',
+  thirdPartyParaStylesSix: '- Market research',
+  thirdPartyParaStylesSeven: '- Serving advertisements and conducting surveys',
+  thirdPartyParaStylesEight:
+    ' - Communicating with you, such as by way of email or survey Xdelivery',
+  thirdPartyParaStylesNine: '- Legal consultancy',
+  thirdPartyParaStylesTen:
+    '- Customer relationship management, including social media',
+  thirdPartyParaStylesEleven: '- Support and related services',
+  thirdPartyParaStylesSubDescOne:
+    'necessary for them to perform services on our behalf, such as: As often as is appropriate and practical, third parties are only provided with aggregated data (through which individuals cannot be identified) and are obligated not to disclose or use the information for any purpose other than those listed above.',
+  thirdPartyParaStylesSubDescTwo:
+    'Vilje Tech uses servers located within the EU; however, if we transfer Data outside of the EU, we check that the third country meets the requirements of applicable data privacy legislation and  make the necessary contractual arrangements to ensure third-party compliance. Vilje Tech does not sell your personal data.',
+  thirdPartyParaStylesSubDescThree:
+    'For a full list of our third parties, please send your request to',
+  thirdPartyParaStylesSubDescFour: ' privacy@foundiapp.com',
+
+  // cookies
+  cookiesHeading: 'Cookies',
+  cookiesParaStylesOne:
+    'A cookie is a small text file that the website or application that you are visiting requests to save on your device. They are widely used in order to make websites and applications work, or work more efficiently, as well as to provide information to the owners of the site or app.',
+  cookiesParaStylesTwo:
+    'Vilje Tech only uses essential cookies, those that allow our Site and Apps to work – as such, these cannot be disabled.',
+  cookiesParaStylesThree:
+    'Should Vilje Tech ever update its cookie collection for other processing purposes, we will first request your consent.',
+  cookiesParaStylesFour:
+    'PTS, the regulatory authority in the field, provides additional information about cookies on its website,',
+  cookiesParaStylesFourSubDesc: 'pts.se',
+  cookiesParaStylesFive:
+    ' For information on how to manage your browser’s cookie settings follow these links:',
+  cookiesParaBlueStyleDescOne: 'Chrome',
+  cookiesParaBlueStyleDescTwo: 'Internet Explorer',
+  cookiesParaBlueStyleDescThree: 'Firefox',
+  cookiesParaBlueStyleDescFour: 'Safari',
+
+  // cyberSecurity
+  cyberSecurityParaStylesDesc:
+    '  Vilje Tech protects your Data using technical and organisational security measures. In order to prevent unauthorised access and ensure data accuracy, we have implemented strict guidelines for the organisation regarding the processing of personal data, including the use of two-factor authentication (2FA), SSL encryption, and trusted third-party cloud data storage, with servers located within',
+
+  // yourRights
+  yourRightsHeading: 'Your rights',
+  yourRightsParaStylesDesc:
+    'Under the EU General Data Protection Regulation (EU GDPR), you have the right to transparency in how your Data is processed. This means that you can at any time:',
+  yourRightsParaStylesDescOne:
+    '- Request an extract of what Data we process about you,',
+  yourRightsParaStylesDescTwo:
+    '- - Request that we correct any Data that is incorrect,',
+  yourRightsParaStylesDescThree: '- Request that we erase your Data,',
+  yourRightsParaStylesDescFour:
+    '- Request that we limit how your Data is used,',
+  yourRightsParaStylesDescFive:
+    '- Object to the processing of your Data that we deem legitimate,',
+  yourRightsParaStylesDescSix:
+    ' - Request to have your Data transferred from Vilje Tech’s system to another body,i.e. data portability, an',
+  yourRightsParaStylesDescSeven:
+    ' - Revoke previously granted consent to any of our personal data processes.',
+  yourRightsParaStylesSubDescOne:
+    ' If you would like to request any of the above, please contact us at',
+  yourRightsParaStylesSubDescTwo: 'privacy@foundiapp.com',
+  yourRightsParaStylesSubDescThree:
+    'You are entitled to contact Sweden’s data protection authority Integritetsskyddsmyndigheten (IMY), to file a complaint if you are  dissatisfied with how we process your Data.',
+  yourRightsParaStylesSubDescFour:
+    'More information about the EU GDPR can be found at',
+  yourRightsParaStylesSubDescFive: 'imy.se',
+  yourRightsParaStylesSubDescSix: 'and',
+  yourRightsParaStylesSubDescSeven: 'ec.europa.eu',
+
+  // changesToVilje
+  changesToViljeHeading: 'Changes to Vilje Tech’s privacy policy',
+  changesToViljeParaStylesDesc:
+    '  We may periodically update this Policy in order to accurately reflect changes to operations, or for regulatory reasons. When this happens, we will inform you by reasonable correspondence  for example, by email, through our Apps, or on our Site.',
+    
+    // contactInformation
+
+    contactInformationHeading:"Contact information",
+    contactInformationParaStylesDesc:"If you have questions about how Vilje Tech processes your personal data, or the contents of this Policy, you can at any time email",
+    contactInformationParaStylesSubDesc:"privacy@foundiapp.com",
+};
+
 export const englishStrings = {
   eventPageStrings,
   footerPageStrings,
@@ -365,4 +537,5 @@ export const englishStrings = {
   prooductsPageStrings,
   reviewPageStrings,
   aboutPageStrings,
+  privacyPolicyPageStrings,
 };

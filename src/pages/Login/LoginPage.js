@@ -67,129 +67,173 @@ const LoginPage = () => {
   const togglePassWord = () => {
     setShowPassWord(!showPassWord);
   };
+  
+  const closeBlock = () => {
+    return (
+      <div className={styles.loginPageCloseAndTitleInfo}>
+        {loginPageCloseBlock()}
+        {loginPageTitleInfo()}
+      </div>
+    );
+  };
+
+  const loginPageCloseBlock = () => {
+    return (
+      <div className={styles.loginPageCloseBlock}>
+        <p className={styles.loginPageBackText}>{loginPageStrings.back}</p>
+        <img
+          src={closeicon}
+          alt={loginPageStrings.closeIconAlt}
+          onClick={handleClosePage}
+        />
+      </div>
+    );
+  };
+
+  const loginPageTitleInfo = () => {
+    return (
+      <div className={styles.loginPageTitleInfo}>
+        <h3 className={styles.loginPageTitle}>
+          {loginPageStrings.loginPageTitle}
+        </h3>
+        <div className={styles.loginPageAccounsSignUpBlock}>
+          <span className={styles.loginPageAccountDesc}>
+            {loginPageStrings.loginPageAccountDesc}
+          </span>
+          &nbsp;
+          <span
+            className={styles.loginPageSignUpText}
+            onClick={() => navigate('/signup')}
+          >
+            {loginPageStrings.loginPageSignUpText}
+          </span>
+        </div>
+      </div>
+    );
+  };
+
+  const loginPageFormFields = () => {
+    return (
+      <div className={styles.loginPageFormsContainer}>
+        <form
+          onSubmit={formik.handleSubmit}
+          className={styles.loginPageFormFields}
+        >
+          {loginPageInputs()}
+          {loginPageButtons()}
+        </form>
+      </div>
+    );
+  };
+
+  const loginPageInputs = () => {
+    return (
+      <div className={styles.inputContainerStyle}>
+        {emailInputSection()}
+        {passWordInputSection()}
+      </div>
+    );
+  };
+
+  const emailInputSection = () => {
+    return (
+      <div className={styles.emailContainer}>
+        <span className={StyleSheet.emailHeading}>
+          {loginPageStrings.emailHeading}
+        </span>
+        <div>
+          <Input
+            type={loginPageStrings.inputTypeEmail}
+            name="email"
+            value={formik.values.email}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            placeholder={loginPageStrings.emailPlaceHolderText}
+            className={styles.loginPageInputFields}
+            errorMessage={styles.errorMessage}
+            error={
+              formik.touched.email && formik.errors.email ? (
+                <div className={styles.emailErrorMessage}>
+                  <span className={styles.inValidEmailText}>
+                    {loginPageStrings.inValidEmail}
+                  </span>
+                  &nbsp;&nbsp;
+                  <span className={styles.enterValidEmailText}>
+                    {loginPageStrings.enterValidEmail}
+                  </span>
+                </div>
+              ) : (
+                ''
+              )
+            }
+          />
+        </div>
+      </div>
+    );
+  };
+
+  const passWordInputSection = () => {
+    return (
+      <div className={styles.passWordContainer}>
+        <span className={styles.passWordHeading}>
+          {loginPageStrings.passWordHeading}
+        </span>
+        <Input
+          type={showPassWord ? 'text' : 'password'}
+          name="password"
+          value={formik.values.password}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          placeholder={loginPageStrings.passwordPlaceHolderText}
+          className={styles.loginPageInputFields}
+          image={showPassWord ? passwordopenicon : passwordhideicon}
+          onClick={togglePassWord}
+          error={
+            formik.touched.password && formik.errors.password ? (
+              <div className={styles.passWordErrorMessage}>
+                <span className={styles.inValidPassWord}>
+                  {loginPageStrings.inValidPassWord}
+                </span>
+                &nbsp; &nbsp;
+                <span>{loginPageStrings.tryAgain}</span>&nbsp;&nbsp;
+                <span className={styles.reset}>{loginPageStrings.reset}</span>
+              </div>
+            ) : (
+              ''
+            )
+          }
+          errorMessage={styles.errorMessage}
+        />
+        <span className={styles.forgotPassWordText}>
+          {loginPageStrings.forgotPassWordText}
+        </span>
+      </div>
+    );
+  };
+
+  const loginPageButtons = () => {
+    return (
+      <div className={styles.loginPageButtons}>
+        <Button
+          btName={loginPageStrings.logIn}
+          btnStyles={styles.loginPageButtonStyles}
+          type="submit"
+        />
+        <Button
+          btName={loginPageStrings.continueGoogleText}
+          btnStyles={styles.continueGoogleButton}
+          image={googleicon}
+          type="button"
+        />
+      </div>
+    );
+  };
+
   return (
     <div className={styles.loginPageContainer}>
       <div className={styles.loginPageInsideContainer}>
-        {/* close block */}
-        <div className={styles.loginPageCloseAndTitleInfo}>
-          <div className={styles.loginPageCloseBlock}>
-            <p className={styles.loginPageBackText}>{loginPageStrings.back}</p>
-            <img
-              src={closeicon}
-              alt={loginPageStrings.closeIconAlt}
-              onClick={handleClosePage}
-            />
-          </div>
-          {/* title info */}
-          <div className={styles.loginPageTitleInfo}>
-            <h3 className={styles.loginPageTitle}>
-              {loginPageStrings.loginPageTitle}
-            </h3>
-            <div className={styles.loginPageAccounsSignUpBlock}>
-              <span className={styles.loginPageAccountDesc}>
-                {loginPageStrings.loginPageAccountDesc}
-              </span>
-              &nbsp;
-              <span
-                className={styles.loginPageSignUpText}
-                onClick={() => navigate('/signup')}
-              >
-                {loginPageStrings.loginPageSignUpText}
-              </span>
-            </div>
-          </div>
-        </div>
-        {/* login page form fields */}
-        <div className={styles.loginPageFormsContainer}>
-          <form
-            onSubmit={formik.handleSubmit}
-            className={styles.loginPageFormFields}
-          >
-            <div className={styles.inputContainerStyle}>
-              <div className={styles.emailContainer}>
-                <span className={StyleSheet.emailHeading}>
-                  {loginPageStrings.emailHeading}
-                </span>
-                <div>
-                  <Input
-                    type={loginPageStrings.inputTypeEmail}
-                    name="email"
-                    value={formik.values.email}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    placeholder={loginPageStrings.emailPlaceHolderText}
-                    className={styles.loginPageInputFields}
-                    errorMessage={styles.errorMessage}
-                    error={
-                      formik.touched.email && formik.errors.email ? (
-                        <div className={styles.emailErrorMessage}>
-                          <span className={styles.inValidEmailText}>
-                            {loginPageStrings.inValidEmail}
-                          </span>
-                          &nbsp;&nbsp;
-                          <span className={styles.enterValidEmailText}>
-                            {loginPageStrings.enterValidEmail}
-                          </span>
-                        </div>
-                      ) : (
-                        ''
-                      )
-                    }
-                  />
-                </div>
-              </div>
-              <div className={styles.passWordContainer}>
-                <span className={styles.passWordHeading}>
-                  {loginPageStrings.passWordHeading}
-                </span>
-                <Input
-                  type={showPassWord ? 'text' : 'password'}
-                  name="password"
-                  value={formik.values.password}
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  placeholder={loginPageStrings.passwordPlaceHolderText}
-                  className={styles.loginPageInputFields}
-                  image={showPassWord ? passwordopenicon : passwordhideicon}
-                  onClick={togglePassWord}
-                  error={
-                    formik.touched.password && formik.errors.password ? (
-                      <div className={styles.passWordErrorMessage}>
-                        <span className={styles.inValidPassWord}>
-                          {loginPageStrings.inValidPassWord}
-                        </span>
-                        &nbsp; &nbsp;
-                        <span>{loginPageStrings.tryAgain}</span>&nbsp;&nbsp;
-                        <span className={styles.reset}>
-                          {loginPageStrings.reset}
-                        </span>
-                      </div>
-                    ) : (
-                      ''
-                    )
-                  }
-                  errorMessage={styles.errorMessage}
-                />
-                <span className={styles.forgotPassWordText}>
-                  {loginPageStrings.forgotPassWordText}
-                </span>
-              </div>
-            </div>
-            <div className={styles.loginPageButtons}>
-              <Button
-                btName={loginPageStrings.logIn}
-                btnStyles={styles.loginPageButtonStyles}
-                type="submit"
-              />
-              <Button
-                btName={loginPageStrings.continueGoogleText}
-                btnStyles={styles.continueGoogleButton}
-                image={googleicon}
-                type="button"
-              />
-            </div>
-          </form>
-        </div>
+        {closeBlock()}
+        {loginPageFormFields()}
       </div>
     </div>
   );

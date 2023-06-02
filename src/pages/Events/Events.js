@@ -185,39 +185,50 @@ const Events = () => {
           </h6>
         </div>
         <div className={styles.eventsBannerBottomDropSection}>
-          <div className={styles.eventsBannerDropSection}>
-            <div className={styles.eventsBannerDropLeftSection}>
-              <img src={droppedImg} className={styles.imageWidth} />
-            </div>
-            <div className={styles.eventsBannerDropRightSection}>
-              <h6 className={styles.eventsBannerRightHeading}>
-                {eventPageStrings.eventsBannerSectionDropHeading}
-              </h6>
-              <p className={styles.eventsBannerRightPara}>
-                {eventPageStrings.eventsBannerSectionDropPara}
-              </p>
-              <p className={styles.eventsBannerRightPara}>
-                {eventPageStrings.eventsBannerSectionDropParaOne}
-              </p>
-            </div>
-          </div>
-          <div className={styles.eventsBannerEmployeeSection}>
-            {Employee.map((item, index) => {
-              return (
-                <div key={index} className={styles.eventBannerEmployeSection}>
-                  <div className={styles.eventBannerEmployeInsideSection}>
-                    <h6 className={styles.eventBannerEmployeeHeading}>
-                      {item.emoployeeHeading}
-                    </h6>
-                    <p className={styles.eventBannerEmployeePara}>
-                      {item.emoployeePara}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+          {eventsBannerDropSection()}
+          {eventsBannerEmployeeSection()}
         </div>
+      </div>
+    );
+  };
+
+  const eventsBannerDropSection = () => {
+    return (
+      <div className={styles.eventsBannerDropSection}>
+        <div className={styles.eventsBannerDropLeftSection}>
+          <img src={droppedImg} className={styles.imageWidth} />
+        </div>
+        <div className={styles.eventsBannerDropRightSection}>
+          <h6 className={styles.eventsBannerRightHeading}>
+            {eventPageStrings.eventsBannerSectionDropHeading}
+          </h6>
+          <p className={styles.eventsBannerRightPara}>
+            {eventPageStrings.eventsBannerSectionDropPara}
+          </p>
+          <p className={styles.eventsBannerRightPara}>
+            {eventPageStrings.eventsBannerSectionDropParaOne}
+          </p>
+        </div>
+      </div>
+    );
+  };
+  const eventsBannerEmployeeSection = () => {
+    return (
+      <div className={styles.eventsBannerEmployeeSection}>
+        {Employee.map((item, index) => {
+          return (
+            <div key={index} className={styles.eventBannerEmployeSection}>
+              <div className={styles.eventBannerEmployeInsideSection}>
+                <h6 className={styles.eventBannerEmployeeHeading}>
+                  {item.emoployeeHeading}
+                </h6>
+                <p className={styles.eventBannerEmployeePara}>
+                  {item.emoployeePara}
+                </p>
+              </div>
+            </div>
+          );
+        })}
       </div>
     );
   };

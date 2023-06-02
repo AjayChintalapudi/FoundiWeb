@@ -9,6 +9,7 @@ import CreateAccountPage from 'pages/CreateAccount/CreateAccountPage';
 import Review from 'pages/Review/Review';
 import CheckOut from 'pages/CheckOut/CheckOut';
 import PrivacyPolicy from 'pages/PrivacyPolicy/PrivacyPolicy';
+import OrderHistory from 'pages/OrderHistory/OrderHistory';
 
 const AppRoutes = () => {
   return (
@@ -24,6 +25,7 @@ const AppRoutes = () => {
           <Route path="/review" element={<Review />}></Route>
           <Route path="/checkout" element={<CheckOut />}></Route>
           <Route path="/privacypolicy" element={<PrivacyPolicy/>}></Route>
+          <Route path="/orderhistory" element={<OrderHistory/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>

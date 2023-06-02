@@ -1,4 +1,4 @@
-.createAccountPageContainer{
+.createAccountPageContainer {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -8,7 +8,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap:72px; 
+  gap: 72px;
   padding: 32px 80px;
   max-width: 1440px;
 }
@@ -53,20 +53,19 @@
   margin: auto;
 }
 
-.createAccountPageInputFields {
+.createAccountPageInputFields{
   max-width: 452px;
   width: 100%;
   border: 1px solid var(--gray100);
 }
 .FormFieldsAndTitleInfoBlock {
   max-width: 452px;
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    margin: auto;
-    width: 100%;
-  }
-
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: auto;
+  width: 100%;
+}
 
 .fullNameContainer,
 .lastNameContainer {
@@ -173,10 +172,12 @@
 .passWordErrorMessage {
   padding-top: 8px;
 }
-.inValidEmailText,
-.inValidPassWord {
-  color: var(--redbrick);
+.inValidEmailText {
   font-size: 14px;
+}
+.enterValidEmailText,
+.passWordStrength {
+  color: var(--redbrick);
 }
 
 .reset {
@@ -279,7 +280,7 @@
   .createAccountPageInsideContainer {
     display: flex;
     flex-direction: column;
-    gap:188px;
+    gap: 188px;
     justify-content: space-between;
     padding: 32px 24px;
   }
@@ -361,7 +362,7 @@
   .emailContainer,
   .passWordContainer {
     margin: 0;
-    width:100%;
+    width: 100%;
   }
 
   .cheersDesc,
@@ -423,7 +424,7 @@
     /* padding: 12px 160px; */
   }
   .continueGoogleButton {
-   max-width: 100%;
+    max-width: 100%;
     height: 48px;
   }
 

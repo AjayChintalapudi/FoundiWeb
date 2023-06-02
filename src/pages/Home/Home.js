@@ -509,7 +509,7 @@ const Home = () => {
   //... Collabarate Section End...
 
   //... Footer Section Start...
-  const FooterSection = () => {
+  const footerSection = () => {
     return (
       <div>
         <Footer />
@@ -535,7 +535,7 @@ const Home = () => {
       </div>
       {sustainabilitySection()}
       {collabarateSection()}
-      {FooterSection()}
+      {footerSection()}
     </div>
   );
 };

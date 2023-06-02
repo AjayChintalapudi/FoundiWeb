@@ -9,8 +9,8 @@ export const EmailValidationSchema = Yup.object().shape({
 export const PassWordValidationSchema = Yup.object().shape({
   password: Yup.string()
     .required('Password is required')
-    .min(7, 'Password must be exactly 7 characters')
-    .max(7, 'Password must be exactly 7 characters')
+    .min(5, 'Password must be exactly 7 characters')
+    // .max(7, 'Password must be exactly 7 characters')
     .matches(/^(?=.*[A-Z])/),
 });
 

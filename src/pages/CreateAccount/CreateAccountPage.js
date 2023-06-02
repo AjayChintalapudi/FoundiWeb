@@ -44,7 +44,8 @@ const CreateAccountPage = () => {
 
   /***********Form HANDLING************/
 
-  const [isDetailsVerified, setIsDetailsVerified] = useState(false);
+  const [isDetailsVerified, setIsDetailsVerified] = useState(true);
+  const [hasMessageShown, setHasMessageShown] = useState(false);
 
   const handleSignUp = async (values) => {
     setCurrentStep((previous) => previous + 1);
@@ -71,6 +72,11 @@ const CreateAccountPage = () => {
     }
     if (currentStep === 2) {
       setSchema(EmailValidationSchema.concat(PassWordValidationSchema));
+    }
+    if (currentStep === 3) {
+      setTimeout(() => {
+        setHasMessageShown(true);
+      }, 2000);
     }
   }, [currentStep]);
 
@@ -282,7 +288,9 @@ const CreateAccountPage = () => {
                     {createAccountPageStrings.strength}
                   </span>
                   &nbsp;&nbsp;
-                  <span>{createAccountPageStrings.poor}</span>
+                  <span className={styles.passWordStrength}>
+                    {createAccountPageStrings.poor}
+                  </span>
                 </div>
               ) : (
                 ''
@@ -311,7 +319,7 @@ const CreateAccountPage = () => {
   const renderStepThree = () => {
     if (currentStep !== 3) return null;
     // our logic regarding credential verfication
-    const message = isDetailsVerified ? (
+    const cheersMessage = (
       <div className={styles.cheersMessageContainer}>
         <h3 className={styles.cheersHeading}>
           {createAccountPageStrings.cheersHeading}
@@ -322,9 +330,11 @@ const CreateAccountPage = () => {
         <Button
           btName={createAccountPageStrings.cheersBtnName}
           btnStyles={styles.cheersBtnStyles}
+          onClick={() => navigate('/')}
         />
       </div>
-    ) : (
+    );
+    const oopsMessage = (
       <div className={styles.oppsMessageContainer}>
         <h3 className={styles.oopsHeading}>
           {createAccountPageStrings.oopsHeading}
@@ -340,7 +350,7 @@ const CreateAccountPage = () => {
         </span>
       </div>
     );
-    return (
+    const verifyCredentialContainer = (
       <div className={styles.verifyCredentialContainer}>
         <h3 className={styles.verifyCredentialHeading}>
           {createAccountPageStrings.verifyCredentialHeading}
@@ -356,6 +366,15 @@ const CreateAccountPage = () => {
         <span className={styles.editEmail}>
           {createAccountPageStrings.editEmail}
         </span>
+      </div>
+    );
+    return (
+      <div className={styles.verifyCredentialContainer}>
+        {!hasMessageShown
+          ? verifyCredentialContainer
+          : isDetailsVerified
+          ? cheersMessage
+          : oopsMessage}
       </div>
     );
   };

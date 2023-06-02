@@ -19,7 +19,7 @@ export const AppDataProvider = (props) => {
 
   useEffect(() => {
     initialize();
-  },[]);
+  }, []);
 
   const strings = () => {
     switch (language) {

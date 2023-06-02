@@ -16,6 +16,8 @@ const Input = ({
   image,
   error,
   errorMessage,
+  success,
+  successMessage,
   customeInputStyle,
 }) => {
   // console.log(error,errorMessage)
@@ -33,17 +35,11 @@ const Input = ({
           styles.input,
           className,
           error && errorMessage,
-          customeInputStyle,
+          customeInputStyle
         )}
       />
       {image && (
         <div className={styles.inputIcon} onClick={onClick}>
-          {/* {type === 'password' && (
-            <img
-              src={showPassWord ? passwordopenicon : passwordhideicon}
-              className={styles.imageWidth}
-            />
-          )} */}
           <img src={image} alt="" className={styles.imageWidth} />
         </div>
       )}
