@@ -155,7 +155,7 @@ const NavBar = (props) => {
               onClick={() => setShowLanguage(!showLanguage)}
             />
           }
-          /*************CONTENT OF THE LANGUAGE POPUP START********/
+          /*************CONTENT OF THE LANGUAGE POPUp START********/
           content={
             <div className={styles.languageContainer}>
               {englishLanguageSection()}
