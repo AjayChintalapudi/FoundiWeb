@@ -316,144 +316,6 @@ const NavBar = (props) => {
     );
   };
 
-  const hambergerMenuSection = () => {
-    return (
-      <div>
-        <div className={styles.navbarMenuItemsMenuIcon}>
-          <img
-            onClick={toggleMenu}
-            className={styles.menuItemsRightMenuIcon}
-            src={isHome ? menu : hamberblackicon}
-            alt="menu"
-          />
-        </div>
-
-        {isMenuOpen && (
-          <div className={styles.toggleMenuContainer}>
-            <div className={styles.headerContainer}>
-              <div
-                className={styles.headerLogoLeft}
-                onClick={() => navigate('/')}
-              >
-                <img
-                  src={foundiblackicon}
-                  alt=""
-                  className={styles.imageWidth}
-                />
-              </div>
-              <div className={styles.headerItemsRight}>
-                <img src={cartblackicon} alt="" className={styles.imageWidth} />
-                <img
-                  src={closeicon}
-                  alt=""
-                  className={styles.imageWidth}
-                  onClick={toggleMenu}
-                />
-              </div>
-            </div>
-            <div className={styles.headerBottomBorder}></div>
-            <div className={styles.headerMenuItemsBlock}>
-              <div className={styles.profileContainerMobile}>
-                <span>{strings.navbar.profile}</span>
-                <Button
-                  btName={strings.navbar.logIn}
-                  btnStyles={styles.profileLoginBtnStyles}
-                  onClick={() => navigate('/login')}
-                />
-              </div>
-              <div
-                onClick={() => handleItemClick('/events')}
-                className={activeItem === '/events' ? styles.activeItem : ''}
-              >
-                {strings.navbar.eventsAndBuissness}
-              </div>
-              <div
-                onClick={() => handleItemClick('/about')}
-                className={activeItem === '/about' ? styles.activeItem : ''}
-              >
-                {strings.navbar.about}
-              </div>
-              <div
-                onClick={() => handleItemClick('/products')}
-                className={activeItem === '/products' ? styles.activeItem : ''}
-              >
-                {strings.navbar.products}
-              </div>
-              {/* Language container Mobile start */}
-              <div className={styles.laguageContainerMobile}>
-                <p>{strings.navbar.language}</p>
-                <span onClick={handleOpenLanguage}>
-                  {openLanguage ? <IoIosArrowDown /> : <IoIosArrowForward />}
-                </span>
-              </div>
-              {openLanguage && (
-                <div className={styles.languageContainerContentMobileBlock}>
-                  <div
-                    className={styles.englishBlock}
-                    onClick={() => setLanguage('EN')}
-                  >
-                    <div className={styles.englishIcon}>
-                      <img
-                        src={
-                          currentLanguage === 'EN' ? englishicon : swedishicon
-                        }
-                        alt=""
-                      />
-                      <h5
-                        className={
-                          currentLanguage === 'EN'
-                            ? styles.languageSelectedStyle
-                            : styles.languageStyle
-                        }
-                      >
-                        {strings.navbar.english}
-                      </h5>
-                    </div>
-                    <div className={styles.check}>
-                      <img
-                        src={currentLanguage === 'EN' ? check : uncheck}
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div
-                    className={styles.swedishBlock}
-                    onClick={() => setLanguage('SE')}
-                  >
-                    <div className={styles.swedishIcon}>
-                      <img
-                        src={
-                          currentLanguage === 'EN' ? swedishicon : englishicon
-                        }
-                        alt=""
-                      />
-                      <h5
-                        className={
-                          currentLanguage === 'SE'
-                            ? styles.languageSelectedStyle
-                            : styles.languageStyle
-                        }
-                      >
-                        {navbar.swedish}
-                      </h5>
-                    </div>
-                    <div className={styles.check}>
-                      <img
-                        src={currentLanguage === 'EN' ? uncheck : check}
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-              )}
-              {/* Language container Mobile end */}
-            </div>
-          </div>
-        )}
-      </div>
-    );
-  };
-
   const loginSignUpButton = () => {
     return (
       <div className={styles.loginSignUpButton}>
@@ -470,6 +332,111 @@ const NavBar = (props) => {
       </div>
     );
   };
+  const hambergerMenuSection = () => {
+    return (
+      <div>
+        <div className={styles.navbarMenuItemsMenuIcon}>
+          <img
+            onClick={toggleMenu}
+            className={styles.menuItemsRightMenuIcon}
+            src={isHome ? menu : hamberblackicon}
+            alt="menu"
+          />
+        </div>
+
+        {isMenuOpen && (
+          <div className={styles.toggleMenuContainer}>
+            {headerSection()}
+            <div className={styles.headerBottomBorder}></div>
+            <div className={styles.headerMenuItemsBlock}>
+              {profileAndLoginSection()}
+              {hamberMenuItemsSection()}
+              {/* Language container Mobile start */}
+              {languageContainerMobileSection()}
+              {/* Language container Mobile end */}
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  };
+
+  const headerSection = () => {
+    return (
+      <div className={styles.headerContainer}>
+        <div className={styles.headerLogoLeft} onClick={() => navigate('/')}>
+          <img src={foundiblackicon} alt="" className={styles.imageWidth} />
+        </div>
+        <div className={styles.headerItemsRight}>
+          <img src={cartblackicon} alt="" className={styles.imageWidth} />
+          <img
+            src={closeicon}
+            alt=""
+            className={styles.imageWidth}
+            onClick={toggleMenu}
+          />
+        </div>
+      </div>
+    );
+  };
+
+  const profileAndLoginSection = () => {
+    return (
+      <div className={styles.profileContainerMobile}>
+        <span>{strings.navbar.profile}</span>
+        <Button
+          btName={strings.navbar.logIn}
+          btnStyles={styles.profileLoginBtnStyles}
+          onClick={() => navigate('/login')}
+        />
+      </div>
+    );
+  };
+
+  const hamberMenuItemsSection = () => {
+    return (
+      <div className={styles.hamberMenuItems}>
+        <div
+          onClick={() => handleItemClick('/events')}
+          className={activeItem === '/events' ? styles.activeItem : ''}
+        >
+          {strings.navbar.eventsAndBuissness}
+        </div>
+        <div
+          onClick={() => handleItemClick('/about')}
+          className={activeItem === '/about' ? styles.activeItem : ''}
+        >
+          {strings.navbar.about}
+        </div>
+        <div
+          onClick={() => handleItemClick('/products')}
+          className={activeItem === '/products' ? styles.activeItem : ''}
+        >
+          {strings.navbar.products}
+        </div>
+      </div>
+    );
+  };
+
+  const languageContainerMobileSection = () => {
+    return (
+      <div>
+        <div className={styles.laguageContainerMobile}>
+          <p>{strings.navbar.language}</p>
+          <span onClick={handleOpenLanguage}>
+            {openLanguage ? <IoIosArrowDown /> : <IoIosArrowForward />}
+          </span>
+        </div>
+        {openLanguage && (
+          <div className={styles.languageContainerContentMobileBlock}>
+            {englishLanguageSection()}
+            {swedishLanguageSection()}
+          </div>
+        )}
+      </div>
+    );
+  };
+
   /*************NAVBAR MENUITEMS RIGHT END****************/
   return (
     <div className={classNames(styles.navbarContainer, props.navbarContainer)}>

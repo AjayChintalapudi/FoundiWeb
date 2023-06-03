@@ -235,7 +235,8 @@
   width: 100%;
 }
 
-.headerMenuItemsBlock {
+.headerMenuItemsBlock,
+.hamberMenuItems {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -259,7 +260,7 @@
   border: 1px solid var(--blue);
   border-radius: 28px;
   padding: 7px 15px;
-  font-family: "Regular" ,sans-serif;
+  font-family: 'Regular', sans-serif;
   font-size: 14px;
   line-height: 22px;
 }
