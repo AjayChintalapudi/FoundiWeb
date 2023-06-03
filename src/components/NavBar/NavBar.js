@@ -134,169 +134,191 @@ const NavBar = (props) => {
   const navbarMenuItemsRight = () => {
     return (
       <div className={styles.navbarMenuItemsRightContainer}>
-        {/* =============NAVBAR MENU ITEMS RIGHT "LANGUAGE" ICON START==============*/}
-        <div className={styles.navbarMenuItemsRight}>
-          <PopOver
-            showPopup={showLanguage}
-            triggerElement={
-              <img
-                className={styles.menuItemsRightLogo}
-                src={isHome ? languageicon : languageblackicon}
-                alt="language"
-                onClick={() => setShowLanguage(!showLanguage)}
-              />
+        {languageSection()}
+        {cartSection()}
+        {profileSection()}
+        {hambergerMenuSection()}
+      </div>
+    );
+  };
+
+  const languageSection = () => {
+    return (
+      <div className={styles.navbarMenuItemsRight}>
+        <PopOver
+          showPopup={showLanguage}
+          triggerElement={
+            <img
+              className={styles.menuItemsRightLogo}
+              src={isHome ? languageicon : languageblackicon}
+              alt="language"
+              onClick={() => setShowLanguage(!showLanguage)}
+            />
+          }
+          /*************CONTENT OF THE LANGUAGE POPUP START********/
+          content={
+            <div className={styles.languageContainer}>
+              {englishLanguageSection()}
+              {swedishLanguageSection()}
+            </div>
+          }
+          /*************CONTENT OF THE LANGUAGE POPUP END********/
+        />
+      </div>
+    );
+  };
+
+  const englishLanguageSection = () => {
+    return (
+      <div className={styles.englishBlock} onClick={() => setLanguage('EN')}>
+        <div className={styles.englishIcon}>
+          <img
+            src={currentLanguage === 'EN' ? englishicon : swedishicon}
+            alt=""
+          />
+          <h5
+            className={
+              currentLanguage === 'EN'
+                ? styles.languageSelectedStyle
+                : styles.languageStyle
             }
-            /*************CONTENT OF THE LANGUAGE POPUP START********/
-            content={
-              <div className={styles.languageContainer}>
-                <div
-                  className={styles.englishBlock}
-                  onClick={() => setLanguage('EN')}
-                >
-                  <div className={styles.englishIcon}>
-                    <img
-                      src={currentLanguage === 'EN' ? englishicon : swedishicon}
-                      alt=""
-                    />
-                    <h5
-                      className={
-                        currentLanguage === 'EN'
-                          ? styles.languageSelectedStyle
-                          : styles.languageStyle
-                      }
-                    >
-                      {strings.navbar.english}
-                    </h5>
-                  </div>
-                  <div className={styles.check}>
-                    <img
-                      src={currentLanguage === 'EN' ? check : uncheck}
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div
-                  className={styles.swedishBlock}
-                  onClick={() => setLanguage('SE')}
-                >
-                  <div className={styles.swedishIcon}>
-                    <img
-                      src={currentLanguage === 'EN' ? swedishicon : englishicon}
-                      alt=""
-                    />
-                    <h5
-                      className={
-                        currentLanguage === 'SE'
-                          ? styles.languageSelectedStyle
-                          : styles.languageStyle
-                      }
-                    >
-                      {navbar.swedish}
-                    </h5>
-                  </div>
-                  <div className={styles.check}>
-                    <img
-                      src={currentLanguage === 'EN' ? uncheck : check}
-                      alt=""
-                    />
-                  </div>
-                </div>
+          >
+            {strings.navbar.english}
+          </h5>
+        </div>
+        <div className={styles.check}>
+          <img src={currentLanguage === 'EN' ? check : uncheck} alt="" />
+        </div>
+      </div>
+    );
+  };
+
+  const swedishLanguageSection = () => {
+    return (
+      <div className={styles.swedishBlock} onClick={() => setLanguage('SE')}>
+        <div className={styles.swedishIcon}>
+          <img
+            src={currentLanguage === 'EN' ? swedishicon : englishicon}
+            alt=""
+          />
+          <h5
+            className={
+              currentLanguage === 'SE'
+                ? styles.languageSelectedStyle
+                : styles.languageStyle
+            }
+          >
+            {navbar.swedish}
+          </h5>
+        </div>
+        <div className={styles.check}>
+          <img src={currentLanguage === 'EN' ? uncheck : check} alt="" />
+        </div>
+      </div>
+    );
+  };
+
+  const cartSection = () => {
+    return (
+      <div className={styles.navbarMenuItemsRight}>
+        <PopOver
+          showPopup={showCart}
+          triggerElement={
+            <img
+              className={styles.menuItemsRightCartIcon}
+              src={isHome ? cart : cartblackicon}
+              alt="cart"
+              onClick={() => setShowCart(!showCart)}
+            />
+          }
+          /*************CONTENT OF THE CART POPUP START********/
+          content={<div>{cartPopUpContentSection()}</div>}
+          /*************CONTENT OF THE CART POPUP END********/
+        />
+      </div>
+    );
+  };
+
+  const cartPopUpContentSection = () => {
+    return (
+      <div className={styles.cartContainer}>
+        <div className={styles.cartNothingIcon}>
+          <img src={dangercircle} alt="" />
+        </div>
+        <div className={styles.cartInfo}>
+          <p className={styles.cartDesc}>{navbar.nothingInCart}</p>
+          <p className={styles.cartShoNow}>{navbar.shopNow}</p>
+        </div>
+      </div>
+    );
+  };
+
+  const profileSection = () => {
+    return (
+      <div className={styles.navbarMenuItemsRight}>
+        <PopOver
+          showPopup={showPopup}
+          triggerElement={
+            <img
+              className={styles.menuItemsRightLogo}
+              src={isHome ? profile : profileblackicon}
+              alt="profile"
+              onClick={() => setShowPopup(true)}
+            />
+          }
+          /*************CONTENT OF THE PROFILE POPUP START********/
+          content={
+            <div>
+              <div className={styles.profileContainer}>
+                {signUpLoginBlock()}
+                <div className={styles.signUpBottomBorder}></div>
+                {profileIcon()}
+                {signUpLoginDescText()}
+                {loginSignUpButton()}
               </div>
-            }
-            /*************CONTENT OF THE LANGUAGE POPUP END********/
+            </div>
+          }
+          /*************CONTENT OF THE "CART" POPUP END********/
+        />
+      </div>
+    );
+  };
+
+  const signUpLoginBlock = () => {
+    return (
+      <div className={styles.signUpLoginBlock}>
+        <p className={styles.signUpLoginHeading}>{navbar.signUpLoginHeading}</p>
+        <div className={styles.closeIcon}>
+          <img
+            src={closeicon}
+            alt=""
+            className={styles.imageWidth}
+            onClick={() => setShowPopup(false)}
           />
         </div>
-        {/* =============NAVBAR MENU ITEMS RIGHT "LANGUAGE" ICON END==============*/}
+      </div>
+    );
+  };
 
-        {/* =============NAVBAR MENU ITEMS RIGHT "CART" ICON START==============*/}
-        <div className={styles.navbarMenuItemsRight}>
-          <PopOver
-            showPopup={showCart}
-            triggerElement={
-              <img
-                className={styles.menuItemsRightCartIcon}
-                src={isHome ? cart : cartblackicon}
-                alt="cart"
-                onClick={() => setShowCart(!showCart)}
-              />
-            }
-            /*************CONTENT OF THE CART POPUP START********/
-            content={
-              <div className={styles.cartContainer}>
-                <div className={styles.cartNothingIcon}>
-                  <img src={dangercircle} alt="" />
-                </div>
-                <div className={styles.cartInfo}>
-                  <p className={styles.cartDesc}>{navbar.nothingInCart}</p>
-                  <p className={styles.cartShoNow}>{navbar.shopNow}</p>
-                </div>
-              </div>
-            }
-            /*************CONTENT OF THE CART POPUP END********/
-          />
-        </div>
-        {/* =============NAVBAR MENU ITEMS RIGHT "CART" ICON END==============*/}
+  const profileIcon = () => {
+    return (
+      <div className={styles.profileIcon}>
+        <img src={adduser} alt="" className={styles.imageWidth} />
+      </div>
+    );
+  };
 
-        {/* =============NAVBAR MENU ITEMS RIGHT "PROFILE" ICON START============= */}
-        <div className={styles.navbarMenuItemsRight}>
-          <PopOver
-            showPopup={showPopup}
-            triggerElement={
-              <img
-                className={styles.menuItemsRightLogo}
-                src={isHome ? profile : profileblackicon}
-                alt="profile"
-                onClick={() => setShowPopup(true)}
-              />
-            }
-            /*************CONTENT OF THE PROFILE POPUP START********/
-            content={
-              <div>
-                <div className={styles.profileContainer}>
-                  <div className={styles.signUpLoginBlock}>
-                    <p className={styles.signUpLoginHeading}>
-                      {navbar.signUpLoginHeading}
-                    </p>
-                    <div className={styles.closeIcon}>
-                      <img
-                        src={closeicon}
-                        alt=""
-                        className={styles.imageWidth}
-                        onClick={() => setShowPopup(false)}
-                      />
-                    </div>
-                  </div>
-                  <div className={styles.signUpBottomBorder}></div>
-                  <div className={styles.profileIcon}>
-                    <img src={adduser} alt="" className={styles.imageWidth} />
-                  </div>
-                  <div className={styles.signUpLoginDescText}>
-                    <p className={styles.signUpLoginDesc}>
-                      {navbar.signUpLoginDesc}
-                    </p>
-                  </div>
-                  <div className={styles.loginSignUpButton}>
-                    <Button
-                      btName={navbar.logIn}
-                      btnStyles={styles.loginButtonStyles}
-                      onClick={() => navigate('/login')}
-                    />
-                    <Button
-                      btName={navbar.signUp}
-                      btnStyles={styles.signUpButtonStyles}
-                      onClick={() => navigate('/signup')}
-                    />
-                  </div>
-                </div>
-              </div>
-            }
-            /*************CONTENT OF THE "CART" POPUP END********/
-          />
-        </div>
+  const signUpLoginDescText = () => {
+    return (
+      <div className={styles.signUpLoginDescText}>
+        <p className={styles.signUpLoginDesc}>{navbar.signUpLoginDesc}</p>
+      </div>
+    );
+  };
 
-        {/* =============NAVBAR MENU ITEMS RIGHT "PROFILE" ICON END==============*/}
-
-        {/* ===================HAMBERGER MENU START=============================== */}
+  const hambergerMenuSection = () => {
+    return (
+      <div>
         <div className={styles.navbarMenuItemsMenuIcon}>
           <img
             onClick={toggleMenu}
@@ -305,6 +327,7 @@ const NavBar = (props) => {
             alt="menu"
           />
         </div>
+
         {isMenuOpen && (
           <div className={styles.toggleMenuContainer}>
             <div className={styles.headerContainer}>
@@ -429,7 +452,23 @@ const NavBar = (props) => {
         )}
       </div>
     );
-    /* ===================HAMBERGER MENU END=============================== */
+  };
+
+  const loginSignUpButton = () => {
+    return (
+      <div className={styles.loginSignUpButton}>
+        <Button
+          btName={navbar.logIn}
+          btnStyles={styles.loginButtonStyles}
+          onClick={() => navigate('/login')}
+        />
+        <Button
+          btName={navbar.signUp}
+          btnStyles={styles.signUpButtonStyles}
+          onClick={() => navigate('/signup')}
+        />
+      </div>
+    );
   };
   /*************NAVBAR MENUITEMS RIGHT END****************/
   return (
