@@ -6,7 +6,7 @@ import {
   instaImg,
   twitterImg,
   linkedinImg,
-} from 'resources/Image/Image';
+} from 'resources/Images/Images';
 
 const Footer = () => {
   const { footerPageStrings } = englishStrings;

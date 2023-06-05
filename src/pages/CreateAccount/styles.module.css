@@ -1,0 +1,478 @@
+.createAccountPageContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.createAccountPageInsideContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  padding: 32px 80px;
+  max-width: 1440px;
+}
+.createAccountPageCloseBlock {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.createAccountPageBackText {
+  font-family: 'Medium', sans-serif;
+  font-size: 14px;
+  color: var(--blackfade);
+}
+
+.createAccountPageTitleInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+}
+
+.createAccountPageTitle {
+  font-family: 'Regular', sans-serif;
+  font-size: 26px;
+}
+.createAccountPageAccountDesc,
+.createAccountPageSignUpText {
+  font-family: 'Light', sans-serif;
+  font-size: 16px;
+  color: var(--nero);
+}
+.createAccountPageSignUpText {
+  border-bottom: 1px solid var(--blue);
+  color: var(--blue);
+}
+
+.createAccountPageFormFields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: auto;
+}
+
+.createAccountPageInputFields{
+  max-width: 452px;
+  width: 100%;
+  border: 1px solid var(--gray100);
+}
+.FormFieldsAndTitleInfoBlock {
+  max-width: 452px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: auto;
+  width: 100%;
+}
+
+.fullNameContainer,
+.lastNameContainer {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: 'Medium', sans-serif;
+  font-size: 14px;
+  margin: auto;
+  justify-content: center;
+}
+
+.createAccountPageButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: auto;
+  padding-top: 16px;
+  width: 100%;
+}
+
+.createAccountPageButtonStyles {
+  justify-content: center;
+  max-width: 452px;
+  width: 100%;
+  height: 48px;
+  color: var(--white);
+  font-family: 'Medium', sans-serif;
+  font-size: 16px;
+  background-color: var(--blue);
+  box-shadow: 0px 4px 16px var(--blacktransparent100);
+  border: 1px solid var(--blue);
+  border-radius: 8px;
+}
+
+.continueGoogleButton {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  max-width: 452px;
+  width: 100%;
+  height: 48px;
+  border: 1px solid var(--blackfade);
+  color: var(--blackfade);
+  font-family: 'Medium', sans-serif;
+  font-size: 16px;
+  box-shadow: 0px 4px 16px var(--blacktransparent100);
+  border: 1px solid var(--blackfade);
+  background-color: var(--white);
+  border-radius: 8px;
+}
+
+.firstNameInfo,
+.lastNameInfo {
+  padding-top: 8px;
+}
+.firstNameText,
+.lastNameText {
+  color: var(--redbrick);
+}
+
+.emailContainer,
+.passWordContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: 'Medium', sans-serif;
+  font-size: 14px;
+  margin: auto;
+  width: 452px;
+  width: 100%s;
+}
+
+.forgotPassWordText {
+  text-align: end;
+  color: var(--blue);
+  font-size: 14px;
+}
+
+.continueGoogleButton {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 48px;
+  border: 1px solid var(--blackfade);
+  color: var(--blackfade);
+  font-family: 'Medium', sans-serif;
+  font-size: 16px;
+  box-shadow: 0px 4px 16px var(--blacktransparent100);
+  border: 1px solid var(--blackfade);
+  background-color: var(--white);
+  border-radius: 8px;
+}
+
+/* Error Messages Design */
+
+.emailErrorMessage,
+.passWordErrorMessage {
+  padding-top: 8px;
+}
+.inValidEmailText {
+  font-size: 14px;
+}
+.enterValidEmailText,
+.passWordStrength {
+  color: var(--redbrick);
+}
+
+.reset {
+  color: var(--blue);
+  border-bottom: 1px solid var(--blue);
+}
+
+.errorMessage {
+  background-color: var(--backgroundtransparentpink);
+  border: 1px solid var(--redbrick);
+}
+
+.verifyCredentialContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: center;
+  padding-top: 82px;
+}
+.verifyCredentialHeading {
+  font-family: 'Regular', sans-serif;
+  font-size: 26px;
+}
+.verifyCredentialDesc {
+  width: 452px;
+  font-family: 'Light', sans-serif;
+  font-size: 16px;
+  margin: auto;
+}
+
+.resendLinkBtnStyles {
+  width: 452px;
+  height: 48px;
+  background-color: var(--blue);
+  border: 1px solid var(--blue);
+  color: var(--white);
+  box-shadow: var(--bluetransparent24);
+  border-radius: 8px;
+  margin: auto;
+  font-family: 'Medium', sans-serif;
+  font-size: 16px;
+}
+
+.editEmail {
+  color: var(--blue);
+  text-decoration: underline var(--blue);
+  font-family: 'Medium', sans-serif;
+  font-size: 16px;
+}
+
+/* cheers design  */
+.cheersMessageContainer,
+.oppsMessageContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: center;
+  max-width: 1440px;
+  margin: auto;
+}
+
+.cheersHeading,
+.oopsHeading {
+  font-family: 'Regular', sans-serif;
+  font-size: 26px;
+}
+
+.cheersDesc,
+.oopsDesc1,
+.oopsDesc2 {
+  width: 452px;
+  font-family: 'Light', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  margin: auto;
+}
+
+.cheersBtnStyles {
+  width: 452px;
+  background-color: var(--blue);
+  box-shadow: var(--bluetransparent24);
+  border: 1px solid var(--blue);
+  border-radius: 8px;
+  color: var(--white);
+  font-family: 'Medium', sans-serif;
+  font-size: 16px;
+  padding: 12px;
+  justify-content: center;
+  margin: auto;
+}
+
+/* oops message container */
+
+/* Media Query Start */
+
+/* Media Query Start */
+
+/* From View 550px View Start */
+@media screen and (max-width: 550px) {
+  .createAccountPageInsideContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 188px;
+    justify-content: space-between;
+    padding: 32px 24px;
+  }
+
+  .FormFieldsAndTitleInfoBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .createAccountPageTitleInfo {
+    text-align: start;
+  }
+
+  .createAccountPageTitle {
+    font-size: 20px;
+  }
+
+  .fullNameContainer,
+  .lastNameContainer {
+    margin: 0;
+  }
+
+  .createAccountPageFormFields {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .createAccountPageInputFields {
+    width: 100%;
+  }
+
+  .createAccountPageFormFields {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: auto;
+  }
+  .createAccountPageButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0;
+  }
+
+  .createAccountPageButtonStyles {
+    max-width: 100%;
+    height: 48px;
+    /* padding: 12px 160px; */
+  }
+  .continueGoogleButton {
+    max-width: 100%;
+    height: 48px;
+  }
+  .emailContainer {
+    margin: 0;
+    width: 100%;
+  }
+
+  .verifyCredentialContainer {
+    padding: 150px 24px 0px 24px;
+  }
+  .verifyCredentialHeading {
+    font-family: 'Regular', sans-serif;
+    font-size: 20px;
+  }
+
+  .verifyCredentialDesc {
+    width: 100%;
+    line-height: 24px;
+    color: var(--nero);
+  }
+
+  .resendLinkBtnStyles {
+    width: 100%;
+  }
+
+  .emailContainer,
+  .passWordContainer {
+    margin: 0;
+    width: 100%;
+  }
+
+  .cheersDesc,
+  .oopsDesc1,
+  .oopsDesc2 {
+    width: 100%;
+    margin: 0;
+  }
+
+  .cheersBtnStyles {
+    width: 100%;
+    margin: 0;
+  }
+}
+/* From View 550px View End */
+
+/* From 320px view start */
+@media screen and (max-width: 320px) {
+  .createAccountPageInsideContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 24px;
+  }
+
+  .createAccountPageTitleInfo {
+    text-align: start;
+  }
+
+  .createAccountPageTitle {
+    font-size: 20px;
+  }
+
+  .createAccountPageFormFields {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .createAccountPageInputFields {
+    width: 100%;
+  }
+
+  .createAccountPageFormFields {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 0;
+  }
+  .createAccountPageButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0;
+  }
+
+  .createAccountPageButtonStyles {
+    max-width: 100%;
+    height: 48px;
+    /* padding: 12px 160px; */
+  }
+  .continueGoogleButton {
+    max-width: 100%;
+    height: 48px;
+  }
+
+  .fullNameContainer,
+  .lastNameContainer {
+    margin: 0;
+  }
+
+  .emailContainer {
+    margin: 0;
+    width: 100%;
+  }
+
+  .verifyCredentialContainer {
+    padding: 150px 24px 0px 24px;
+  }
+
+  .verifyCredentialHeading {
+    font-family: 'Regular', sans-serif;
+    font-size: 20px;
+  }
+
+  .verifyCredentialDesc {
+    width: 100%;
+    line-height: 24px;
+    color: var(--nero);
+  }
+
+  .resendLinkBtnStyles {
+    width: 100%;
+  }
+  .emailContainer,
+  .passWordContainer {
+    margin: 0;
+    width: 100%;
+  }
+  .cheersDesc,
+  .oopsDesc1,
+  .oopsDesc2 {
+    width: 100%;
+    margin: 0;
+  }
+
+  .cheersBtnStyles {
+    width: 100%;
+    margin: 0;
+  }
+
+  /* From 320px View End */
+}
+/* Media Query End */

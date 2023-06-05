@@ -1,0 +1,527 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+/* -----------------------------DeskTop View Starts----------------------------- */
+/* topSection Styles Start */
+.privacyPolicyTopContainer {
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+}
+.insideprivacyPolicyTopContainer {
+  max-width: 1440px;
+  margin: auto;
+  padding: 64px 160px 100px 160px;
+  display: flex;
+  flex-direction: row;
+  gap: 64px;
+  align-items: center;
+}
+.privacyPolicyTopLeftSection {
+  max-width: 360px;
+  max-height: 428px;
+  width: 100%;
+  height: 100%;
+}
+.imageWidth {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.privacyPolicyTopRightSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.privacyPolicyTopHeaderText {
+  max-width: 696px;
+  width: 100%;
+  font-family: 'Regular', sans-serif;
+  font-size: 40px;
+  line-height: 52px;
+  color: var(--black);
+}
+.privacyPolicyTopParaText {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 660px;
+  width: 100%;
+}
+.privacyPolicyTopHeaderpara,
+.privacyPolicyTopHeaderparaOne,
+.privacyPolicyTopHeaderparaTwo,
+.privacyPolicyTopHeaderparaThree {
+  font-family: 'Light', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--nero);
+}
+
+/* topSection Styles Ends */
+
+/* bottomSection Styles Starts */
+.privacyPolicyBottomcontainer {
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+}
+.insidePrivacyPolicyBottomcontainer {
+  padding: 0px 135px 100px 135px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  align-items: center;
+}
+.privacyPolicyBottomHeaderSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.privacyPolicyBottomHeading {
+  max-width: 1120px;
+  width: 100%;
+  font-family: 'Regular', sans-serif;
+  font-size: 40px;
+  line-height: 52px;
+  text-align: center;
+  color: var(--black);
+}
+
+.privacyPolicyBottomPara {
+  max-width: 738px;
+  width: 100%;
+  font-family: 'Light', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: var(--nero);
+}
+.privacyPolicyBottomSpanOne,
+.privacyPolicyBottomSpanTwo {
+  color: var(--blue);
+  font-family: 'Medium', sans-serif;
+}
+.privacyPolicyFooterSection {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+.privacyPolicyDataController,
+.privacyPolicyAboutFoundi,
+.privacyPolicyPersonalData,
+.PurposeData,
+.dataRetention,
+.employmentApplication,
+.thirdParties,
+.cookies,
+.cyberSecurity,
+.yourRights,
+.changesToVilje,
+.contactInformation {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.DataControllerHeading,
+.aboutFoundiHeading,
+.personalDataHeading,
+.purposeDataHeading,
+.dataRetentionHeading,
+.employmentApplicationsHeading,
+.thirdPartiesHeading,
+.cookiesHeading,
+.cyberSecurityHeading,
+.yourRightsHeading,
+.changesToViljeHeading,
+.contactInformationHeading {
+  max-width: 850px;
+  width: 100%;
+  font-family: 'Regular', sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--black);
+}
+.dataControllerLinkTextStyle,
+.dataRetentionParaSpan,
+.thirdPartySpanStyles,
+.cookiesSpanStyles,
+.yourRightsSpanStyles,
+.contactInformationSpanStyles {
+  font-family: 'Medium', sans-serif;
+  color: var(--blue);
+  border-bottom: 1px solid var(--blue);
+}
+.dataControllerParaSection,
+.aboutFoundiParaSection,
+.personalDataParaSection,
+.purposeDataParaSection,
+.dataRetentionParaSection,
+.employmentApplicationParaSection,
+.thirdPartyParaSection,
+.cookiesParaSection,
+.cyberSecurityParaSection,
+.yourRightsParaSection,
+.changesToViljeParaSection,
+.contactInformationParaSection {
+  max-width: 850px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.dataControllerContentTextStyle,
+.aboutFoundiTextStyle,
+.personalDataParaTextStyle,
+.purposeDataParaStyle,
+.dataRetentionParaStyle,
+.employmentApplicationParaStyle,
+.thirdPartyParaStyles,
+.cookiesParaStyles,
+.cyberSecurityParaStyles,
+.yourRightsParaStyles,
+.changesToViljeParaStyles,
+.contactInformationParaStyles {
+  font-family: 'Light', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--nero);
+}
+.cookiesParaBlueStyle {
+  color: var(--blue);
+}
+
+/* bottomSection Styles Ends */
+
+/* -----------------------------DeskTop View Ends----------------------------- */
+
+/* ----------------------- View Starts at  1440px----------------------- */
+
+@media screen and (max-width: 1440px) {
+  /* heroSection Styles Starts at 1440px*/
+
+  /* heroSection Styles End at 1440px*/
+
+  /* bottomSection Styles Starts at 1440px*/
+
+  /* bottomSection Styles Ends at 1440px*/
+}
+
+/* ----------------------- View Ends at  1440px----------------------- */
+
+/* ----------------------- View Starts at  1336px----------------------- */
+
+@media screen and (max-width: 1336px) {
+  /* TopSection Styles Starts at 1336px*/
+
+  .insideprivacyPolicyTopContainer {
+    padding: 64px 128px 100px 128px;
+  }
+
+  .privacyPolicyTopLeftSection {
+    max-width: 360px;
+    max-height: 452px;
+  }
+  .privacyPolicyTopHeaderText {
+    max-width: 600px;
+  }
+
+  .privacyPolicyTopParaText {
+    max-width: 600px;
+  }
+
+  /* TopSection Styles Ends at 1336px*/
+
+  /* bottomSection Styles Starts at 1336px*/
+
+  .insidePrivacyPolicyBottomcontainer {
+    padding: 0px 128px 100px 128px;
+  }
+  .privacyPolicyBottomHeading {
+    max-width: 1024px;
+  }
+
+  /* bottomSection Styles Ends at 1336px*/
+}
+
+/* ----------------------- View Ends at  1336px----------------------- */
+
+/* ----------------------- View Starts at  1279px----------------------- */
+
+@media screen and (max-width: 1279px) {
+  /* topSection Styles Starts at 1279px*/
+  .insideprivacyPolicyTopContainer {
+    padding: 64px 80px 100px 80px;
+  }
+  .privacyPolicyTopLeftSection {
+    width: 320px;
+    height: 452px;
+  }
+  .privacyPolicyTopHeaderText {
+    max-width: 576px;
+  }
+  .privacyPolicyTopParaText {
+    max-width: 576px;
+  }
+
+  /* topSection Styles End at 1279px*/
+
+  /* bottomSection Styles Starts at 1279px*/
+  .insidePrivacyPolicyBottomcontainer {
+    padding: 0px 80px 100px 80px;
+  }
+  .privacyPolicyBottomHeading {
+    max-width: 960px;
+  }
+  .DataControllerHeading,
+  .aboutFoundiHeading,
+  .personalDataHeading,
+  .purposeDataHeading,
+  .dataRetentionHeading,
+  .employmentApplicationsHeading,
+  .thirdPartiesHeading,
+  .cookiesHeading,
+  .cyberSecurityHeading,
+  .yourRightsHeading,
+  .changesToViljeHeading,
+  .contactInformationHeading {
+    max-width: 720px;
+  }
+  .dataControllerParaSection,
+  .aboutFoundiParaSection,
+  .personalDataParaSection,
+  .purposeDataParaSection,
+  .dataRetentionParaSection,
+  .employmentApplicationParaSection,
+  .thirdPartyParaSection,
+  .cookiesParaSection,
+  .cyberSecurityParaSection,
+  .yourRightsParaSection,
+  .changesToViljeParaSection,
+  .contactInformationParaSection {
+    max-width: 720px;
+  }
+
+  /* bottomSection Styles Ends at 1279px*/
+}
+
+/* ----------------------- View Starts at  1023px----------------------- */
+
+@media screen and (max-width: 1023px) {
+  /* heroSection Styles Starts at 1023px*/
+  .insideprivacyPolicyTopContainer {
+    padding: 56px 60px 80px 60px;
+    gap: 56px;
+    align-items: initial;
+  }
+  .privacyPolicyTopLeftSection {
+    max-width: 260px;
+    max-height: 260px;
+  }
+
+  .privacyPolicyTopRightSection {
+    gap: 12px;
+  }
+  .privacyPolicyTopHeaderText {
+    max-width: 504px;
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .privacyPolicyTopParaText {
+    gap: 20px;
+    max-width: 504px;
+  }
+
+  /* heroSection Styles End at 1023px*/
+
+  /* bottomSection Styles Starts at 1023px*/
+  .insidePrivacyPolicyBottomcontainer {
+    padding: 0px 60px 80px 60px;
+    gap: 56px;
+  }
+  .privacyPolicyBottomHeaderSection {
+    gap: 12px;
+  }
+  .privacyPolicyBottomHeading {
+    max-width: 820px;
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .privacyPolicyBottomPara {
+    max-width: 820px;
+  }
+  .privacyPolicyFooterSection {
+    gap: 56px;
+  }
+  .privacyPolicyDataController,
+  .privacyPolicyAboutFoundi,
+  .privacyPolicyPersonalData,
+  .PurposeData,
+  .dataRetention,
+  .employmentApplication,
+  .thirdParties,
+  .cookies,
+  .cyberSecurity,
+  .yourRights,
+  .changesToVilje,
+  .contactInformation {
+    gap: 8px;
+  }
+
+  /* bottomSection Styles Ends at 1023px*/
+}
+
+/* ----------------------- View Ends at  1023px----------------------- */
+
+/* ----------------------- View Starts at  867px----------------------- */
+
+@media screen and (max-width: 867px) {
+  /* heroSection Styles Starts at 867px*/
+  .insideprivacyPolicyTopContainer {
+    padding: 48px 32px 80px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+  }
+  .privacyPolicyTopLeftSection {
+    max-width: 604px;
+    max-height: 260px;
+  }
+  .privacyPolicyTopHeaderText {
+    max-width: 604px;
+  }
+
+  .privacyPolicyTopParaText {
+    max-width: 604px;
+  }
+
+  /* heroSection Styles End at 867px*/
+
+  /* bottomSection Styles Starts at 867px*/
+  .insidePrivacyPolicyBottomcontainer {
+    padding: 0px 32px 80px 32px;
+    gap: 48px;
+  }
+  .privacyPolicyBottomHeading {
+    max-width: 604px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .privacyPolicyBottomPara {
+    max-width: 604px;
+  }
+  .privacyPolicyFooterSection {
+    gap: 48px;
+  }
+  .DataControllerHeading,
+  .aboutFoundiHeading,
+  .personalDataHeading,
+  .purposeDataHeading,
+  .dataRetentionHeading,
+  .employmentApplicationsHeading,
+  .thirdPartiesHeading,
+  .cookiesHeading,
+  .cyberSecurityHeading,
+  .yourRightsHeading,
+  .changesToViljeHeading,
+  .contactInformationHeading {
+    max-width: 604px;
+  }
+  .dataControllerParaSection,
+  .aboutFoundiParaSection,
+  .personalDataParaSection,
+  .purposeDataParaSection,
+  .dataRetentionParaSection,
+  .employmentApplicationParaSection,
+  .thirdPartyParaSection,
+  .cookiesParaSection,
+  .cyberSecurityParaSection,
+  .yourRightsParaSection,
+  .changesToViljeParaSection,
+  .contactInformationParaSection {
+    max-width: 604px;
+  }
+
+  /* bottomSection Styles Ends at 867px*/
+}
+
+/* ----------------------- View Ends at  867px----------------------- */
+
+/* ----------------------- View Starts at  867px----------------------- */
+
+/* ----------------------- View Starts at  550px----------------------- */
+
+@media screen and (max-width: 550px) {
+  /* heroSection Styles Starts at 550px*/
+  .insideprivacyPolicyTopContainer {
+    padding: 32px 24px 80px 24px;
+    gap: 32px;
+  }
+  .privacyPolicyTopLeftSection {
+    width: 366px;
+    height: 260px;
+    max-width: 100%;
+  }
+  .privacyPolicyTopHeaderText {
+    max-width: 366px;
+  }
+
+  .privacyPolicyTopParaText {
+    max-width: 366px;
+  }
+
+  /* heroSection Styles End at 550px*/
+
+  /* bottomSection Styles Starts at 550px*/
+  .insidePrivacyPolicyBottomcontainer {
+    padding: 0px 24px 80px 24px;
+    gap: 32px;
+    align-items: flex-start;
+  }
+  .privacyPolicyBottomHeading {
+    max-width: 366px;
+    text-align: initial;
+  }
+  .privacyPolicyBottomPara {
+    max-width: 366px;
+    text-align: initial;
+  }
+  .privacyPolicyFooterSection {
+    gap: 32px;
+  }
+  .DataControllerHeading,
+  .aboutFoundiHeading,
+  .personalDataHeading,
+  .purposeDataHeading,
+  .dataRetentionHeading,
+  .employmentApplicationsHeading,
+  .thirdPartiesHeading,
+  .cookiesHeading,
+  .cyberSecurityHeading,
+  .yourRightsHeading,
+  .changesToViljeHeading,
+  .contactInformationHeading {
+    max-width: 366px;
+  }
+  .dataControllerParaSection,
+  .aboutFoundiParaSection,
+  .personalDataParaSection,
+  .purposeDataParaSection,
+  .dataRetentionParaSection,
+  .employmentApplicationParaSection,
+  .thirdPartyParaSection,
+  .cookiesParaSection,
+  .cyberSecurityParaSection,
+  .yourRightsParaSection,
+  .changesToViljeParaSection,
+  .contactInformationParaSection {
+    max-width: 366px;
+  }
+
+  /* bottomSection Styles Ends at 550px*/
+}
+
+/* ----------------------- View Ends at  550px----------------------- */

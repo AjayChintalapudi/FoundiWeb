@@ -1,50 +1,56 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*::-webkit-scrollbar {
+  display: none;
 }
-:root{
+:root {
   --white: #ffffff;
   --black: #000000;
-  --blue : #1373FB;
-  --gray72 : #EBEBEB;
-  --blacktransparent50 : rgba(0, 0, 0, 0.5);
-  --gray95: #F2F2F2;
+  --blue: #1373fb;
+  --gray72: #ebebeb;
+  --blacktransparent50: rgba(0, 0, 0, 0.5);
+  --blacktransparent80: rgba(0, 0, 0, 0.08);
+  --blacktransparent100: rgba(208, 208, 208, 0.24);
+  --bluetransparent24: rgba(19, 115, 251, 0.24);
+  --bluetransparent50: rgba(19, 115, 251, 0.5);
+  --gray95: #f2f2f2;
+  --gray100: #d0d0d0;
+  --gray110: #a6a6a6;
+  --gray120: --#A0A0A0;
   --nero: #202020;
-
-
+  --blackfade:#505050;
+  --grey: #808080;
+  --lightgreen:rgba(3, 227, 139, 0.1);
+  --lightblue:rgba(19, 115, 251, 0.1);
+  --lightpink:rgba(250, 19, 99, 0.1);
+  --backgroundtransparentpink:rgba(250, 19, 99, 0.08);
+  --redbrick:#FA1363;
 }
 
 @font-face {
   font-family: "Light";
-  src: url("assets/Fonts/Euclid\ Circular\ A\ Light.ttf");
+  src: url("assets/Fonts/EuclidCircularB-Light.ttf");
   font-weight: 300;
 }
 @font-face {
   font-family: "Medium";
-  src: url("assets/Fonts/Euclid\ Circular\ A\ Medium.ttf");
+  src: url("assets/Fonts/EuclidCircularB-Medium.ttf");
   font-weight: 400;
 }
 @font-face {
   font-family: "Regular";
-  src: url("assets/Fonts/Euclid\ Circular\ A\ Regular.ttf");
+  src: url("assets/Fonts/EuclidCircularB-Regular.ttf");
   font-weight: 500;
 }
 @font-face {
   font-family: "Semi-Bold";
-  src: url("assets/Fonts/Euclid\ Circular\ A\ SemiBold.ttf");
+  src: url("assets/Fonts/EuclidCircularB-SemiBold.ttf");
   font-weight: 600;
 }
 @font-face {
   font-family:"Bold";
-  src: url("assets/Fonts/Euclid\ Circular\ A\ Bold.ttf");
+  src: url("assets/Fonts/EuclidCircularB-Bold.ttf");
   font-weight: 800;
 }

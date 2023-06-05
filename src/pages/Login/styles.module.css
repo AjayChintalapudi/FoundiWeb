@@ -1,0 +1,278 @@
+.loginPageInsideContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 32px 80px;
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+}
+
+.loginPageCloseAndTitleInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 57px;
+}
+
+.loginPageCloseBlock {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.loginPageFormsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.loginPageBackText {
+  font-family: 'Medium', sans-serif;
+  font-size: 14px;
+  color: var(--blackfade);
+}
+
+.loginPageTitleInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+}
+
+.loginPageTitle {
+  font-family: 'Regular', sans-serif;
+  font-size: 26px;
+  line-height: 34px;
+}
+.loginPageAccountDesc,
+.loginPageSignUpText {
+  font-family: 'Light', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--nero);
+}
+.loginPageSignUpText {
+  border-bottom: 1px solid var(--blue);
+  color: var(--blue);
+}
+
+.loginPageFormFields {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: auto;
+}
+
+.loginPageInputFields {
+  width: 452px;
+  border: 1px solid var(--gray100);
+}
+
+.inputContainerStyle{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.emailContainer,
+.passWordContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: 'Medium', sans-serif;
+  font-size: 14px;
+}
+
+.forgotPassWordText {
+  text-align: end;
+  color: var(--blue);
+  font-size: 14px;
+}
+
+.loginPageButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: auto;
+}
+
+.loginPageButtonStyles {
+  justify-content: center;
+  width: 452px;
+  height: 48px;
+  color: var(--white);
+  font-family: 'Medium', sans-serif;
+  font-size: 16px;
+  background-color: var(--blue);
+  box-shadow: 0px 4px 16px var(--blacktransparent100);
+  border: 1px solid var(--blue);
+  border-radius: 8px;
+}
+
+.continueGoogleButton {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 452px;
+  height: 48px;
+  border: 1px solid var(--blackfade);
+  color: var(--blackfade);
+  font-family: 'Medium', sans-serif;
+  font-size: 16px;
+  box-shadow: 0px 4px 16px var(--blacktransparent100);
+  border: 1px solid var(--blackfade);
+  border-radius: 8px;
+  background-color: var(--white);
+}
+
+/* Error Messages Design */
+
+.emailErrorMessage,
+.passWordErrorMessage {
+  padding-top: 8px;
+}
+.inValidEmailText,
+.inValidPassWord {
+  color: var(--redbrick);
+  font-size: 14px;
+}
+
+.reset {
+  color: var(--blue);
+  border-bottom: 1px solid var(--blue);
+}
+
+.errorMessage {
+  background-color: var(--backgroundtransparentpink);
+  border: 1px solid var(--redbrick);
+}
+/* Media Query Start */
+
+/* From View 550px View Start */
+@media screen and (max-width: 550px) {
+  .loginPageInsideContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 24px 32px;
+    max-width: 1440px;
+    margin: auto;
+  }
+
+  .loginPageCloseAndTitleInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 172px;
+  }
+
+  .loginPageTitleInfo {
+    text-align: start;
+  }
+
+  .loginPageTitle {
+    font-size: 20px;
+  }
+
+  .loginPageFormFields {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .loginPageInputFields {
+    width: 100%;
+    border: 1px solid var(--gray100);
+  }
+
+  .loginPageFormFields {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0;
+  }
+  .loginPageTitle {
+    max-width: 366px;
+    width: 100%;
+  }
+  .loginPageButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0;
+    padding-top: 16px;
+  }
+
+  .loginPageButtonStyles {
+    width: 100%;
+    height: 48px;
+    /* padding: 12px 160px; */
+  }
+  .continueGoogleButton {
+    width: 100%;
+    height: 48px;
+  }
+}
+/* From View 550px View End */
+
+/* From 320px view start */
+@media screen and (max-width: 320px) {
+  .loginPageInsideContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 24px 32px;
+    max-width: 1440px;
+    margin: auto;
+  }
+
+  .loginPageCloseAndTitleInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 172px;
+  }
+
+  .loginPageTitleInfo {
+    text-align: start;
+  }
+
+  .loginPageTitle {
+    font-size: 20px;
+  }
+
+  .loginPageFormFields {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .loginPageInputFields {
+    width: 100%;
+  }
+
+  .loginPageFormFields {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 0;
+  }
+  .loginPageButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0;
+  }
+
+  .loginPageButtonStyles {
+    width: 100%;
+    height: 48px;
+    /* padding: 12px 160px; */
+  }
+  .continueGoogleButton {
+    width: 100%;
+    height: 48px;
+  }
+  /* From 320px View End */
+}
+/* Media Query End */

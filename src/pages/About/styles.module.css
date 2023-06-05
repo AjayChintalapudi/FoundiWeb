@@ -1,0 +1,866 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* -----------------------------DeskTop View Starts----------------------------- */
+/* heroSection Styles Start */
+.aboutHeroSection{
+    width: 100%;
+    height: 100%;
+}
+.insideAboutHeroSection{
+    max-width: 1440px;
+    margin: auto;
+    padding:64px 160px 0px ;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    align-items: center;
+}
+.aboutHeroTopSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:80px;
+}
+.aboutHeroTopHeading{
+    max-width: 452px;
+    font-family: 'Regular', sans-serif;
+    font-size: 40px;
+    line-height: 52px;   
+    color: var(--black);
+}
+.aboutHeroTopPara{
+    max-width: 588px;
+    font-family: 'Light', sans-serif;
+    font-size: 16px;
+line-height: 24px;
+color: var(--nero);
+
+}
+.aboutHeroMiddleSection{
+    position: relative;
+}
+.aboutHeroMiddleVideo{
+    max-width: 1120px;
+    width: 100%;
+    
+}
+.imageWidth{
+    width: 100%;
+    height: 100%;
+}
+.aboutHeroPauseButton{
+    position: absolute;
+    max-width: 90px;
+    width: 100%;
+    max-height: 80px;
+    top: 45%;
+    left: 45%;
+   
+}
+.aboutHeroBottomSection{
+    max-width: 1120px;
+}
+.aboutHeroFooterText{
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    align-items: center;
+}
+.aboutHeroFooterPara{
+    max-width: 738px;
+    font-family: 'Regular', sans-serif;
+    font-size: 40px;
+line-height: 52px;
+text-align: center;
+color: var(--grey);
+
+}
+.aboutHeroSpan{
+    color: var(--black);
+}
+.aboutHeroFooterData{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+}
+.aboutHeroFooterDataText{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 250px;
+}
+.aboutHeroHoursHeading{
+    font-family: 'Regular', sans-serif;
+    font-size: 40px;
+line-height: 52px;
+color:var(--nero);
+
+}
+.aboutHeroHoursPara{
+    font-family: 'Light', sans-serif;
+    font-size: 16px;
+line-height: 24px;
+color:var(--nero);
+
+}
+/* heroSection Styles Ends */
+
+
+
+/* MiddleSection Styles Starts */
+.aboutMiddleContainer{
+    width: 100%;
+    height: 100%;
+}
+.insideAboutMiddleContainer{
+    max-width: 1440px;
+    margin: auto;
+    padding: 100px 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+}
+.appStoreSection, .playStoreSection{
+    height: 48px;
+    width: 166.15px;
+}
+.appleImageWidth, .playStoreImageWidth{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+
+}
+
+
+
+/* MiddleSection Styles Ends */
+
+
+
+/* Subscription Styles Starts */
+.aboutSubscriptionContainer{
+    width: 100%;
+    height: 100%;
+}
+.insideaboutSubscriptionContainer{
+    max-width: 1440px;
+    margin: auto;
+    padding: 0px 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    align-items: center;
+}
+.aboutSubscriptionText{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.subscriptionHeading{
+    max-width: 960px;
+    font-family: 'Regular', sans-serif;
+    font-size: 40px;
+line-height: 52px;
+text-align: center;
+color: var(--black);
+}
+.subscriptionPara{
+    max-width: 738px;
+    font-family: 'Light', sans-serif;
+    font-size: 16px;
+line-height: 24px;
+text-align: center;
+color: var(--nero);
+
+}
+.subscriptionPlannerData{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 16px;
+    width: 100%;
+    
+}
+.subscriptionFreepack{
+    width: 100%;
+    max-width: 100%;
+background: var(--lightgreen);
+border-radius: 16px;
+}
+
+.odd{
+    width: 100%;
+    max-width: 100%;
+    background:var(--lightblue);
+    border-radius: 16px;
+}
+.insideSubscriptionFreepack{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 24px;
+
+}
+.subscriptionFreePackTopText{
+    max-width: 315px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.subscriptionStaterPlan{
+    font-family: 'Regular', sans-serif;
+    font-size: 14px;
+line-height: 22px;  
+color: var(--blackfade);
+}
+.subscriptionLifeTime{
+    font-family: 'Medium', sans-serif;
+    font-size: 30px;
+line-height: 40px;
+color: var(--black);
+}
+.subscriptionPrice{
+    font-family: 'Light', sans-serif;
+    font-size: 14px;
+line-height: 22px;
+color: var(--blackfade);
+
+}
+.subscriptionFreePackBottomText{
+    max-width: 315px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.subscriptionLimit{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.subscriptionGreenIcon{
+    width: 24px;
+    height: 24px;
+}
+.subscriptionLimitTimeText{
+    max-width: 281px;
+    width: 100%;
+    font-family: 'Light', sans-serif;
+    font-size: 16px;
+line-height: 24px;
+color: var(--nero);
+}
+.subscriptionValidity{
+    display: flex;
+    flex-direction: row;
+    gap: 10px; 
+}
+.subscriptionBlueIcon{
+    width: 24px;
+    height: 24px;
+}
+.subscriptionValidityText{
+    max-width: 281px;
+    width: 100%;
+    font-family: 'Light', sans-serif;
+    font-size: 16px;
+line-height: 24px;
+color: var(--nero);
+}
+/* Subscription Styles Ends */
+
+
+
+/* Footer Styles Starts */
+.aboutFooterSection{
+    width: 100%;
+    height: 100%;
+}
+.insideAboutFooterSection{
+    max-width: 1440px;
+    margin: auto;
+    padding: 100px 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    align-items: center;
+}
+.abooutFooterTopSection{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+}
+.aboutFooterHeading{
+    max-width: 738px;
+    font-family: 'Regular',sans-serif;
+    font-size: 40px;
+line-height: 52px;
+text-align: center;
+color: var(--black);
+
+}
+.aboutFooterPara{
+    max-width: 738px;
+    font-family: 'Light',sans-serif;
+    font-size: 16px;
+line-height: 24px;
+text-align: center;
+color: var(--nero);
+}
+.abooutFooterCartSection{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 16px;
+    width: 100%;
+}
+.aboutFooterBottomSection{
+    width: 100%;
+    max-width: 100%;
+    min-height: 152px;
+    height: 100%;
+    background: var(--lightpink);
+border-radius: 16px;
+}
+.insideAboutFooterBottomSection{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 24px;
+}
+.aboutCartImageSection{
+    max-width: 33px;
+    max-height: 33px;
+}
+.aboutCartParaText{
+    max-width: 314px;
+    width: 100%;
+    font-family: 'Light',sans-serif;
+    font-size: 16px;
+line-height: 24px;
+color: var(--nero);
+
+}
+/* Footer Styles Ends */
+
+
+
+
+
+
+/* -----------------------------DeskTop View Ends----------------------------- */
+
+/* ----------------------- View Starts at  1440px----------------------- */
+
+@media screen and (max-width:1440px){
+
+    /* heroSection Styles Starts at 1440px*/
+
+    /* heroSection Styles End at 1440px*/
+    
+    /* MiddleSection Styles Starts at 1440px*/
+
+    /* MiddleSection Styles Ends at 1440px*/
+
+    /* subscriptionSection Styles Starts at 1440px*/
+    /* subscriptionSection Styles Ends at 1440px*/
+
+     /* Footer Styles Starts at 1440px*/
+
+    /* Footer Styles Ends at 1440px*/
+}
+
+/* ----------------------- View Ends at  1440px----------------------- */
+
+
+
+/* ----------------------- View Starts at  1336px----------------------- */
+
+@media screen and (max-width:1336px){
+
+    /* heroSection Styles Starts at 1336px*/
+
+.insideAboutHeroSection{
+    padding:64px 128px 0px ;
+
+}
+
+.aboutHeroTopPara{
+    max-width: 492px;
+
+}
+.aboutHeroMiddleVideo{
+    max-width: 1024px;
+    margin: auto;
+}
+.aboutHeroBottomSection{
+    max-width: 1024px;
+}
+.aboutHeroFooterDataText{
+    max-width: 226px;
+}
+
+
+    /* heroSection Styles End at 1336px*/
+    
+    /* MiddleSection Styles Starts at 1336px*/
+
+    /* MiddleSection Styles Ends at 1336px*/
+
+
+
+ /* subscriptionSection Styles Starts at 1336px*/
+ .insideaboutSubscriptionContainer{
+    padding: 0px 128px;
+}
+
+
+  /* subscriptionSection Styles Ends at 1336px*/
+
+   /* Footer Styles Starts at 1336px*/
+   .insideAboutFooterSection{
+    padding: 100px 128px;
+} 
+
+
+    /* Footer Styles Ends at 1336px*/
+}
+
+/* ----------------------- View Ends at  1336px----------------------- */
+
+
+
+/* ----------------------- View Starts at  1279px----------------------- */
+
+@media screen and (max-width:1279px){
+
+    /* heroSection Styles Starts at 1279px*/
+    .insideAboutHeroSection{
+        padding:64px 80px 0px ;
+    
+    }
+    .aboutHeroTopPara{
+        max-width: 428px;
+    
+    }
+    .aboutHeroMiddleVideo{
+        max-width: 960px;
+      
+    }
+    .aboutHeroBottomSection{
+        max-width: 960px;
+    }
+    .aboutHeroFooterDataText{
+        max-width: 210px;
+    }
+
+    /* heroSection Styles End at 1279px*/
+    
+    /* MiddleSection Styles Starts at 1279px*/
+    /* MiddleSection Styles Ends at 1279px*/
+
+
+ /* subscriptionSection Styles Starts at 1279px*/
+ .insideaboutSubscriptionContainer{
+    padding: 0px 80px;
+}
+
+ /* subscriptionSection Styles Ends at 1279px*/
+
+
+  /* Footer Styles Starts at 1279px*/
+  .insideAboutFooterSection{
+    padding: 100px 80px;
+} 
+
+    /* Footer Styles Ends at 1279px*/
+
+
+}
+
+/* ----------------------- View Ends at  1279px----------------------- */
+
+
+
+
+/* ----------------------- View Starts at  1023px----------------------- */
+
+@media screen and (max-width:1023px){
+
+    /* heroSection Styles Starts at 1023px*/
+    .insideAboutHeroSection{
+        padding:56px 60px 0px ;
+        gap: 56px;
+    }
+    .aboutHeroTopSection{
+        display: flex;
+        flex-direction: column;
+        gap:12px;
+        align-items: center;
+    }
+    .aboutHeroTopHeading{
+        max-width: 560px;
+        font-size: 36px;
+        line-height: 44px;   
+    }
+    .aboutHeroTopPara{
+        max-width: 560px;
+    
+    }
+    .aboutHeroMiddleVideo{
+        max-width: 820px;
+        
+    }
+    .aboutHeroFooterText{
+        gap: 56px;  
+    }
+    .aboutHeroBottomSection{
+        max-width: 820px;
+    }
+    .aboutHeroFooterPara{
+        max-width: 668px;
+        font-size: 36px;
+    line-height: 44px;
+    }
+    .aboutHeroFooterData{
+        display: grid;
+       grid-template-columns: auto auto;
+        gap: 40px;
+        grid-gap:40px;
+    }
+    .aboutHeroFooterDataText{
+        gap: 12px;
+        max-width: 390px;
+    }
+    .aboutHeroHoursHeading{
+        font-size: 36px;
+    line-height: 44px;
+   
+    
+    }
+
+    /* heroSection Styles End at 1023px*/
+    
+    /* MiddleSection Styles Starts at 1023px*/
+    .insideAboutMiddleContainer{
+        padding: 80px 0px;
+        gap: 24px;
+       
+    }
+    /* MiddleSection Styles Ends at 1023px*/
+
+
+
+    /* subscriptionSection Styles Starts at 1023px*/
+    .insideaboutSubscriptionContainer{
+        padding: 0px 60px;
+        gap: 56px;
+    
+    }
+    .aboutSubscriptionText{
+        gap: 12px;
+    }
+    .subscriptionHeading{
+        max-width: 820px;
+        font-size: 36px;
+    line-height: 44px;
+    }
+    .subscriptionPara{
+        max-width: 668px;
+    
+    }
+    .subscriptionPlannerData{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 12px;
+        width: 100%;
+        
+    }
+    .subscriptionFreePackTopText{
+        max-width: 356px;
+    }
+    .subscriptionLifeTime{
+        font-size: 26px;
+    line-height: 34px;
+    
+    }
+    .subscriptionFreePackBottomText{
+        max-width: 322px;
+    }
+    /* subscriptionSection Styles Ends at 1023px*/
+
+
+     /* FooterSection Styles Starts at 1023px*/
+     .insideAboutFooterSection{
+        padding: 80px 60px;
+        gap: 56px;
+    }
+    .abooutFooterTopSection{
+        gap: 12px;
+    }
+    .aboutFooterHeading{
+        max-width: 668px;
+        font-size: 36px;
+    line-height: 44px;
+    
+    }
+    .aboutFooterPara{
+        max-width: 668px;
+    }
+    .abooutFooterCartSection{
+        display: grid;
+        grid-template-columns: auto auto;
+       grid-gap: 12px;
+    }
+
+
+
+
+     /* FooterSection Styles Ends at 1023px*/
+
+}
+
+/* ----------------------- View Ends at  1023px----------------------- */
+
+
+/* ----------------------- View Starts at  867px----------------------- */
+
+@media screen and (max-width:867px){
+
+    /* heroSection Styles Starts at 867px*/
+    .insideAboutHeroSection{
+        padding:48px 32px 0px ;
+        gap: 48px;
+    }
+    .aboutHeroTopHeading{
+        max-width: 604px;
+        font-size: 30px;
+        line-height: 40px;   
+    }
+    .aboutHeroTopPara{
+        max-width: 604px;
+    
+    }
+    .aboutHeroMiddleVideo{
+        max-width: 604px;    
+    }
+    .aboutHeroPauseButton{
+        
+        max-width: 80px;
+    
+    }
+    .aboutHeroBottomSection{
+        max-width: 604px;
+    }
+    .aboutHeroFooterText{
+        gap: 48px;  
+    }
+    .aboutHeroFooterPara{
+        max-width: 604px;
+        font-size: 30px;
+    line-height: 40px;
+    }
+    .aboutHeroFooterDataText{
+        max-width: 282px;
+    }
+    .aboutHeroHoursHeading{
+        font-size: 30px;
+    line-height: 40px;
+   
+    
+    }
+    
+
+
+    /* heroSection Styles End at 867px*/
+    
+    /* MiddleSection Styles Starts at 867px*/
+    /* MiddleSection Styles Ends at 867px*/
+
+ /* SubsrciptionSection Styles Starts at 867px*/
+ .insideaboutSubscriptionContainer{
+    padding: 0px 32px;
+    gap: 48px;
+}
+.subscriptionHeading{
+    max-width: 604px;
+    font-size: 29px;
+line-height: 40px;
+}
+.subscriptionPara{
+    max-width: 604px;
+
+}
+.subscriptionPlannerData{
+    display: grid;
+    grid-template-columns: auto ;
+    padding: 0px 76px;
+    width: 100%;
+    
+}
+.subscriptionLifeTime{
+    font-size: 24px;
+line-height: 34px;
+
+}
+
+    /* SubsrciptionSection Styles Ends at 867px*/
+
+
+    /* FooterSection Styles Starts at 867px*/
+    .insideAboutFooterSection{
+        padding: 80px 32px;
+        gap: 48px;
+        
+    }  
+    .aboutFooterHeading{
+        max-width: 604px;
+        font-size: 30px;
+    line-height: 40px;
+    
+    }
+    .aboutFooterPara{
+        max-width: 604px;
+    }
+    .abooutFooterCartSection{
+        display: grid;
+        grid-template-columns: auto;
+       grid-gap: 12px;
+       padding: 0px 76px;
+    }
+
+
+    
+    /* FooterSection Styles Ends at 867px*/
+
+
+}
+
+/* ----------------------- View Ends at  867px----------------------- */
+
+
+/* ----------------------- View Starts at  550px----------------------- */
+
+@media screen and (max-width:550px){
+
+    /* heroSection Styles Starts at 550px*/
+    .insideAboutHeroSection{
+        padding:32px 24px 0px ;
+        gap: 32px;
+    }
+    .aboutHeroTopHeading{
+        max-width: 366px;
+    }
+    .aboutHeroTopPara{
+        max-width: 366px;
+    }
+    .aboutHeroMiddleVideo{
+        max-width: 366px;
+        
+    }
+    .aboutHeroPauseButton{
+        top: 34%;
+        left: 41%;
+       
+    }
+    .aboutHeroBottomSection{
+        max-width: 366px;
+    }
+    .aboutHeroFooterText{
+        gap: 32px;  
+    }
+    .aboutHeroFooterPara{
+        max-width: 366px;
+        text-align: initial;
+    }
+
+    .aboutHeroFooterData{
+        display: flex;
+       flex-direction: column;
+        gap: 32px;
+    }
+    .aboutHeroFooterDataText{
+        max-width: 366px;
+    }
+
+
+
+
+
+    /* heroSection Styles End at 550px*/
+    
+    /* MiddleSection Styles Starts at 550px*/
+    .insideAboutMiddleContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    /* MiddleSection Styles Ends at 550px*/
+
+
+     /* subscriptionSection Styles Starts at 550px*/
+     .insideaboutSubscriptionContainer{
+        padding: 0px 24px;
+        gap: 32px;
+        align-items: flex-start;
+    }
+  
+    .subscriptionHeading{
+        max-width: 366px;
+        font-size: 29px;
+    line-height: 40px;
+    text-align: initial;
+    }
+    .subscriptionPara{
+        max-width: 366px;
+        text-align: initial;
+    
+    }
+    .subscriptionPlannerData{
+        padding: 0px 0px;
+        
+    }
+    /* subscriptionSection Styles Ends at 550px*/
+
+
+     /* FooterSection Styles Starts at 867px*/
+     .insideAboutFooterSection{
+        padding: 80px 24px;
+        gap:32px;
+        align-items: flex-start;
+        
+    }  
+
+    .aboutFooterHeading{
+        max-width: 366px;
+        text-align: initial;
+    
+    }
+    .aboutFooterPara{
+        max-width: 366px;
+        text-align: initial;
+    }
+    .abooutFooterCartSection{
+      
+       padding: 0px 0px;
+    }
+
+
+
+
+    /* FooterSection Styles Ends at 867px*/
+}
+
+/* ----------------------- View Ends at  550px----------------------- */
+
+
+

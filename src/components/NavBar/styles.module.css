@@ -1,0 +1,402 @@
+/* From 1440px to 1366px  Start*/
+.navbarContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 17px 80px;
+  color: var(--white);
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: var(--gray72);
+  z-index: 999;
+}
+
+.activeItem {
+  border-bottom: 2px solid var(--black);
+}
+
+.foundiLogo {
+  width: 90px;
+  height: 90px;
+}
+
+.navbarLogoLeft {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  height: 30px;
+  font-family: Medium;
+  cursor: pointer;
+}
+
+.navbarMenuItems {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  font-family: Medium;
+  color: var(--black);
+  cursor: pointer;
+  justify-content: space-around;
+  align-items: center;
+  width: 337px;
+}
+
+.navbarMenuItemsRightContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.menuItemsRightLogo {
+  width: 19px;
+  height: 19px;
+}
+
+.menuItemsRightLogo {
+  width: 100%;
+  height: 100%;
+}
+
+.menuItemsRightMenuIcon {
+  display: none;
+}
+/* From 1440px to 1366px  End*/
+.languageContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 274px;
+  max-width: 100%;
+  overflow: hidden;
+  /* border-radius: 24px; */
+  padding: 24px;
+}
+
+.englishIcon,
+.swedishIcon {
+  display: flex;
+  flex-direction: row;
+  gap: 13px;
+}
+
+.englishBlock,
+.swedishBlock {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.unCheck {
+  color: var(--gray72);
+}
+.languageStyle {
+  font-family: 'Light', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--black);
+}
+
+.languageSelectedStyle {
+  font-family: 'Light', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--blue);
+}
+
+.cartContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  align-items: center;
+  overflow: hidden;
+  padding: 16px 24px;
+}
+.cartInfo {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Medium', sans-serif;
+  font-size: 14px;
+}
+
+.cartShoNow {
+  color: var(--blue);
+  border-bottom: 1px solid var(--blue);
+}
+
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 320px;
+  height: 100%;
+  padding: 24px;
+}
+.signUpLoginHeading {
+  font-family: 'Medium', sans-serif;
+  font-size: 16px;
+}
+
+.signUpLoginBlock {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.closeIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.signUpBottomBorder {
+  width: 100%;
+  border-bottom: 1px solid var(--gray72);
+}
+
+.profileIcon {
+  width: 64px;
+  height: 64px;
+  margin: auto;
+}
+
+.signUpLoginDesc {
+  font-family: 'Light', sans-serif;
+  width: 272px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.loginSignUpButton {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin: auto;
+}
+
+.loginButtonStyles,
+.signUpButtonStyles {
+  width: fit-content;
+  height: 40px;
+  padding: 9px 40px;
+  color: var(--nero);
+  background: var(--white);
+  border: 1px solid var(--black);
+  border-radius: 20px;
+  font-family: 'Regular', sans-serif;
+  font-size: 14px;
+}
+
+.signUpButtonStyles {
+  background: var(--blue);
+  color: var(--white);
+  border: 1px solid var(--blue);
+}
+
+/* Toggle Menu start */
+
+.toggleMenuContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: var(--white);
+  color: var(--black);
+  border-radius: 0px 0px 16px 16px;
+  padding: 24px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  top: 0;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.headerLogoLeft {
+  width: 92px;
+  height: 28px;
+}
+
+.headerItemsRight {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.headerBottomBorder {
+  border-bottom: 1px solid var(--gray72);
+  width: 100%;
+}
+
+.headerMenuItemsBlock,
+.hamberMenuItems {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: 'Medium', sans-serif;
+  font-size: 16px;
+}
+
+.profileContainerMobile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.profileLoginBtnStyles {
+  width: 110px;
+  background-color: var(--blue);
+  color: var(--white);
+  border: 1px solid var(--blue);
+  border-radius: 28px;
+  padding: 7px 15px;
+  font-family: 'Regular', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.laguageContainerMobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.languageContainerContentMobileBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 25px;
+}
+
+/* Toggle Menu End */
+
+/*-------- Media Query Start--------- */
+
+/*  From 560px to 867 px View Start */
+
+@media screen and (min-width: 550px) and (max-width: 867px) {
+  .navbarContainer {
+    padding: 18px 24px;
+  }
+
+  .navbarMenuItems {
+    display: none;
+  }
+
+  .menuItemsRightLogo {
+    display: none;
+  }
+
+  .menuItemsRightCartIcon {
+    display: block;
+    position: absolute;
+    right: 80px;
+    top: 24px;
+  }
+
+  .navbarMenuItemsMenuIcon {
+    width: 24px;
+    height: 8px;
+    position: relative;
+    top: 4px;
+  }
+
+  .menuItemsRightMenuIcon {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/*  From 867px to 560 px View End */
+
+/* 550px Mobile View Start */
+
+@media screen and (max-width: 550px) {
+  .navbarContainer {
+    padding: 18px 24px;
+  }
+
+  .navbarMenuItems {
+    display: none;
+  }
+
+  .menuItemsRightLogo {
+    display: none;
+  }
+
+  .menuItemsRightCartIcon {
+    display: block;
+    position: absolute;
+    right: 80px;
+    top: 24px;
+  }
+
+  .navbarMenuItemsMenuIcon {
+    width: 24px;
+    height: 8px;
+    position: relative;
+    top: 4px;
+  }
+
+  .menuItemsRightMenuIcon {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* 550px Mobile View End */
+
+/* 320px MobieView Start */
+@media screen and (max-width: 320px) {
+  .navbarContainer {
+    padding: 18px 24px;
+  }
+
+  .navbarMenuItems {
+    display: none;
+  }
+
+  .menuItemsRightLogo {
+    display: none;
+  }
+
+  .menuItemsRightCartIcon {
+    display: block;
+    position: absolute;
+    right: 80px;
+    top: 24px;
+  }
+
+  .navbarMenuItemsMenuIcon {
+    width: 24px;
+    height: 8px;
+    position: relative;
+    top: 4px;
+  }
+
+  .menuItemsRightMenuIcon {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .languageContainer {
+    display: none;
+  }
+}
+/* 320px MobieView End */
+
+/* Media Query End */

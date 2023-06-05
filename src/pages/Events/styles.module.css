@@ -44,7 +44,7 @@
     align-items: center;
 }
 .eventsHeaderTextHeading{
-    max-width: 522px;
+    max-width: 674px;
     font-family: "Regular", sans-serif;
     font-size: 40px;
 line-height: 52px;
@@ -108,7 +108,7 @@ text-align: center;
     line-height: 24px;
     color: var(--white);
     border: none;
-    /* cursor: pointer; */
+   
 
 }
 .eventsHeaderImage{
@@ -185,7 +185,7 @@ gap: 64px;
 background: var(--gray95);
 border-radius: 16px;
 width: 100%;
-justify-content: space-between;
+
 }
 .eventsBannerDropLeftSection{
     max-width: 260px;
@@ -198,14 +198,14 @@ max-height: 248px;
     gap: 16px;
 }
 .eventsBannerRightHeading{
-    max-width: 572px;
+    
     font-family: 'Regular', sans-serif;
     font-size: 30px;
     line-height: 40px;
     color: var(--black);
 }
 .eventsBannerRightPara{
-    max-width: 572px;
+   
     font-family: 'Light', sans-serif;
     font-size: 16px;
 line-height: 24px;
@@ -392,7 +392,7 @@ line-height: 24px;
         gap: 12px;
     }
     .eventsHeaderTextHeading{
-        width: 820px;
+        width: 560px;
         font-size: 36px;
     line-height: 44px;
     
@@ -454,7 +454,7 @@ line-height: 34px;
     display: flex;
 flex-direction: row;
 padding: 56px;
-gap: 56px;
+
 }
 .eventsBannerDropLeftSection{
   
@@ -520,7 +520,7 @@ line-height: 34px;
      
     }
     .eventsHeaderTextHeading{
-        width: 604px;
+        width: 100%;
         font-size: 30px;
     line-height: 40px;
     
@@ -529,6 +529,8 @@ line-height: 34px;
         width: 452px;
 
     }
+   
+   
 
     .eventsHeaderImage{
         max-width: 452px;
@@ -576,7 +578,7 @@ line-height: 34px;
     display: flex;
 flex-direction: column;
 padding: 24px;
-gap: 24px;
+
 }
 .eventsBannerDropLeftSection{
    width: 556px;
@@ -662,8 +664,9 @@ height: 224px;
  max-width: 366px;
 }
 .eventsBannerDropLeftSection{
-    width: 318px;
- height: 224px;
+    max-width: 314px;
+    width: 100%;
+ height: 100%;
      }
      .eventsBannerRightHeading{
         max-width: 318px;
@@ -680,6 +683,10 @@ height: 224px;
         max-width: 366px;
         min-height: 310px;
         height: 100%;
+    }
+    .eventsBannerBottomHeadingText{
+        text-align: initial;
+      
     }
     .eventBannerEmployeeHeading{
         max-width: 318px;   

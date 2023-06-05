@@ -1,12 +1,12 @@
-import Footer from 'components/Footer/Footer';
-import Events from './pages/Events/Events';
 
+import React from 'react';
+import AppRoutes from 'routes/AppRoutes';
+import { AppDataProvider } from 'providers/AppDataProvider';
 function App() {
   return (
-    <div className="App">
-      {/* <Footer /> */}
-      <Events />
-    </div>
+    <AppDataProvider>
+        <AppRoutes />
+        </AppDataProvider>
   );
 }
 

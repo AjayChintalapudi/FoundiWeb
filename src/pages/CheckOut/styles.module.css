@@ -1,0 +1,646 @@
+.checkOutMainContainer {
+  max-width: 1440px;
+  margin: auto;
+  padding: 32px 80px 64px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 65px;
+}
+.checkOutInsideContainer {
+  /* display: grid;
+  grid-template-columns: 2fr repeat(1, minmax(0, 1fr)); */
+  display: flex;
+  flex-direction: row;
+  gap: 64px;
+  /* column-gap: 64px; */
+}
+.checkOutHeading {
+  font-family: 'Medium', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+}
+.checkOutCloseBlock {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.closeIconContainer {
+  width: 24px;
+  height: 24px;
+}
+.checkOutLeftBlock {
+  max-width: 764px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contactDetailsBlock,
+.addressDeatilsBlock,
+.paymentDetailsBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.contactDetailsInfoBlock,
+.addressDetailsInfoBlock,
+.paymentDeatilsInfoBlock {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--gray95);
+  border-radius: 16px;
+  padding: 24px;
+  cursor: pointer;
+}
+
+.contactDetailsInfoLeft,
+.addressDeatilsInfoLeft,
+.paymentDetailsInfoLeft {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+.checkOutIconImgBlock {
+  max-width: 24px;
+  width: 100%;
+  height: 24px;
+}
+
+.imageWidth {
+  width: 100%;
+  object-fit: contain;
+  height: 100%;
+}
+
+.checkOutContactHeading,
+.checkOutAddressHeading,
+.checkOutPaymenttHeading {
+  width: 100%;
+  font-family: 'Medium', sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.contactDetailsInputs,
+.addressDetailsInputs,
+.paymentDetailsInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.firstAndLastNameContainer,
+.cityAndZipCodeContainer,
+.expiryDateAndCvvContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  width: 100%;
+}
+.firstNameBlock,
+.lastNameBlock,
+.cityNameBlock,
+.zipCodeBlock,
+.expiryDateBlock,
+.cvvNameBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+.firstNameHeading,
+.lastNameHeading,
+.cityNameHeading,
+.zipCodeHeading,.expiryDateHeading,.cvvHeading {
+  font-family: 'Medium', sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+  max-width: 370px;
+  width: 100%;
+}
+.firstNameInput,
+.lastNameInput,
+.cityNameInput,
+.zipCodeInput,.expiryDateInput {
+  padding: 12px 16px;
+  border: 1px solid var(--gray100);
+}
+
+.emailAddressContainer,
+.doorNoContainer,
+.stateAndCityContainer,
+.cardHolderContainer,
+.creditAndDebitCardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.emailInput,
+.doorNoInput,
+.stateAndCountryInput,
+.cardHolderInput,
+.creditAndDebitCardInput {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--gray100);
+}
+
+.enterEmailAddressText,
+.enterDoorNoText,
+.stateAndCityText,
+.cardHolderNameText,
+.creditAndDebitCardNameText {
+  font-family: 'Medium', sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--nero);
+}
+
+.phoneNumberContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.phoneNumberHeading {
+  font-family: 'Medium', sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--nero);
+}
+
+.phoneNumberInput {
+  width: 100%;
+  border: none;
+  padding: 12px 16px;
+  /* border: 1px solid var(--gray100); */
+}
+.codeTextStyle {
+  border-right: 2px solid var(--gray95);
+  padding: 0 16px;
+  font-family: 'Light', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+.mobileInputContainerStyle {
+  border: 1px solid var(--gray100);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.checkOutRightBlock {
+  max-width: 452px;
+  max-height: 827px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* gap: 32px; */
+  background-color: var(--white);
+  border: 1px solid var(--gray100);
+  border-radius: 16px;
+}
+
+.orderSummaryHeading {
+  font-family: 'Medium', sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  color: #202020;
+}
+.orderSummaryDetailsBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 32px;
+}
+
+.keyChainTagImgLeftBlock {
+  width: 98px;
+  height: 98px;
+}
+
+.keyChainTagContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: center;
+}
+
+.keyChainTagAddAndDeleteBlock {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.keyChainTagInfoRightBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.keyChainTagDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.addAndDecreaseBlock {
+  display: flex;
+  flex-direction: row;
+  gap: 13px;
+  align-items: center;
+}
+
+.keyChaimPackHeading {
+  font-family: 'Medium', sans-serif;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.keyChainPackPriceText {
+  font-family: 'Light', sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--nero);
+}
+
+.incrementCheckoutImgBlock,
+.decrementCheckOutImgBlock {
+  width: 32px;
+  height: 32px;
+  background-color: #f2f2f2;
+  border: 1px solid #ebebeb;
+  border-radius: 8px;
+  height: 32px;
+  padding: 6px;
+}
+.incrementNumeric {
+  font-family: 'Medium', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+.deleteIconBlock {
+  width: 20px;
+  height: 20px;
+}
+
+.orderSummaryBorder {
+  width: 100%;
+  border: 1px solid var(--gray72);
+}
+
+.orderSummaryPricesBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 32px;
+}
+
+.discountInput {
+  width: 100%;
+  border: 1px solid var(--gray100);
+}
+
+.discountAndTotalPriceDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.discountPriceDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.subTotalContainer,
+.shippingContainer,
+.taxContainer,
+.disCountContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.discountDescHeading {
+  font-family: 'Light', sans-serif;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.discountDescSubHeading {
+  font-size: 14px;
+}
+
+.discountPriceHeading {
+  font-family: 'Medium', sans-serif;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.discountPriceBorder {
+  border: 1px solid var(--gray72);
+}
+
+.totalPriceDetails {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.totalPriceDesc {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.totalShippingHeading {
+  font-family: 'Medium', sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+}
+.totalShippingSubHeading {
+  font-family: 'Light', sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+}
+.totalPriceNumber {
+  font-family: 'Medium', sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.checkOutPageButton {
+  width: 100%;
+  height: 48px;
+  padding: 12px;
+  background-color: var(--bluetransparent50);
+  outline: none;
+  border: 1px solid var(--bluetransparent50);
+  border-radius: 28px;
+  color: var(--white);
+  font-family: 'Medium', sans-serif;
+  line-height: 24px;
+  font-size: 17px;
+  justify-content: center;
+}
+
+.cvvInput {
+  border: 1px solid var(--gray100);
+}
+
+/* Media Query  Start */
+
+/* view 1440px start */
+@media screen and (max-width: 1440px) {
+}
+/* View 1440px end */
+/* View 1279 start */
+@media screen and (max-width: 1279px) {
+}
+/* View 1279 end */
+
+/* View 1023 start */
+@media screen and (max-width: 1023px) {
+  .checkOutMainContainer {
+    max-width: 940px;
+    margin: auto;
+    padding: 25px 60px 40px 60px;
+    gap: 56px;
+  }
+  .checkOutInsideContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+  }
+  .checkOutLeftBlock {
+    max-width: 560px;
+    width: 100%;
+    margin: auto;
+  }
+  .checkOutRightBlock {
+    max-width: 560px;
+    max-height: 890px;
+    margin: auto;
+    gap: 24px;
+  }
+  .orderSummaryDetailsBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+  }
+  .keyChainTagContainer {
+    gap: 28px;
+  }
+  .keyChaimPackHeading {
+    font-size: 16px;
+  }
+  .keyChainPackPriceText {
+    font-size: 14px;
+  }
+  .discountDescHeading {
+    font-size: 16px;
+  }
+  .discountPriceHeading {
+    font-size: 16px;
+  }
+}
+/* View 1023 end */
+
+/* View 867 view start */
+
+@media screen and (max-width: 867px) {
+  .checkOutMainContainer {
+    max-width: 940px;
+    margin: auto;
+    padding: 25px 32px 40px 32px;
+    gap: 48px;
+  }
+  .checkOutInsideContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+  .checkOutLeftBlock {
+    max-width: 560px;
+    width: 100%;
+    margin: auto;
+    gap: 32px;
+  }
+  .checkOutRightBlock {
+    max-width: 560px;
+    max-height: 890px;
+    margin: auto;
+    gap: 24px;
+  }
+  .contactDetailsBlock,
+  .adressDetailsBlock,
+  .paymentDetailsBlock {
+    gap: 24px;
+  }
+  .contactDetailsInputs,
+  .addressDetailsInputs,.paymentDetailsInputs {
+    gap: 16px;
+  }
+  .firstNameHeading,
+  .lastNameHeading,
+  .cityNameHeading,
+  .zipCodeHeading,.expiryDateHeading,.cvvHeading {
+    font-size: 14px;
+  }
+  .enterEmailAddressText,
+  .enterDoorNoText,
+  .stateAndCityText,
+  .cardHolderNameText,
+  .creditAndDebitCardNameText {
+    font-size: 14px;
+  }
+  .phoneNumberHeading {
+    font-size: 14px;
+  }
+  .orderSummaryPricesBlock {
+    padding-top: 16px;
+    gap: 24px;
+  }
+}
+/* View 867 view end */
+
+/* View 550px view start */
+@media screen and (max-width: 550px) {
+  .checkOutMainContainer {
+    max-width: 940px;
+    margin: auto;
+    padding: 25px 24px 40px 24px;
+    gap: 32px;
+  }
+  .checkOutInsideContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .checkOutLeftBlock {
+    max-width: 560px;
+    width: 100%;
+    margin: auto;
+    gap: 32px;
+  }
+  .contactDetailsInfoBlock,
+  .addressDetailsInfoBlock,
+  .paymentDeatilsInfoBlock {
+    padding: 16px;
+  }
+  .firstAndLastNameContainer,
+  .cityAndZipCodeContainer,
+  .expiryDateAndCvvContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .checkOutRightBlock {
+    max-width: 560px;
+    max-height: 890px;
+    margin: auto;
+    gap: 24px;
+  }
+  .orderSummaryDetailsBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+  }
+  .keyChainTagContainer {
+    gap: 28px;
+  }
+  .keyChaimPackHeading {
+    font-size: 16px;
+  }
+  .keyChainPackPriceText {
+    font-size: 14px;
+  }
+  .discountDescHeading {
+    font-size: 16px;
+  }
+  .discountPriceHeading {
+    font-size: 16px;
+  }
+  .checkOutPageButton {
+    font-size: 16px;
+  }
+}
+/* View 550px view end  */
+/* View 320px view start */
+@media screen and (max-width: 320px) {
+  .checkOutMainContainer {
+    max-width: 940px;
+    margin: auto;
+    padding: 25px 24px 40px 24px;
+    gap: 32px;
+  }
+  .checkOutInsideContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .checkOutLeftBlock {
+    max-width: 560px;
+    width: 100%;
+    margin: auto;
+    gap: 32px;
+  }
+  .contactDetailsInfoBlock,
+  .addressDetailsInfoBlock,
+  .paymentDeatilsInfoBlock {
+    padding: 16px;
+  }
+  .firstAndLastNameContainer,
+  .cityAndZipCodeContainer,
+  .expiryDateAndCvvContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .checkOutRightBlock {
+    max-width: 560px;
+    max-height: 890px;
+    margin: auto;
+    gap: 24px;
+  }
+  .orderSummaryDetailsBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+  }
+  .keyChainTagContainer {
+    gap: 28px;
+  }
+  .keyChaimPackHeading {
+    font-size: 16px;
+  }
+  .keyChainPackPriceText {
+    font-size: 14px;
+  }
+  .discountDescHeading {
+    font-size: 16px;
+  }
+  .discountPriceHeading {
+    font-size: 16px;
+  }
+  .checkOutPageButton {
+    font-size: 16px;
+  }
+}
+/* View 320px view end */
+/* Media Query  End */

@@ -1,0 +1,380 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.activeItem {
+  text-decoration: underline;
+}
+
+/* -----------------------Desktop View Intially Starts----------------------- */
+
+/* heroSection Styles Starts*/
+.productsHeroSection {
+  width: 100%;
+  height: 100%;
+  background-image: url('../../assets/Images/productsImage.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.insideProductsHeroSection {
+  max-width: 1440px;
+  margin: auto;
+  padding: 191.5px 80px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 143.5px;
+}
+.productsMiddleHeroSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 180px;
+}
+
+.leftProductsHeroSection {
+  width: 40px;
+  height: 40px;
+}
+.rightProductsHeroSection {
+  width: 40px;
+  height: 40px;
+}
+.productsTextContainer {
+  width: 100%;
+}
+
+.productsHeroTextSection {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 560px;
+}
+.productsHeroText {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.productsHeroSectionHeading {
+  font-family: 'Medium', sans-serif;
+  font-size: 40px;
+  line-height: 52px;
+  color: var(--white);
+}
+.productsHeroSectionPara {
+  font-family: 'Light', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--gray72);
+}
+.productsHeroButtonSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  width: 257px;
+  height: 72px;
+  border: 1px dashed var(--white);
+  border-radius: 36px;
+}
+.ProductsButton {
+  font-family: 'Light', sans-serif;
+  font-size: 30px;
+  line-height: 40px;
+  text-align: center;
+  color: var(--white);
+}
+.productsHeroBottomSection {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: center;
+}
+
+.productsSpanOne {
+  border-radius: 10px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--white);
+}
+.productsSpanTwo {
+  border-radius: 8px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--black);
+  border: 1px solid var(--white);
+}
+.productsSpanThree {
+  border-radius: 8px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--black);
+  border: 1px solid var(--white);
+}
+
+/* heroSection Styles Ends*/
+
+/* bannerSection Styles Starts*/
+.productsBannerSection {
+  width: 100%;
+  height: 100%;
+}
+.insideProductsBannerSection {
+  padding: 100px 160px;
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  overflow: hidden;
+}
+.productsBannerTopSection {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  margin: auto;
+}
+.productsBannerCategorieOne,
+.productsBannerCategorieTwo,
+.productsBannerCategorieThree,
+.productsBannerCategorieFour {
+  font-family: 'Light', sans-serif;
+  color: var(--grey);
+  font-size: 16px;
+  line-height: 24px;
+}
+.productsBannerHoliday {
+  font-family: 'Light', sans-serif;
+  color: var(--black);
+  font-size: 16px;
+  line-height: 24px;
+  border-bottom: 1px solid var(--black);
+}
+
+.productsCartSection {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 16px;
+  justify-content: center;
+}
+
+/* bannerSection Styles Ends*/
+
+/* -----------------------Desktop View  Ends----------------------- */
+
+/* ----------------------- View Starts at  1440px----------------------- */
+
+@media screen and (max-width: 1440px) {
+  /* heroSection Styles Starts at 1440px*/
+
+  /* heroSection Styles End at 1440px*/
+
+  /* bannerSection Styles Starts at 1440px*/
+  /* bannerSection Styles Ends at 1440px*/
+}
+
+/* ----------------------- View Ends at  1440px----------------------- */
+
+/* ----------------------- View Starts at  1336px----------------------- */
+
+@media screen and (max-width: 1366px) {
+  /* heroSection Styles Starts at 1336px*/
+
+  .productsMiddleHeroSection {
+    gap: 100px;
+  }
+
+  /* heroSection Styles Ends at 1336px*/
+}
+
+/* ----------------------- View Ends at  1336px----------------------- */
+
+/* ----------------------- View Starts at  1279px----------------------- */
+
+@media screen and (max-width: 1279px) {
+  /* heroSection Styles Starts at 1279px*/
+  .productsHeroSection {
+    background-image: url('../../assets/Images/productsTabImage.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .insideProductsHeroSection {
+    padding: 191.5px 40px 40px;
+  }
+  .productsMiddleHeroSection {
+    gap: 60px;
+  }
+
+  /* heroSection Styles Ends at 1279px*/
+
+  /* bannerSection Styles Starts at 1279px*/
+  .insideProductsBannerSection {
+    padding: 100px 80px;
+  }
+
+  /* bannerSection Styles Ends at 1279px*/
+}
+
+/* ----------------------- View Ends at  1279px----------------------- */
+
+/* ----------------------- View Starts at  1023px----------------------- */
+
+@media screen and (max-width: 1023px) {
+  /* heroSection Styles Starts at 1023px*/
+  .insideProductsHeroSection {
+    padding: 147px 24px 24px;
+    gap: 115px;
+  }
+  .productsTextContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .productsHeroTextSection {
+    max-width: 452px;
+  }
+  .productsHeroText {
+    gap: 12px;
+  }
+  .productsHeroSectionHeading {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .productsHeroButtonSection {
+    width: 232px;
+    height: 66px;
+  }
+  .ProductsButton {
+    font-size: 26px;
+    line-height: 34px;
+  }
+  /* heroSection Styles Ends at 1023px*/
+
+  .insideProductsBannerSection {
+    padding: 80px 60px;
+    gap: 56px;
+  }
+  .productsCartSection {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  /* bannerSection Styles Ends at 1023px*/
+}
+
+/* ----------------------- View Ends at  1023px----------------------- */
+
+/* ----------------------- View Starts at  867px----------------------- */
+
+@media screen and (max-width: 867px) {
+  /* heroSection Styles Starts at 867px*/
+
+  .insideProductsHeroSection {
+    padding: 149px 108px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 117px;
+  }
+  .leftProductsHeroSection {
+    display: none;
+  }
+  .rightProductsHeroSection {
+    display: none;
+  }
+  .productsHeroSectionHeading {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .productsHeroButtonSection {
+    width: 219px;
+    height: 66px;
+  }
+  .ProductsButton {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  /* heroSection Styles Ends at 867px*/
+
+  /* bannerSection Styles Starts at 867px*/
+  .insideProductsBannerSection {
+    padding: 32px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+  .productsBannerTopSection {
+    width: 400px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+  .productsBannerTopSection::-webkit-scrollbar {
+    display: none;
+  }
+  .productsCartSection {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 16px;
+  }
+}
+
+/* bannerSection Styles Ends at 867px*/
+
+/* ----------------------- View Ends at  867px----------------------- */
+
+/* ----------------------- View Starts at  550px----------------------- */
+
+@media screen and (max-width: 550px) {
+  /* heroSection Styles Starts at 550px*/
+
+  .productsHeroSection {
+    background-image: url('../../assets/Images/productsMobileImg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .insideProductsHeroSection {
+    padding: 187px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 155px;
+  }
+  .productsSpanOne {
+    border-radius: 10px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--white);
+  }
+  .productsSpanTwo {
+    border-radius: 8px;
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+    border: 1px solid var(--white);
+  }
+  .productsSpanThree {
+    border-radius: 8px;
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+    border: 1px solid var(--white);
+  }
+
+  /* heroSection Styles Ends at 550px*/
+
+  /* bannerSection Styles Starts at 867px*/
+  .insideProductsBannerSection {
+    padding: 80px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  /* bannerSection Styles Ends at 867px*/
+}
+
+/* ----------------------- View Ends at  550px----------------------- */
