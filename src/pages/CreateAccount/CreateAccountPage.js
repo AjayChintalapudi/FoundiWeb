@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { englishStrings } from 'resources/Strings/eng';
 import Input from 'components/Input/Input';
 import {
@@ -16,21 +16,41 @@ import {
   LastNameValidationSchema,
   PassWordValidationSchema,
 } from 'validators/Validators';
-import { signUp } from 'networking/endpoints/endpoints';
 import ProgressBar from 'components/ProgressBar/ProgressBar';
+import { signUp } from 'networking/apis/signUp';
+import { UserDataContext } from 'providers/UserDataProvider';
 
 const CreateAccountPage = () => {
   /***********STRING VALUES************/
+
   const { createAccountPageStrings } = englishStrings;
-  /***********AFTER  CLOSING THE ICON REDIRECT TO HOME PAGE************/
+  const { setUserData } = useContext(UserDataContext);
+
+  // SignUp Page Steps[1-2-3]
+
+  const [currentStep, setCurrentStep] = useState(1);
+  const [schema, setSchema] = useState(
+    FirstNameValidationSchema.concat(LastNameValidationSchema)
+  );
+  // scroll to top of the page onloading
+
+  const [isPageClosed, setIsPageClosed] = useState(false);
+
+  // Form Handling
+
+  const [isDetailsVerified, setIsDetailsVerified] = useState(true);
+  const [hasMessageShown, setHasMessageShown] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   // scroll to top of the page onloading
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  // scroll to top of the page onloading
+
+  // after closing redirect to home page
+
   const navigate = useNavigate();
-  const [isPageClosed, setIsPageClosed] = useState(false);
   useEffect(() => {
     if (isPageClosed) {
       navigate('/');
@@ -40,32 +60,9 @@ const CreateAccountPage = () => {
   const handleClosePage = () => {
     setIsPageClosed(true);
   };
-  /***********AFTER  CLOSING THE ICON REDIRECT TO HOME PAGE************/
 
-  /***********Form HANDLING************/
+  // formik validation
 
-  const [isDetailsVerified, setIsDetailsVerified] = useState(true);
-  const [hasMessageShown, setHasMessageShown] = useState(false);
-
-  const handleSignUp = async (values) => {
-    setCurrentStep((previous) => previous + 1);
-    if (currentStep === 3) {
-      console.log(values);
-      try {
-        const response = await signUp(values);
-        console.log(response);
-        const isVerified = response.status === 'verified';
-      } catch (error) {
-        console.log('error');
-      }
-    }
-  };
-
-  // SignUp Page Steps[1-2-3]
-  const [currentStep, setCurrentStep] = useState(1);
-  const [schema, setSchema] = useState(
-    FirstNameValidationSchema.concat(LastNameValidationSchema)
-  );
   useEffect(() => {
     if (currentStep === 1) {
       setSchema(FirstNameValidationSchema.concat(LastNameValidationSchema));
@@ -73,12 +70,36 @@ const CreateAccountPage = () => {
     if (currentStep === 2) {
       setSchema(EmailValidationSchema.concat(PassWordValidationSchema));
     }
-    if (currentStep === 3) {
-      setTimeout(() => {
-        setHasMessageShown(true);
-      }, 2000);
-    }
   }, [currentStep]);
+
+  /***********Form HANDLING************/
+
+  const handleSignUp = async (values) => {
+    if (currentStep === 1) {
+      setCurrentStep((previous) => previous + 1);
+    } else {
+      let data = {
+        full_name: values.firstname + values.lastname,
+        email: values.email,
+        password: values.password,
+        type: 1,
+      };
+      try {
+        const response = await signUp(data);
+        console.log(response);
+        if (response.data.type === 'success') {
+          localStorage.setItem('auth', response.data.accessToken);
+          console.log('auth', response.data.accessToken);
+          setUserData(response.data);
+          setCurrentStep(3);
+        } else {
+          setErrorMessage(response.data.message);
+        }
+      } catch (error) {
+        console.log('error');
+      }
+    }
+  };
 
   // fomik validation
 
@@ -147,8 +168,8 @@ const CreateAccountPage = () => {
         <form onSubmit={formik.handleSubmit}>
           {renderStepOne()}
           {renderStepTwo()}
-          {renderStepThree()}
         </form>
+        {renderStepThree()}
       </div>
     );
   };
@@ -157,53 +178,33 @@ const CreateAccountPage = () => {
     if (currentStep !== 1) return null;
     return (
       <div className={styles.createAccountPageFormFields}>
-        <div className={styles.fullNameContainer}>
-          <p className={StyleSheet.fullNameHeading}>
-            {createAccountPageStrings.fullNameHeading}
-          </p>
-          <div>
-            <Input
-              name="firstname"
-              type={createAccountPageStrings.inputTypetext}
-              value={formik.values.firstname}
-              placeholder={createAccountPageStrings.fullNamePlaceHolderText}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              className={styles.createAccountPageInputFields}
-              error={
-                formik.touched.firstname && formik.errors.firstname ? (
-                  <div className={styles.firstNameInfo}>
-                    <span className={styles.firstNameText}>
-                      {createAccountPageStrings.firstName}
-                    </span>
-                    &nbsp;&nbsp;
-                    <span>{createAccountPageStrings.required}</span>
-                  </div>
-                ) : (
-                  ''
-                )
-              }
-              errorMessage={styles.errorMessage}
-            />
-          </div>
-        </div>
-        <div className={styles.lastNameContainer}>
-          <p className={styles.lastNameHeading}>
-            {createAccountPageStrings.lastNameHeading}
-          </p>
+        {firstNameInputSection()}
+        {lastNameInputSection()}
+        {buttonSection()}
+      </div>
+    );
+  };
+
+  const firstNameInputSection = () => {
+    return (
+      <div className={styles.fullNameContainer}>
+        <p className={StyleSheet.fullNameHeading}>
+          {createAccountPageStrings.fullNameHeading}
+        </p>
+        <div>
           <Input
-            name="lastname"
+            name="firstname"
             type={createAccountPageStrings.inputTypetext}
-            value={formik.values.lastname}
-            placeholder={createAccountPageStrings.lastNamePlaceHolderText}
+            value={formik.values.firstname}
+            placeholder={createAccountPageStrings.fullNamePlaceHolderText}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             className={styles.createAccountPageInputFields}
             error={
-              formik.touched.lastname && formik.errors.lastname ? (
-                <div className={styles.lastNameInfo}>
-                  <span className={styles.lastNameText}>
-                    {createAccountPageStrings.lastName}
+              formik.touched.firstname && formik.errors.firstname ? (
+                <div className={styles.firstNameInfo}>
+                  <span className={styles.firstNameText}>
+                    {createAccountPageStrings.firstName}
                   </span>
                   &nbsp;&nbsp;
                   <span>{createAccountPageStrings.required}</span>
@@ -215,19 +216,39 @@ const CreateAccountPage = () => {
             errorMessage={styles.errorMessage}
           />
         </div>
-        <div className={styles.createAccountPageButtons}>
-          <Button
-            btName={createAccountPageStrings.createAccountNext}
-            btnStyles={styles.createAccountPageButtonStyles}
-            type="submit"
-          />
-          <Button
-            btName={createAccountPageStrings.continueGoogleText}
-            btnStyles={styles.continueGoogleButton}
-            image={googleicon}
-            type="button"
-          />
-        </div>
+      </div>
+    );
+  };
+
+  const lastNameInputSection = () => {
+    return (
+      <div className={styles.lastNameContainer}>
+        <p className={styles.lastNameHeading}>
+          {createAccountPageStrings.lastNameHeading}
+        </p>
+        <Input
+          name="lastname"
+          type={createAccountPageStrings.inputTypetext}
+          value={formik.values.lastname}
+          placeholder={createAccountPageStrings.lastNamePlaceHolderText}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          className={styles.createAccountPageInputFields}
+          error={
+            formik.touched.lastname && formik.errors.lastname ? (
+              <div className={styles.lastNameInfo}>
+                <span className={styles.lastNameText}>
+                  {createAccountPageStrings.lastName}
+                </span>
+                &nbsp;&nbsp;
+                <span>{createAccountPageStrings.required}</span>
+              </div>
+            ) : (
+              ''
+            )
+          }
+          errorMessage={styles.errorMessage}
+        />
       </div>
     );
   };
@@ -236,82 +257,88 @@ const CreateAccountPage = () => {
     if (currentStep !== 2) return null;
     return (
       <div className={styles.createAccountPageFormFields}>
-        <div className={styles.emailContainer}>
-          <span className={styles.emailHeading}>
-            {createAccountPageStrings.emailHeading}
-          </span>
+        {emailInputSection()}
+        {passWordInputSection()}
+        {errorMessage && (
           <div>
-            <Input
-              type={createAccountPageStrings.inputTypeEmail}
-              name="email"
-              value={formik.values.email}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              placeholder={createAccountPageStrings.emailPlaceHolderText}
-              className={styles.createAccountPageInputFields}
-              errorMessage={styles.errorMessage}
-              error={
-                formik.touched.email && formik.errors.email ? (
-                  <div className={styles.emailErrorMessage}>
-                    <span className={styles.inValidEmailText}>
-                      {createAccountPageStrings.inValidEmail}
-                    </span>
-                    &nbsp;&nbsp;
-                    <span className={styles.enterValidEmailText}>
-                      {createAccountPageStrings.enterValidEmail}
-                    </span>
-                  </div>
-                ) : (
-                  ''
-                )
-              }
-            />
+            <p className={styles.userErrorMessage}>{errorMessage}</p>
           </div>
-        </div>
-        <div className={styles.passWordContainer}>
-          <span className={styles.passWordHeading}>
-            {createAccountPageStrings.passwordText}
-          </span>
+        )}
+        {buttonSection()}
+      </div>
+    );
+  };
+
+  const emailInputSection = () => {
+    return (
+      <div className={styles.emailContainer}>
+        <span className={styles.emailHeading}>
+          {createAccountPageStrings.emailHeading}
+        </span>
+        <div>
           <Input
-            type={createAccountPageStrings.inputTypePassword}
-            name="password"
-            value={formik.values.password}
+            type={createAccountPageStrings.inputTypeEmail}
+            name="email"
+            value={formik.values.email}
             onChange={formik.handleChange}
+            onFocus={() => setErrorMessage('')}
             onBlur={formik.handleBlur}
-            placeholder={createAccountPageStrings.passwordPlaceHolderText}
+            placeholder={createAccountPageStrings.emailPlaceHolderText}
             className={styles.createAccountPageInputFields}
-            image={passwordhideicon}
+            errorMessage={styles.errorMessage}
             error={
-              formik.touched.password && formik.errors.password ? (
-                <div className={styles.passWordErrorMessage}>
-                  <span className={styles.inValidPassWord}>
-                    {createAccountPageStrings.strength}
+              formik.touched.email && formik.errors.email ? (
+                <div className={styles.emailErrorMessage}>
+                  <span className={styles.inValidEmailText}>
+                    {createAccountPageStrings.inValidEmail}
                   </span>
                   &nbsp;&nbsp;
-                  <span className={styles.passWordStrength}>
-                    {createAccountPageStrings.poor}
+                  <span className={styles.enterValidEmailText}>
+                    {createAccountPageStrings.enterValidEmail}
                   </span>
                 </div>
               ) : (
                 ''
               )
             }
-            errorMessage={styles.errorMessage}
           />
         </div>
-        <div className={styles.createAccountPageButtons}>
-          <Button
-            btName={createAccountPageStrings.createAccount}
-            btnStyles={styles.createAccountPageButtonStyles}
-            type="submit"
-          />
-          <Button
-            btName={createAccountPageStrings.continueGoogleText}
-            btnStyles={styles.continueGoogleButton}
-            image={googleicon}
-            type="button"
-          />
-        </div>
+      </div>
+    );
+  };
+
+  const passWordInputSection = () => {
+    return (
+      <div className={styles.passWordContainer}>
+        <span className={styles.passWordHeading}>
+          {createAccountPageStrings.passwordText}
+        </span>
+        <Input
+          type={createAccountPageStrings.inputTypePassword}
+          name="password"
+          value={formik.values.password}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          placeholder={createAccountPageStrings.passwordPlaceHolderText}
+          className={styles.createAccountPageInputFields}
+          image={passwordhideicon}
+          error={
+            formik.touched.password && formik.errors.password ? (
+              <div className={styles.passWordErrorMessage}>
+                <span className={styles.inValidPassWord}>
+                  {createAccountPageStrings.strength}
+                </span>
+                &nbsp;&nbsp;
+                <span className={styles.passWordStrength}>
+                  {createAccountPageStrings.poor}
+                </span>
+              </div>
+            ) : (
+              ''
+            )
+          }
+          errorMessage={styles.errorMessage}
+        />
       </div>
     );
   };
@@ -319,7 +346,22 @@ const CreateAccountPage = () => {
   const renderStepThree = () => {
     if (currentStep !== 3) return null;
     // our logic regarding credential verfication
-    const cheersMessage = (
+
+    return (
+      <div className={styles.verifyCredentialContainer}>
+        {/* {!hasMessageShown
+          ? verifyCredentialContainer
+          : isDetailsVerified
+          ? cheersMessage
+          : oopsMessage} */}
+
+        {cheersMessage()}
+      </div>
+    );
+  };
+
+  const cheersMessage = () => {
+    return (
       <div className={styles.cheersMessageContainer}>
         <h3 className={styles.cheersHeading}>
           {createAccountPageStrings.cheersHeading}
@@ -331,54 +373,69 @@ const CreateAccountPage = () => {
           btName={createAccountPageStrings.cheersBtnName}
           btnStyles={styles.cheersBtnStyles}
           onClick={() => navigate('/')}
+          type="button"
         />
-      </div>
-    );
-    const oopsMessage = (
-      <div className={styles.oppsMessageContainer}>
-        <h3 className={styles.oopsHeading}>
-          {createAccountPageStrings.oopsHeading}
-        </h3>
-        <p className={styles.oopsDesc1}>{createAccountPageStrings.oopsDesc1}</p>
-        <p className={styles.oopsDesc2}>{createAccountPageStrings.oopsDesc2}</p>
-        <Button
-          btName={createAccountPageStrings.resendLink}
-          btnStyles={styles.resendLinkBtnStyles}
-        />
-        <span className={styles.editEmail}>
-          {createAccountPageStrings.editEmail}
-        </span>
-      </div>
-    );
-    const verifyCredentialContainer = (
-      <div className={styles.verifyCredentialContainer}>
-        <h3 className={styles.verifyCredentialHeading}>
-          {createAccountPageStrings.verifyCredentialHeading}
-        </h3>
-        <p className={styles.verifyCredentialDesc}>
-          {createAccountPageStrings.verifyCredentialDesc}
-        </p>
-        <Button
-          btName={createAccountPageStrings.resendLink}
-          btnStyles={styles.resendLinkBtnStyles}
-          onClick={() => setCurrentStep(1)}
-        />
-        <span className={styles.editEmail}>
-          {createAccountPageStrings.editEmail}
-        </span>
-      </div>
-    );
-    return (
-      <div className={styles.verifyCredentialContainer}>
-        {!hasMessageShown
-          ? verifyCredentialContainer
-          : isDetailsVerified
-          ? cheersMessage
-          : oopsMessage}
       </div>
     );
   };
 
+  const oopsMessage = (
+    <div className={styles.oppsMessageContainer}>
+      <h3 className={styles.oopsHeading}>
+        {createAccountPageStrings.oopsHeading}
+      </h3>
+      <p className={styles.oopsDesc1}>{createAccountPageStrings.oopsDesc1}</p>
+      <p className={styles.oopsDesc2}>{createAccountPageStrings.oopsDesc2}</p>
+      <Button
+        btName={createAccountPageStrings.resendLink}
+        btnStyles={styles.resendLinkBtnStyles}
+      />
+      <span className={styles.editEmail}>
+        {createAccountPageStrings.editEmail}
+      </span>
+    </div>
+  );
+
+  const verifyCredentialContainer = (
+    <div className={styles.verifyCredentialContainer}>
+      <h3 className={styles.verifyCredentialHeading}>
+        {createAccountPageStrings.verifyCredentialHeading}
+      </h3>
+      <p className={styles.verifyCredentialDesc}>
+        {createAccountPageStrings.verifyCredentialDesc}
+      </p>
+      <Button
+        btName={createAccountPageStrings.resendLink}
+        btnStyles={styles.resendLinkBtnStyles}
+        // onClick={() => setCurrentStep(1)}
+      />
+      <span className={styles.editEmail}>
+        {createAccountPageStrings.editEmail}
+      </span>
+    </div>
+  );
+
+  const buttonSection = () => {
+    return (
+      <div className={styles.createAccountPageButtons}>
+        <Button
+          btName={
+            currentStep === 1
+              ? createAccountPageStrings.createAccountNext
+              : createAccountPageStrings.createAccount
+          }
+          btnStyles={styles.createAccountPageButtonStyles}
+          type="submit"
+        />
+        <Button
+          btName={createAccountPageStrings.continueGoogleText}
+          btnStyles={styles.continueGoogleButton}
+          image={googleicon}
+          type="button"
+        />
+      </div>
+    );
+  };
   return (
     <div className={styles.createAccountPageContainer}>
       {progressBar()}

@@ -51,7 +51,7 @@ const NavBar = (props) => {
 
   // Language Change
   const { strings, setLanguage, currentLanguage } = useAppData();
-  console.log(currentLanguage);
+  // console.log(currentLanguage);
   const selectSweLanguage = () => {
     setLanguage('SE');
   };
@@ -254,6 +254,7 @@ const NavBar = (props) => {
   };
 
   const profileSection = () => {
+    // const authToken = localStorage.getItem('auth', accessToken);
     return (
       <div className={styles.navbarMenuItemsRight}>
         <PopOver
@@ -267,19 +268,21 @@ const NavBar = (props) => {
             />
           }
           /*************CONTENT OF THE PROFILE POPUP START********/
-          content={
-            <div>
-              <div className={styles.profileContainer}>
-                {signUpLoginBlock()}
-                <div className={styles.signUpBottomBorder}></div>
-                {profileIcon()}
-                {signUpLoginDescText()}
-                {loginSignUpButton()}
-              </div>
-            </div>
-          }
+          content={<div>{signUpSection()}</div>}
           /*************CONTENT OF THE "CART" POPUP END********/
         />
+      </div>
+    );
+  };
+
+  const signUpSection = () => {
+    return (
+      <div className={styles.profileContainer}>
+        {signUpLoginBlock()}
+        <div className={styles.signUpBottomBorder}></div>
+        {profileIcon()}
+        {signUpLoginDescText()}
+        {loginSignUpButton()}
       </div>
     );
   };
@@ -332,6 +335,9 @@ const NavBar = (props) => {
       </div>
     );
   };
+
+  // const afterSignUpSection
+
   const hambergerMenuSection = () => {
     return (
       <div>
