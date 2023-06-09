@@ -134,9 +134,15 @@
   padding-top: 8px;
 }
 .inValidEmailText,
-.inValidPassWord {
+.inValidPassWord  {
   color: var(--redbrick);
   font-size: 14px;
+}
+.errorMsg{
+  color: var(--redbrick);
+  font-size: 16px;
+  font-family: 'Medium',sans-serif;
+  line-height: 22px;
 }
 
 .reset {
@@ -148,6 +154,7 @@
   background-color: var(--backgroundtransparentpink);
   border: 1px solid var(--redbrick);
 }
+
 /* Media Query Start */
 
 /* From View 550px View Start */

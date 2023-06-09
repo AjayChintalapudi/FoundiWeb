@@ -105,7 +105,7 @@ text-decoration:line-through;
         border: 1px solid var(--gray72);
        transform: scale(1.05);
        transition: .4s ease-in-out;
-       transform-origin: top;
+       transform-origin: center;
        height: 340px;
         
     }

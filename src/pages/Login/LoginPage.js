@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { englishStrings } from 'resources/Strings/eng';
 import Input from 'components/Input/Input';
 import {
@@ -15,6 +15,8 @@ import {
   EmailValidationSchema,
   PassWordValidationSchema,
 } from 'validators/Validators';
+import { UserLoginContext } from 'providers/UserDataProvider';
+import { userLogin } from 'networking/apis/login';
 
 const LoginPage = () => {
   // scroll to top of the page onloading
@@ -22,8 +24,11 @@ const LoginPage = () => {
     window.scrollTo(0, 0);
   }, []);
   // scroll to top of the page onloading
+
   /*****LOGIN PAGE STRINGS*****/
   const { loginPageStrings } = englishStrings;
+  const { setUserData } = useContext(UserLoginContext);
+  const [errorMessage, setErrorMessage] = useState('');
 
   /*****AFTER CLOSING THE ICON REDIRECT TO HOME PAGE*****/
   const navigate = useNavigate();
@@ -41,13 +46,21 @@ const LoginPage = () => {
 
   /*****FORM VALIDATION USING YUP AND FORMIK*****/
   const handleLogin = async (values, { resetForm }) => {
-    // try {
-    //   const response = await userLogin(values);
-    //   console.log(response);
-    // } catch {
-    //   console.log('error');
-    // }
     console.log(values);
+    try {
+      const response = await userLogin(values);
+      console.log('response', response);
+      if (response.data.type === 'success') {
+        localStorage.setItem('authtoken', response.data.accessToken);
+        setUserData(response.data.user);
+        navigate('/');
+      } else {
+        setErrorMessage(response.data.message);
+      }
+    } catch (error) {
+      console.log('error');
+      setErrorMessage(error.Message);
+    }
   };
 
   const formik = useFormik({
@@ -67,7 +80,7 @@ const LoginPage = () => {
   const togglePassWord = () => {
     setShowPassWord(!showPassWord);
   };
-  
+
   const closeBlock = () => {
     return (
       <div className={styles.loginPageCloseAndTitleInfo}>
@@ -131,6 +144,11 @@ const LoginPage = () => {
       <div className={styles.inputContainerStyle}>
         {emailInputSection()}
         {passWordInputSection()}
+        {errorMessage && (
+          <div>
+            <p className={styles.errorMsg}>{errorMessage}</p>
+          </div>
+        )}
       </div>
     );
   };

@@ -1,5 +1,5 @@
 // HamberIcon
-export {default as hamberblackicon} from 'assets/Images/hamberblackicon.svg';
+export { default as hamberblackicon } from 'assets/Images/hamberblackicon.svg';
 
 // Login Form Images
 
@@ -35,7 +35,7 @@ export { default as dangercircle } from 'assets/Images/dangercircle.svg';
 
 // profileIcon
 
-export { default as closeicon } from 'assets/Images/CloseIcon.svg';
+export { default as closeicon } from 'assets/Images/closeicon.svg';
 export { default as adduser } from 'assets/Images/adduser.svg';
 
 // Return Section Images
@@ -131,7 +131,7 @@ export { default as heartImg } from 'assets/Images/Heart.svg';
 
 //chat Images
 export { default as chatDownImg } from 'assets/Images/chatDownIcon.svg';
-export { default as closeImg } from 'assets/Images/CloseIcon.svg';
+export { default as closeImg } from 'assets/Images/closeicon.svg';
 export { default as walletImg } from 'assets/Images/coin-wallet.svg';
 export { default as ipadImg } from 'assets/Images/ipadpro.svg';
 export { default as headsetImg } from 'assets/Images/airpods-pro-max.svg';
@@ -146,6 +146,6 @@ export { default as privacyPolicyImgOne } from 'assets/Images/privacy.svg';
 export { default as orderTagImg } from 'assets/Images/orderTagImage.svg';
 
 // Customer product Images
-export {default as customerproductImg1} from 'assets/Images/customerproductImg1.svg';
-export {default as customerproductImg2} from 'assets/Images/customerproductImg2.svg';
-export {default as customerproductImg3} from 'assets/Images/customerproductImg3.svg';
+export { default as customerproductImg1 } from 'assets/Images/customerproductImg1.svg';
+export { default as customerproductImg2 } from 'assets/Images/customerproductImg2.svg';
+export { default as customerproductImg3 } from 'assets/Images/customerproductImg3.svg';
