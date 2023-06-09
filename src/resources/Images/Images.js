@@ -35,7 +35,7 @@ export { default as dangercircle } from 'assets/Images/dangercircle.svg';
 
 // profileIcon
 
-export { default as closeicon } from 'assets/Images/CloseIcon.svg';
+export { default as closeicon } from 'assets/Images/closeicon.svg';
 export { default as adduser } from 'assets/Images/adduser.svg';
 
 // Return Section Images
@@ -131,7 +131,7 @@ export { default as heartImg } from 'assets/Images/Heart.svg';
 
 //chat Images
 export { default as chatDownImg } from 'assets/Images/chatDownIcon.svg';
-export { default as closeImg } from 'assets/Images/CloseIcon.svg';
+export { default as closeImg } from 'assets/Images/closeicon.svg';
 export { default as walletImg } from 'assets/Images/coin-wallet.svg';
 export { default as ipadImg } from 'assets/Images/ipadpro.svg';
 export { default as headsetImg } from 'assets/Images/airpods-pro-max.svg';
