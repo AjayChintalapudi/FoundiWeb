@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import {
   cart,
   profile,
@@ -17,6 +17,8 @@ import {
   foundilogowhite,
   hamberblackicon,
   languageicon,
+  userprofiledp,
+  userprofilelogout,
 } from 'resources/Images/Images';
 import { englishStrings } from 'resources/Strings/eng';
 import PopOver from 'components/PopOver/PopOver';
@@ -26,9 +28,12 @@ import styles from './styles.module.css';
 import classNames from 'classnames';
 import { useAppData } from 'providers/AppDataProvider';
 import { IoIosArrowDown, IoIosArrowForward } from 'react-icons/io';
-
+import { UserProfileData } from 'constants/CardsData';
+import { UserDataContext } from 'providers/UserDataProvider';
 const NavBar = (props) => {
   const { navbar } = englishStrings;
+
+  const { user, logOut, handleDeleteAccount } = useContext(UserDataContext);
 
   // scroll to top page
 
@@ -254,7 +259,7 @@ const NavBar = (props) => {
   };
 
   const profileSection = () => {
-    // const authToken = localStorage.getItem('auth', accessToken);
+    const authToken = localStorage.getItem('auth');
     return (
       <div className={styles.navbarMenuItemsRight}>
         <PopOver
@@ -268,7 +273,9 @@ const NavBar = (props) => {
             />
           }
           /*************CONTENT OF THE PROFILE POPUP START********/
-          content={<div>{signUpSection()}</div>}
+          content={
+            <div>{authToken ? profileLoginSection() : signUpSection()}</div>
+          }
           /*************CONTENT OF THE "CART" POPUP END********/
         />
       </div>
@@ -336,7 +343,92 @@ const NavBar = (props) => {
     );
   };
 
-  // const afterSignUpSection
+  const profileLoginSection = () => {
+    return (
+      <div className={styles.profileLoginContainer}>
+        {profileLoginUserDetails()}
+        <div className={styles.profileDivider}></div>
+        {profileLoginMenuOptions()}
+        <div className={styles.profileDivider}></div>
+        {profileLogOut()}
+      </div>
+    );
+  };
+
+  const profileLoginUserDetails = () => {
+    return (
+      <div className={styles.profileLoginUserDetails}>
+        <div className={styles.userProfileImageBlock}>
+          <img src={userprofiledp} className={styles.imageWidth} />
+        </div>
+        <div className={styles.userProfileDetails}>
+          <h5 className={styles.userName}>{user?.full_name}</h5>
+          <p className={styles.userEmail}>{user?.email}</p>
+        </div>
+      </div>
+    );
+  };
+
+  const profileLoginMenuOptions = () => {
+    return (
+      <div className={styles.profileLoginMenuOptionsContainer}>
+        {UserProfileData &&
+          UserProfileData.map((item, index) => {
+            return (
+              <div
+                key={index}
+                className={styles.profileLoginMenuOptions}
+                onClick={() => {
+                  if (index === 0) {
+                    navigate('/editprofile');
+                  }
+                  if (index === 3) {
+                    handleDeleteAccount();
+                  }
+                }}
+              >
+                <div className={styles.profileMenuOptionsLeftBlock}>
+                  <div className={styles.userProfileOptionsImgBlock}>
+                    <img
+                      src={item.userProfileOptionsImg}
+                      alt=""
+                      className={styles.imageWidth}
+                    />
+                  </div>
+                  <p className={styles.userProfileOptionsHeading}>
+                    {item.userProfileOptionsHeading}
+                  </p>
+                </div>
+                <div className={styles.profileMenuOptionsRightBlock}>
+                  <img
+                    src={item.userProfileLeftArrow}
+                    alt=""
+                    className={styles.imageWidth}
+                  />
+                </div>
+              </div>
+            );
+          })}
+      </div>
+    );
+  };
+
+  const profileLogOut = () => {
+    return (
+      <div
+        className={styles.profileLogOut}
+        onClick={() => {
+          logOut();
+          navigate('/login');
+        }}
+      >
+        <div className={styles.logoutImgBlock}>
+          <img src={userprofilelogout} className={styles.imageWidth} />
+        </div>
+        <p className={styles.logoutText}>{navbar.logOut}</p>
+      </div>
+    );
+  };
 
   const hambergerMenuSection = () => {
     return (

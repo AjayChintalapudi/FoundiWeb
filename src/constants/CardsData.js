@@ -16,10 +16,37 @@ import {
   customerproductImg1,
   customerproductImg2,
   customerproductImg3,
+  userprofileedit,
+  userprofilearrowleft,
+  userprofilemessage,
+  userprofiletimecircle,
+  deleteaccount,
 } from 'resources/Images/Images';
-// import { Strings } from 'resources/Strings/eng';
 import { englishStrings } from 'resources/Strings/eng';
-const { home } = englishStrings;
+const { home, navbar } = englishStrings;
+
+const UserProfileData = [
+  {
+    userProfileOptionsImg: userprofileedit,
+    userProfileOptionsHeading: navbar.editProfile,
+    userProfileLeftArrow: userprofilearrowleft,
+  },
+  {
+    userProfileOptionsImg: userprofilemessage,
+    userProfileOptionsHeading: navbar.message,
+    userProfileLeftArrow: userprofilearrowleft,
+  },
+  {
+    userProfileOptionsImg: userprofiletimecircle,
+    userProfileOptionsHeading: navbar.myPurchase,
+    userProfileLeftArrow: userprofilearrowleft,
+  },
+  {
+    userProfileOptionsImg: deleteaccount,
+    userProfileOptionsHeading: navbar.deleteAccount,
+    userProfileLeftArrow: userprofilearrowleft,
+  },
+];
 const FeatureData = [
   {
     heading: home.purchasetag,
@@ -152,6 +179,7 @@ const CustomersProductData = [
 ];
 
 export {
+  UserProfileData,
   FeatureData,
   GetAppData,
   ProductsData,

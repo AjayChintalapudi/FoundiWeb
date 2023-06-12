@@ -1,5 +1,5 @@
 // HamberIcon
-export {default as hamberblackicon} from 'assets/Images/hamberblackicon.svg';
+export { default as hamberblackicon } from 'assets/Images/hamberblackicon.svg';
 
 // Login Form Images
 
@@ -7,6 +7,15 @@ export { default as passwordhideicon } from 'assets/Images/passwordhideicon.svg'
 export { default as passwordopenicon } from 'assets/Images/openicon.svg';
 export { default as googleicon } from 'assets/Images/googleicon.svg';
 export { default as arrowleftcircle } from 'assets/Images/arrowleftcircle.svg';
+
+// User Profile Images
+export { default as userprofiledp } from 'assets/Images/userprofiledp.svg';
+export { default as userprofileedit } from 'assets/Images/editprofile.svg';
+export { default as userprofilemessage } from 'assets/Images/userprofilemessage.svg';
+export { default as userprofiletimecircle } from 'assets/Images/userprofiletimecircle.svg';
+export { default as userprofilelogout } from 'assets/Images/userprofilelogout.svg';
+export { default as userprofilearrowleft } from 'assets/Images/arrowleftcircle.svg';
+export { default as deleteaccount } from 'assets/Images/deleteaccount.svg';
 
 // Navbar Images
 export { default as navbarlogo } from 'assets/Images/navbarlogo.svg';
@@ -146,6 +155,6 @@ export { default as privacyPolicyImgOne } from 'assets/Images/privacy.svg';
 export { default as orderTagImg } from 'assets/Images/orderTagImage.svg';
 
 // Customer product Images
-export {default as customerproductImg1} from 'assets/Images/customerproductImg1.svg';
-export {default as customerproductImg2} from 'assets/Images/customerproductImg2.svg';
-export {default as customerproductImg3} from 'assets/Images/customerproductImg3.svg';
+export { default as customerproductImg1 } from 'assets/Images/customerproductImg1.svg';
+export { default as customerproductImg2 } from 'assets/Images/customerproductImg2.svg';
+export { default as customerproductImg3 } from 'assets/Images/customerproductImg3.svg';

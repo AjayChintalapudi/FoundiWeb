@@ -20,6 +20,13 @@ const navbar = {
     'Create an account or Log in with an existing account to access all of Foundi’s exciting features.',
   logIn: 'Log in',
   signUp: 'Sign up',
+
+  // userProfileMenuOptions
+  editProfile: 'Edit Profile',
+  message: 'Messages (2)',
+  myPurchase: 'My Purchases',
+  deleteAccount: 'Delete Account',
+  logOut: 'Logout',
 };
 const home = {
   // banner Section
@@ -518,12 +525,13 @@ const privacyPolicyPageStrings = {
   changesToViljeHeading: 'Changes to Vilje Tech’s privacy policy',
   changesToViljeParaStylesDesc:
     '  We may periodically update this Policy in order to accurately reflect changes to operations, or for regulatory reasons. When this happens, we will inform you by reasonable correspondence  for example, by email, through our Apps, or on our Site.',
-    
-    // contactInformation
 
-    contactInformationHeading:"Contact information",
-    contactInformationParaStylesDesc:"If you have questions about how Vilje Tech processes your personal data, or the contents of this Policy, you can at any time email",
-    contactInformationParaStylesSubDesc:"privacy@foundiapp.com",
+  // contactInformation
+
+  contactInformationHeading: 'Contact information',
+  contactInformationParaStylesDesc:
+    'If you have questions about how Vilje Tech processes your personal data, or the contents of this Policy, you can at any time email',
+  contactInformationParaStylesSubDesc: 'privacy@foundiapp.com',
 };
 
 export const englishStrings = {

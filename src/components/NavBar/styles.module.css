@@ -199,6 +199,95 @@
   border: 1px solid var(--blue);
 }
 
+/* userProfile  */
+
+.profileLoginUserDetails {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  padding: 24px;
+}
+.userProfileDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.userProfileImageBlock {
+  width: 40px;
+  height: 40px;
+}
+.imageWidth {
+  width: 100%;
+  height: 100%;
+}
+.userName {
+  font-family: 'Regular', sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+}
+.userEmail {
+  font-family: 'Light', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--blackfade);
+}
+.profileLoginMenuOptionsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 24px;
+}
+.profileLoginMenuOptions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.profileMenuOptionsLeftBlock {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.userProfileOptionsHeading {
+  font-family: 'Medium', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--blackfade);
+}
+.userProfileOptionsImgBlock {
+  width: 24px;
+  height: 24px;
+}
+.profileMenuOptionsRightBlock {
+  width: 16px;
+  height: 16px;
+}
+.profileLogOut {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  padding: 18px 24px;
+  cursor: pointer;
+}
+.logoutImgBlock {
+  width: 24px;
+  height: 24px;
+}
+.logoutText {
+  font-family: 'Medium', sans-serif;
+  color: var(--redbrick);
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.profileDivider {
+  border: 1px solid var(--gray72);
+}
+
 /* Toggle Menu start */
 
 .toggleMenuContainer {

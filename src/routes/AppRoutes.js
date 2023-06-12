@@ -10,6 +10,7 @@ import Review from 'pages/Review/Review';
 import CheckOut from 'pages/CheckOut/CheckOut';
 import PrivacyPolicy from 'pages/PrivacyPolicy/PrivacyPolicy';
 import OrderHistory from 'pages/OrderHistory/OrderHistory';
+import EditProfile from 'pages/EditProfile/EditProfile';
 
 const AppRoutes = () => {
   return (
@@ -24,8 +25,9 @@ const AppRoutes = () => {
           <Route path="/signup" element={<CreateAccountPage />}></Route>
           <Route path="/review" element={<Review />}></Route>
           <Route path="/checkout" element={<CheckOut />}></Route>
-          <Route path="/privacypolicy" element={<PrivacyPolicy/>}></Route>
-          <Route path="/orderhistory" element={<OrderHistory/>}></Route>
+          <Route path="/privacypolicy" element={<PrivacyPolicy />}></Route>
+          <Route path="/orderhistory" element={<OrderHistory />}></Route>
+          <Route path="/editprofile" element={<EditProfile />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

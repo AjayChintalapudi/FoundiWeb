@@ -88,8 +88,6 @@ const CreateAccountPage = () => {
         const response = await signUp(data);
         console.log(response);
         if (response.data.type === 'success') {
-          localStorage.setItem('auth', response.data.accessToken);
-          console.log('auth', response.data.accessToken);
           setUserData(response.data);
           setCurrentStep(3);
         } else {

@@ -1,0 +1,36 @@
+.editProfileContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.editProfileFormMainContainer {
+  margin: auto;
+}
+
+.editProfileFormContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  /* align-items: center; */
+}
+
+.fullNameInput,
+.emailInput {
+  width: 452px;
+  max-width: 100%;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+}
+.editProfileBtnStyles {
+  justify-content: center;
+  width: 452px;
+  height: 48px;
+  color: var(--white);
+  font-family: 'Medium', sans-serif;
+  font-size: 16px;
+  background-color: var(--blue);
+  box-shadow: 0px 4px 16px var(--blacktransparent100);
+  border: 1px solid var(--blue);
+  border-radius: 8px;
+}
