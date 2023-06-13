@@ -119,7 +119,7 @@ const Home = () => {
                 <img
                   src={closeicontwo}
                   alt=""
-                  className={styles.imageWidth}
+                  className={styles.closeIconImageWidth}
                   onClick={handleVideoCloseModal}
                 />
               </div>
@@ -259,32 +259,6 @@ const Home = () => {
   //... Features Section End...
 
   //... Get App Section Start...
-
-  // const getAppSection = () => {
-  //   return (
-  //     <div className={styles.getAppContainer}>
-  //       {GetAppData &&
-  //         GetAppData.map((item, index) => {
-  //           return (
-  //             <div className={styles.getAppButtonBlock} key={index}>
-  //               <div className={styles.getAppImage}>
-  //                 <img
-  //                   src={item.getAppImg}
-  //                   alt={item.getAppAltText}
-  //                   className={styles.imageWidth}
-  //                 />
-  //               </div>
-  //               <div className={styles.getAppDesc}>
-  //                 <p className={styles.getAppText}>{item.getAppText}</p>
-  //                 <p className={styles.getAppHeading}>{item.getAppHeading}</p>
-  //               </div>
-  //             </div>
-  //           );
-  //         })}
-  //     </div>
-  //   );
-  // };
-
   const getAppSection = () => {
     return (
       <div className={styles.getAppContainer}>

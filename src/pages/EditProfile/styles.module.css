@@ -5,6 +5,9 @@
 }
 
 .editProfileFormMainContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   margin: auto;
 }
 
@@ -13,6 +16,13 @@
   flex-direction: column;
   gap: 25px;
   /* align-items: center; */
+}
+
+.editProfileHeading{
+  font-family: "Regular", sans-serif;
+  font-size: 32px;
+  line-height: 24px;
+  text-align: center;
 }
 
 .fullNameInput,

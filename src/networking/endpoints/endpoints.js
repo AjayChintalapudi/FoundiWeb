@@ -8,3 +8,7 @@ export const editProfile = '/user/updateProfile';
 // delete account
 
 export const deleteAccount = '/user/account-delete-init/{id}';
+
+// google signin endpoint
+
+export const googleSignIn = '/auth/googleSignin';

@@ -44,6 +44,7 @@
 .createAccountPageSignUpText {
   border-bottom: 1px solid var(--blue);
   color: var(--blue);
+  cursor: pointer;
 }
 
 .createAccountPageFormFields {

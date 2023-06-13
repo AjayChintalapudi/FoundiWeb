@@ -28,7 +28,8 @@ export { default as menu } from 'assets/Images/menu.svg';
 export { default as foundiblackicon } from 'assets/Images/foundilogo.svg';
 export { default as foundilogowhite } from 'assets/Images/foundilogowhite.svg';
 export { default as languageblackicon } from 'assets/Images/languageiconblack.svg';
-export { default as cartblackicon } from 'assets/Images/carticonblack.svg';
+// export { default as cartblackicon } from 'assets/Images/carticonblack.svg';
+export { default as cartblackicon } from 'assets/Images/carticonblack (2).svg';
 export { default as profileblackicon } from 'assets/Images/profileiconblack.svg';
 
 // Language Icon

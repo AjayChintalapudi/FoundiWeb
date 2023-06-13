@@ -102,6 +102,7 @@ const EditProfile = () => {
     <div className={styles.editProfileContainer}>
       {navbarSection()}
       <div className={styles.editProfileFormMainContainer}>
+        <h2 className={styles.editProfileHeading}>Edit profile</h2>
         <form
           onSubmit={formik.handleSubmit}
           className={styles.editProfileFormContainer}

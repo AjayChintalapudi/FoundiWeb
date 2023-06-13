@@ -5,6 +5,7 @@ import {
   closeicon,
   googleicon,
   passwordhideicon,
+  passwordopenicon,
 } from 'resources/Images/Images';
 import Button from 'components/Button/Button';
 import { useNavigate } from 'react-router-dom';
@@ -19,12 +20,27 @@ import {
 import ProgressBar from 'components/ProgressBar/ProgressBar';
 import { signUp } from 'networking/apis/signUp';
 import { UserDataContext } from 'providers/UserDataProvider';
+import { useGoogleLogin } from '@react-oauth/google';
 
 const CreateAccountPage = () => {
   /***********STRING VALUES************/
 
   const { createAccountPageStrings } = englishStrings;
   const { setUserData } = useContext(UserDataContext);
+
+  // show password usestate
+
+  const [showPassWord, setShowPassWord] = useState(false);
+
+  const togglePassWord = () => {
+    setShowPassWord(!showPassWord);
+  };
+
+  // google login
+
+  const googleSignUp = useGoogleLogin({
+    onSuccess: (codeResponse) => console.log(codeResponse),
+  });
 
   // SignUp Page Steps[1-2-3]
 
@@ -61,7 +77,7 @@ const CreateAccountPage = () => {
     setIsPageClosed(true);
   };
 
-  // formik validation
+  //  using concat method keep validations while rendering steps
 
   useEffect(() => {
     if (currentStep === 1) {
@@ -312,14 +328,15 @@ const CreateAccountPage = () => {
           {createAccountPageStrings.passwordText}
         </span>
         <Input
-          type={createAccountPageStrings.inputTypePassword}
+          type={showPassWord ? 'text' : 'password'}
           name="password"
           value={formik.values.password}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           placeholder={createAccountPageStrings.passwordPlaceHolderText}
           className={styles.createAccountPageInputFields}
-          image={passwordhideicon}
+          image={showPassWord ? passwordopenicon : passwordhideicon}
+          onClick={togglePassWord}
           error={
             formik.touched.password && formik.errors.password ? (
               <div className={styles.passWordErrorMessage}>
@@ -430,6 +447,7 @@ const CreateAccountPage = () => {
           btnStyles={styles.continueGoogleButton}
           image={googleicon}
           type="button"
+          onClick={() => googleSignUp()}
         />
       </div>
     );
