@@ -11,4 +11,4 @@ export const deleteAccount = '/user/account-delete-init/{id}';
 
 // google signin endpoint
 
-export const googleSignIn = '/auth/googleSignin';
+export const googleSignUp = '/auth/googleSignin';

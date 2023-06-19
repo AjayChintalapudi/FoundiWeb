@@ -8,7 +8,7 @@ import {
   passwordopenicon,
 } from 'resources/Images/Images';
 import Button from 'components/Button/Button';
-import { useNavigate } from 'react-router-dom';
+import { redirect, useNavigate } from 'react-router-dom';
 import styles from './styles.module.css';
 import { useFormik } from 'formik';
 import {
@@ -20,9 +20,13 @@ import {
 import ProgressBar from 'components/ProgressBar/ProgressBar';
 import { signUp } from 'networking/apis/signUp';
 import { UserDataContext } from 'providers/UserDataProvider';
-import { useGoogleLogin } from '@react-oauth/google';
+import { GoogleLogin, useGoogleLogin } from '@react-oauth/google';
+import jwt_decode from 'jwt-decode';
+import { googleSignUp } from 'networking/apis/googleSignIn';
+import axios from 'axios';
 
 const CreateAccountPage = () => {
+  /******************************8 */
   /***********STRING VALUES************/
 
   const { createAccountPageStrings } = englishStrings;
@@ -35,12 +39,6 @@ const CreateAccountPage = () => {
   const togglePassWord = () => {
     setShowPassWord(!showPassWord);
   };
-
-  // google login
-
-  const googleSignUp = useGoogleLogin({
-    onSuccess: (codeResponse) => console.log(codeResponse),
-  });
 
   // SignUp Page Steps[1-2-3]
 
@@ -114,6 +112,48 @@ const CreateAccountPage = () => {
       }
     }
   };
+
+  // google signup
+
+  const googleSignup = useGoogleLogin({
+    onSuccess: async (codeResponse) => {
+      if (codeResponse) {
+        try {
+          const response = await axios.get(
+            `https://www.googleapis.com/oauth2/v1/userinfo?access_token=${codeResponse.access_token}`,
+            {
+              headers: {
+                Authorization: `Bearer ${codeResponse.access_token}`,
+                Accept: 'application/json',
+              },
+            }
+          );
+
+          console.log('google api response', response.data);
+          const data = {
+            full_name: response.data.name,
+            email: response.data.email,
+            image: response.data.picture,
+            type: 1,
+          };
+          console.log('sending data', data);
+          const googleSignUpResponse = await googleSignUp(data);
+          console.log('googleSignUpResponse', googleSignUpResponse);
+
+          if (googleSignUpResponse.data.type === 'success') {
+            setUserData(googleSignUpResponse.data);
+            setCurrentStep(3);
+          } else {
+            // setUserData(res.data.message)
+            alert(googleSignUpResponse.data.message);
+          }
+        } catch (error) {
+          console.log(error, 'google signup failed');
+        }
+      }
+    },
+    onError: (error) => console.log('Login Failed:', error),
+  });
 
   // fomik validation
 
@@ -447,11 +487,13 @@ const CreateAccountPage = () => {
           btnStyles={styles.continueGoogleButton}
           image={googleicon}
           type="button"
-          onClick={() => googleSignUp()}
+          onClick={googleSignup}
         />
+        {/* {<p className={styles.userErrorMessage}>{errorMessage}</p>} */}
       </div>
     );
   };
+
   return (
     <div className={styles.createAccountPageContainer}>
       {progressBar()}
