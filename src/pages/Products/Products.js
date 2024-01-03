@@ -39,7 +39,7 @@ const Products = () => {
       </div>
     );
   };
-
+  
   const productsHeroTopSection = () => {
     return (
       <div className={styles.productsMiddleHeroSection}>

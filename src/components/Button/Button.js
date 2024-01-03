@@ -13,19 +13,6 @@ const Button = (props) => {
     onSuccess,
     onError,
   } = props;
-  const handleClick = () => {
-    // Perform necessary actions before calling onSuccess or onError
-    // ...
-
-    // Simulate success or error for demonstration purposes
-    const isSuccess = true;
-
-    if (isSuccess) {
-      onSuccess();
-    } else {
-      onError();
-    }
-  };
 
   return (
     <button
